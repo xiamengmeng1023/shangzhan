@@ -1,0 +1,58 @@
+<view class="order">
+
+  <view class="order_header">
+    <view class="order_header_item {{activIndex==0?'activ':''}} " data-index="0 " catchtap="navTap" >全部</view>
+    <view class="order_header_item {{activIndex==1?'activ':''}} " data-index="1" catchtap="navTap">待付款</view>
+    <view class="order_header_item {{activIndex==2?'activ':''}} " data-index="2" catchtap="navTap">待收货</view>
+    <view class="order_header_item {{activIndex==3?'activ':''}} " data-index="3" catchtap="navTap">已完成</view>
+  </view>
+  <view class="order_main_footer">
+    <view wx:if="{{orderList.length!==0}}" wx:for="{{orderList}}" wx:for-item="itema" wx:key="{{index}}">
+      <view class="order_main_footer_item" data-sn="{{itema.order_sn}}" catchtap="goToOrderDeil">
+        <view class="order_main">
+          <view wx:for="{{itema.store_list}}" wx:for-item="itemb" wx:key="{{index}}">
+            <view  class="order_main_t">
+                <view class="order_main_t_l">
+                  <image class="order_main_t_l_one" src="{{iconUrl}}/btn/order_shop.png"></image>
+                  <view class="order_main_t_l_two">{{itemb.store_name}}</view>
+                </view>
+                <view class="order_main_t_r"  wx:if="{{itema.order_status == 0}}">待付款</view>
+                <view class='order_main_t_r' wx:if="{{itema.order_status == 1}}">已付款</view>
+                <view class='order_main_t_r' wx:if="{{itema.order_status == 2}}">已发货</view>
+                <view class='order_main_t_r' wx:if="{{itema.order_status == 3}}">退款</view>
+                <view class='order_main_t_r' wx:if="{{itema.order_status == 4}}">已退款</view>
+                <view class='order_main_t_r' wx:if="{{itema.order_status == 5}}">已签收</view>
+            </view>
+            <view class="order_main_b">
+              <block wx:for="{{itemb.goods_list}}" wx:for-item="itemc" wx:key="{{index}}">
+                <image class="order_main_b_l" src="{{picUrl}}{{itemc.icon}}">
+                </image>
+                <view  class="order_main_b_r">
+                  <view  class="order_main_b_r_t">
+                  {{itemc.title}}
+                  </view>
+                  <view  class="order_main_b_r_b">
+                    <view class="order_main_b_r_b_icon">￥</view>
+                    {{itemc.goods_price}}
+                  </view>
+                </view>
+              </block>
+            </view>
+          </view>
+          <view class="pay_info">  
+            <view class="pay_info_one fz26">共{{itema.goods_count}}件商品需支付￥{{itema.order_amount}}</view>
+            <navigator class="pay_info_two fz24" url="/pages/goods_details/goods_details?goodsId={{itema.store_list[0].goods_list[0].goods_id}}&cardId={{cardId}}">
+              再次购买
+            </navigator>
+          </view>
+        </view>
+      </view>
+    </view>
+    <block wx:if="{{orderList.length==0}}">
+      <view class="noneBox">
+        <image class="noneImage" src="/assets/btn/none.png"></image>
+        <view class="noneTxt">暂无订单</view>
+      </view>
+    </block>
+  </view>
+</view> 

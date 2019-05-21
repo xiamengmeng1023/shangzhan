@@ -1,0 +1,36 @@
+.sz-box {
+  text-align: center;
+  padding: 69rpx 0 60rpx 0;
+  box-sizing: border-box;
+  border-top: 20rpx solid #f4f4f6;
+}
+
+.sz-box image {
+  width: 200rpx;
+  height: 125rpx;
+  border-radius: 10rpx;
+}
+
+.f36-28,
+.f32-28 {
+  text-align: center;
+}
+
+.f30-44 {
+  line-height: 68rpx;
+  text-indent: 48rpx;
+}
+
+/* .f26-44 > view{
+  position: relative;
+}
+.f26-44 > view:before{
+  content:"";
+  position: absolute;
+  left: 24rpx;
+  top: 28rpx;
+  width:12rpx;
+  height: 12rpx;
+  background: #444444;
+  border-radius: 50%;
+} */

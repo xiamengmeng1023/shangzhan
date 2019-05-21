@@ -1,0 +1,379 @@
+::-webkit-scrollbar {
+  width: 0;
+  height: 0;
+  color: transparent;
+}
+
+.company_details_main {
+  width: 690rpx;
+  margin: 0 auto;
+
+  // 轮播图
+  .swiper-container {
+    position: relative;
+
+    .swiper {
+
+      .img {
+        border-radius: 10rpx;
+        width: 100%;
+        height: 240rpx;
+        // height: 100%;
+      }
+    }
+
+    .dots {
+      position: absolute;
+      left: 0;
+      right: 0;
+      top: 210rpx;
+      display: flex;
+      justify-content: center;
+
+      .dot {
+        margin: 0 8rpx;
+        width: 20rpx;
+        height: 5rpx;
+        background-color: transparent;
+        border-radius: 8rpx;
+        background-color: #e3e1df;
+        transition: all 0.6s ease-in-out;
+
+        &.active {
+          background: #fff;
+        }
+      }
+    }
+  }
+
+  // <!-- 商栈产品 -->
+
+  .product_mian {
+
+    .product_main_head {
+      height: 80rpx;
+      margin-bottom: 35rpx;
+
+      .product_main_head_img {
+        float: left;
+        height: 80rpx;
+        width: 80rpx;
+        border-radius: 50%;
+        // background-color: red;
+        border: 1rpx solid #000;
+        margin-right: 13rpx
+      }
+
+      .product_main_head_tit {
+        float: left;
+        font-size: 30rpx;
+        line-height: 80rpx;
+
+      }
+
+      .card_details_main_shopBanner_b {
+        float: right;
+        position: relative;
+        top: 10rpx;
+
+        // .card_details_main_shopBanner_b_btn {
+        //   width: 180rpx;
+        //   height: 55rpx;
+        //   border-radius: 30rpx;
+        //   box-shadow: 0rpx 8rpx 5rpx #86c9ff
+        // }
+        .card_details_main_shopBanner_b_btn {
+          width: 180rpx;
+          height: 55rpx;
+          border-radius: 30rpx;
+          background-color: #3190FE;
+          box-shadow: 0rpx 8rpx 5rpx #86c9ff
+        }
+
+        .card_details_main_shopBanner_b_btn_txt {
+          font-size: 25rpx;
+          font-weight: 700;
+          color: #fff;
+          position: absolute;
+          top: 10rpx;
+          right: 50rpx;
+
+        }
+      }
+    }
+
+    // <!-- 优惠券 -->
+
+    .coupon {
+      display: flex;
+      align-items: flex-start;
+      justify-content: center;
+
+      .coupon_item {
+        position: relative;
+        width: 330rpx;
+        margin-right: 30rpx;
+
+        &:last-child {
+          margin-right: 0rpx;
+        }
+
+        image {
+          height: 130rpx;
+          width: 330rpx;
+          background-color: skyblue;
+        }
+
+        .yhq_main {
+          width: 330rpx;
+          display: flex;
+          justify-content: flex-start;
+          position: absolute;
+          top: 0;
+          left: 0;
+          text-align: center;
+
+          .yhq_main_one {
+            margin-top: 5rpx;
+            margin-left: 35rpx;
+            margin-right: 15rpx;
+
+            .fz64 {
+              font-size: 64rpx;
+              color: #fff;
+            }
+
+            .fz24 {
+              font-size: 24rpx;
+              color: #F8E71C
+            }
+          }
+
+          .yhq_main_two {
+            margin-top: 21rpx;
+            margin-right: 20rpx;
+
+            .fz36 {
+              color: #fff;
+              font-size: 36rpx;
+              margin-bottom: 5rpx
+            }
+
+            .fz24 {
+              color: #fff;
+              font-size: 24rpx;
+            }
+          }
+
+          .yhq_main_three {
+            // margin-left: 10rpx;
+            color: #fff;
+            font-size: 24rpx;
+            width: 30rpx;
+          }
+
+          .yhq_main_four {
+            position: absolute;
+            right: 13rpx;
+            top: 0rpx;
+            color: #fff;
+            font-size: 24rpx;
+            width: 24rpx;
+          }
+
+          .yhq_main_five {
+            position: absolute;
+            right: 13rpx;
+            top: 16rpx;
+            color: #fff;
+            font-size: 24rpx;
+            width: 24rpx;
+          }
+
+        }
+
+      }
+
+
+    }
+
+
+  }
+
+  // <!-- 分类 -->
+  .classification {
+    // display: flex;
+    // justify-content: flex-start;
+    // flex-wrap: nowrap;
+    // align-items: center;
+    height: 60rpx;
+    margin-bottom: 50rpx;
+
+    .scroll_box {
+      height: 300rpx;
+      overflow: hidden;
+      white-space: nowrap;
+
+      .eventSegment {
+        font-size: 24rpx;
+        color: #9c9c9c;
+        height: 50rpx;
+        display: inline-block;
+        line-height: 50rpx;
+        text-align: center;
+        padding: 0 30rpx;
+        border-radius: 25rpx;
+      }
+
+      .activ {
+        background-color: #3190fe !important;
+        color: #fff
+      }
+    }
+  }
+
+  // 商品列表
+  // 瀑布流布局
+  .goods_main {
+    width: 690rpx;
+    margin: 0 auto;
+    column-count: 2;
+    margin-bottom: 50rpx;
+
+    .goods_item {
+      width: 340rpx;
+      margin-bottom: 10rpx;
+      box-shadow: 3rpx 10rpx 10rpx #E8E8E8;
+      border-radius: 10rpx;
+      display: inline-block;
+      vertical-align: top;
+
+      .goods_img {
+        width: 340rpx;
+        height: 340rpx;
+        margin-bottom: 35rpx;
+      }
+
+      .goods_price_info {
+        padding: 0 25rpx;
+        display: flex;
+        align-items: baseline;
+        justify-items: flex-start;
+        margin-bottom: 35rpx;
+
+        .sign {
+          color: #fc4c40;
+          font-size: 24rpx;
+        }
+
+        .goods_price {
+          font-size: 48rpx;
+          color: #fc4c40;
+          margin-right: 15rpx;
+        }
+
+        .goods_oldPrice {
+          font-size: 24rpx;
+          color: #999999;
+          text-decoration: line-through
+        }
+      }
+
+      .goods_tit {
+        width: 290rpx;
+        padding: 0 25rpx;
+        font-size: 26rpx;
+        padding-bottom: 35rpx
+      }
+
+      .goods_tit_label {
+        margin-bottom: 22rpx;
+        display: flex;
+        margin-left: 22rpx;
+
+        .goods_tit_label_item {
+          font-size: 18rpx;
+          height: 25rpx;
+          color: #F5A623;
+          border: 1rpx solid #F5A623;
+          margin-right: 15rpx;
+          padding: 5rpx;
+        }
+      }
+    }
+  }
+
+  // 列表布局
+  // .goods_main {
+  //   .goods_item {
+  //     width: 690rpx;
+  //     height: 180rpx;
+  //     margin: 0 auto;
+  //     background-color: #fff;
+  //     margin-bottom: 60rpx;
+  //     display: flex;
+
+  //     .goods_img {
+  //       width: 180rpx;
+  //       height: 180rpx;
+  //       background-color: pink;
+  //       margin-right: 33rpx;
+  //       border-radius: 10rpx;
+  //     }
+
+  //     .goods_item_r {
+  //       .goods_tit {
+  //         padding: 0 25rpx;
+  //         font-size: 26rpx;
+  //         padding-bottom: 25rpx;
+  //       }
+
+  //       .goods_tit_label {
+  //         margin-bottom: 32rpx;
+  //         display: flex;
+  //         margin-left: 22rpx;
+
+
+  //         .goods_tit_label_item {
+  //           font-size: 18rpx;
+  //           height: 25rpx;
+  //           color: #F5A623;
+  //           border: 1rpx solid #F5A623;
+  //           margin-right: 15rpx;
+  //           padding: 5rpx;
+  //         }
+  //       }
+
+  //       .goods_price_info {
+  //         display: flex;
+  //         align-items: baseline;
+  //         align-content: flex-end;
+
+  //         .sign {
+  //           color: #fc4c40;
+  //           font-size: 24rpx;
+  //         }
+
+  //         .goods_price {
+  //           font-size: 48rpx;
+  //           color: #fc4c40;
+  //           margin-right: 15rpx;
+  //         }
+
+  //         .goods_oldPrice {
+  //           font-size: 24rpx;
+  //           color: #999999;
+  //           text-decoration: line-through
+  //         }
+  //       }
+  //     }
+
+  //   }
+  // }
+}
+
+.ticket-items {
+  width: 310rpx;
+  margin-right: 50rpx;
+  position: relative;
+}

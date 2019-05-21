@@ -1,0 +1,192 @@
+<view class="company_details_main" style="display:block">
+  <!-- 轮播图 -->
+  <view class="swiper-container">
+    <swiper current="{{swiperCurrent}}" bindchange="swiperChange" class="swiper">
+      <block wx:for="{{baPic}}" wx:key="{{index}}">
+        <swiper-item >
+          <image src='{{config.pic}}' class="img"></image>
+        </swiper-item>
+      </block>
+    </swiper>
+    <view class="dots">
+      <block wx:for="{{imgUrls}}" wx:key="{{index}}">
+        <view class="dot{{index == swiperCurrent ? ' active' : ''}}"></view>
+      </block>
+    </view>
+  </view>
+  <!-- 商栈产品 -->
+  <view class="product_mian">
+    <!-- 头部 -->
+    <view class="product_main_head">
+      <image class="product_main_head_img"  src="{{config.icon}}" ></image>
+      <view class="product_main_head_tit">{{config.name}}</view>
+      <view class="card_details_main_shopBanner_b">   <view class="card_details_main_shopBanner_b_btn_txt" catchtap="ml_toCompany_details">
+        去官网
+        </view>
+        <view class="card_details_main_shopBanner_b_btn" ></view>
+      </view>
+    </view>
+    <!-- 优惠券 -->
+    <view  class="coupon">
+      <!-- <block wx:if="{{isShowYhq==0}}">
+        <view class="coupon_item" catchtap="receiveOffer" data-id="{{getStoreOfferList[0].id}}">
+          <image src="/assets/btn/yhq_1.png"></image>
+          <view class="yhq_main">
+            <view class="yhq_main_one">
+              <view class="fz64">{{getStoreOfferList[0].money}}</view>
+              <view class="fz24">-RMB-</view>
+            </view>
+            <view class="yhq_main_two">
+              <view class="fz36">优惠券</view>
+              <view class="fz24">{{getStoreOfferList[0].title}}</view>
+            </view>
+            <view  class="yhq_main_three">立即领取</view>
+          </view>
+        </view>
+      </block>
+      <block wx:if="{{isShowYhq==0}}">
+        <view class="coupon_item" catchtap="receiveOffer" data-id="{{getStoreOfferList[1].id}}">
+          <image src="/assets/btn/yhq_1.png"></image>
+          <view class="yhq_main">
+            <view class="yhq_main_one">
+              <view class="fz64">{{getStoreOfferList[1].money}}</view>
+              <view class="fz24">-RMB-</view>
+            </view>
+            <view class="yhq_main_two">
+              <view class="fz36">优惠券</view>
+              <view class="fz24">{{getStoreOfferList[1].title}}</view>
+            </view>
+            <view  class="yhq_main_three">立即领取</view>
+          </view>
+        </view>
+      </block> -->
+      <block wx:if="{{isShowYhq_1==0}}">
+        <view class="coupon_item" catchtap="receiveOffer" data-index="1" data-id="{{getStoreOfferList[1].id}}">
+          <image src="{{iconUrl}}btn/yhq_1.png"></image>
+          <view class="yhq_main">
+            <view class="yhq_main_one">
+              <view class="fz64">{{getStoreOfferList[0].money}}</view>
+              <view class="fz24">-RMB-</view>
+            </view>
+            <view class="yhq_main_two">
+              <view class="fz36">优惠券</view>
+              <view class="fz24">{{getStoreOfferList[0].title}}</view>
+            </view>
+            <view class="yhq_main_four">立即领取</view>
+          </view>
+        </view>
+      </block>
+      <block wx:if="{{isShowYhq_1==1}}">
+        <view class="coupon_item" >
+          <image src="{{iconUrl}}btn/yhq_2.png"></image>
+          <view class="yhq_main">
+            <view class="yhq_main_one">
+              <view class="fz64">{{getStoreOfferList[1].money}}</view>
+              <view class="fz24">-RMB-</view>
+            </view>
+            <view class="yhq_main_two">
+              <view class="fz36">优惠券</view>
+              <view class="fz24">{{getStoreOfferList[1].title}}</view>
+            </view>
+            <view class="yhq_main_five">已领取</view>
+          </view>
+        </view>
+      </block>
+      <block wx:if="{{isShowYhq_2==0}}" >
+        <view class="coupon_item" catchtap="receiveOffer" data-index="2" data-id="{{getStoreOfferList[1].id}}" >
+          <image src="{{iconUrl}}btn/yhq_1.png"></image>
+          <view class="yhq_main">
+            <view class="yhq_main_one">
+              <view class="fz64">{{getStoreOfferList[1].money}}</view>
+              <view class="fz24">-RMB-</view>
+            </view>
+            <view class="yhq_main_two">
+              <view class="fz36">优惠券</view>
+              <view class="fz24">{{getStoreOfferList[1].title}}</view>
+            </view>
+            <view class="yhq_main_four">立即领取</view>
+          </view>
+        </view>
+      </block>
+      <block wx:if="{{isShowYhq_2==1}}">
+        <view class="coupon_item" >
+          <image src="{{iconUrl}}btn/yhq_2.png"></image>
+          <view class="yhq_main">
+            <view class="yhq_main_one">
+              <view class="fz64">{{getStoreOfferList[1].money}}</view>
+              <view class="fz24">-RMB-</view>
+            </view>
+            <view class="yhq_main_two">
+              <view class="fz36">优惠券</view>
+              <view class="fz24">{{getStoreOfferList[1].title}}</view>
+            </view>
+            <view class="yhq_main_five">已领取</view>
+          </view>
+        </view>
+      </block>
+    </view>
+  </view>
+      <!-- 分类 -->
+  <view class="classification">
+    <scroll-view scroll-x class="scroll_box">
+      <view class="eventSegment {{item.id==activIndex ?'activ':''}}" data-id="all" data-index="all" wx:key="{{item.id}}" catchtap="ml_getClickId" >
+      全部
+      </view>
+      <view data-index="{{item.id}}"  wx:for="{{gcategory}}" data-id="{{item.id}}" class="eventSegment {{item.id==activIndex ?'activ':''}}" wx:key="{{item.id}}" catchtap="ml_getClickId" >
+      {{item.name}}
+      </view>
+    </scroll-view>
+  </view>
+  <!-- 瀑布流 -->
+  <view class="goods_main">
+    <block wx:if="{{index%2!=''}}" wx:for="{{goodsList}}"  wx:key="{{index}}">
+      <view class="goods_item" data-id='{{item.id}}' catchtap="goToGoods_details">
+        <image class="goods_img"  mode="widthFix" src="{{item.icon}}"></image>
+        <view class="goods_price_info">
+            <view class="sign">￥</view>
+            <view class="goods_price" >{{item.v_price}}</view>
+            <view class="goods_oldPrice">￥{{item.m_price}}</view>
+        </view>
+        <view class="goods_tit">{{item.title}}</view>
+        <!-- <view class="goods_tit_label">
+          <view class="goods_tit_label_item">买赠</view>
+            <view class="goods_tit_label_item">明星同款</view>
+        </view> -->
+      </view>
+    </block>
+    <block  wx:if="{{index%2 ==''}}"  wx:for="{{goodsList}}" wx:key="{{index}}">
+      <view class="goods_item" data-id='{{item.id}}' catchtap="goToGoods_details">
+        <image class="goods_img"  mode="widthFix" src="{{item.icon}}"></image>
+        <view class="goods_price_info">
+            <view class="sign">￥</view>
+            <view class="goods_price" >{{item.v_price}}</view>
+            <view class="goods_oldPrice">￥{{item.m_price}}</view>
+        </view>
+        <view class="goods_tit">{{item.title}}</view>
+        <!-- <view class="goods_tit_label">
+          <view class="goods_tit_label_item">买赠</view>
+            <view class="goods_tit_label_item">明星同款</view>
+        </view> -->
+      </view>
+    </block>
+  
+  </view>
+  <!-- 列表 -->
+  <!-- <view class="goods_main">
+    <view class="goods_item"  wx:for="{{waterFallImages}}"  catchtap="goToGoods_details">
+      <image class="goods_img" wx:key='{{item.src}}' mode="widthFix" src="{{item.src}}" ></image>
+      <view class="goods_item_r">
+        <view class="goods_tit">企业版</view>
+         <view class="goods_tit_label">
+          <view class="goods_tit_label_item">买赠</view>
+            <view class="goods_tit_label_item">明星同款</view>
+        </view>
+        <view class="goods_price_info">
+            <view class="sign">￥</view>
+            <view class="goods_price" >1232</view>
+            <view class="goods_oldPrice">￥333</view>
+       </view>
+      </view>
+    </view>
+  </view> -->
+</view>

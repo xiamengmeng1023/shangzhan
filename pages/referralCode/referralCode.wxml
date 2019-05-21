@@ -1,0 +1,17 @@
+<view class="referralCode_main">
+  <image class="referralCode_main_img" src="{{iconUrl}}/referralCode.png"></image>
+  <image src="{{picUrl}}{{codeDetail.codeImg}}" class="referralCode_main_code"></image>
+  <view class="referralCode_main_name">
+   {{user_realName}}
+  </view>
+  
+  <view class="referralCode_main_tit">
+  推荐码
+  </view>
+  <view class="referralCode_main_num">
+  {{codeDetail.codeNum}}
+  </view>
+  <view class="referralCode_main_footer">
+  扫一扫上面的二维码图片，看我名片
+  </view>
+</view>

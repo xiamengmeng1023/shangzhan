@@ -1,0 +1,9 @@
+{
+  "usingComponents": {
+
+  },
+  "backgroundTextStyle": "light",
+  "navigationBarBackgroundColor": "#fff",
+  "navigationBarTitleText": "招聘详情",
+  "navigationBarTextStyle": "black"
+}

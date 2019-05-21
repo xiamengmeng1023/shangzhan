@@ -1,0 +1,19 @@
+.aboutUs {
+  text-align: center;
+  margin: 0 auto;
+}
+.aboutUs .aboutUs_img {
+  margin-top: 232rpx;
+  margin-bottom: 50rpx;
+}
+.aboutUs .aboutUs_img image {
+  width: 200rpx;
+  height: 125rpx;
+}
+.aboutUs .aboutUs_tit {
+  font-size: 36rpx;
+  margin-bottom: 20rpx;
+}
+.aboutUs .aboutUs_v {
+  font-size: 24rpx;
+}

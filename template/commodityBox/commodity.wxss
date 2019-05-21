@@ -1,0 +1,13 @@
+.c-list {
+  width: 320rpx;
+  height: 430rpx;
+  line-height: 45rpx;
+  padding: 0 20rpx;
+  box-sizing: border-box;
+}
+
+.img {
+  display: block;
+  width: 100%;
+  height: 280rpx;
+}

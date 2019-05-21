@@ -1,0 +1,11 @@
+{
+  "usingComponents": {
+    "businessCard": "/pages/component/businessCard/businessCard",
+    "home_order": "/pages/component/home_order/home_order"
+  },
+  "backgroundTextStyle": "light",
+  "navigationBarBackgroundColor": "#3190fe",
+  "navigationBarTitleText": "我的名片",
+  "navigationBarTextStyle": "white",
+  "navigationStyle": "custom"
+}

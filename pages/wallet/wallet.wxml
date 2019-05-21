@@ -1,0 +1,79 @@
+
+<view class="wallet">
+  <view class="wallet_main">
+    <view class="wallet_box">
+      <view class="wallet_tit">
+        可提额度
+      </view>
+      <view class="wallet_one">
+        <view class="wallet_one_l">
+        ￥
+        </view>
+        <view class="wallet_one_r">
+        {{init.balance?init.balance : '0.00'}}
+        </view>
+      </view>
+      <view class="wallet_two">
+        <view class="wallet_two_l">
+          <image class="wallet_two_l_img" src="{{iconUrl}}/imgs/wallet_one.png"></image>
+          <view  class="wallet_two_l_box">
+            <view  class="wallet_two_l_tit">提现中</view>
+            <view  class="wallet_two_l_num">￥{{init.cash_withdrawal?init.cash_withdrawal : '0.00'}}</view>
+          </view>
+        </view>
+        <view class="wallet_two_l">
+          <image class="wallet_two_l_img" src="{{iconUrl}}/imgs/wallet_two.png"></image>
+          <view  class="wallet_two_l_box">
+            <view  class="wallet_two_l_tit">已提现</view>
+            <view  class="wallet_two_l_num">￥{{init.cash_withdrawed?init.cash_withdrawed : '0.00'}}</view>
+          </view>
+        </view>
+      
+      </view>
+    </view>
+  </view>
+ 
+  <!-- 红包 -->
+  <view class="red_packet">
+    <view class="red_packet_t">
+      <view class="red_packet_t_one">
+     赚取红包总额
+      </view>
+      <view class="red_packet_t_two">
+      (元)
+      </view>
+    </view>
+    <view class="red_packet_b">
+      <view class="red_packet_b_one">
+      ￥{{init.brokerage?init.brokerage :'0.00' }}
+      </view>
+      <view class="red_packet_b_two">
+      {{init.datetime}}
+      </view>
+    </view>
+  
+  
+ 
+  </view>
+
+  <view  class="wallet_footer">
+    <view  class="wallet_footer_one" catchtap="goToHistoryOfWithdrawal">
+      <view class="wallet_footer_one_left">
+        <image src="{{iconUrl}}/imgs/wallet_three.png" class="wallet_footer_one_left_img"></image>
+        <view class="wallet_footer_one_left_tit">历史提现</view>
+      </view>
+      <image class="wallet_footer_one_right" src="{{iconUrl}}/btn/arrow.png"  ></image>
+    </view>
+    <view  class="wallet_footer_one"  catchtap="goToRed" >
+      <view class="wallet_footer_one_left">
+        <image src="{{iconUrl}}/imgs/wallet_four.png" class="wallet_footer_one_left_img w30h24"></image>
+        <view class="wallet_footer_one_left_tit">红包记录</view>
+      </view>
+      <image class="wallet_footer_one_right" src="{{iconUrl}}/btn/arrow.png"  ></image>
+    </view>
+  </view>
+  <view class="txBtn" catchtap='cash_money'>
+      <image src="{{iconUrl}}btn/tx.png"></image>
+      <text>提现</text>
+  </view>
+</view>

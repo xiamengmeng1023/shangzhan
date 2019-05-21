@@ -1,0 +1,20 @@
+.vipexplain{
+  width: 100%;
+  padding-top: 22rpx;
+  padding-bottom: 16rpx;
+  font-size: 28rpx;
+  color: #e78800;
+  border-radius: 16rpx 16rpx 0 0;
+}
+
+.vipexplain image{
+  width: 42rpx;
+  height: 42rpx;
+}
+
+.vip-text-box{
+  min-height: 320rpx;
+  padding-top: 18rpx;
+  border-radius: 0 0 16rpx 16rpx;
+  line-height: 40rpx;
+}

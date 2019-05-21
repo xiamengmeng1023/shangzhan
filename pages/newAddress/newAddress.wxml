@@ -1,0 +1,55 @@
+<view class="place"></view>
+<form bindsubmit="formSubmit">
+  <view class="realNameAuthentication">
+    <view class="realNameAuthentication_main">
+      <view class="realNameAuthentication_main_item">
+        <view>收货姓名</view>
+        <input type="text"  maxlength='6' value='{{rname}}' name="rname"/>
+      </view>
+      <view class="realNameAuthentication_main_item">
+        <view>手机+86</view>
+        <input  type="text"  name="phone" value='{{phone}}' />
+      </view>
+      <view class="realNameAuthentication_main_item">
+        <view class="region_tit">省、市、县</view>
+        <view class="section">
+            <picker
+              mode="region"
+              bindchange="bindRegionChange"
+              value="{{region}}"
+              custom-item=""
+            >
+              <view class="picker">
+                {{region[0]}}，{{region[1]}}，{{region[2]}}
+              </view>
+            </picker>
+        </view>
+      </view>
+      <view class="realNameAuthentication_main_item">
+        <view>详细地址</view>
+        <input type="text" maxlength="100" name="dateilsAddress" value='{{dateilsAddress}}' placeholder="请输入详细收货地址" />
+      </view>
+      <view class="agreement">
+        <icon wx:if="{{checked}}" type="success" data-mindex="1"  catchtap='switchChange' color="#3190FE"  />
+        <icon wx:else type="circle" data-mindex="2"  catchtap='switchChange' color="#d5d5d5" />
+        <view class="agreement_bottom" >设为默认</view>
+      </view>
+      <!-- 提交 -->
+      <block  wx:if="{{addressId==''}}">
+        <button class="submit_new" form-type='submit' >
+        保存
+        </button>
+      </block>
+      <block  wx:else>
+        <view class="flexbox">
+          <button class="submit" catchtap="remove" >
+          删除
+          </button>
+          <button class="submit" form-type='submit' >
+          修改
+          </button>
+        </view>
+      </block>
+    </view>
+  </view>
+</form>

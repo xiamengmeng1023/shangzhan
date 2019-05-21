@@ -1,0 +1,45 @@
+.find .find_box {
+  width: 690rpx;
+  margin: 0 auto;
+}
+.find .find_box .find_search {
+  height: 30rpx;
+  background-color: #F5F5F5;
+  display: flex;
+  align-items: center;
+  border-radius: 60rpx;
+  margin-bottom: 50rpx;
+  padding: 15rpx 20rpx;
+}
+.find .find_box .find_search .find_search_btn {
+  width: 24rpx;
+  height: 24rpx;
+  margin-right: 10rpx;
+}
+.find .find_box .find_search .find_search_tit {
+  font-size: 24rpx;
+  color: #CCCCCC;
+}
+.find .find_box .find_mian .find_mian_item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 90rpx;
+}
+.find .find_box .find_mian .find_mian_item .find_mian_item_l {
+  display: flex;
+  justify-items: flex-start;
+  align-items: center;
+}
+.find .find_box .find_mian .find_mian_item .find_mian_item_l .find_mian_item_l_img {
+  width: 30rpx;
+  height: 30rpx;
+  margin-right: 20rpx;
+}
+.find .find_box .find_mian .find_mian_item .find_mian_item_l .find_mian_item_l_tit {
+  font-size: 30rpx;
+}
+.find .find_box .find_mian .find_mian_item .find_mian_item_r {
+  width: 12rpx;
+  height: 21rpx;
+}

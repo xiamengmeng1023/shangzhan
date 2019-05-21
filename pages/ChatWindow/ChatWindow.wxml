@@ -1,0 +1,27 @@
+<scroll-view  class="ChatWindow_main"  scroll-y="true" style='height:{{windowH}}px' scroll-top="{{scrollTop}}" upper-threshold="100rpx" bindscrolltoupper="scrolltoupper" >
+   <block wx:for="{{getMessage}}" wx:key="index">
+    <view class='ChatWindow_main_getter' wx:if="{{item.speaker_id != token}}" >
+      <image src='{{item.speaker_icon}}' class='ChatWindow_main_getter_img'></image>
+      <view class='ChatWindow_main_getter_info'>
+        {{item.content}}
+      </view>
+    </view>
+    <view class='ChatWindow_main_sender' wx:if="{{item.speaker_id == token}}">
+      <image src='{{item.speaker_icon}}' class='ChatWindow_main_sender_img'></image>
+      <view class='ChatWindow_main_sender_info'>
+        {{item.content}}
+      </view>
+    </view>
+  </block>
+</scroll-view >
+  <!-- 输入框 -->
+  <view class="ChatWindow_main_footer"> 
+    <view class="ChatWindow_main_footer_l">
+      <image  src="{{iconUrl}}btn/wenjian_1.png"></image>
+    </view>
+    <input class="sender_input" bindblur='bindblur' bindfocus="bindfocus" bindinput="bindinput" cursor-spacing="30rpx" maxlength='120' value='{{eVal}}' bindconfirm="sendMessage" />
+      <!-- <button  catchtap='sendMessage'>发送</button> -->
+    <view class="ChatWindow_main_footer_r">
+      <image  src="{{iconUrl}}btn/wenjian_2.png"></image>
+    </view>
+  </view>

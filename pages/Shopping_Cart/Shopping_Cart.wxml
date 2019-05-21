@@ -1,0 +1,82 @@
+<view class="Shopping_Cart">
+  <block wx:for="{{list.store_list}}" wx:key="{{index}}" >
+    <view class="Shopping_Cart_header">
+      <view class="Shopping_Cart_header_l">
+        <!-- <checkbox checked="{{checked}}"  catchtap='stairCkeck'  data-id='{{item.store_id}}' ></checkbox> -->
+          <icon type="{{item.IsCheck?'success':'circle'}}" class='m-r' catchtap='stairCkeck'  data-id='{{item.store_id}}' color="{{item.IsCheck?'#008cd6':'#d5d5d5'}}" />
+        <image src="{{iconUrl}}/btn/order_shop.png"></image>
+        <view class="shop_tit">{{item.store_name}}</view>
+      </view>
+      <view class="Shopping_Cart_header_r">
+        <image  src="{{iconUrl}}/btn/arrow.png"></image>
+      </view>
+    </view>
+    <!-- 主體 -->
+    <view class="Shopping_Cart_main"  wx:for="{{item.goods_list}}" wx:for-item="items" wx:key="{{index}}">
+      <view class="Shopping_Cart_main_item" catchlongtap='shopLong' >
+        <view class="Shopping_Cart_main_flexbox">
+         <cover-view class='Shopping_Cart_main_item_delbox' wx:if="{{shopShow}}"  catchtap='shopHide'>
+              <cover-view class='del_btn' catchtap='del' data-id="{{items.id}}">删除</cover-view>        
+          </cover-view>
+          <view class="Shopping_Cart_main_one">
+            <!-- <checkbox checked="{{isckall}}" data-id="{{items.id}}"  catchtap='onlyCheck'></checkbox> -->
+            <icon type="{{items.IsCheck?'success':'circle'}}" class='m-r' data-id="{{items.id}}"  catchtap='onlyCheck' color="{{items.IsCheck?'#008cd6':'#d5d5d5'}}" />
+          </view>
+          <view class="Shopping_Cart_main_two">
+            <image src='{{picUrl}}{{items.icon}}'></image>
+          </view>
+          <view class="Shopping_Cart_main_three">
+            <view class="Shopping_Cart_main_three_t fz30">{{items.title}}</view>
+            <view class="Shopping_Cart_main_three_b fz30">￥{{items.goods_price}}</view>
+          </view>
+        </view>
+        <view class="Shopping_Cart_main_four">
+          <view class="Shopping_Cart_main_four_l" data-cid="{{items.id}}" data-num="{{items.goods_num}}" catchtap='sub'  >
+            <image class="reduce_icon" src="{{iconUrl}}/btn/reduce_{{num==1?'1':'2'}}.png" ></image>
+          </view>
+          <view class="Shopping_Cart_main_four_c fz30" bindchange="ml_totalPrice">
+            <input type="text" value='{{items.goods_num}}' bindblur="writenum" disabled='true' maxlength="2"  />
+          </view>
+          <view class="Shopping_Cart_main_four_r" data-cid="{{items.id}}" data-num="{{items.goods_num}}" catchtap='add'>
+            <image class="add_icon" src="{{iconUrl}}/btn/add.png" ></image>
+          </view>
+        </view>
+      </view>
+    </view>
+  </block>
+</view>
+<!-- 底部固定结算 -->
+<view class="Shopping_Cart_footer">
+  <view class="Shopping_Cart_footer_flexbox">
+    <view class="Shopping_Cart_footer_l">
+      <view class="Shopping_Cart_footer_l_item">
+        <checkbox catchtap='ckall' checked='{{isckall}}' ></checkbox>
+      </view>
+      <view class="Shopping_Cart_footer_l_item fz30">
+        全选
+      </view>
+    </view>
+    <view class="Shopping_Cart_footer_r">
+      <view class="Shopping_Cart_footer_r_item fz24">
+        合计:
+      </view>
+      <view class="Shopping_Cart_footer_r_item fz30" >
+        ￥{{orderNum}}
+      </view>
+    </view>
+  </view>
+  <view class="Shopping_Cart_footer_btn fz30"  catchtap='goSub'>
+    提交订单
+  </view>
+</view>
+
+
+
+
+
+
+
+
+
+
+

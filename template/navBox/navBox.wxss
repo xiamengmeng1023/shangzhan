@@ -1,0 +1,16 @@
+page{
+  background: #f4f4f6;
+  padding-top: 128rpx;
+}
+.nav-box{
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 100%;
+}
+.nav-list{
+  line-height: 50rpx;
+}
+.nav-border{
+  border-bottom: 2rpx solid #008cd6;
+}

@@ -1,0 +1,368 @@
+ <view class="official_web_main">
+ <!-- 轮播图 -->
+  <view class="swiper-container">
+  <!-- 轮播图1 -->
+    <block wx:if="{{banner.cateid==40}}">
+      <swiper current="{{swiperCurrent}}" bindchange="swiperChange" class="swiper" autoplay="{{autoplay}}"  interval="{{interval}}" duration="{{duration}}" vertical="{{vertical_1}}" circular="{{circular}}">
+        <block  wx:for="{{banner.datacon}}" wx:key="{{item.id}}">
+          <swiper-item data-id="{{item.id}}" data-url="{{item.linkUrl}}">
+            <image src="{{picUrl}}{{item.pic}}" class="img"></image>
+          </swiper-item>
+        </block>
+      </swiper>
+      <view class="dots">
+        <block wx:for="{{imgUrls}}" wx:key="{{item.id}}">
+          <view class="dot{{index == swiperCurrent ? ' active' : ''}}"></view>
+        </block>
+      </view>
+    </block>
+  <!-- 轮播图2 -->
+    <block wx:if="{{banner.cateid==9}}">
+      <swiper current="{{swiperCurrent}}" bindchange="swiperChange" class="swiper" autoplay="{{autoplay}}"  interval="{{interval}}" duration="{{duration}}" vertical="{{vertical_2}}" circular="{{circular}}">
+        <block  wx:for="{{banner.datacon}}" wx:key="{{item.id}}">
+          <swiper-item data-id="{{item.id}}" data-url="{{item.linkUrl}}">
+            <image src="{{picUrl}}{{item.pic}}" class="img"></image>
+          </swiper-item>
+        </block>
+      </swiper>
+      <view class="dots">
+        <block wx:for="{{imgUrls}}" wx:key="{{item.id}}">
+          <view class="dot{{index == swiperCurrent ? ' active' : ''}}"></view>
+        </block>
+      </view>
+    </block>
+  </view>
+   <!-- 商栈产品 -->
+  <view class="product_mian">
+    <!-- 头部 -->
+    <view class="product_main_head">
+      <image class="product_main_head_img"  src='{{picUrl}}{{pageData[1].datacon[0].logo}}'></image>
+
+      <view class="product_main_head_tit">{{companyData.name}}</view>
+      <view class="card_details_main_shopBanner_b"> 
+        <view class="card_details_main_shopBanner_b_btn_txt" catchtap="ml_toCompany_details">
+        去产品
+        </view>
+        <view class="card_details_main_shopBanner_b_btn" ></view>
+      </view>
+    </view>
+    <view class="profile_tit">公司简介</view>
+       <!-- 公司简介1 -->
+    <block  wx:if="{{companyData.cateid==10}}">
+      <view class='brief_2'>
+        <image src='https://www.shangzhanyun.com/Public/Uploads/companypics/20190127/5c4d9aa70c943.jpg'></image>
+      </view>
+    </block>
+    <!-- 公司简介 2-->
+    <block wx:elif="{{companyData.cateid==29}}">
+      <!-- <view class='ji_jie'>
+        <image src='https://www.shangzhanyun.com/Public/Uploads/companypics/20190127/5c4d9aa70c943.jpg'></image>
+      </view> -->
+      <view class="official_web_main_detailedInfo">
+        <view class="profile_main">{{companyData.summary}}</view>
+      </view>
+    </block>
+    <!-- 公司简介3 -->
+    <block  wx:elif="{{companyData.cateid==30}}">
+      <view class='brief_2'>
+        <image src='https://www.shangzhanyun.com/Public/Uploads/companypics/20190127/5c4d9aa70c943.jpg'></image>
+        <text>{{companyData.datacon[0].summary}}</text>
+      </view>
+    </block>
+
+    <!-- 成功案例 -->
+    <view class="successful_case">
+      <view class="successful_case_tit">
+      成功案例
+      </view>
+      <!-- 成功样式1 -->
+      <block wx:if="{{1==1}}">
+        <view class="successful_case_main">
+          <view class='succ_img' wx:for="{{successCase}}" wx:key="{{item.id}}">
+              <image class="successful_case_main_img" src="{{picUrl}}{{item.pic}}"></image>
+              <view><text>{{item.title}}</text></view> 
+          </view>
+        </view>
+      </block>
+      <!-- 成功样式2 -->
+      <view class="successful_case_main">
+        <block wx:if="{{1==2}}">
+         <view class='succ_img_2' wx:for="{{successCase}}" wx:key="{{item.id}}">
+            <image class="successful_case_main_img" src="{{picUrl}}{{item.pic}}"></image>
+            <text>{{item.title}}</text>
+         </view>
+        </block>
+      </view>
+      
+      <!-- 成功样式3 -->
+      <block wx:if="{{1==2}}">
+        <view class="successful_case_main">
+         <view class='succ_img_2 succ_img_3' wx:for="{{successCase}}" wx:key="{{item.id}}">
+            <image class="successful_case_main_img" src="{{picUrl}}{{item.pic}}"></image>
+            <text>{{item.title}}</text>
+         </view>
+        </view>
+      </block>
+
+       <!-- 成功样式4 -->
+      <!-- 公司简介2 -->
+      <!-- <view class='brief_2'>
+         <image src='https://www.shangzhanyun.com/Public/Uploads/companypics/20190127/5c4d9aa70c943.jpg'></image>
+         <text>One of the keys to reaching your goals is to eliminate any escape routes. It is tempting to retreat to safety and comfort when</text>
+      </view> -->
+
+    </view>
+    <!-- 企业招聘 -->
+    <view class="recruit">
+      <view class="recruit_tit">企业招聘</view>
+      <!-- 企业招聘样式1 -->
+      <block  wx:if="{{recruitInfo.cateid==22}}">
+        <view class="recruit_main">
+          <block wx:for="{{recruitInfo.datacon}}" wx:key="{{item.id}}">
+          <navigator  class="recruit_main_item" url= '/pages/recruitment_details/recruitment_details?id={{item.id}}'  catchtap="goToRecruitmentDetails" data-id="{{item.id}}" >
+              <view class="recruit_main_flexbox">
+                <view class="recruit_main_item_img" data-index="{{index}}"  style="background-color:{{index/2==0?rColorList[1]:rColorList[2]}}">
+                  {{item.firstKey}} </view>
+                  <view class="recruit_main_item_center">
+                    <view class="recruit_main_item_center_t">
+                    {{item.title}}</view>
+                    <view class="recruit_main_item_center_b">
+                    {{item.area}}|{{item.jingyan}}|{{item.create_time}}</view>
+                </view>
+              </view>
+              <view class="recruit_main_item_pay">
+              {{item.xinzi}}</view>
+          </navigator>
+          </block>
+        </view>
+      </block>
+      <!-- 企业招聘样式2 -->
+      <block  wx:if="{{recruitInfo.cateid==23}}">
+        <view class="recruit_main">
+          <block wx:for="{{recruitInfo.datacon}}" wx:key="{{item.id}}">
+            <navigator class="recruit_main_item"  url= '/pages/recruitment_details/recruitment_details?id={{item.id}}'  catchtap="goToRecruitmentDetails" data-id="{{item.id}}">
+              <view class="recruit_main_flexbox">
+                <view class="recruit_main_item_center">
+                    <view class="recruit_main_item_center_t">
+                    {{item.title}}</view>
+                    <view class="recruit_main_item_center_b">
+                    {{item.area}}|{{item.jingyan}}|{{item.create_time}}</view>
+                </view>
+              </view>
+              <view class="recruit_main_item_pay">
+              {{item.xinzi}}</view>
+            </navigator>
+          </block>
+        </view>
+      </block>
+    </view>
+    <!-- 精彩文章 -->
+    <view class="art">
+      <view class="art_tit">
+      精彩文章
+      </view>
+      <!-- <block  wx:if="{{Article.cateid==31}}">
+        <view class="art_main">
+          <block wx:for="{{Article.datacon}}" wx:key="{{item.id}}"  >
+            <navigator class="art_main_item"  url="/pages/textTxt/textTxt?id={{item.id}}">
+              <view class="art_main_item_l">
+                <view class="art_main_item_l_t">{{item.title}}</view>
+                <view class="art_main_item_l_b">{{item.title}}</view>
+              </view>
+              <image class="art_main_item_r" src="{{iconUrl}}/btn/arrow.png" >
+              </image>
+            </navigator>
+          </block>
+        </view>
+      </block> -->
+       <!-- 文章资讯样式4 -->
+       <!-- Article.cateid==16 -->
+      <block  wx:if="{{Article.cateid==31}}">
+        <block wx:for="{{Article.datacon}}" wx:key="{{item.id}}" >
+          <navigator class='article'  url="/pages/newsDetails/newsDetails?newsId={{item.id}}&typeId=3" >
+              <image src='{{picUrl}}{{item.pic}}' ></image>
+            <view class="article_tit">
+              <text>{{item.title}}</text>
+              <text>{{item.addtime}}</text>
+            </view>
+          </navigator>
+        </block>
+      </block>
+       <!-- 文章资讯样式4 -->
+      <block  wx:if="{{Article.cateid==15}}">
+        <view class="art_main">
+          <block wx:for="{{Article.datacon}}" wx:key="{{item.id}}" >
+            <navigator class="art_main_item" url="/pages/newsDetails/newsDetails?newsId={{item.id}}&typeId=3">
+              <view class="art_main_item_l">
+                <view class="art_main_item_l_t">{{item.title}}</view>
+                <view class="art_main_item_l_b">{{item.addtime}}</view>
+              </view>
+              <image class="art_main_item_r_2" src="{{picUrl}}{{item.pic}}" >
+              </image>
+            </navigator>
+          </block>
+        </view>
+      </block>
+    </view>
+    <!-- 企业资讯 -->
+    <view class="enterpris_info">
+      <view class="enterpris_info_tit">
+      企业资讯
+      </view>
+      <block wx:if="{{1==1}}">
+        <view class="enterpris_info_main">
+          <view class="enterpris_info_main_item" wx:for="{{EnterpriseInfo}}" wx:key="{{item.id}}">
+            <view class="enterpris_info_main_item_l">
+              <view class="enterpris_info_main_item_l_t">{{item.title}}</view>
+              <view class="enterpris_info_main_item_l_b">{{item.addtime}}</view>
+            </view>
+            <image class="enterpris_info_main_item_r" src="{{picUrl}}{{item.pic}}">
+            </image>
+          </view>
+        </view>
+      </block>
+    </view>
+      <!-- 商品样式1 -->
+      <!-- <view class='product_1'>
+         <view class='list'>
+            <image class='list_img' src="https://www.shangzhanyun.com/Public/Uploads/companypics/20190127/5c4d9aa70c943.jpg"></image>
+            <text class='list_txt1'>Maria Runolfsson</text>
+            <text class='list_txt2'>买赠</text>
+            <view class='list_txt3'>
+               <view><text>￥</text><text>1800</text></view>
+               <text>￥3600</text>
+            </view>
+         </view>
+         <view class='list'>
+            <image class='list_img' src="https://www.shangzhanyun.com/Public/Uploads/companypics/20190127/5c4d9aa70c943.jpg"></image>
+            <text class='list_txt1'>Maria Runolfsson</text>
+            <text class='list_txt2'>买赠</text>
+            <view class='list_txt3'>
+               <view><text>￥</text><text>1800</text></view>
+               <text>￥3600</text>
+            </view>
+         </view>
+      </view> -->
+
+      <!-- 商品样式2 -->
+      <!-- <view class='list list_2'>
+         <image class='list_img' src="https://www.shangzhanyun.com/Public/Uploads/companypics/20190127/5c4d9aa70c943.jpg"></image>
+         <view class='list_r'>
+               <text class='list_txt1'>Maria Runolfsson</text>
+               <text class='list_txt2'>买赠</text>
+               <view class='list_txt3'>
+                  <view><text>￥</text><text>1800</text></view>
+                  <text>￥3600</text>
+               </view>
+         </view>
+      </view> -->
+
+      <!-- 商品样式3 -->
+      <!-- <view class='product_1'>
+         <view class='list list_3'>
+            <image class='list_img' src="https://www.shangzhanyun.com/Public/Uploads/companypics/20190127/5c4d9aa70c943.jpg"></image>
+            <view class='list_b'>
+               <view class='list_txt3'>
+                  <view><text>￥</text><text>1800</text></view>
+                  <text>￥3600</text>
+               </view>
+               <text class='list_txt1'>Maria Runolfsson</text>
+               <view class='list_txt_b'><text class='list_txt2'>买赠</text><text class='list_txt2'>明星款</text><text class='list_txt2'>包邮</text></view> 
+            </view>
+         </view>
+         <view class='list list_3'>
+            <image class='list_img' src="https://www.shangzhanyun.com/Public/Uploads/companypics/20190127/5c4d9aa70c943.jpg"></image>
+            <view class='list_b'>
+               <view class='list_txt3'>
+                  <view><text>￥</text><text>1800</text></view>
+                  <text>￥3600</text>
+               </view>
+               <text class='list_txt1'>Maria Runolfsson</text>
+               <view class='list_txt_b'><text class='list_txt2'>买赠</text><text class='list_txt2'>明星款</text><text class='list_txt2'>包邮</text></view> 
+            </view>
+         </view>
+      </view> -->
+
+      <!-- 商品样式4 -->
+      <!-- <view class='product_4'>
+         <image class='pro_img' src="https://www.shangzhanyun.com/Public/Uploads/companypics/20190127/5c4d9aa70c943.jpg" ></image>
+         <text class='pro_txt'>商栈名片企业版定制版企业发展必</text>
+         <view class='pro_bt'>
+            <text class='list_txt2'>买赠</text>
+            <view class='list_txt3'>
+               <text>￥3600</text>
+               <view><text>￥</text><text>1800</text></view>
+            </view>
+         </view>  
+      </view> -->
+    <!-- 联系我们 -->
+    <block wx:if="{{1==1}}">
+      <view class="contact_us">
+        <view class="contact_us_tit">
+          联系我们
+        </view>
+        <view class="contact_us_item">
+          <image class="contact_us_l" src="{{iconUrl}}/btn/detailedInfo_5.png">
+          </image>
+          <view class="contact_us_r">
+          {{ContactInfo.tel}}
+          </view>
+        </view>
+        <view class="contact_us_item">
+          <image class="contact_us_l" src="{{iconUrl}}/btn/detailedInfo_4.png">
+          </image>
+          <view class="contact_us_r">
+          {{ContactInfo.email}}
+          </view>
+        </view>
+        <view class="contact_us_item">
+          <image class="contact_us_l" src="{{iconUrl}}/btn/detailedInfo_3.png">
+          </image>
+          <view class="contact_us_r">
+          {{ContactInfo.web_name}}
+          </view>
+        </view>
+        <view class="contact_us_item">
+          <image class="contact_us_l" src="{{iconUrl}}/btn/detailedInfo_2.png">
+          </image>
+          <view class="contact_us_r">
+          {{ContactInfo.title}}
+          </view>
+        </view>
+        <view class="contact_us_item">
+          <image class="contact_us_l" src="{{iconUrl}}/btn/detailedInfo_1.png">
+          </image>
+          <view class="contact_us_r">
+          {{ContactInfo.address}}
+          </view>
+        </view>
+      </view>
+    </block>
+      <!-- 联系我们2 -->
+    <block wx:if="{{1==2}}">
+      <view class='relation_2'>
+        <view>
+          <text>电话:</text>
+          <text>17521581164</text>
+        </view>
+        <view>
+          <text>邮箱:</text>
+          <text>kaden.leffler@msn.com</text>
+        </view>
+        <view>
+          <text>微信:</text>
+          <text>www.shangzhanyun.com</text>
+        </view>
+        <view>
+          <text>公司:</text>
+          <text>上海胧月网络科技有限公司</text>
+        </view>
+        <view>
+          <text>地址:</text>
+          <text>上海市浦东新区东靖路</text>
+        </view>
+      </view>
+    </block>
+  </view>
+ </view>
+ 

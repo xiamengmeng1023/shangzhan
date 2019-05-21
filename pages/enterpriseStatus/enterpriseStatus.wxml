@@ -1,0 +1,51 @@
+
+
+<form bindsubmit="formSubmit">
+  <view class='bg pading-lr pading-ud m-t '>
+    <text class='font_f36 font_w'>企业版</text>
+  </view>
+  <radio-group bindchange="radioChange" name="radio" >
+    <view class='flex bg'>
+      <view class='pading-lr pading-ud border-bottom  a-items j-bet border m-d' wx:for="{{radio}}" wx:key='index'  data-id="{{index}}" catchtap='radioTap'>
+        <view class='t-center'>
+          <view class='f26-8c font_w font_c3 font_l50'>{{item.name}}</view>
+          <text class='font_c4' style='{{item.checked==true?"color:#008cd6":"color:#333333"}}'>￥<text class='font_f56 font_w m-r'>{{item.price}}</text></text>
+          <text class='f26-8c t-d'>￥{{item.oldPrice}}</text>
+          <radio checked='{{item.checked}}' value='{{index}}' color='#008cd6' class='radio'></radio>
+        </view>
+      </view>
+    </view>
+  </radio-group>
+  <view class='bg pading-lr pading-ud m-t g_b_d'>
+    <text class='font_f36 font_w'>支付方式</text>
+  </view>
+  <view class='bg pading-lr pading-ud m-d flex a-items j-bet'>
+    <view>
+      <image src='{{picUrl}}/Style/images/applets/assets/v3_my_wx.png' class='wx-logo m-r'></image>
+      <text class='f30-44 font_c3'>微信支付</text>
+    </view>
+    <checkbox checked='true' disabled='true'></checkbox>
+  </view>
+
+  <view class='bg pading-lr pading-ud m-t g_b_d'>
+    <text class='font_f36 font_w'>尊贵特权</text>
+  </view>
+  <view class='pading-lr bg flex a-items f-wrap prerogative-box'>
+    <block wx:if="{{type==0}}">
+      <view wx:for="{{setMealList}}" wx:for-item="items" class='setMealList' wx:key='index'>
+        <image src='{{items.image}}' class='{{items.listName}}'></image>
+        <text class='t-block f26-8c'>{{items.setMealName}}</text>
+      </view>
+    </block>
+    <block wx:if="{{type==1}}">
+      <view wx:for="{{setMealListTo}}" wx:for-item="items" class='setMealList' wx:key='index'>
+        <image src='{{items.image}}' class='{{items.listName}}'></image>
+        <text class='t-block f26-8c'>{{items.setMealName}}</text>
+      </view>
+    </block>
+  </view>
+
+  <view class='btn_box'>
+    <button class='f30-ff' disabled='{{IsSub}}' form-type='submit'>申请企业码</button>
+  </view>
+</form>

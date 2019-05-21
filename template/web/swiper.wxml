@@ -1,0 +1,18 @@
+<template name="swiper">
+<!-- 横屏滚动 -->
+  <block wx:if="{{cateid == 9}}">
+    <swiper class='swiper-box' indicator-dots="true" indicator-active-color="#ffffff" autoplay="true" interval="2500" circular="true">
+      <swiper-item wx:for="{{datacon}}" wx:key="index">
+        <image src="{{picUrl}}{{item.pic}}"></image>
+      </swiper-item>
+    </swiper>
+  </block>
+  <!-- 竖屏滚动 -->
+  <block wx:elif="{{cateid == 40}}">
+    <swiper class='swiper-box' indicator-dots="true" indicator-active-color="#ffffff" autoplay="true" interval="2500" circular="true" vertical="true">
+      <swiper-item wx:for="{{datacon}}" wx:key="index">
+        <image src="{{picUrl}}{{item.pic}}"></image>
+      </swiper-item>
+    </swiper>
+  </block>
+</template>

@@ -1,0 +1,16 @@
+<view class="Personal_image">
+
+  <view class="Personal_image_tit">添加个人图片</view>
+  <view class="Personal_image_box">
+    <view class="Personal_image_box_item" wx:for="{{imgUrl}}" wx:key="{{index}}">
+      <image src='{{picUrl}}{{item}}' catchlongtap='delShow'></image>
+      <view class='remore-box'  catchtap='delModel'  wx:if="{{isShow}}" data-url="{{item}}" >
+        <image src='{{picUrl}}/Style/images/applets/img/shanchu.png'></image>
+      </view>
+    </view>
+    <view class="Personal_image_addbtn" catchtap='imgLoad'>
+      <view class="one"></view>
+      <view class="two"></view>
+    </view>
+  </view>
+</view>

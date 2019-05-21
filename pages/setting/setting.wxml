@@ -1,0 +1,90 @@
+
+<view class="place"></view>
+<view class="mainbox">
+
+  <!-- 实名认证状态 -->
+
+  
+  <block  wx:if="{{isRealName}}" >
+    <navigator  class="item" url='/pages/realNameAuthentication/realNameAuthentication'>
+      <view class='itemLeft'>
+        实名认证
+      </view>
+      <view class='itemRight'>
+        <image src="{{iconUrl}}/imgs/my-arrowRight.png" />
+      </view>
+    </navigator>
+  </block>
+
+  <block  wx:else>
+    <navigator  class="item" url='/pages/realNamereSult/realNamereSult'>
+      <view class='itemLeft'>
+        实名认证
+      </view>
+      <view class='itemRight'>
+        <image src="{{iconUrl}}/imgs/my-arrowRight.png" />
+      </view>
+    </navigator>
+  </block>
+
+
+  <navigator class="item" url='/pages/bindPhone/bindPhone?phone={{phoneNum}}'>
+    <view class="itemLeft">
+      手机绑定
+    </view>
+    <view class='itemRight'>
+      <image src="{{iconUrl}}/imgs/my-arrowRight.png" />
+    </view>
+  </navigator>
+  <navigator class="item" url='/pages/Set_password/Set_password?is_password={{is_password}}&phone={{phoneNum}}'>
+    <view class='itemLeft'>
+      支付密码
+    </view>
+    <view class='itemRight'>
+      <image src="{{iconUrl}}/imgs/my-arrowRight.png" />
+    </view>
+  </navigator>
+  <navigator class="item" url='/pages/receiptAddress/receiptAddress'>
+      <view class='itemLeft'>
+      收货地址
+      </view>
+      <view class='itemRight'>
+        <image src="{{iconUrl}}/imgs/my-arrowRight.png" />
+      </view>
+  </navigator>
+  <navigator class="item" url='/pages/customer_service/customer_service'>
+    <view class='itemLeft'>
+    商栈客服
+    </view>
+    <view class='itemRight'>
+      <image src="{{iconUrl}}/imgs/my-arrowRight.png" />
+    </view>
+  </navigator>
+  <navigator class="item" url='/pages/Version/Version'>
+    <view class='itemLeft'>
+    版本介绍
+    </view>
+    <view class='itemRight'>
+      <image src="{{iconUrl}}/imgs/my-arrowRight.png" />
+    </view>
+  </navigator>
+  <navigator class="item" url='/pages/about/about'>
+      <view class='itemLeft'>
+      关于我们
+      </view>
+      <view class='itemRight'>
+        <image src="{{iconUrl}}/imgs/my-arrowRight.png" />
+      </view>
+  </navigator>
+
+   <!-- <view class='item' wx:for='{{list}}' catchtap='go' wx:key="" data-index='{{index}}'>
+    <view class='itemLeft'>
+        {{item.name}}
+      </view>
+      <view class='itemRight'>
+        <image src="{{iconUrl}}/imgs/my-arrowRight.png" />
+      </view>
+    </view> -->
+</view>
+
+

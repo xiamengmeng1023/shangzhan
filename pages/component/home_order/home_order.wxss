@@ -1,0 +1,101 @@
+.order {
+  margin-bottom: 50rpx;
+  margin: 0 30rpx;
+}
+.order .order_head {
+  margin-bottom: 45rpx;
+}
+.order .order_head .order_icon {
+  width: 30rpx;
+  height: 30rpx;
+  margin-right: 20rpx;
+  margin-bottom: -4rpx;
+}
+.order .order_head .order_text {
+  font-size: 30rpx;
+  font-weight: 700;
+  display: inline-block;
+}
+.order .order_head .order_text1 {
+  font-size: 30rpx;
+}
+.order .order_head .order_text2 {
+  font-weight: 500;
+  color: #999999;
+  letter-spacing: 2rpx;
+}
+.order .order_head .arrow {
+  height: 21rpx;
+  width: 12rpx;
+  float: right;
+  margin-top: 10rpx;
+}
+.order .order_footer {
+  padding: 35rpx 20rpx;
+  display: flex;
+  border-radius: 5rpx;
+  box-shadow: #e7e7e7 0rpx 7rpx 20rpx;
+  margin-bottom: 50rpx;
+}
+.order .order_footer .order_footer_l {
+  width: 690rpx;
+}
+.order .order_footer .order_footer_l .order_footer_l_t {
+  margin-bottom: 25rpx;
+  font-size: 24rpx;
+}
+.order .order_footer .order_footer_l .order_footer_l_b {
+  display: flex;
+}
+.order .order_footer .order_footer_l .order_footer_l_b .order_footer_l_b_img {
+  width: 130rpx;
+  height: 130rpx;
+  border-radius: 7rpx;
+  margin-right: 20rpx;
+}
+.order .order_footer .order_footer_l .order_footer_l_b .order_footer_l_b_info {
+  margin-top: 10rpx;
+}
+.order .order_footer .order_footer_l .order_footer_l_b .order_footer_l_b_info text {
+  display: block;
+}
+.order .order_footer .order_footer_l .order_footer_l_b .order_footer_l_b_info text:nth-child(1) {
+  font-size: 26rpx;
+  font-weight: 700;
+  margin-bottom: 15rpx;
+}
+.order .order_footer .order_footer_l .order_footer_l_b .order_footer_l_b_info text:nth-child(2) {
+  font-size: 24rpx;
+  font-weight: 500;
+  margin-bottom: 15rpx;
+}
+.order .order_footer .order_footer_l .order_footer_l_b .order_footer_l_b_info text:nth-child(3) {
+  font-size: 24rpx;
+  color: #cecece;
+}
+.order .order_footer .order_footer_r {
+  margin-top: 10rpx;
+}
+.order .order_footer .order_footer_r .order_footer_r_flex {
+  display: flex;
+  align-items: baseline;
+}
+.order .order_footer .order_footer_r .order_footer_r_flex view {
+  display: inline-block;
+}
+.order .order_footer .order_footer_r .order_footer_r_flex view:nth-child(1) {
+  color: #fc4a40;
+  font-size: 24rpx;
+  margin-right: 10rpx;
+}
+.order .order_footer .order_footer_r .order_footer_r_flex view:nth-child(2) {
+  color: #fc4a40;
+  font-size: 48rpx;
+  margin-bottom: 27rpx;
+}
+.order .order_footer .order_footer_r .order_footer_r_num {
+  font-size: 24rpx;
+  text-align: right;
+  color: #999999;
+  float: right;
+}

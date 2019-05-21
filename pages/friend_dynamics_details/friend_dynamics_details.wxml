@@ -1,0 +1,45 @@
+<view class="newsDetails_main">
+  <view class="newsDetails_top">
+    <view class="newsDetails_top_l">
+      <view class="newsDetails_top_img">
+        <image src="{{dynamic.friend_avatar_url}}" ></image>
+      </view>
+      <view class="newsDetails_top_name">{{dynamic.friend_name}}</view>
+      <view class="newsDetails_top_job">{{dynamic.job}}</view>
+    </view>
+    <view class="newsDetails_top_r">{{addtime}}</view>
+  </view>
+
+
+  <view class="newsDetails_main_tit">{{dynamic.content}}</view>
+  <image class="newsDetails_main_img" mode="widthFix" src="{{picUrl}}{{dynamic.pic}}"></image>
+  <!-- <view class="newsDetails_main_text">
+  {{dynamic.content}}
+  </view> -->
+  <!-- 点赞 -->
+  <view class="giveTheThumbsUp">
+    <view class="giveTheThumbsUp_one">
+      被赞{{dynamic.hits}}次
+    </view>
+    <block wx:if="{{dynamic.addlike_status==1?true:false}}">
+      <view class="giveTheThumbsUp_two"  catchtap="onClickImage" data-id="{{dynamic.id}}" data-type="2">
+        <image src="{{iconUrl}}btn/dianzan1.png"  style="{{style_img}}" ></image>
+      </view>
+    </block>
+    <block wx:else>
+    <view class="giveTheThumbsUp_two"  catchtap="onClickImage" data-id="{{dynamic.id}}" data-type="1">
+      <image src="{{iconUrl}}/btn/find_search_zan.png" class="bt-img"></image>
+    </view>
+    </block>
+  </view>
+  <view class="giveTheThumbsUp_list">
+    <image class="giveTheThumbsUp_list_one" src="{{iconUrl}}/btn/find_search_zanlist.png">
+    </image>
+    <block wx:if="{{likeList.length>0}}" wx:for="{{likeList}}" wx:key="{{index}}">
+      <view class="giveTheThumbsUp_list_two">{{item}}</view>
+    </block>
+  </view>
+</view>
+<!-- 分享按钮 -->
+<image class="share_btn_img" src="{{iconUrl}}/btn/Suspension_sharing.png">
+</image>

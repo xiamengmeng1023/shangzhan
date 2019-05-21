@@ -1,0 +1,20 @@
+<!--pages/redPacketRecord/redPacketRecord.wxml-->
+<view class="place"></view>
+<view class="redPacketRecord">
+   <view class="redPacketRecord_box">
+      <view class="redPacketRecord_box_item" wx:for="{{list_data}}" wx:for-index="index" wx:for-item="item" wx:key="index">
+         <view class="redPacketRecord_box_item_l">
+            <view class="redPacketRecord_box_item_l_t">
+               <view class="redPacketRecord_box_item_l_t_one">来自于</view>
+               <view class="redPacketRecord_box_item_l_t_two">{{item.rec_member}}</view>
+            </view>
+            <view class="redPacketRecord_box_item_l_b">
+               <view class="redPacketRecord_box_item_l_b_one">{{item.cash_back_time}}</view>
+               <!-- <view class="redPacketRecord_box_item_l_b_two">20:19</view> -->
+            </view>
+         </view>
+         <view class="redPacketRecord_box_item_r">￥{{item.cash_fee}}</view>
+      </view>
+   </view>
+</view>
+

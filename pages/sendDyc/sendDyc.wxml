@@ -1,0 +1,22 @@
+<!--pages/sendDyc/sendDyc.wxml-->
+<form bindsubmit='formSubmit'>
+  <view  class="sendDyc_mian">
+    <view  class="sendDyc_top">
+      <textarea name="textarea"  placeholder-class="placecolor"  placeholder="请写下你这一刻的想法…">
+      </textarea>
+      <view class="flex">
+        <block wx:if="{{imgList.length > 0}}" wx:for="{{imgList}}">
+          <view class="Personal_image_addbtn" catchtap='add'>
+            <image src='{{item}}' ></image>
+          </view>
+        </block>
+        <view class="Personal_image_addbtn" catchtap='add'>
+          <view class="one"></view>
+          <view class="two"></view>
+        </view>
+      </view>
+    </view>
+    <!-- <view class="ok_btn">立即发布</view> -->
+    <button form-type='submit'  class="ok_btn">立即发布</button>
+  </view>
+</form>

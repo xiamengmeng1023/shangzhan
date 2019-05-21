@@ -1,0 +1,24 @@
+
+<view class="wallet_d">
+   <view class='minimum'>每笔最低提现金额￥5元</view>
+   <view class='cash_my'>
+      <text>提现金额</text>
+      <view class='input'>
+         <text>￥</text>
+         <input type='number' placeholder='0.00' bindinput='withdraw_num' value="{{brokerage}}" />
+      </view>
+   </view>
+   <view class='all_cash'>
+      <text>零钱余额￥{{balance}},</text>
+      <text catchtap="alltx" >全部提现</text>
+   </view>
+   <view  class='submit' catchtap='apply_cash'>申请提现</view>
+   <view class='hint'>申请提现后24h内，我们将以微信红包的方式发放，请注意查收您的微信零钱账户</view>
+</view>
+
+
+
+
+
+
+

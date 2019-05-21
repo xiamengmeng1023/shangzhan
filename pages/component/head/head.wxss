@@ -1,0 +1,26 @@
+.main_head {
+  margin: 0 auto;
+  margin-top: 65rpx;
+  margin-bottom: 65rpx;
+  width: 690rpx;
+  position: relative;
+}
+.main_head .backbtn {
+  width: 18rpx;
+  height: 34rpx;
+  position: absolute;
+  top: 3rpx;
+}
+.main_head .homebtn {
+  width: 36rpx;
+  height: 35rpx;
+  position: absolute;
+  top: 3rpx;
+  left: 100rpx;
+}
+.main_head .main_tit {
+  height: 35rpx;
+  line-height: 1;
+  font-size: 36rpx;
+  text-align: center;
+}

@@ -1,0 +1,35 @@
+<!-- 客服 -->
+<view class="customer_service">
+  <view class="customer_service_one">
+  服务时间
+  </view>
+  <view class="customer_service_two">
+  工作日内早上09:00-下午18:00
+  </view>
+  <view class="customer_service_three" catchtap="callTap">
+  021-400-8888
+  </view>
+  <view class="customer_service_five" >
+  点击号码可进行拨号
+  </view>
+   <view class="customer_service_four" catchtap="ml_clickCall">
+  在线咨询
+  </view>
+</view>
+
+<!-- 客服拨打弹窗 -->
+
+
+  <!-- 遮罩 -->
+  <view class="card_details_mask" hidden="{{isMaskShow}}"  catchtap="ml_closeMask" ></view>
+  <!-- 拨打电话 -->
+  <view class="card_details_popup" hidden="{{isMaskShow}}" >
+    <image class="card_details_mask_close" src="{{iconUrl}}/btn/mask_close.png" catchtap="ml_closeMask" ></image>
+    <view class="card_details_popup_one">正在联系</view>
+    <view class="card_details_popup_two">商栈客服</view>
+    <view class="card_details_popup_three">175 2158 116</view>
+    <view class="card_details_popup_four"  catchtap="callTap">
+    呼叫
+    </view>
+ 
+  </view>

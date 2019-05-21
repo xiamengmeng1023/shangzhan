@@ -1,0 +1,422 @@
+{
+	"description": "项目配置文件",
+	"packOptions": {
+		"ignore": []
+	},
+	"setting": {
+		"urlCheck": false,
+		"es6": true,
+		"postcss": true,
+		"minified": true,
+		"newFeature": true,
+		"autoAudits": false
+	},
+	"compileType": "miniprogram",
+	"libVersion": "2.6.4",
+	"appid": "wx5550cef350778b61",
+	"projectname": "%E5%95%86%E6%A0%88%E4%BA%91%E5%90%8D%E7%89%87",
+	"debugOptions": {
+		"hidedInDevtools": []
+	},
+	"isGameTourist": false,
+	"condition": {
+		"search": {
+			"current": -1,
+			"list": []
+		},
+		"conversation": {
+			"current": -1,
+			"list": []
+		},
+		"plugin": {
+			"current": -1,
+			"list": []
+		},
+		"game": {
+			"currentL": -1,
+			"list": []
+		},
+		"miniprogram": {
+			"current": 53,
+			"list": [
+				{
+					"id": -1,
+					"name": "search",
+					"pathName": "pages/search/search",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "card",
+					"pathName": "pages/mine/mine",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "card111",
+					"pathName": "pages/aboutUs/aboutUs",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": 3,
+					"name": "56",
+					"pathName": "pages/mine/mine",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "111111",
+					"pathName": "pages/card/card",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "222",
+					"pathName": "pages/mine/mine",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "555",
+					"pathName": "pages/card/card",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "111",
+					"pathName": "pages/realNameAuthentication/realNameAuthentication",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "77777777",
+					"pathName": "pages/bindPhone/bindPhone",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "888",
+					"pathName": "pages/Set_password/Set_password",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "999",
+					"pathName": "pages/home/home",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "999",
+					"pathName": "pages/mine/mine",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "11111111",
+					"pathName": "pages/find/find",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "1222",
+					"pathName": "pages/sendDyc/sendDyc",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "1222",
+					"pathName": "pages/search/search",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "3123",
+					"pathName": "pages/friend_dynamics/friend_dynamics",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "22222",
+					"pathName": "pages/find/find",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "22222",
+					"pathName": "pages/newsCenter/newsCenter",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "22222",
+					"pathName": "pages/newsCenter/newsCenter",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "22222",
+					"pathName": "pages/friend_dynamics/friend_dynamics",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "22222",
+					"pathName": "pages/find/find",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "22222",
+					"pathName": "pages/search/search",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "6",
+					"pathName": "pages/find/find",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "6",
+					"pathName": "pages/newsDetails/newsDetails",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "6",
+					"pathName": "pages/employ/employ",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "515",
+					"pathName": "pages/card/card",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "555",
+					"pathName": "pages/ChatWindow/ChatWindow",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "55555",
+					"pathName": "pages/card/card",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "55555",
+					"pathName": "pages/component/home_order/home_order",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "55555",
+					"pathName": "pages/home/home",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": 30,
+					"name": "55555",
+					"pathName": "pages/obligation/obligation",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "555551",
+					"pathName": "pages/ticketBag/ticketBag",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "55555166",
+					"pathName": "pages/wallet/wallet",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "555",
+					"pathName": "pages/newsCenter/newsCenter",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "555",
+					"pathName": "pages/card/card",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "55511",
+					"pathName": "pages/setting/setting",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "1111111111",
+					"pathName": "pages/mine/mine",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "11111111",
+					"pathName": "pages/company_details/company_details",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "11111111",
+					"pathName": "pages/myIdentity/myIdentity",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "23",
+					"pathName": "pages/wallet/wallet",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "22222222",
+					"pathName": "pages/goods_details/goods_details",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "111111111111",
+					"pathName": "pages/BusinessCardsMX/BusinessCardsMX",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "111111111111",
+					"pathName": "pages/basicInfo/basicInfo",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "555",
+					"pathName": "pages/bind_end/bind_end",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "555",
+					"pathName": "pages/official_web/official_web",
+					"query": "token=1954&card_id:1785&app_id:wx5550cef350778b61",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "555111111",
+					"pathName": "pages/realNameAuthentication/realNameAuthentication",
+					"query": "token=1954&card_id:1785&app_id:wx5550cef350778b61",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "13123123",
+					"pathName": "pages/setting/setting",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "11111",
+					"pathName": "pages/card/card",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "111111111111111111",
+					"pathName": "pages/newAddress/newAddress",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "11111111111111111111111",
+					"pathName": "pages/card/card",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "11111111111111",
+					"pathName": "pages/newsCenter/newsCenter",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "11111111111111123",
+					"pathName": "pages/myIdentity/myIdentity",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "11111111",
+					"pathName": "pages/mine/mine",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "11111111",
+					"pathName": "pages/billboard/billboard",
+					"scene": null
+				}
+			]
+		}
+	}
+}

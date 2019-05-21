@@ -1,0 +1,60 @@
+<view class="place"></view>
+
+
+<block>
+  <form  bindsubmit="formSubmit">
+    <view class="realNameAuthentication">
+      <view class="realNameAuthentication_main">
+        <view class="realNameAuthentication_main_item">
+          <view class="tit">真实姓名</view>
+          <input  name="rname" placeholder='请填写身份证姓名' value="{{rname}}"/>
+        </view>
+        <view class="realNameAuthentication_main_item">
+        <view class="tit">手机+86</view>
+          <input  placeholder='请填写手机号码' maxlength='11' type="number"  name="phone" value='{{phone}}' bindinput="bindinput" bindblur="blurTel"/>
+          <view class="getCode"  catchtap='getCode' disabled='{{disabled}}'>{{verifyCode}}</view>
+        </view>
+        <view class="realNameAuthentication_main_item">
+          <view class="tit">输入验证码</view>
+          <input  placeholder='' type="number" name="code"/>
+        </view>
+        <view class="realNameAuthentication_main_item">
+          <view class="tit">身份证号</view>
+          <input  placeholder='请填写身份证号码' type="idcard" name="rCode" value='{{rCode}}'/>
+        </view>
+        <!-- <view class="realNameAuthentication_main_item">
+          <view class="tit">有效期限</view>
+          <input type="text"  placeholder="如：2019/01/01" />
+        </view> -->
+        <!-- 身份证 -->
+        <view class="idCard" >
+          <view class="idCard_item" catchtap='idcardfrontpic'>
+           <!-- wx:if="{{Isfront==0}}" -->
+            <view class="UploadIdImg">
+              <image src='{{front}}'></image>
+            </view>
+          </view>
+          <view class="idCard_item" catchtap='idcardbackpic'>
+            <!-- <view wx:if="{{Isreverse==0}}" class="tempImg" >
+              <image src='{{iconUrl}}btn/idcard.png'></image>
+            </view> -->
+            <view class="UploadIdImg" >
+              <image src="{{reverse}}" ></image>
+            </view>
+          </view>
+          
+          </view>
+        <view class="idCard_item_tit">
+          <view class="idCard_item_tit_item">身份证正面</view>
+          <view class="idCard_item_tit_item">身份证反面</view>
+        </view>
+        <checkbox-group bindchange="checkboxChange" class="agreement">
+          <checkbox checked='{{checked}}'></checkbox>
+          <view class="agreement_bottom" >我已阅读并同意 <text class="agreement_bottom_r" >《服务协议》</text></view>
+        </checkbox-group>
+        <!-- 提交 -->
+        <button class="submit" form-type='submit'>提交</button>
+      </view>
+    </view>
+  </form>
+</block>

@@ -1,0 +1,24 @@
+<import src="../../wxParse/wxParse.wxml"/>
+<view class='bg f-box'>
+  <view class='t-box'>
+    <view class='f34-28 m-d'>
+      <text>{{news.title}}</text>
+    </view>
+    <view class='f26-8c m-d'>
+      <text>{{news.addtime}}</text>
+    </view>
+    <view class='f28-44'>
+      <image src='{{news.pic}}' mode="widthFix"></image>
+    </view>
+    <view class='f30-28 m-d wxParse-box'>
+      <!-- <text>{{news.content}}</text> -->
+      <template is="wxParse" data="{{wxParseData:summary.nodes}}"/> 
+    </view>
+  </view>
+</view>
+
+<import src="/template/complainBox/complain.wxml" />
+  <view class='pading-lr m-t'>
+    <template is="complain"></template>
+  </view>
+<component-tag-name obj="{{news}}"></component-tag-name>

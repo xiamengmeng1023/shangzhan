@@ -1,0 +1,842 @@
+::-webkit-scrollbar {
+  width: 0;
+  height: 0;
+  color: transparent;
+}
+
+page {
+  height: 100%;
+  width: 100%;
+  background-color: #F5F5F5;
+}
+
+.card_main {
+  margin: 0 auto;
+}
+
+.card_main .card_main_head {
+  height: 50rpx;
+  width: 100%;
+  position: fixed;
+  top: 0rpx;
+  left: 0rpx;
+  display: flex;
+  flex-wrap: nowrap;
+  justify-content: space-around;
+  align-items: center;
+  margin-bottom: 20rpx;
+  padding: 25rpx 30rpx;
+  padding-left: 120rpx;
+  padding-right: 120rpx;
+  background-color: #fff;
+  z-index: 50;
+}
+
+.card_main .card_main_head .card_main_head_search_mainbox {
+  height: 75rpx;
+  width: 150rpx;
+  position: fixed;
+  top: 15rpx;
+  left: 15rpx;
+  z-index: 99;
+  line-height: 80rpx;
+  background-color: #fff;
+  margin-top: 7rpx
+}
+
+.card_main .card_main_head .card_main_head_search_mainbox .card_main_head_search {
+  background-color: #f5f5f5;
+  width: 120rpx;
+  height: 60rpx;
+  line-height: 60rpx;
+  border-radius: 30rpx;
+
+}
+
+.card_main .card_main_head .card_main_head_search_mainbox .card_main_head_search .card_main_head_search_btn {
+  width: 25rpx;
+  height: 25rpx;
+  margin-left: 20rpx;
+  position: relative;
+  top: -3rpx;
+}
+
+.card_main .card_main_head .card_main_head_search_mainbox .card_main_head_search .card_main_head_search_text {
+  display: inline-block;
+  margin-left: 10rpx;
+  font-size: 24rpx;
+  position: relative;
+  bottom: 7rpx;
+  color: #cccccc;
+}
+
+.card_main .card_main_head .classification {
+  display: flex;
+  justify-content: flex-start;
+  flex-wrap: nowrap;
+  align-items: center;
+  white-space: nowrap;
+}
+
+.card_main .card_main_head .classification .eventSegment {
+  font-size: 24rpx;
+  color: #9c9c9c;
+  height: 50rpx;
+  line-height: 50rpx;
+  text-align: center;
+  padding: 0 30rpx;
+  border-radius: 25rpx;
+  margin-right: 10rpx;
+  display: inline-block;
+}
+
+.card_main .card_main_head .classification .eventSegment:first-child {
+  margin-left: 50rpx;
+}
+
+.card_main .card_main_head .classification .eventSegment:last-child {
+  margin-right: 200rpx;
+}
+
+.card_main .card_main_head .classification .activ {
+  background-color: #3190fe !important;
+  color: #fff;
+}
+
+.card_main .down_btn {
+  width: 70rpx;
+  height: 70rpx;
+  position: fixed;
+  top: 25rpx;
+  right: 0rpx;
+  margin: 0 auto;
+  text-align: center;
+  z-index: 999;
+  background-color: #fff;
+}
+
+.card_main .down_btn image {
+  width: 24rpx;
+  height: 14rpx;
+  margin-bottom: 5rpx;
+}
+
+.card_main .zhanwei {
+  height: 130rpx;
+  width: 750rpx;
+  line-height: 130rpx;
+  font-size: 24rpx;
+  color: #999;
+  text-align: center;
+  background-color: #F5F5F5;
+}
+
+.card_main .home_selfCard_1 {
+  overflow: auto;
+  text-align: left;
+  width: 690rpx;
+  margin: 0 auto;
+  background-color: #fff;
+  margin-bottom: 30rpx;
+  border-radius: 5rpx;
+  padding: 35rpx 0;
+  position: relative;
+  box-shadow: #e7e7e7 0rpx 7rpx 30rpx;
+}
+
+.card_main .home_selfCard_1 .home_selfCard_one {
+  padding: 0 20rpx;
+  height: 100rpx;
+  margin-bottom: 45rpx;
+}
+
+.card_main .home_selfCard_1 .home_selfCard_one .home_selfCard_one_l {
+  width: 100rpx;
+  height: 100rpx;
+  float: left;
+  border-radius: 50%;
+  margin-right: 20rpx;
+}
+
+.card_main .home_selfCard_1 .home_selfCard_one .home_selfCard_one_r {
+  float: left;
+  text-align: left;
+}
+
+.card_main .home_selfCard_1 .home_selfCard_one .home_selfCard_one_r .home_selfCard_one_r_t {
+  font-size: 35rpx;
+  margin-bottom: 15rpx;
+}
+
+.card_main .home_selfCard_1 .home_selfCard_one .home_selfCard_one_r .home_selfCard_one_r_t .home_selfCard_one_r_t_name {
+  font-size: 48rpx;
+}
+
+.card_main .home_selfCard_1 .home_selfCard_one .home_selfCard_one_r .home_selfCard_one_r_t .home_selfCard_icon {
+  margin-left: 12rpx;
+  height: 32rpx;
+  width: 40rpx;
+}
+
+.card_main .home_selfCard_1 .home_selfCard_one .home_selfCard_one_r .home_selfCard_one_r_b {
+  height: 25rpx;
+  line-height: 1;
+  color: #999;
+  font-size: 30rpx;
+}
+
+.card_main .home_selfCard_1 .home_selfCard_two {
+  padding: 0 20rpx;
+  margin-bottom: 35rpx;
+  display: flex;
+  align-items: center;
+}
+
+.card_main .home_selfCard_1 .home_selfCard_two .company_name {
+  font-weight: 700;
+  font-size: 28rpx;
+}
+
+.card_main .home_selfCard_1 .home_selfCard_two .address_icon {
+  width: 21rpx;
+  height: 24rpx;
+  margin-left: 15rpx;
+}
+
+.card_main .home_selfCard_1 .home_selfCard_two .home_selfCard_two_img {
+  height: 65rpx;
+  width: 65rpx;
+  background-color: #fff;
+  border-radius: 50%;
+  margin-right: 13rpx;
+}
+
+.card_main .home_selfCard_1 .home_selfCard_three {
+  padding: 0 20rpx;
+  height: 24rpx;
+  line-height: 1;
+  font-size: 20rpx;
+  display: flex;
+  align-items: center;
+  margin-bottom: 30rpx;
+}
+
+.card_main .home_selfCard_1 .home_selfCard_three .phone_icon {
+  width: 24rpx;
+  height: 24rpx;
+  margin-right: 15rpx;
+}
+
+.card_main .home_selfCard_1 .home_selfCard_three .mail_address,
+.card_main .home_selfCard_1 .home_selfCard_three .phone_num {
+  font-size: 24rpx;
+  color: #999;
+  margin-right: 50rpx;
+}
+
+.card_main .home_selfCard_1 .home_selfCard_four {
+  padding: 0 20rpx;
+  height: 24rpx;
+  line-height: 1;
+  display: flex;
+}
+
+.card_main .home_selfCard_1 .home_selfCard_four .mail_icon {
+  width: 24rpx;
+  height: 19rpx;
+  margin-right: 15rpx;
+}
+
+.card_main .home_selfCard_1 .home_selfCard_four .mail_address {
+  font-size: 20rpx;
+  color: #999;
+  margin-right: 50rpx;
+}
+
+.card_main .home_selfCard_1 .erweima {
+  width: 34rpx;
+  height: 34rpx;
+  position: absolute;
+  top: 50rpx;
+  right: 50rpx;
+}
+
+.card_main .home_selfCard_1 .ellipsis {
+  position: absolute;
+  width: 36rpx;
+  height: 12rpx;
+  bottom: 20rpx;
+  right: 50rpx;
+}
+
+.card_main .home_selfCard_1 .company_logo {
+  background-color: #fff;
+  width: 80rpx;
+  height: 80rpx;
+  position: absolute;
+  border-radius: 50%;
+  bottom: 0rpx;
+  top: 0rpx;
+}
+
+.card_main .home_selfCard_2 {
+  overflow: auto;
+  text-align: left;
+  width: 690rpx;
+  background-color: #fff;
+  border-radius: 5rpx;
+  padding: 35rpx 0;
+  margin: 0 auto;
+  margin-bottom: 30rpx;
+  position: relative;
+  box-shadow: #e7e7e7 0rpx 7rpx 30rpx;
+}
+
+.card_main .home_selfCard_2 .home_selfCard_one {
+  padding: 0 20rpx;
+  height: 100rpx;
+  margin-bottom: 40rpx;
+}
+
+.card_main .home_selfCard_2 .home_selfCard_one .home_selfCard_one_l {
+  width: 100rpx;
+  height: 100rpx;
+  float: left;
+  border-radius: 50%;
+  margin-right: 20rpx;
+}
+
+.card_main .home_selfCard_2 .home_selfCard_one .home_selfCard_one_r {
+  float: left;
+  text-align: left;
+}
+
+.card_main .home_selfCard_2 .home_selfCard_one .home_selfCard_one_r .home_selfCard_one_r_t {
+  font-size: 35rpx;
+  margin-bottom: 15rpx;
+}
+
+.card_main .home_selfCard_2 .home_selfCard_one .home_selfCard_one_r .home_selfCard_one_r_t .home_selfCard_one_r_t_name {
+  font-size: 48rpx;
+}
+
+.card_main .home_selfCard_2 .home_selfCard_one .home_selfCard_one_r .home_selfCard_one_r_t .home_selfCard_icon {
+  margin-left: 12rpx;
+  height: 32rpx;
+  width: 40rpx;
+}
+
+.card_main .home_selfCard_2 .home_selfCard_one .home_selfCard_one_r .home_selfCard_one_r_b {
+  height: 30rpx;
+  line-height: 1;
+  color: #999;
+  font-size: 30rpx;
+}
+
+.card_main .home_selfCard_2 .home_selfCard_two {
+  padding: 0 20rpx;
+  margin-bottom: 45rpx;
+  display: flex;
+  justify-content: space-between;
+}
+
+.card_main .home_selfCard_2 .home_selfCard_two .home_selfCard_two_l .company_name {
+  font-weight: 700;
+  font-size: 28rpx;
+}
+
+.card_main .home_selfCard_2 .home_selfCard_two .home_selfCard_two_l .address_icon {
+  width: 21rpx;
+  height: 24rpx;
+  margin-left: 15rpx;
+}
+
+.card_main .home_selfCard_2 .home_selfCard_two .home_selfCard_two_r .home_selfCard_two_img {
+  width: 80rpx;
+  height: 80rpx;
+}
+
+.card_main .home_selfCard_2 .home_selfCard_three {
+  padding: 0 20rpx;
+  height: 24rpx;
+  line-height: 1;
+  font-size: 24rpx;
+  display: flex;
+  align-items: center;
+}
+
+.card_main .home_selfCard_2 .home_selfCard_three .phone_icon {
+  width: 24rpx;
+  height: 24rpx;
+  margin-right: 15rpx;
+}
+
+.card_main .home_selfCard_2 .home_selfCard_three .mail_address,
+.card_main .home_selfCard_2 .home_selfCard_three .phone_num {
+  font-size: 24rpx;
+  color: #999;
+  margin-right: 50rpx;
+}
+
+.card_main .home_selfCard_2 .home_selfCard_three .mail_icon {
+  width: 24rpx;
+  height: 19rpx;
+  margin-right: 15rpx;
+}
+
+.card_main .home_selfCard_2 .erweima {
+  width: 34rpx;
+  height: 34rpx;
+  position: absolute;
+  top: 30rpx;
+  right: 50rpx;
+}
+
+.card_main .home_selfCard_2 .ellipsis {
+  position: absolute;
+  width: 36rpx;
+  height: 12rpx;
+  bottom: 20rpx;
+  right: 55rpx;
+}
+
+.card_main .home_selfCard_2 .company_logo {
+  width: 80rpx;
+  height: 80rpx;
+  position: absolute;
+  border-radius: 50%;
+  top: 165rpx;
+  right: 70rpx;
+}
+
+.card_main .noneData {
+  margin: 0 auto;
+  width: 750rpx;
+  text-align: center;
+  background-color: #F5F5F5;
+}
+
+.card_main .noneData .noneData_img {
+  margin-top: 300rpx;
+}
+
+.card_main .noneData .noneData_img image {
+  width: 132rpx;
+  height: 100rpx;
+  margin-bottom: 30rpx;
+}
+
+.card_main .noneData .noneData_txt {
+  font-size: 24rpx;
+  color: #ccc;
+}
+
+.card_main .card_main_foot {
+  font-size: 24rpx;
+  text-align: center;
+  color: #999;
+  padding-top: 50rpx;
+  padding-bottom: 50rpx;
+}
+
+.mask {
+  height: 100%;
+  width: 750rpx;
+  background: rgba(0, 0, 0, 0.4);
+  opacity: 0.7;
+  position: fixed;
+  top: 0rpx;
+  z-index: 2;
+}
+
+.card_AddAndDelete {
+  width: 750rpx;
+  background-color: #fff;
+  position: fixed;
+  top: 0rpx;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 20;
+  box-sizing: border-box;
+  padding: 0 30rpx;
+  padding-bottom: 180rpx;
+  z-index: 999;
+}
+
+.card_AddAndDelete .card_AddAndDelete_tit {
+  margin-bottom: 80rpx;
+  font-size: 30rpx;
+  font-weight: 700;
+  padding-bottom: 3rpx;
+  border-bottom: 2rpx solid #f5f5f5;
+  letter-spacing: 2rpx;
+  position: relative;
+}
+
+.card_AddAndDelete .card_AddAndDelete_tit .showDelBtn {
+  position: absolute;
+  right: 10rpx;
+  top: 140rpx;
+  z-index: 99;
+  width: 29rpx;
+  height: 30rpx;
+}
+
+.card_AddAndDelete .card_AddAndDelete_tit .showDelBtn image {
+  width: 29rpx;
+  height: 30rpx;
+}
+
+.card_AddAndDelete .card_AddAndDelete_ipt {
+  font-size: 30rpx;
+  border-bottom: 1rpx solid #000;
+  margin-bottom: 70rpx;
+}
+
+.card_AddAndDelete .eventSegment_def {
+  font-size: 24rpx;
+  color: #ccc;
+  height: 50rpx;
+  line-height: 50rpx;
+  text-align: center;
+  padding: 0 30rpx;
+  border-radius: 25rpx;
+  margin-right: 20rpx;
+  display: inline-block;
+  margin-bottom: 30rpx;
+  border: 1rpx solid #e5e5e5;
+  position: relative;
+}
+
+.card_AddAndDelete .eventSegment {
+  font-size: 24rpx;
+  color: #9c9c9c;
+  height: 50rpx;
+  line-height: 50rpx;
+  text-align: center;
+  padding: 0 30rpx;
+  border-radius: 25rpx;
+  margin-right: 20rpx;
+  display: inline-block;
+  margin-bottom: 30rpx;
+  border: 1rpx solid #ccc;
+  position: relative;
+}
+
+.card_AddAndDelete .eventSegment .card_close_btn {
+  width: 24rpx;
+  height: 24rpx;
+  position: absolute;
+  top: -15rpx;
+  right: 0rpx;
+}
+
+.card_AddAndDelete .del_btn {
+  width: 30rpx;
+  height: 30rpx;
+  position: absolute;
+  top: 125rpx;
+  right: 65rpx;
+}
+
+.card_AddAndDelete .add_btn {
+  width: 80rpx;
+  height: 80rpx;
+  position: absolute;
+  bottom: 50rpx;
+  right: 50%;
+  transform: translateX(50%);
+}
+
+.card_AddAndDelete .default {
+  color: #d2d2d2;
+  border: 1rpx solid #e5e5e5;
+}
+
+.card_AddAndDelete .activ {
+  color: #3190fe;
+  border: 1rpx solid #3190fe;
+}
+
+
+/* 模板3 */
+.module {
+  width: 690rpx;
+  padding: 30rpx 20rpx;
+  background: #fff;
+  box-shadow: 0px 10px 10px 0px rgba(229, 229, 229, 0.5);
+  border-radius: 6px;
+  margin: 0 auto 30rpx;
+  position: relative;
+  box-sizing: border-box;
+}
+
+.module_t {
+  position: relative;
+  margin-bottom: 30rpx;
+  display: flex;
+  align-items: center;
+}
+
+.module_t_pic {
+  width: 100rpx;
+  height: 100rpx;
+  border-radius: 50rpx;
+  overflow: hidden;
+  margin-right: 30rpx;
+}
+
+.module_t_pic image {
+  width: 100%;
+  height: 100%;
+}
+
+.module_t_share {
+  width: 30rpx;
+  height: 30rpx;
+  position: absolute;
+  right: 25rpx;
+  top: 15rpx;
+}
+
+.module_c {
+  margin-bottom: 40rpx;
+  display: flex;
+}
+
+.module_c_name {
+  font-size: 48rpx;
+  color: #000;
+  font-weight: 500;
+  margin-right: 10rpx;
+}
+
+.module_c_rank {
+  margin-top: 25rpx;
+  margin-left: 10rpx;
+  width: 40rpx;
+  height: 32rpx;
+}
+
+.module_c_job {
+  font-size: 30rpx;
+  color: #999;
+  margin-left: 6rpx;
+  line-height: 42rpx;
+}
+
+.module_c_job.mt {
+  margin-top: 20rpx;
+}
+
+.module_phone {
+  display: flex;
+  margin-bottom: 20rpx;
+  align-items: center;
+  font-size: 0;
+}
+
+.module_phone_tel,
+module_phone_mail {
+  display: flex;
+  align-items: center;
+  margin-right: 30rpx;
+}
+
+.module_phone_tel image {
+  width: 24rpx;
+  height: 24rpx;
+  margin-right: 10rpx;
+}
+
+.module_phone_tel text,
+.module_phone_mail text {
+  font-size: 24rpx;
+  color: #999;
+}
+
+.module_phone_mail {
+  margin-right: 0;
+  font-size: 0;
+}
+
+.module_phone_mail image {
+  width: 24rpx;
+  height: 18rpx;
+  margin-right: 10rpx;
+}
+
+.module_company {
+  display: flex;
+  align-items: center;
+}
+
+.module_company text {
+  font-size: 30rpx;
+  color: #000;
+  font-weight: 500;
+  margin-right: 12rpx;
+}
+
+.module_company image {
+  width: 21rpx;
+  height: 24rpx;
+}
+
+.module_dot {
+  width: 36rpx;
+  height: 12rpx;
+  position: absolute;
+  right: 20rpx;
+  bottom: 20rpx;
+}
+
+.module_dot image {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+}
+
+.module_4 {
+  position: relative;
+  margin-bottom: 30rpx;
+  display: flex;
+  height: 130rpx;
+}
+
+.module_4_c {
+  width: 230rpx;
+  height: auto;
+  position: absolute;
+  left: 50%;
+  top: 20rpx;
+  transform: translate(-50%, 0);
+  display: flex;
+  align-items: center;
+}
+
+.module_4_c .module_t_pic:last-child {
+  margin-right: 0;
+}
+
+.module_4_z {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 30rpx;
+}
+
+/* .module_4_z::before,
+.module_4_z::after {
+  content: '';
+  width: 198rpx;
+  height: 1px;
+  background: #999;
+} */
+
+.module_c_job.mg_1 {
+  margin: 0 12rpx;
+}
+
+.just_c {
+  justify-content: center;
+}
+
+.module_5 {
+  display: flex;
+  align-items: center;
+  margin-bottom: 30rpx;
+  position: relative;
+}
+
+.module_t_pic.module_5_icon {
+  margin-right: 20rpx;
+}
+
+.module_t_pic.module_5_icon image {
+  text-align: center;
+  margin-top: 20rpx;
+  border-radius: 50%;
+  margin-left: 20rpx;
+  width: 60rpx;
+  height: 60rpx;
+}
+
+.module_post {
+  font-size: 30rpx;
+  color: #000;
+  margin-bottom: 30rpx;
+  display: block;
+}
+
+.module_phone_mail.mt_5 {
+  margin: 15rpx 0 30rpx;
+}
+
+.module_t_pic.module_5_pic {
+  position: absolute;
+  right: 90rpx;
+  top: 50%;
+  transform: translate(0, -50%);
+}
+
+.module_6_c {
+  margin-bottom: 45rpx;
+  display: flex;
+}
+
+.module_t_pic.mr_6 {
+  margin-right: 30rpx;
+}
+
+.module_post.module_6_p {
+  margin-left: 50rpx;
+  line-height: 42rpx;
+  margin-top: 45rpx;
+}
+
+.module_phone_tel.mb_6 {
+  margin-bottom: 20rpx;
+}
+
+.module_c_name.module_6_name {
+  line-height: 67rpx;
+  margin-top: 30rpx;
+  font-size: 48rpx;
+  white-space: nowrap
+}
+
+.module_c_rank.module_6_rank {
+  margin-top: 50rpx;
+}
+
+.module_7_c {
+  display: flex;
+  margin-bottom: 25rpx;
+}
+
+.module_7_pic {
+  width: 150rpx;
+  height: 150rpx;
+  overflow: hidden;
+  border-radius: 50%;
+  margin-right: 30rpx;
+}
+
+.module_7_pic image {
+  width: 100%;
+  height: 100%;
+}
+
+.module_job_r {
+  width: 70%;
+}
+
+.module_phone_tel.mb_7 {
+  margin-bottom: 12rpx;
+}
+
+.module_5.mb_c_7 {
+  margin-bottom: 0;
+}

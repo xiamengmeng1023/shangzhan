@@ -1,0 +1,42 @@
+<!-- <view class='pading-lr pading-ud bg border-bottom list' wx:for="{{list}}" wx:key="index">
+  <view class='flex a-items j-bet'>
+    <text class='f30-28 t-block'>{{item.order_title}}</text>
+    <text class='f26-8c t-block'>{{item.order_amount}}</text>
+  </view>
+  <view class='flex a-items j-bet m-t'>
+    <label class='f26-44 t-block'>订单号：{{item.order_sn}}</label>
+    <text class='f30-44 t-block'>{{item.order_time}}</text>
+  </view>
+</view> -->
+
+<view class='m-t20 pading-lr bg list' wx:for="{{list}}" wx:key="index">
+  <view class='flex a-items j-bet'>
+    <view class='flex a-items'>
+      <text class='f30-28 title'>{{item.order_title}}</text>
+      <text class='f30-28'>￥{{item.order_amount}}</text>
+    </view>
+    <view class='f24-99'>
+      <text class="f24_999">{{item.order_time}}</text>
+    </view>
+  </view>
+  <view class='m-t m-d f24-28'>
+    <text class="f24_000">企业激活码</text>
+  </view>
+  <view class='flex a-items j-bet'>
+    <view class='f36-28 title'>
+      <text>{{item.order_sn}}</text>
+    </view>
+    <block wx:if="{{item.is_active == 0}}">
+      <view class="f24-28 copy_box" data-id='{{index}}' bindtap="copyTap">
+        <text  class="f24_999">复制</text>
+      </view>
+    </block>
+    <block wx:else>
+      <view class='f24-28 copy_border'>
+        <text class="f24_blue">已激活</text>
+      </view>
+    </block>
+  </view>
+</view>
+
+<button class='btn f36-ff' bindtap='nextTo'>继续申请</button>

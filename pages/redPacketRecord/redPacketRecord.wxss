@@ -1,0 +1,37 @@
+.place {
+  height: 15rpx;
+  width: 100%;
+  background-color: #F5F5F5;
+}
+.redPacketRecord .redPacketRecord_box {
+  width: 690rpx;
+  margin: 0 auto;
+}
+.redPacketRecord .redPacketRecord_box_item {
+  padding: 20rpx 30rpx;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.redPacketRecord .redPacketRecord_box_item .redPacketRecord_box_item_l .redPacketRecord_box_item_l_t {
+  display: flex;
+  font-size: 24rpx;
+  margin-bottom: 20rpx;
+}
+.redPacketRecord .redPacketRecord_box_item .redPacketRecord_box_item_l .redPacketRecord_box_item_l_t .redPacketRecord_box_item_l_t_one {
+  margin-right: 10rpx;
+}
+.redPacketRecord .redPacketRecord_box_item .redPacketRecord_box_item_l .redPacketRecord_box_item_l_t .redPacketRecord_box_item_l_t_two {
+  color: #FFA200;
+}
+.redPacketRecord .redPacketRecord_box_item .redPacketRecord_box_item_l .redPacketRecord_box_item_l_b {
+  display: flex;
+  font-size: 24rpx;
+  color: #999999;
+}
+.redPacketRecord .redPacketRecord_box_item .redPacketRecord_box_item_l .redPacketRecord_box_item_l_b .redPacketRecord_box_item_l_b_one {
+  margin-right: 10rpx;
+}
+.redPacketRecord .redPacketRecord_box_item .redPacketRecord_box_item_r {
+  font-size: 48rpx;
+}

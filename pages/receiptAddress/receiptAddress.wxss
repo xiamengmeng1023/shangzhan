@@ -1,0 +1,114 @@
+.mainbox {
+  margin-bottom: 165rpx;
+}
+.mainbox .receiptAddress {
+  width: 690rpx;
+  margin: 0 auto;
+}
+.mainbox .receiptAddress .receiptAddress_item {
+  padding: 30rpx 20rpx;
+  padding-top: 60rpx;
+  box-shadow: #e7e7e7 0rpx 7rpx 20rpx;
+  position: relative;
+  margin-bottom: 30rpx;
+}
+.mainbox .receiptAddress .receiptAddress_item .receiptAddress_item_one {
+  margin-bottom: 20rpx;
+  font-size: 30rpx;
+  display: flex;
+  justify-content: space-between;
+}
+.mainbox .receiptAddress .receiptAddress_item .receiptAddress_item_one .receiptAddress_item_one_l {
+  display: flex;
+}
+.mainbox .receiptAddress .receiptAddress_item .receiptAddress_item_one .receiptAddress_item_one_l .receiptAddress_item_one_name {
+  margin-right: 40rpx;
+}
+.mainbox .receiptAddress .receiptAddress_item .receiptAddress_item_one .receiptAddress_item_one_r {
+  width: 60rpx;
+  height: 60rpx;
+  background-color: transparent;
+  z-index: 99;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.mainbox .receiptAddress .receiptAddress_item .receiptAddress_item_one .receiptAddress_item_one_r image {
+  width: 30rpx;
+  height: 30rpx;
+}
+.mainbox .receiptAddress .receiptAddress_item .receiptAddress_item_two {
+  font-size: 26rpx;
+  margin-bottom: 30rpx;
+  color: #999;
+}
+.mainbox .receiptAddress .receiptAddress_item .receiptAddress_item_three .agreement {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+.mainbox .receiptAddress .receiptAddress_item .receiptAddress_item_three .agreement .agreement_bottom {
+  margin-left: 20rpx;
+  font-size: 24rpx;
+}
+.mainbox .receiptAddress .receiptAddress_item .list_del {
+  position: absolute;
+  top: 0;
+  height: 260rpx;
+  line-height: 260rpx;
+  background-color: #e64340;
+  width: 180rpx;
+  text-align: center;
+  z-index: 4;
+  right: -210rpx;
+  color: #fff;
+}
+.add {
+  font-size: 30rpx;
+  background-color: #3190FE;
+  color: #fff;
+  height: 88rpx;
+  line-height: 88rpx;
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  text-align: center;
+}
+.place {
+  height: 15rpx;
+  width: 100%;
+  background-color: #F5F5F5;
+}
+/* 重写 checkbox 样式 */
+/* 未选中的 背景样式 */
+checkbox .wx-checkbox-input {
+  border-radius: 50%;
+  /* 圆角 */
+  width: 40rpx;
+  /* 背景的宽 */
+  height: 40rpx;
+  /* 背景的高 */
+}
+/* 选中后的 背景样式 （红色背景 无边框 可根据UI需求自己修改） */
+checkbox .wx-checkbox-input.wx-checkbox-input-checked {
+  border: 1rpx solid #3190FE;
+  background: #3190FE;
+}
+/* 选中后的 对勾样式 （白色对勾 可根据UI需求自己修改） */
+checkbox .wx-checkbox-input.wx-checkbox-input-checked::before {
+  border-radius: 50%;
+  /* 圆角 */
+  width: 40rpx;
+  /* 选中后对勾大小，不要超过背景的尺寸 */
+  height: 40rpx;
+  /* 选中后对勾大小，不要超过背景的尺寸 */
+  line-height: 40rpx;
+  text-align: center;
+  font-size: 30rpx;
+  /* 对勾大小 30rpx */
+  color: #fff;
+  /* 对勾颜色 白色 */
+  background: transparent;
+  transform: translate(-50%, -50%) scale(1);
+  -webkit-transform: translate(-50%, -50%) scale(1);
+}

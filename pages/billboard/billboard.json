@@ -1,0 +1,9 @@
+{
+  "usingComponents": {
+
+  },
+  "backgroundTextStyle": "light",
+  "navigationBarBackgroundColor": "#fff",
+  "navigationBarTitleText": "风云榜",
+  "navigationBarTextStyle": "black"
+}

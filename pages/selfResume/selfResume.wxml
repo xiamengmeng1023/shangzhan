@@ -1,0 +1,31 @@
+<form bindsubmit="bindFormSubmit">
+  <view class="selfResume">
+      <block>
+        <view class="selfResume_tit">
+          {{placeholder[1]}}
+        </view>
+        <view class="selfResume_main">
+          <textarea auto-height="{{auto_height}}" maxlength="{{maxlen}}" name="" value="{{textVal}}"  bindinput="bindWordLimit" rows="3" placeholder="{{placeholder[2]}}"></textarea>
+        </view>
+      </block>
+      <!-- <block wx:elif="{{showpage=='merit'}}">
+        <view class="selfResume_tit">
+           {{placeholder[1]}}
+        </view>
+        <view class="selfResume_main">
+          <textarea auto-height="{{auto_height}}" maxlength="{{maxlen}}" name="" value="{{textVal}}"  bindinput="bindWordLimit" rows="3" placeholder="{{placeholder[2]}}">
+          </textarea>
+        </view>
+      </block>
+      <block wx:else >
+        <view class="selfResume_tit">
+        描述自己的需求
+        </view>
+        <view class="selfResume_main">
+          <textarea auto-height="{{auto_height}}" maxlength="{{maxlen}}" name="" value="{{textVal}}"  bindinput="bindWordLimit" rows="3" placeholder="{{placeholder[2]}}"></textarea>
+        </view>
+      </block> -->
+      <view class="selfResume_numbox">(<text>{{reNum}}</text>/200)</view>
+      <button form-type="submit" class="save_btn">保存</button>
+  </view>
+</form>

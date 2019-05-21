@@ -1,0 +1,37 @@
+page{
+  padding-bottom: 130rpx;
+  box-sizing: border-box;
+}
+.footer{
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  z-index: 5;
+  width: 100%;
+  padding-top: 10rpx;
+  padding-bottom: 10rpx;
+  border-top: 2rpx solid #cccccc;
+}
+.mp{
+  width: 60rpx;
+  height: 48rpx;
+}
+.wd{
+  width: 58rpx;
+  height: 54rpx;
+}
+.dynamic{
+  width: 58rpx;
+  height: 58rpx;
+}
+.gw{
+  width: 54rpx;
+  height: 48rpx;
+}
+.my{
+  width: 54rpx;
+  height: 60rpx;
+}
+/* .img-box{
+  height: 60rpx;
+} */

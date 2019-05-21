@@ -1,0 +1,106 @@
+<!-- index.wxml -->
+<view class="container">
+  <view class="iheaderbox">
+    <view class="headerTop" >
+      <view class="headerTopLeft" catchtap="GoToBasicInfo">
+        <view class="userImgUrl"><open-data type="userAvatarUrl"></open-data></view>
+        <view class="headerTopLeft_tit">
+          <open-data type="userNickName" class="headerTopLeft_tit_t"></open-data>
+          <view class="headerTopLeft_tit_b">商栈，您的私人订制品牌助手</view>
+        </view>
+      </view>
+      <view class="headerTopRight" catchtap="goToReferralCode">
+        <image src="{{iconUrl}}/imgs/my-qrcode.png" />
+        <image src="{{iconUrl}}/imgs/my-arrowRight.png" />
+      </view>
+    </view>
+     <view  class="headerBottom" catchtap="makeShopTap" >
+        <image src="{{iconUrl}}/imgs/my-backgroundLine.png" />
+        <view class="headerBottom_tit">{{text}}我的电子名片</view>
+     </view>
+  </view>
+  <view class="lighting">
+    <view class="lightingTop">
+      <view class="lightingTop_l">
+        <view class="lightingTop_tit">点亮身份权限</view>
+        <view class="lightingTop_close_box" catchtap="ml_clickHidden" >
+          <view class="lightingTop_close" >{{isDownOrUp?'展开':'收起'}}</view>
+          <image class="lightingTop_close_icon"  src="{{iconUrl}}/btn/{{isDownOrUp?'down':'up'}}.png"></image>
+        </view>
+      </view>
+      <image src="{{iconUrl}}/imgs/my-attention.png" catchtap="explain" />
+    </view>
+    <!-- 显示隐藏 -->
+    <view hidden="{{isDownOrUp}}" >
+      <view class="lightingCenter" catchtap="goToMyIdentity" >
+        <view class="lightingCenterItem {{isVip==1?'green_border':''}}">
+            <view class="lightingCenterItemIcon" >
+              <image class="lightingCenterItemIcon_img1" src="{{iconUrl}}/imgs/{{isVip==1?'my_vip':'my_v'}}.png" />
+              <text class="{{isVip==1?'green_txt':''}}">环保使者</text>
+            </view>
+        </view>
+        <view class="lightingCenterItem {{is_company_member==1?'blue_border':''}}">
+          <view class="lightingCenterItemIcon managerIcon">
+            <image class="lightingCenterItemIcon_img2" src="{{iconUrl}}/imgs/{{is_company_member||is_company_member=='1'? 'my_companyManager_vip':'my_companyManager'}}.png" />
+            <text class="{{is_company_member==1?'blue_txt':''}}">企业管理</text>
+          </view>
+        </view>
+        <view class="lightingCenterItem {{alliance_status==1?'orange_border':''}}" >
+          <view class="lightingCenterItemIcon">
+            <image class="lightingCenterItemIcon_img3" src="{{iconUrl}}/imgs/{{alliance_status==1||alliance_status=='1'?'my_amb_vip':'my_amb'}}.png" />
+            <text class="{{alliance_status==1?'orange_txt':''}}">环保联盟</text>
+          </view>
+        </view>
+      </view>
+      <view class="lignhtingText">企业管理为企业管理人员专属权限</view>
+    </view>
+    <view class="myIdentity" catchtap="goToMyIdentity">
+      <text>我的商栈身份</text>
+      <view class='myIdentityIcon' wx:if="{{isVip==1}}" >
+        <image class="w39h32" wx:if="{{isVip==1}}" src="{{iconUrl}}/btn/zuan.png"/>
+        <image class="w39h32" wx:if="{{is_company_member==1}}" src="{{iconUrl}}/btn/qygl.png"/>
+        <image class="w39h32" wx:if="{{alliance_status==1}}" src="{{iconUrl}}/btn/hblm.png"/>
+        <image src="{{iconUrl}}/imgs/my-arrowRight.png" />
+      </view>
+      <view class='myIdentityIcon' wx:else>
+        <text>未点亮，不可享受优质服务</text>
+        <image src="{{iconUrl}}/imgs/my-arrowRight.png" />
+      </view>
+    </view>
+  </view>
+
+  <view class="list">
+    <view class='listItem' wx:for='{{list}}' catchtap='go' wx:key="{{index}}" data-index='{{index}}'>
+      <view class="listItemLeft">
+        <block data-index='{{index}}' wx:if="{{index==0}}">
+           <image  src="{{iconUrl}}{{item.icon}}" class="w30h33"/>
+        </block>
+        <block data-index='{{index}}' wx:elif="{{index==1}}">
+            <image  src="{{iconUrl}}{{item.icon}}" class="w30h27" />
+        </block>   
+         <block data-index='{{index}}' wx:elif="{{index==2}}">
+            <image  src="{{iconUrl}}{{item.icon}}" class="w28h28" />
+        </block>
+        <block data-index='{{index}}' wx:elif="{{index==3}}" >
+            <image  src="{{iconUrl}}{{item.icon}}" class="w30h27" />
+        </block>
+        <block data-index='{{index}}' wx:elif="{{index==4}}">
+            <image  src="{{iconUrl}}{{item.icon}}" class="w30h25"  />
+        </block>
+        <block data-index='{{index}}' wx:elif="{{index==5}}">
+            <image  src="{{iconUrl}}{{item.icon}}" class="w30h33"  />
+        </block>
+        <block data-index='{{index}}' wx:elif="{{index==6}}">
+            <image  src="{{iconUrl}}{{item.icon}}" class="w30h27"  />
+        </block>
+        <block data-index='{{index}}' wx:elif="{{index==7}}">
+            <image  src="{{iconUrl}}{{item.icon}}" class="w30h33"  />
+        </block>
+        <text>{{item.text}}</text>
+      </view>
+      <view class="listItemRight">
+        <image src="{{iconUrl}}/imgs/my-arrowRight.png" />
+      </view>
+    </view>
+  </view>
+</view>

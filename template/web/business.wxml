@@ -1,0 +1,54 @@
+<template name="business">
+  <block wx:if="{{cateid == 36}}">
+    <view class='pading-lr bg f26-8c p-d t-text' wx:for="{{datacon}}" wx:key="{{index}}">
+      <view class='flex a-items'>
+        <image src='{{picUrl}}{{item.icon}}' class='img m-r'></image>
+        <view>
+          <text class='t-block more-ellipsis'>{{item.title}}</text>
+        </view>
+      </view>
+    </view>
+  </block>
+  <block wx:elif="{{cateid == 37}}">
+    <view class='pading-lr bg f26-8c p-d t-text flex a-items f-wrap j-bet'>
+      <block wx:for="{{datacon}}" wx:key="{{index}}">
+        <navigator url='/pages/details/details?id={{item.id}}' class='list m-d'>
+          <view class='w1 t-center'>
+            <image src='{{picUrl}}{{item.icon}}' class='list-img '></image>
+          </view>
+          <view>
+            <text class='t-block ellipsis'>{{item.title}}</text>
+          </view>
+        </navigator>
+      </block>
+    </view>
+  </block>
+  <block wx:elif="{{cateid == 38}}">
+    <block wx:for="{{datacon}}" wx:key="{{index}}">
+      <navigator url='/pages/details/details?id={{item.id}}' class='pading-lr bg f26-8c p-d t-text'>
+        <view>
+          <image src='{{picUrl}}{{item.icon}}' class='big-img '></image>
+        </view>
+        <view>
+          <text class='t-block ellipsis'>{{item.title}}</text>
+        </view>
+      </navigator>
+    </block>
+  </block>
+  <block wx:elif="{{cateid == 39}}">
+    <scroll-view class='scroll pading-lr  bg f26-8c p-d t-text' scroll-x="true">
+      <view class='flex a-items'>
+        <block wx:for="{{datacon}}" wx:key="{{index}}">
+          <navigator url='/pages/details/details?id={{item.id}}' class='m-d scroll-list'>
+            <view class='w1 t-center'>
+              <image src='{{picUrl}}{{item.icon}}' class='list-img '></image>
+            </view>
+            <view>
+              <text class='t-block ellipsis'>{{item.title}}</text>
+            </view>
+          </navigator>
+        </block>
+      </view>
+    </scroll-view>
+  </block>
+</template>

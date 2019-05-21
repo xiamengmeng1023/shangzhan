@@ -1,0 +1,124 @@
+.home_selfCard {
+  text-align: left;
+  width: 690rpx;
+  margin: 0 auto;
+  background-color: #fff;
+  border-radius: 5rpx;
+  padding: 35rpx 0;
+  position: relative;
+  box-shadow: #e7e7e7 0rpx 7rpx 30rpx;
+}
+.home_selfCard .home_selfCard_one {
+  padding: 0 20rpx;
+  height: 100rpx;
+  margin-bottom: 45rpx;
+}
+.home_selfCard .home_selfCard_one .home_selfCard_one_l {
+  width: 100rpx;
+  height: 100rpx;
+  float: left;
+  border-radius: 50%;
+  margin-right: 20rpx;
+}
+.home_selfCard .home_selfCard_one .home_selfCard_one_r {
+  float: left;
+  text-align: left;
+}
+.home_selfCard .home_selfCard_one .home_selfCard_one_r .home_selfCard_one_r_t {
+  font-size: 35rpx;
+  margin-bottom: 15rpx;
+}
+.home_selfCard .home_selfCard_one .home_selfCard_one_r .home_selfCard_one_r_t .home_selfCard_one_r_t_name {
+  font-size: 48rpx;
+}
+.home_selfCard .home_selfCard_one .home_selfCard_one_r .home_selfCard_one_r_t .home_selfCard_icon {
+  margin-left: 12rpx;
+  height: 32rpx;
+  width: 40rpx;
+}
+.home_selfCard .home_selfCard_one .home_selfCard_one_r .home_selfCard_one_r_b {
+  height: 25rpx;
+  line-height: 1;
+  color: #999;
+  font-size: 30rpx;
+}
+.home_selfCard .home_selfCard_two {
+  padding: 0 20rpx;
+  margin-bottom: 35rpx;
+  display: flex;
+  align-items: center;
+}
+.home_selfCard .home_selfCard_two .company_name {
+  font-weight: 700;
+  font-size: 28rpx;
+}
+.home_selfCard .home_selfCard_two .address_icon {
+  width: 21rpx;
+  height: 24rpx;
+  margin-left: 15rpx;
+}
+.home_selfCard .home_selfCard_two .home_selfCard_two_img {
+  height: 65rpx;
+  width: 65rpx;
+  background-color: red;
+  border-radius: 50%;
+  margin-right: 13rpx;
+}
+.home_selfCard .home_selfCard_three {
+  padding: 0 20rpx;
+  height: 24rpx;
+  line-height: 1;
+  font-size: 20rpx;
+  display: flex;
+  margin-bottom: 30rpx;
+}
+.home_selfCard .home_selfCard_three .phone_icon {
+  width: 24rpx;
+  height: 24rpx;
+  margin-right: 15rpx;
+}
+.home_selfCard .home_selfCard_three .mail_address,
+.home_selfCard .home_selfCard_three .phone_num {
+  font-size: 24rpx;
+  color: #999;
+  margin-right: 50rpx;
+}
+.home_selfCard .home_selfCard_four {
+  padding: 0 20rpx;
+  height: 24rpx;
+  line-height: 1;
+  display: flex;
+}
+.home_selfCard .home_selfCard_four .mail_icon {
+  width: 24rpx;
+  height: 19rpx;
+  margin-right: 15rpx;
+}
+.home_selfCard .home_selfCard_four .mail_address {
+  font-size: 20rpx;
+  color: #999;
+  margin-right: 50rpx;
+}
+.home_selfCard .erweima {
+  width: 34rpx;
+  height: 34rpx;
+  position: absolute;
+  top: 50rpx;
+  right: 50rpx;
+}
+.home_selfCard .ellipsis {
+  position: absolute;
+  width: 36rpx;
+  height: 12rpx;
+  bottom: 20rpx;
+  right: 50rpx;
+}
+.home_selfCard .company_logo {
+  background-color: red;
+  width: 80rpx;
+  height: 80rpx;
+  position: absolute;
+  border-radius: 50%;
+  bottom: 0rpx;
+  top: 0rpx;
+}

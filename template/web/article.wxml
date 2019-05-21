@@ -1,0 +1,48 @@
+<template name="article">
+  <block wx:if="{{cateid == 14}}">
+    <view class='pading-lr bg f32-8c p-d t-text' wx:for="{{datacon}}" wx:key="{{index}}">
+      <navigator url='/pages/textTxt/textTxt?id={{item.id}}' class='flex a-items'>
+        <image src='{{picUrl}}{{item.pic}}' class='img m-r'></image>
+        <view class='f32-8c'>
+          <text class='t-block more-ellipsis m-d'>{{item.title}}</text>
+          <text class='m-t'>{{item.addtime}}</text>
+        </view>
+      </navigator>
+    </view>
+  </block>
+  <block wx:elif="{{cateid == 15}}">
+    <view class='pading-lr bg f26-8c p-d t-text' wx:for="{{datacon}}" wx:key="{{index}}">
+      <navigator url='/pages/textTxt/textTxt?id={{item.id}}' class='flex a-items'>
+        <view class="w1 f32-8c">
+          <text class='t-block more-ellipsis m-d'>{{item.title}}</text>
+          <text class='m-t'>{{item.addtime}}</text>
+        </view>
+        <image src='{{picUrl}}{{item.pic}}' class='img m-l'></image>
+      </navigator>
+    </view>
+  </block>
+  <block wx:elif="{{cateid == 16}}">
+    <block wx:for="{{datacon}}" wx:key="{{index}}">
+      <navigator url='/pages/textTxt/textTxt?id={{item.id}}' class='pading-lr bg f26-8c p-d t-text'>
+        <view>
+          <image src='{{picUrl}}{{item.pic}}' class='big-img '></image>
+        </view>
+        <view class='f32-8c'>
+          <text class='t-block ellipsis'>{{item.title}}</text>
+          <text class='m-t'>{{item.addtime}}</text>
+        </view>
+      </navigator>
+    </block>
+  </block>
+  <block wx:elif="{{cateid == 31}}">
+    <view class='pading-lr bg f26-8c p-d t-text' wx:for="{{datacon}}" wx:key="{{index}}">
+      <navigator url='/pages/textTxt/textTxt?id={{item.id}}' class='flex a-items j-bet'>
+        <view class='w1 f32-8c'>
+          <text class='t-block more-ellipsis m-r'>{{item.title}}</text>
+          <text class='m-t'>{{item.addtime}}</text>
+        </view>
+        <image src='https://www.shangzhanyun.com/Public/Style/images/applets/img/more.png' class='more'></image>
+      </navigator>
+    </view>
+  </block>
+</template>

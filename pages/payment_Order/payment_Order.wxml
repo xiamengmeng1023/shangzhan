@@ -1,0 +1,106 @@
+<!-- 订单支付 -->
+<view class="obligation">
+  <navigator class="obligation_top" wx:if="{{address !== ''}}" url="/pages/receiptAddress/receiptAddress" >
+    <view class="flexbox">
+      <view class="obligation_top_img ">
+        <image src="{{iconUrl}}/btn/order_add.png"></image>
+      </view>
+      <view class="obligation_top_center">
+        <view class="obligation_top_center_one">
+          <view class="obligation_top_center_one_l fz30">
+            {{address.name}}
+          </view>
+          <view class="obligation_top_center_one_r fz30">
+            {{address.mobile}}
+          </view>
+        </view>
+        <view class="obligation_top_center_two fz26">
+          {{address.province}}{{address.city}}{{address.area}}{{address.address}}
+        </view>
+      </view>
+    </view>
+    <view class="obligation_top_right">
+      <image src="{{iconUrl}}/btn/arrow.png"></image>
+    </view>
+  </navigator>
+  <navigator  wx:else class="obligation_top" url="/pages/newAddress/newAddress" >
+    <view class="flexbox_noadd" >
+      <view class="obligation_top_img ">
+        <image src="{{iconUrl}}/btn/order_add.png"></image>
+      </view>
+      <view class="obligation_top_center_noadd">
+          请先前往个人信息，完善地址
+      </view>
+    </view>
+    <view class="obligation_top_right">
+      <image src="{{iconUrl}}/btn/arrow.png"></image>
+    </view>
+  </navigator>
+  <view class="line">
+    <image  src="{{iconUrl}}/btn/line.png"></image>
+  </view>
+  <!-- 商品详情 -->
+  <view class="obligation_main">
+    <view class="obligation_main_color">
+      <view class="obligation_main_center">
+        <view class="obligation_main_center_img">
+          <image src="{{iconUrl}}/order_img.png"></image>
+        </view>
+        <view class="obligation_main_center_infobox">
+          <view class="obligation_main_center_name fz30">
+             {{list.goods_list[0].title}}
+          </view>
+          <view class="obligation_main_center_infobox_bottom">
+            <view class="obligation_main_center_price fz30">
+              <view class="fz24">￥</view>{{list.goods_list[0].goods_price}}
+            </view>
+            <view class="obligation_goods_num fz30 c999">x{{list.goods_list[0].goods_num}}</view>
+          </view>
+        </view>
+      </view>
+      <view class="obligation_main_footer fz26">
+       ￥{{list.goods_list[0].goods_total_price}} 
+      </view>
+    </view>
+  </view>
+  <!-- 底部 -->
+  <view class="obligation_footer">
+    <block wx:if="{{item.store_offer.length > 0}}">
+      <view class='flex a-items j-bet m-d'>
+        <view class="section__title">店铺优惠</view>
+        <picker bindchange="bindchange" data-id='{{item.store_id}}' value="{{pickerIndex[item.store_id]}}" range="{{item.store_offer}}" range-key="title">
+          <view class="picker">
+            <text>-￥{{list.store_offer[pickerIndex[item.store_id]].money}}</text>
+          </view>
+        </picker>
+      </view>
+    </block>
+
+    <block wx:else>
+      <view class="obligation_footer_item">
+        <view class="obligation_footer_item_l fz26">优惠券</view>
+        <view class="obligation_footer_item_t fz26">暂无可用优惠券</view>
+      </view>
+    </block>
+    <view class="obligation_footer_item">
+      <view class="obligation_footer_item_l fz26">
+        快递信息
+      </view>
+      <view class="obligation_footer_item_t fz26">
+        顺丰 | 包邮
+      </view>
+    </view>
+  </view>
+</view>
+
+<view class="settleAccounts">
+  <view class="settleAccounts_l ">
+    <view class="settleAccounts_l_one fz24">
+    实付款:
+    </view>
+    <view class="settleAccounts_l_two fz36">
+    ￥{{list.goods_list[0].goods_total_price}} 
+    </view>
+  </view>
+  <button class="settleAccounts_r fz30 blue" disabled='{{checked}}' catchtap='submit'>立即支付</button>
+</view>

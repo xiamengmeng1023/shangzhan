@@ -1,0 +1,12 @@
+{
+  "usingComponents": {
+    "businessCard": "/pages/component/businessCard/businessCard",
+    "businessCard_2": "/pages/component/businessCard_2/businessCard_2",
+    "businessCard_3": "/pages/component/businessCard_3/businessCard_3"
+  },
+  "enablePullDownRefresh": true,
+  "backgroundTextStyle": "dark",
+  "navigationBarBackgroundColor": "#fff",
+  "navigationBarTitleText": "名片夹",
+  "navigationBarTextStyle": "black"
+}

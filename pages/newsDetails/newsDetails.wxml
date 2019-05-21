@@ -1,0 +1,10 @@
+<import src="../../wxParse/wxParse.wxml" />
+
+<view class="newsDetails_main">
+  <view class="newsDetails_main_tit">{{pageData.title}}</view>
+  <view class="newsDetails_main_time">{{pageData.addtime}}</view>
+  <image class="newsDetails_main_img" src="{{picUrl}}{{pageData.pic}}"></image>
+  <view class="newsDetails_main_text">
+    <template is="wxParse" data="{{wxParseData:summary.nodes}}" />
+  </view>
+</view>

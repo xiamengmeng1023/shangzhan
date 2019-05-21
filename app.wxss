@@ -1,0 +1,550 @@
+::-webkit-scrollbar {
+  width: 0;
+  height: 0;
+  color: transparent;
+}
+
+button::after {
+  border: none;
+}
+
+button::after {
+  border-radius: 0;
+}
+
+/* 公共样式 */
+
+/* 底部水印公共 */
+.clearfix:after {
+  content: "";
+  display: block;
+  height: 0;
+  clear: both;
+  visibility: hidden;
+}
+
+
+.footer-img {
+  display: block;
+  width: 84rpx;
+  height: 30rpx;
+  margin: 0 auto;
+  margin-bottom: 10rpx;
+}
+
+.bg {
+  background: #fff;
+}
+
+.bg-list {
+  /*列表背景色*/
+  background: #f1f1f1;
+}
+
+image {
+  width: 100%;
+}
+
+.img-icon {
+  vertical-align: middle;
+}
+
+.loading {
+  width: 120rpx;
+  height: 120rpx;
+}
+
+.t-block {
+  display: block;
+}
+
+.t-center {
+  text-align: center;
+}
+
+.t-h3 {
+  padding-top: 37rpx;
+  padding-bottom: 26rpx;
+}
+
+.t-d {
+  text-decoration: line-through;
+}
+
+.ellipsis {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.word-break {
+  word-break: break-all;
+}
+
+.more-ellipsis {
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 2;
+  overflow: hidden;
+}
+
+.log-card {
+  min-width: 180rpx;
+  white-space: nowrap;
+  text-align: right;
+}
+
+.t-last {
+  text-align: justify;
+  text-align-last: justify;
+  padding-right: 25rpx;
+  box-sizing: border-box;
+}
+
+.t-right {
+  text-align: right;
+}
+
+/* 商品图片 */
+
+.p-url {
+  width: 160rpx;
+  height: 160rpx;
+  margin-right: 21rpx;
+}
+
+/* 边框 */
+
+.border-all {
+  padding: 4rpx 6rpx;
+  box-sizing: border-box;
+  border: 2rpx solid #008cd6;
+}
+
+/* *****右边箭头**** */
+
+.more {
+  width: 16rpx;
+  height: 26rpx;
+}
+
+.border-bottom {
+  border-bottom: 2rpx solid #dcdcdc;
+}
+
+/* *****结构布局   用于拼接**** */
+
+.left {
+  float: left;
+}
+
+.right {
+  float: right;
+}
+
+.w1 {
+  width: 100%;
+}
+
+.flex {
+  display: flex;
+}
+
+.a-items {
+  align-items: center;
+}
+
+.f-reverse {
+  flex-direction: row-reverse;
+}
+
+.f-wrap {
+  flex-wrap: wrap;
+}
+
+.j-around {
+  justify-content: space-around;
+}
+
+.j-content {
+  justify-content: center;
+}
+
+.j-bet {
+  justify-content: space-between;
+}
+
+/* **内边距* */
+
+.pading-lr {
+  width: 100%;
+  padding-left: 40rpx;
+  padding-right: 40rpx;
+  box-sizing: border-box;
+}
+
+.pading-ud {
+  padding-top: 30rpx;
+  padding-bottom: 30rpx;
+  box-sizing: border-box;
+}
+
+/* 外边距 */
+
+.m-l {
+  margin-left: 20rpx;
+}
+
+.m-r {
+  margin-right: 20rpx;
+}
+
+.m-t {
+  margin-top: 20rpx;
+}
+
+.m-d {
+  margin-bottom: 20rpx;
+}
+
+/* 字体 */
+
+.f-w {
+  font-weight: bold;
+}
+
+.f44-ff {
+  font-size: 44rpx;
+  color: #fff;
+}
+
+.f36-ff {
+  font-size: 36rpx;
+  color: #fff;
+}
+
+.f36-28 {
+  font-size: 36rpx;
+  color: #282828;
+}
+
+.f36-c4red {
+  font-size: 36rpx;
+  color: #008cd6;
+}
+
+.f36-8c {
+  font-size: 36rpx;
+  color: #8c8c8c;
+}
+
+.f34-c4red {
+  font-size: 34rpx;
+  color: #008cd6;
+}
+
+.f34-8c {
+  font-size: 34rpx;
+  color: #8c8c8c;
+}
+
+.f32-28 {
+  font-size: 32rpx;
+  color: #282828;
+}
+
+.f32-ff {
+  font-size: 32rpx;
+  color: #fff;
+}
+
+.f32-44 {
+  font-size: 32rpx;
+  color: #444;
+}
+
+.f32-8c {
+  font-size: 32rpx;
+  color: #8c8c8c;
+}
+
+.f32-c4red {
+  font-size: 32rpx;
+  color: #008cd6;
+}
+
+.f30-c4red {
+  font-size: 30rpx;
+  color: #008cd6;
+}
+
+.f30-44 {
+  font-size: 30rpx;
+  color: #444;
+}
+
+.f30-8c {
+  font-size: 30rpx;
+  color: #8c8c8c;
+}
+
+.f30-ff {
+  font-size: 30rpx;
+  color: #fff;
+}
+
+.f30-28 {
+  font-size: 30rpx;
+  color: #282828;
+}
+
+.f28-8c {
+  font-size: 28rpx;
+  color: #8c8c8c;
+}
+
+.f28-d4 {
+  font-size: 28rpx;
+  color: #008cd6;
+}
+
+.f28-44 {
+  font-size: 28rpx;
+  color: #444;
+}
+
+.f28-28 {
+  font-size: 28rpx;
+  color: #282828;
+}
+
+.f28-ff {
+  font-size: 28rpx;
+  color: #fff;
+}
+
+.f26-ff {
+  font-size: 26rpx;
+  color: #fff;
+}
+
+.f26-8c {
+  font-size: 26rpx;
+  color: #8c8c8c;
+}
+
+.f26-d4 {
+  font-size: 26rpx;
+  color: #008cd6;
+}
+
+.f26-44 {
+  font-size: 26rpx;
+  color: #444;
+}
+
+.f26-28 {
+  font-size: 26rpx;
+  color: #282828;
+}
+
+.f24-c4red {
+  font-size: 24rpx;
+  color: #008cd6;
+}
+
+.f24-44 {
+  font-size: 24rpx;
+  color: #444;
+}
+
+.f24-8c {
+  font-size: 24rpx;
+  color: #8c8c8c;
+}
+
+.f24-ff {
+  font-size: 24rpx;
+  color: #fff;
+}
+
+.f22-8c {
+  font-size: 22rpx;
+  color: #8c8c8c;
+}
+
+.f22-ff {
+  font-size: 22rpx;
+  color: #fff;
+}
+
+.f22-44 {
+  font-size: 22rpx;
+  color: #444;
+}
+
+.f22-c4red {
+  font-size: 22rpx;
+  color: #008cd6;
+}
+
+.f20-8c {
+  font-size: 20rpx;
+  color: #8c8c8c;
+}
+
+.f20-ff {
+  font-size: 20rpx;
+  color: #fff;
+}
+
+.f16-ff {
+  font-size: 16rpx;
+  color: #fff;
+}
+
+.f16-c4red {
+  font-size: 16rpx;
+  color: #008cd6;
+}
+
+/* 申请按钮 */
+
+.open-vip {
+  width: 480rpx;
+  height: 80rpx;
+  line-height: 80rpx;
+  background: #008cd6;
+  border-radius: 80rpx;
+  margin: 50rpx auto 0;
+  border: none;
+}
+
+/* 底部按钮 */
+
+.footert-btn {
+  width: 100%;
+  height: 100rpx;
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  z-index: 10;
+  line-height: 100rpx;
+  background: #008cd6;
+  border-radius: 0rpx;
+}
+
+checkbox {
+  width: 40rpx;
+  height: 40rpx;
+  margin-top: -5rpx;
+}
+
+checkbox .wx-checkbox-input {
+  border-radius: 50%;
+  width: 40rpx;
+  height: 40rpx;
+  margin-top: -5rpx;
+}
+
+checkbox .wx-checkbox-input.wx-checkbox-input-checked {
+  border: none;
+  background: #008cd6;
+}
+
+checkbox .wx-checkbox-input.wx-checkbox-input-checked::before {
+  border-radius: 50%;
+  /* 圆角 */
+  width: 40rpx;
+  /* 选中后对勾大小，不要超过背景的尺寸 */
+  height: 40rpx;
+  /* 选中后对勾大小，不要超过背景的尺寸 */
+  line-height: 40rpx;
+  text-align: center;
+  font-size: 30rpx;
+  /* 对勾大小 30rpx */
+  color: #fff;
+  /* 对勾颜色 白色 */
+  background: transparent;
+  transform: translate(-50%, -50%) scale(1);
+  -webkit-transform: translate(-50%, -50%) scale(1);
+}
+
+radio .wx-radio-input {
+  border-radius: 50%;
+  /* 圆角 */
+  width: 40rpx;
+  height: 40rpx;
+  margin-top: -5rpx;
+}
+
+/* 选中后的 背景样式 （红色背景 无边框 可根据UI需求自己修改） */
+
+radio .wx-radio-input.wx-radio-input-checked {
+  border: none;
+  background: #008cd6;
+}
+
+/* 选中后的 对勾样式 （白色对勾 可根据UI需求自己修改） */
+
+radio .wx-radio-input.wx-radio-input-checked::before {
+  border-radius: 50%;
+  /* 圆角 */
+  width: 40rpx;
+  /* 选中后对勾大小，不要超过背景的尺寸 */
+  height: 40rpx;
+  /* 选中后对勾大小，不要超过背景的尺寸 */
+  line-height: 40rpx;
+  text-align: center;
+  font-size: 30rpx;
+  /* 对勾大小 30rpx */
+  color: #fff;
+  /* 对勾颜色 白色 */
+  background: transparent;
+  transform: translate(-50%, -50%) scale(1);
+  -webkit-transform: translate(-50%, -50%) scale(1);
+}
+
+.wx-switch-input {
+  width: 82rpx !important;
+  height: 36rpx !important;
+  background: #008cd6 !important;
+  border: #008cd6 !important;
+  /* 2018-07-18 重置开关边框颜色 */
+}
+
+/*白色样式（false的样式）*/
+
+.wx-switch-input::before {
+  width: 80rpx !important;
+  height: 36rpx !important;
+}
+
+/*绿色样式（true的样式）*/
+
+.wx-switch-input::after {
+  width: 40rpx !important;
+  height: 36rpx !important;
+}
+
+.icon-box {
+  width: 120rpx;
+  height: 120rpx;
+  border-radius: 50%;
+}
+
+.icon-box image {
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+}
+
+.wxParse-box {
+  width: 100%;
+}
+
+.wxParse-box image {
+  display: block;
+  margin: 0 auto;
+  max-width: 100%;
+}

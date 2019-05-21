@@ -1,0 +1,27 @@
+<view class="DetailsOfWithdrawals">
+  <view class="DetailsOfWithdrawals_item">
+    <view class="DetailsOfWithdrawals_item_l">
+      <view class="DetailsOfWithdrawals_item_l_t">
+        {{getCash.nick_name}} 提现
+      </view>
+      <view class="DetailsOfWithdrawals_item_l_b">
+      <view class="DetailsOfWithdrawals_item_l_b_icon">￥</view>
+      {{getCash.withdrawal_amount}}
+      </view>
+    </view>
+    <view class="DetailsOfWithdrawals_item_r">
+      <image src="{{getCash.icon}}"></image>
+    </view>
+  </view>
+  <view class="time">
+    <view class="time_l">申请时间</view>
+    <view class="time_r"> {{getCash.create_time}}</view>
+  </view>
+  <view class="time">
+    <view class="time_l">审核时间</view>
+    <view class="time_r" wx:if="{{getCash.update_time==0}}">审核中</view>
+    <view class="time_r" wx:else>{{getCash.update_time}}</view>
+  </view>
+  <view class="footer_tit_one">查询到账情况</view>
+  <view class="footer_tit_two">微信-我-钱包-零钱-零钱明细</view>
+</view>

@@ -1,0 +1,4 @@
+.complain-text{
+  text-decoration:underline;
+  line-height: 40rpx;
+}

@@ -1,0 +1,6 @@
+<template name="setCard">
+  <navigator url='/pages/topUpVip/topUpVip' class='set-card'>
+    <text class='f28-ff t-block'>创建</text>
+    <text class='f28-ff t-block'>名片</text>
+  </navigator>
+</template>

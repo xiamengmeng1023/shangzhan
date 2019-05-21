@@ -1,0 +1,103 @@
+.place {
+  height: 15rpx;
+  width: 100%;
+  background-color: #F5F5F5;
+}
+.container {
+  width: 690rpx;
+  margin: 0 auto;
+}
+.container .number {
+  width: 690rpx;
+  margin: 0 auto;
+  height: 100rpx;
+  padding-bottom: 8rpx;
+  border-bottom: 2rpx #e5e5e5 solid;
+  display: flex;
+  font-size: 30rpx;
+  align-items: flex-end;
+  justify-content: space-between;
+}
+.container .number .number_tit_one {
+  display: flex;
+  justify-content: space-between;
+  top: -5rpx;
+}
+.container .number .number_tit_one .number_tit_one_l {
+  line-height: 53rpx;
+}
+.container .number .number_tit_one .number_tit_one_r {
+  color: #999;
+}
+.container .number .number_tit_two {
+  position: relative;
+  top: -5rpx;
+  color: #3190FE;
+}
+.container .number input {
+  padding-left: 20rpx;
+  font-size: 30rpx;
+  color: #333333;
+}
+.container .paymentCode,
+.container .confirmPassword,
+.container .code {
+  width: 690rpx;
+  margin: 0 auto;
+  height: 100rpx;
+  padding-bottom: 8rpx;
+  border-bottom: 2rpx #e5e5e5 solid;
+  display: flex;
+  font-size: 30rpx;
+  align-items: flex-end;
+}
+.container .paymentCode .paymentCode_tit,
+.container .confirmPassword .paymentCode_tit,
+.container .code .paymentCode_tit,
+.container .paymentCode .confirmPassword_tit,
+.container .confirmPassword .confirmPassword_tit,
+.container .code .confirmPassword_tit,
+.container .paymentCode .code_tit,
+.container .confirmPassword .code_tit,
+.container .code .code_tit {
+  position: relative;
+  top: -5rpx;
+}
+.container .paymentCode .paymentCode_tit_two,
+.container .confirmPassword .paymentCode_tit_two,
+.container .code .paymentCode_tit_two,
+.container .paymentCode .confirmPassword_tit_two,
+.container .confirmPassword .confirmPassword_tit_two,
+.container .code .confirmPassword_tit_two,
+.container .paymentCode .code_tit_two,
+.container .confirmPassword .code_tit_two,
+.container .code .code_tit_two {
+  font-size: 30rpx;
+  color: #999;
+}
+.container .paymentCode input,
+.container .confirmPassword input,
+.container .code input {
+  height: 42rpx;
+  padding: 0 30rpx;
+  padding-left: 20rpx;
+  font-size: 30rpx;
+  font-family: PingFangSC-Regular;
+  font-weight: 400;
+  color: #333333;
+  line-height: 52rpx;
+}
+.container .true {
+  width: 690rpx;
+  height: 88rpx;
+  font-size: 30rpx;
+  margin-top: 230rpx;
+  background: #3190fe;
+  border-radius: 5rpx;
+  text-align: center;
+  line-height: 88rpx;
+  color: #fff;
+}
+.pla_color {
+  color: #999;
+}

@@ -1,0 +1,69 @@
+<import src="../../wxParse/wxParse.wxml" />
+
+<view class="recruitment_details">
+  <!-- 头部 -->
+  <view class="recruitment_details_head">
+    <view class="recruitment_details_head_box">
+      <view class="recruitment_details_head_tit">
+       {{pageData.title}}
+      </view>
+      <view class="recruitment_details_head_one">
+        <view class="recruitment_details_head_one_l">{{pageData.xinzi}}/月</view>
+        <view class="recruitment_details_head_one_r">招聘{{pageData.is_rec}}人</view>
+      </view>
+      <view class="recruitment_details_head_two">
+        <image class="recruitment_details_head_two_img1" src="{{iconUrl}}/btn/adds.png"></image>
+        <view class="recruitment_details_head_two_add">{{pageData.city}}</view>
+        <image class="recruitment_details_head_two_img2"  src="{{iconUrl}}/btn/exp.png"></image>
+        <view class="recruitment_details_head_two_exp">{{pageData.jingyan}}</view>
+        <image class="recruitment_details_head_two_img3" src="{{iconUrl}}/btn/xl.png"></image>
+        <view class="recruitment_details_head_two_edu">{{pageData.xueli}}</view>
+      </view>
+      <view class="recruitment_details_head_three">
+        <view class="recruitment_details_head_three_l">发布日期{{pageData.addtime}}</view>
+        <view class="recruitment_details_head_three_r">
+          <!-- <image src="{{iconUrl}}/btn/Shape2.png" class="recruitment_details_head_three_r_1"></image> -->
+          <image src="{{iconUrl}}/btn/fx.png" class="recruitment_details_head_three_r_2"></image>
+        </view>
+      </view>
+    </view>
+  </view>
+  <!-- 公司信息 -->
+  <view class="company_info">
+    <view class="company_info_box">
+      <image class="company_info_img" src="{{pageData.logo}}"></image>
+      <view class="company_info_right">
+        <view class="company_info_right_one">{{pageData.company_name}}</view>
+        <view class="company_info_right_two">{{pageData.address}}</view>
+        <!-- <view class="company_info_right_three">企业规模 0~50人</view> -->
+      </view>
+    </view>
+    <image src="{{iconUrl}}/btn/dingwei.png" class="company_info_addimg" ></image>
+  </view>
+  <!-- 技能要求 -->
+  <view class="skill_requirement">
+    <view class="skill_requirement_box">
+      <view class="skill_requirement_tit">
+      技能要求
+      </view>
+      <view class="skill_requirement_main">
+        <view class="skill_requirement_main_item" wx:for="{{pageData.skill}}" wx:key="{{index}}">
+        {{item}}
+        </view>
+      </view>
+    </view>
+  </view>
+  <!-- 岗位职责 -->
+  <view class="duty">
+    <view class="duty_box">
+      <!-- <view class="duty_tit">
+      岗位职责
+      </view> -->
+      <view class="duty_main">
+        <view class="duty_main_item">
+           <template is="wxParse" data="{{wxParseData:summary.nodes}}" />
+        </view>
+      </view>
+    </view>
+  </view>
+</view>

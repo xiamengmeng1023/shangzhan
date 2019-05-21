@@ -1,0 +1,229 @@
+<view class='lm'>
+  <image src="{{iconUrl}}/imgs/myIdentity-background.png" />
+  <view class='lmText'>
+    <!-- <text>点亮身份权限</text>
+        <text>商栈，您的私人订制品牌助手</text> -->
+    <text>已点亮：1/3</text>
+  </view>
+  <view class="medal">
+    <view class="medalItem"  data-index="1" catchtap="getindex" >
+      <image src="{{iconUrl}}/imgs/myIdentity-v.png" wx:if="{{isVip==1}}" />
+      <image src="{{iconUrl}}/imgs/myIdentity-v_n.png" wx:else />
+      <text>环保使者</text>
+    </view>
+    <view class="medalItem" data-index="2" catchtap="getindex">
+      <image src="{{iconUrl}}/imgs/myIdentity-manager.png"  wx:if="{{is_company_member==1}}" />
+      <image src="{{iconUrl}}/imgs/myIdentity-manager_n.png"  wx:else />
+      <text>企业管理</text>
+    </view>
+    <view class="medalItem" data-index="3"  catchtap="getindex">
+      <image src="{{iconUrl}}/imgs/myIdentity-amb.png" wx:if="{{alliance_status==1}}"/>
+      <image src="{{iconUrl}}/imgs/myIdentity-amb_n.png" wx:else />
+      <text>环保联盟</text>
+    </view>
+  </view>
+
+</view>
+
+
+<block wx:if="{{isIndex==1}}">
+  <view class="identity">
+    <view class="identityTop">
+      <view class="identityTopLeft">
+        <view class="identityTopLeft_tit_one">环保使者身份</view>
+        <view class="identityTopLeft_tit_two" wx:if="{{isVip==1}}">有效期: {{dueTime}}</view>
+      </view>
+      <view class="vipState_no" wx:if="{{isVip==0}}"  catchtap="showBuyModal">去点亮</view>
+      <view class="vipState_no renew" wx:elif="{{isVip==1}}" catchtap="showBuyModal" >续费</view>
+      <view class="vipState_ok" wx:else>已点亮</view>
+    </view>
+  </view>
+  <view class="identityMiddle">
+    <view class="identityMiddleItem" wx:for='{{list}}' wx:key="{{index}}">
+      <image src="{{iconUrl}}{{item.icon}}{{vipState==1?'1':''}}.png" />
+      <text>{{item.name}}</text>
+    </view>
+  </view>
+  <view wx:if="{{isVip==1}}" class="identityBottom" >开通更多身份，即可享受更多专属服务</view>
+  <view wx:elif="{{isVip==0}}" class="identityBottom" >尚未开通任何身份，多项专属服务将无法正常使用</view>
+</block>
+
+<block wx:if="{{isIndex==2}}">
+  <view class="identity">
+    <view class="identityTop">
+      <view class="identityTopLeft">
+        <view class="identityTopLeft_tit_one">企业码</view>
+        <!-- <view class="identityTopLeft_tit_two" wx:if="{{isVip==1}}">有效期: {{dueTime}}</view> -->
+      </view>
+      <view class="vipState_no"  catchtap="showBuyModal">去申请</view>
+    </view>
+  </view>
+  <view class="identityMiddle">
+    <view class="identityMiddleItem" wx:for='{{list}}' wx:key="{{index}}">
+      <image src="{{iconUrl}}{{item.icon}}{{vipState==1?'1':''}}.png" />
+      <text>{{item.name}}</text>
+    </view>
+  </view>
+  
+  <view wx:if="{{isVip==1}}" class="identityBottom" >开通更多身份，即可享受更多专属服务</view>
+  <view wx:elif="{{isVip==0}}" class="identityBottom" >尚未开通任何身份，多项专属服务将无法正常使用</view>
+</block>
+
+<block wx:if="{{isIndex==3}}">
+  <view class="identity">
+    <view class="identityTop">
+      <view class="identityTopLeft">
+        <view class="identityTopLeft_tit_one">环保联盟身份</view>
+        <!-- <view class="identityTopLeft_tit_two" wx:if="{{isVip==1}}">有效期: {{dueTime}}</view> -->
+      </view>
+      <view class="vipState_no" wx:if="{{isVip==0}}"  catchtap="showBuyModal">去点亮</view>
+      <view class="vipState_no renew" wx:elif="{{isVip==1}}" catchtap="showBuyModal" >续费</view>
+      <view class="vipState_ok" wx:else>已点亮</view>
+    </view>
+  </view>
+  <view class="identityMiddle">
+    <view class="identityMiddleItem" wx:for='{{list}}' wx:key="{{index}}">
+      <image src="{{iconUrl}}{{item.icon}}{{vipState==1?'1':''}}.png" />
+      <text>{{item.name}}</text>
+    </view>
+  </view>
+  
+  <view wx:if="{{isVip==1}}" class="identityBottom" >开通更多身份，即可享受更多专属服务</view>
+  <view wx:elif="{{isVip==0}}" class="identityBottom" >尚未开通任何身份，多项专属服务将无法正常使用</view>
+</block>
+
+
+
+<!-- 模态框遮罩 -->
+ <!-- catchtap="closeFxModal" -->
+<form bindsubmit="formSubmit">
+  <view class="modal-mask" catchtap="hideBuyModal"  wx:if='{{showFxModal}}'>
+  </view>
+  <view class='fxmodal' animation="{{animationData}}" wx:if='{{showFxModal}}'>  
+    <!-- 弹出二维码 -->
+    
+      <!-- <view class="erweima">
+        <image src="https://www.shangzhanyun.com/Public/Style/images/shaiya.jpg" mode="widthFix"  
+      data-src="https://www.shangzhanyun.com/Public/Style/images/shaiya.jpg" 
+          catchtap="previewImage"></image>
+      </view> -->
+
+    <!-- 开通环保使者身份 -->
+    <block wx:if="{{isIndex==1}}">
+      <view class="fxheader">
+        <view class="fxheaderText" wx:if="{{isVip==0}}">开通<text class="blue">环保使者</text>身份</view> 
+        <view class="fxheaderText" wx:elif="{{isVip==1}}">续费<text class="blue">环保使者</text>身份</view>
+      </view>
+      <view class='fxselect' wx:if="{{isIndex==1}}" >
+        <view class="item {{orderType==0?'select':''}}" data-index='0' catchtap="getOrderType">
+          <text>{{radio[0].name}}</text>
+          <view class='price'> 
+            <text>￥{{radio[0].price}}元</text>
+            <text>￥{{radio[0].oldPrice}}元</text>
+          </view>
+        </view>
+        <view class="item {{orderType==1?'select':''}}" data-index='1' catchtap="getOrderType">
+          <text>{{radio[1].name}}</text>
+          <view class='price'>
+            <text>￥{{radio[1].price}}元</text>
+            <text>￥{{radio[1].oldPrice}}元</text>
+          </view>
+        </view>
+      </view>
+      <view class='listPrice'>
+        <view class='listItem'>
+          <text class='priceName'>价格</text>
+          <text class='defaultPrice'>￥{{radio[orderType].price}}</text>
+        </view>
+        <!-- <view class='listItem'>
+          <text class='priceName'>余额抵扣</text>
+          <text class='normalPrice'>￥1.9</text>
+        </view> -->
+        <view class='listItem'>
+          <text class='priceName'>实付金额</text>
+          <text class='defaultPrice'>￥{{radio[orderType].price}}</text>
+        </view>
+      
+      </view>
+      <button class='true'  disabled='{{IsSub}}' form-type='submit'>
+        确认
+      </button>
+    </block>
+     <!-- 申请企业版 -->
+    <block wx:if="{{isIndex==2}}">
+      <view class="fxheader">
+        <view class="fxheaderText" >申请<text class="blue">企业码</text></view> 
+      </view>
+      <view class='fxselect'>
+        <view class="item {{orderType==2?'select':''}}"  catchtap="getOrderType"  data-index='2'>
+          <text>企业标准版</text>
+          <view class='price'>
+            <text>￥{{radio[2].price}}元/年</text>
+          </view>
+        </view>
+        <view class="item  {{orderType==3?'select':''}}"  catchtap="getOrderType" data-index='3'>
+          <text>企业至尊版</text>
+          <view class='price'>
+            <text>￥{{radio[3].price}}元/年</text>
+          </view>
+        </view>
+      </view>
+      <view class='listPrice'>
+        <view class='listItem'>
+          <text class='priceName'>价格</text>
+          <text class='defaultPrice'>￥{{radio[orderType].price}}</text>
+        </view>
+        <view class='listItem'>
+          <text class='priceName'>实付金额</text>
+          <text class='defaultPrice'>￥{{radio[orderType].price}}</text>
+        </view>
+      </view>
+      <button class='true'  disabled='{{IsSub}}' form-type='submit'>
+        确认
+      </button>
+    </block>
+    <!-- 点亮环保联盟身份 -->
+    <block wx:if="{{isIndex==3}}">
+      <view class="fxheader">
+        <view class="fxheaderText" >开通<text class="blue">环保联盟</text>身份</view> 
+      </view>
+      <view class='fxselect'>
+        <view class="item {{orderType==4?'select':''}}"  catchtap="getOrderType" data-index='4'>
+          <text>一星联盟</text>
+          <view class='price'>
+            <text>￥{{radio[4].price}}元/年</text>
+          </view>
+        </view>
+        <view class="item {{orderType==5?'select':''}}"  catchtap="getOrderType"  data-index='5'>
+          <text>二星联盟</text>
+          <view class='price'>
+            <text>￥{{radio[5].price}}元/年</text>
+          </view>
+        </view>
+        <view class="item {{orderType==6?'select':''}}" catchtap="getOrderType" data-index='6'>
+          <text>三星联盟</text>
+          <view class='price'>
+            <text>￥{{radio[6].price}}元/年</text>
+          </view>
+        </view>
+      </view>
+      <view class='listPrice'>
+        <view class='listItem'>
+          <text class='priceName'>原价</text>
+          <text class='defaultPrice'>￥{{radio[orderType].price}}</text>
+        </view>
+        <view class='listItem'>
+          <text class='priceName'>实付金额</text>
+          <text class='defaultPrice'>￥{{radio[orderType].price}}</text>
+        </view>
+      </view>
+      <button class='true'  disabled='{{IsSub}}' form-type='submit'>
+        确认
+      </button>
+    </block>
+  </view>
+</form>
+
+
+
+

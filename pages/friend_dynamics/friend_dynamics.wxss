@@ -1,0 +1,178 @@
+.friend_dynamics {
+  background-color: #F2F2F2;
+}
+.friend_dynamics .friend_dynamics_minebox {
+  width: 100%;
+  margin-bottom: 50rpx;
+  position: relative;
+}
+.friend_dynamics .friend_dynamics_minebox .friend_dynamics_minebox_img {
+  height: 325rpx;
+  background-color: #fff;
+}
+.friend_dynamics .friend_dynamics_minebox .friend_dynamics_minebox_mine {
+  position: absolute;
+  left: 30rpx;
+  bottom: -20rpx;
+  z-index: 5;
+  border-radius: 75rpx;
+  background-color: #fff;
+}
+.friend_dynamics .friend_dynamics_minebox .friend_dynamics_minebox_mine open-data {
+  width: 150rpx;
+  height: 150rpx;
+  display: block;
+  overflow: hidden;
+  border-radius: 50%;
+}
+.friend_dynamics .friend_dynamics_minebox .friend_dynamics_minebox_name {
+  position: absolute;
+  left: 210rpx;
+  bottom: 25rpx;
+  display: flex;
+  justify-content: flex-start;
+}
+.friend_dynamics .friend_dynamics_minebox .friend_dynamics_minebox_name open-data {
+  color: #fff;
+  font-size: 36rpx;
+}
+.friend_dynamics .friend_dynamics_minebox .friend_dynamics_minebox_name .friend_dynamics_minebox_icon {
+  margin-left: 10rpx;
+}
+.friend_dynamics .friend_dynamics_minebox .friend_dynamics_minebox_name .friend_dynamics_minebox_icon image {
+  width: 40rpx;
+  height: 32rpx;
+}
+.friend_dynamics .friend_dynamics_minebox .friend_dynamics_minebox_send {
+  position: absolute;
+  right: 30rpx;
+  text-align: center;
+  top: 30rpx;
+  width: 60rpx;
+  height: 60rpx;
+  line-height: 60rpx;
+  background-color: #fff;
+  border-radius: 50%;
+  font-weight: 500;
+}
+.friend_dynamics .friend_dynamics_minebox .friend_dynamics_minebox_send .one {
+  position: absolute;
+  top: 45%;
+  right: 25%;
+  height: 4rpx;
+  width: 30rpx;
+  background-color: #000;
+}
+.friend_dynamics .friend_dynamics_minebox .friend_dynamics_minebox_send .two {
+  position: absolute;
+  top: 25%;
+  right: 45%;
+  height: 30rpx;
+  width: 4rpx;
+  background-color: #000;
+}
+.friend_dynamics .friend_dynamics_item {
+  width: 690rpx;
+  margin: 0 auto;
+  padding: 0 30rpx;
+  padding-top: 50rpx;
+  background-color: #fff;
+}
+.friend_dynamics .friend_dynamics_item .friend_dynamics_header {
+  display: flex;
+  align-items: center;
+  margin-bottom: 20rpx;
+}
+.friend_dynamics .friend_dynamics_item .friend_dynamics_header .friend_dynamics_header_one {
+  width: 60rpx;
+  height: 60rpx;
+  background-color: #ffffff;
+  margin-right: 20rpx;
+}
+.friend_dynamics .friend_dynamics_item .friend_dynamics_header .friend_dynamics_header_two {
+  margin-right: 10rpx;
+  font-size: 30rpx;
+}
+.friend_dynamics .friend_dynamics_item .friend_dynamics_header .friend_dynamics_header_three {
+  font-size: 24rpx;
+  color: #999999;
+}
+.friend_dynamics .friend_dynamics_item .friend_dynamics_tit {
+  font-size: 30rpx;
+  margin-bottom: 30rpx;
+}
+.friend_dynamics .friend_dynamics_item .friend_dynamics_time {
+  display: flex;
+  white-space: nowrap;
+  justify-content: space-between;
+  margin-bottom: 30rpx;
+}
+.friend_dynamics .friend_dynamics_item .friend_dynamics_time .friend_dynamics_time_l {
+  font-size: 24rpx;
+  color: #999999;
+}
+.friend_dynamics .friend_dynamics_item .friend_dynamics_time .bt-img {
+  z-index: 10;
+  transform: scale(1);
+  -webkit-transform: scale(1);
+  -webkit-transition: ease all;
+  -moz-transition: ease all;
+  transition: ease all;
+  -webkit-transition-duration: 700ms;
+  -moz-transition-duration: 700ms;
+  transition-duration: 700ms;
+}
+.friend_dynamics .friend_dynamics_item .friend_dynamics_time .bt-img image {
+  width: 34rpx;
+  height: 31rpx;
+}
+.friend_dynamics .friend_dynamics_item .friend_dynamics_main_1 {
+  width: 690rpx;
+  margin-bottom: 20rpx;
+}
+.friend_dynamics .friend_dynamics_item .friend_dynamics_main_2 {
+  width: 690rpx;
+  margin-bottom: 50rpx;
+  display: flex;
+  flex-wrap: wrap;
+}
+.friend_dynamics .friend_dynamics_item .friend_dynamics_main_2 .friend_dynamics_main_item image {
+  height: 225rpx;
+  background: red;
+  width: 225rpx;
+  margin-right: 7rpx;
+  margin-bottom: 7rpx;
+}
+.friend_dynamics .friend_dynamics_item .friend_dynamics_main_2 .friend_dynamics_main_item image:nth-child(3n) {
+  margin-right: 0rpx;
+}
+.friend_dynamics .noData {
+  font-size: 24rpx;
+  color: #999;
+  text-align: center;
+  padding: 50rpx 0;
+  margin: 0 auto;
+}
+.friend_dynamics .none_box {
+  text-align: center;
+  margin: 0 auto;
+}
+.friend_dynamics .none_box .none_img {
+  width: 132rpx;
+  height: 100rpx;
+  margin-top: 300rpx;
+  margin-bottom: 30rpx;
+}
+.friend_dynamics .none_box .none_tit {
+  font-size: 24rpx;
+  color: #999;
+}
+.friend_dynamics .senddyc {
+  position: fixed;
+  top: 65%;
+  right: 5%;
+}
+.friend_dynamics .senddyc image {
+  width: 100rpx;
+  height: 100rpx;
+}

@@ -1,0 +1,14 @@
+.set-card{
+  width: 100rpx;
+  height: 100rpx;
+  border-radius: 50%;
+  background: #008cd6;
+  position: fixed;
+  right: 30rpx;
+  bottom: 150rpx;
+  text-align: center;
+  z-index: 3;
+  line-height: 40rpx;
+  padding: 10rpx 0;
+  box-sizing: border-box;
+}

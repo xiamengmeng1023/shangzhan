@@ -1,0 +1,31 @@
+<template name="imgTxt">
+  <block wx:if="{{cateid == 10}}">
+    <view class='pading-lr bg f26-8c t-indent t-text'>
+      <block wx:for="{{datacon}}" wx:key="{{index}}">
+        <text>{{item.summary}}</text>
+      </block>
+    </view>
+  </block>
+  <block wx:elif="{{cateid == 29}}">
+    <view class='pading-lr bg f26-8c t-text' wx:for="{{datacon}}" wx:key="{{index}}">
+      <image src="{{picUrl}}{{item.pic}}" mode='widthFix'></image>
+    </view>
+  </block>
+  <block wx:elif="{{cateid == 30}}">
+    <block wx:for="{{datacon}}" wx:key="{{index}}">
+      <view class='pading-lr bg f26-8c p-t t-text'>
+        <image src="{{picUrl}}{{item.pic}}" mode='widthFix'></image>
+      </view>
+      <view class='pading-lr bg f26-8c t-indent t-text'>
+        <text>{{item.summary}}</text>
+      </view>
+    </block>
+
+
+  </block>
+
+  <!-- <view class='pading-lr bg f26-8c pading-ud t-text'>
+    <image src="https://www.shangzhanyun.com/Public/Style/images/applets/imgs/web.jpg"></image>
+  </view> -->
+
+</template>

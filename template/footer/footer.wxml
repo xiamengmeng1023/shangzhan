@@ -1,0 +1,6 @@
+<template name="footer">
+  <view class='bg-list w1 pading-ud'>
+  <image src='https://www.shangzhanyun.com/Public/Style/images/applets/img/shuiyin.png' class='footer-img'></image>
+    <text class='f26-8c w1 t-block t-center'>商栈提供技术支持</text>
+  </view>
+</template>

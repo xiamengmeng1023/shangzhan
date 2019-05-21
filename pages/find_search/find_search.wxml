@@ -1,0 +1,56 @@
+ 
+ <view class="find_search_box">
+  <!-- 搜索框 -->
+  <view class="find_search_head">
+    <input  
+  placeholder-class="phcolor"
+  class="find_search" placeholder="搜索" value="{{searchVal}}"  bindinput="bindKeyInput" bindblur="blur"  />
+    <image class="find_search_icon" src="{{iconUrl}}/btn/search_btn.png"></image>
+    <view class="find_search_btn" catchtap="resetSearch" catchtap='subSoso'>搜索</view>
+  </view>
+  <view class="find_search_main">
+     <block wx:for="{{navList}}" wx:key="{{index}}">
+      <view class="find_search_main_item {{item.checked?'activ':''}}" data-id="{{item.id}}" catchtap='navTab'>
+        {{item.txt}}
+      </view>
+    </block>
+  </view>
+ </view>
+ <view wx:if="{{isShow}}" class='pading-lr pading-ud border-bottom bg f30-28 w1 t-center failMsg'>
+    <text>{{failMsg}}</text>
+  </view>
+<view class='bg w1' wx:if="{{list.length > 0 && isShow == false}}">
+  <block wx:for="{{list}}" wx:key="{{index}}">
+    <block wx:if="{{search_type == 2}}">
+      <navigator url='/pages/news/news?id={{item.id}}'>
+        <view class='pading-lr pading-ud border-bottom bg f30-28'>
+          <text>{{item.title}}</text>
+        </view>
+      </navigator>
+    </block>
+    <block wx:if="{{search_type == 3}}">
+      <navigator url='/pages/goods_details/goods_details?id={{item.id}}'>
+        <view class='pading-lr pading-ud border-bottom bg f30-28'>
+          <text>{{item.title}}</text>
+        </view>
+      </navigator>
+    </block>
+    <block wx:if="{{search_type == 4}}">
+      <navigator url='/pages/textTxt/textTxt?id={{item.id}}'>
+        <view class='pading-lr pading-ud border-bottom bg f30-28'>
+          <text>{{item.title}}</text>
+        </view>
+      </navigator>
+    </block>
+      <block wx:if="{{search_type == 5}}">
+      <navigator url='/pages/employ/employ?id={{item.id}}'>
+        <view class='pading-lr pading-ud border-bottom bg f30-28'>
+          <text>{{item.title}}</text>
+        </view>
+      </navigator>
+    </block>
+  </block>
+</view>
+
+
+

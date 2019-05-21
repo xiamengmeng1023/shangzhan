@@ -1,0 +1,49 @@
+<view class="find">
+  <view class="find_box">
+    <!-- 搜索框 -->
+    <view class="find_search" catchtap="ml_toFindSearch" >
+      <image class="find_search_btn" src="{{iconUrl}}/btn/search_btn.png"></image>
+      <view class="find_search_tit">搜索</view>
+    </view>
+    <!-- 列表 -->
+    <view class="find_mian">
+      <view class="find_mian_item" catchtap="goToFriendDynamics">
+       <view class="find_mian_item_l">
+          <image class="find_mian_item_l_img" src="{{iconUrl}}/btn/dynamic.png" ></image>
+          <view class="find_mian_item_l_tit">朋友动态</view>
+       </view>
+       <image class="find_mian_item_r" src="{{iconUrl}}/btn/arrow.png">
+       </image>
+      </view>
+      <view class="find_mian_item" catchtap="goToEntDy" >
+       <view class="find_mian_item_l">
+          <image class="find_mian_item_l_img" src="{{iconUrl}}/btn/find_home_icon3.png" ></image>
+          <view class="find_mian_item_l_tit">企业动态</view>
+       </view>
+       <image class="find_mian_item_r" src="{{iconUrl}}/btn/arrow.png">
+       </image>
+      </view>
+
+
+
+   
+      <navigator class="find_mian_item"  hover-class="none" url="/pages/billboard/billboard?from=1">
+        <view class="find_mian_item_l">
+          <image class="find_mian_item_l_img" src="{{iconUrl}}/btn/find_home_icon2.png" ></image>
+          <view class="find_mian_item_l_tit">风云榜</view>
+        </view>
+        <image class="find_mian_item_r" src="{{iconUrl}}/btn/arrow.png">
+        </image>
+      </navigator>
+
+      <navigator class="find_mian_item"   hover-class="none"url="/pages/billboard/billboard?from=2" >
+        <view class="find_mian_item_l">
+          <image class="find_mian_item_l_img" src="{{iconUrl}}/btn/find_home_icon1.png" ></image>
+          <view class="find_mian_item_l_tit">企业榜</view>
+        </view>
+        <image class="find_mian_item_r" src="{{iconUrl}}/btn/arrow.png">
+        </image>
+      </navigator>
+    </view>
+  </view>
+</view>

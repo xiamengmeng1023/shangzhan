@@ -1,0 +1,62 @@
+page {
+  background-color: #f5f5f5;
+}
+.sendDyc_mian {
+  margin-top: 15rpx;
+}
+.sendDyc_mian .sendDyc_top {
+  padding: 0 30rpx;
+  padding-top: 35rpx;
+  background-color: #fff;
+  padding-bottom: 30rpx;
+}
+.sendDyc_mian .sendDyc_top textarea {
+  font-size: 30rpx;
+}
+.sendDyc_mian .sendDyc_top .flex {
+  display: flex;
+}
+.sendDyc_mian .sendDyc_top .flex .Personal_image_addbtn {
+  width: 210rpx;
+  height: 210rpx;
+  text-align: center;
+  line-height: 210rpx;
+  background-color: #f5f5f5;
+  margin-bottom: 100rpx;
+  position: relative;
+}
+.sendDyc_mian .sendDyc_top .flex .Personal_image_addbtn image {
+  width: 210rpx;
+  height: 210rpx;
+}
+.sendDyc_mian .sendDyc_top .flex .Personal_image_addbtn .one {
+  background-color: #ccc;
+  width: 36rpx;
+  height: 4rpx;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%);
+}
+.sendDyc_mian .sendDyc_top .flex .Personal_image_addbtn .two {
+  background-color: #ccc;
+  height: 36rpx;
+  width: 4rpx;
+  position: absolute;
+  top: 43%;
+  left: 50%;
+  transform: translate(-50%);
+}
+.sendDyc_mian .placecolor {
+  color: #999999;
+}
+.sendDyc_mian .ok_btn {
+  height: 88rpx;
+  width: 690rpx;
+  line-height: 88rpx;
+  text-align: center;
+  color: #fff;
+  background-color: #0090ff;
+  font-size: 30rpx;
+  margin: 0 auto;
+}

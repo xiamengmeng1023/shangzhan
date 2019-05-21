@@ -1,0 +1,17 @@
+.box {
+  margin-top: 30rpx;
+  width: 690rpx;
+  margin: 0 auto;
+}
+.box .title {
+  font-size: 18px;
+  margin-bottom: 50rpx;
+  font-weight: 500;
+  font-size: 36rpx;
+}
+.box .content {
+  font-size: 15px;
+  font-size: 30rpx;
+  line-height: 50rpx;
+  margin-bottom: 50rpx;
+}

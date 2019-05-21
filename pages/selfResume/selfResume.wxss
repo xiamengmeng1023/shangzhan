@@ -1,0 +1,41 @@
+.selfResume {
+  padding: 45rpx 30rpx;
+}
+.selfResume .selfResume_tit {
+  padding-bottom: 50rpx;
+  font-size: 40rpx;
+}
+.selfResume .selfResume_main {
+  border-bottom: 1rpx solid #F5F5F5;
+  margin: 0 auto;
+}
+.selfResume .selfResume_main textarea {
+  width: 690rpx;
+  margin: 0 auto;
+  font-size: 30rpx;
+  min-height: 125rpx !important;
+  line-height: 43rpx;
+  color: #999;
+  padding-bottom: 50rpx;
+}
+.selfResume .selfResume_numbox {
+  margin-top: 30rpx;
+  text-align: right;
+  font-size: 24rpx;
+  color: #999999;
+}
+.selfResume .selfResume_numbox text {
+  color: #0090FF;
+}
+.selfResume .save_btn {
+  height: 88rpx;
+  text-align: center;
+  line-height: 88rpx;
+  color: #fff;
+  width: 690rpx;
+  margin: 0 auto;
+  font-size: 30rpx;
+  background-color: #3190FE;
+  position: fixed;
+  bottom: 50rpx;
+}

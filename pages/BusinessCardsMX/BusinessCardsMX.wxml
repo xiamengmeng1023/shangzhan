@@ -1,0 +1,18 @@
+<view class="BusinessCardsMX">
+  <view class="BusinessCardsMX_main {{item.isMb10 ? 'ma_b10':''}}" >
+  <block wx:for="{{list}}">
+    <view class="BusinessCardsMX_main_flexbox"  catchtap="isWhichPageToGo"  wx:key="{{index}}" data-index="{{item.id}}" >
+      <view class="BusinessCardsMX_main_item fz30" >
+        {{item.tit}}    
+      </view>
+      <view class="BusinessCardsMX_main_item">
+        <image src="{{iconUrl}}/btn/arrow.png" ></image>
+      </view>
+    </view>
+  </block>
+  </view>
+</view>
+
+
+
+

@@ -1,0 +1,163 @@
+.recruitment_details {
+  background-color: #F5F5F5;
+}
+.recruitment_details .recruitment_details_head {
+  padding-top: 50rpx;
+  padding-bottom: 30rpx;
+  margin-bottom: 15rpx;
+  background-color: #fff;
+}
+.recruitment_details .recruitment_details_head .recruitment_details_head_box {
+  margin: 0 auto;
+  padding: 0 30rpx;
+}
+.recruitment_details .recruitment_details_head .recruitment_details_head_box .recruitment_details_head_tit {
+  font-size: 48rpx;
+  margin-bottom: 32rpx;
+  font-weight: 700;
+}
+.recruitment_details .recruitment_details_head .recruitment_details_head_box .recruitment_details_head_one {
+  margin-bottom: 30rpx;
+  font-size: 24rpx;
+  display: flex;
+}
+.recruitment_details .recruitment_details_head .recruitment_details_head_box .recruitment_details_head_one .recruitment_details_head_one_l {
+  color: #F63C33;
+  margin-right: 10rpx;
+}
+.recruitment_details .recruitment_details_head .recruitment_details_head_box .recruitment_details_head_one .recruitment_details_head_one_r {
+  color: #999999;
+}
+.recruitment_details .recruitment_details_head .recruitment_details_head_box .recruitment_details_head_two {
+  font-size: 24rpx;
+  display: flex;
+  margin-bottom: 38rpx;
+  align-items: baseline;
+}
+.recruitment_details .recruitment_details_head .recruitment_details_head_box .recruitment_details_head_two image {
+  margin-right: 15rpx;
+}
+.recruitment_details .recruitment_details_head .recruitment_details_head_box .recruitment_details_head_two .recruitment_details_head_two_img1 {
+  width: 31rpx;
+  height: 32rpx;
+}
+.recruitment_details .recruitment_details_head .recruitment_details_head_box .recruitment_details_head_two .recruitment_details_head_two_img2 {
+  width: 30rpx;
+  height: 24rpx;
+}
+.recruitment_details .recruitment_details_head .recruitment_details_head_box .recruitment_details_head_two .recruitment_details_head_two_img3 {
+  width: 30rpx;
+  height: 26rpx;
+}
+.recruitment_details .recruitment_details_head .recruitment_details_head_box .recruitment_details_head_two .recruitment_details_head_two_add {
+  margin-right: 50rpx;
+}
+.recruitment_details .recruitment_details_head .recruitment_details_head_box .recruitment_details_head_two .recruitment_details_head_two_exp {
+  margin-right: 50rpx;
+}
+.recruitment_details .recruitment_details_head .recruitment_details_head_box .recruitment_details_head_three {
+  display: flex;
+  justify-content: space-between;
+}
+.recruitment_details .recruitment_details_head .recruitment_details_head_box .recruitment_details_head_three .recruitment_details_head_three_l {
+  font-size: 24rpx;
+  color: #999999;
+}
+.recruitment_details .recruitment_details_head .recruitment_details_head_box .recruitment_details_head_three .recruitment_details_head_three_r {
+  display: flex;
+  align-items: center;
+}
+.recruitment_details .recruitment_details_head .recruitment_details_head_box .recruitment_details_head_three .recruitment_details_head_three_r .recruitment_details_head_three_r_1 {
+  width: 40rpx;
+  height: 40rpx;
+  margin-right: 30rpx;
+}
+.recruitment_details .recruitment_details_head .recruitment_details_head_box .recruitment_details_head_three .recruitment_details_head_three_r .recruitment_details_head_three_r_2 {
+  width: 36rpx;
+  height: 36rpx;
+}
+.recruitment_details .company_info {
+  padding-top: 50rpx;
+  background-color: #fff;
+  position: relative;
+}
+.recruitment_details .company_info .company_info_box {
+  width: 690rpx;
+  margin: 0 auto;
+  display: flex;
+  margin-bottom: 15rpx;
+}
+.recruitment_details .company_info .company_info_box .company_info_img {
+  width: 120rpx;
+  height: 120rpx;
+  background-color: red;
+  margin-right: 20rpx;
+}
+.recruitment_details .company_info .company_info_box .company_info_right {
+  margin-bottom: 50rpx;
+}
+.recruitment_details .company_info .company_info_box .company_info_right .company_info_right_one {
+  font-size: 30rpx;
+  color: #000;
+  margin-bottom: 16rpx;
+  font-weight: 700;
+}
+.recruitment_details .company_info .company_info_box .company_info_right .company_info_right_two {
+  color: #999;
+  font-size: 24rpx;
+  width: 400rpx;
+  margin-bottom: 5rpx;
+}
+.recruitment_details .company_info .company_info_box .company_info_right .company_info_right_three {
+  color: #999;
+  font-size: 24rpx;
+}
+.recruitment_details .company_info .company_info_addimg {
+  width: 21rpx;
+  height: 24rpx;
+  position: absolute;
+  top: 110rpx;
+  right: 40rpx;
+}
+.recruitment_details .skill_requirement .skill_requirement_box {
+  background-color: #fff;
+  padding: 0 30rpx;
+  margin: 0 auto;
+  padding-top: 50rpx;
+}
+.recruitment_details .skill_requirement .skill_requirement_box .skill_requirement_tit {
+  font-size: 30rpx;
+  margin-bottom: 50rpx;
+}
+.recruitment_details .skill_requirement .skill_requirement_box .skill_requirement_main {
+  display: flex;
+  padding-bottom: 50rpx;
+}
+.recruitment_details .skill_requirement .skill_requirement_box .skill_requirement_main .skill_requirement_main_item {
+  font-size: 24rpx;
+  color: #999999;
+  border-radius: 30rpx;
+  padding: 10rpx 28rpx;
+  border: 1rpx solid #999;
+  margin-right: 20rpx;
+}
+.recruitment_details .duty {
+  background-color: #fff;
+}
+.recruitment_details .duty .duty_box {
+  padding: 0 30rpx;
+  margin: 0 auto;
+}
+.recruitment_details .duty .duty_box .duty_tit {
+  font-size: 30rpx;
+  margin-bottom: 30rpx;
+}
+.recruitment_details .duty .duty_box .duty_main {
+  padding-bottom: 50rpx;
+}
+.recruitment_details .duty .duty_box .duty_main .duty_main_item {
+  font-size: 24rpx;
+  color: #999999;
+  margin-bottom: 10rpx;
+  padding-bottom: 50rpx;
+}

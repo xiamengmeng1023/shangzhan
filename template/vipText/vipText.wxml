@@ -1,0 +1,11 @@
+<template name="vipText">
+  <view class='vipexplain bg pading-lr border-bottom'>
+    <image src='/img/vipexplain.png' class='img-icon m-r'></image>
+    <text>{{vipTitle||'使用说明'}}</text>
+  </view>
+  <view class='pading-lr bg vip-text-box f26-8c'>
+    <view wx:for="{{vipText}}">
+      <text>{{item}}</text>
+    </view>
+  </view>
+</template>

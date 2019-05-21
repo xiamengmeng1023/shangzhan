@@ -1,0 +1,30 @@
+   <!-- 个人名片信息 -->
+  <view class="home_selfCard" catchtap="goToCardDetails" >
+    <view class="home_selfCard_one">
+        <image class="home_selfCard_one_l" src="{{cardList.logo||'{{iconUrl}}/order_img.png'}}"></image>
+        <view class="home_selfCard_one_r">
+          <view class="home_selfCard_one_r_t">
+            <text class="home_selfCard_one_r_t_name">{{MyCard[0].real_name||'暂未填写'}}</text>
+            <image class="home_selfCard_icon" wx:if="{{IsShow}}" src="{{iconUrl}}/btn/zuan.png"></image>
+          </view>
+          <view class="home_selfCard_one_r_b">{{MyCard[0].job||'暂未填写'}}</view>
+          </view>
+        </view>
+    <view class="home_selfCard_two">
+      <view class="company_name">{{MyCard[0].name||'暂未填写'}}</view>
+      <image class="address_icon" src="{{iconUrl}}/btn/dingwei.png"></image>
+    </view>
+    <view class="home_selfCard_three">
+      <image class="phone_icon" src="{{iconUrl}}/btn/phone.png"></image>
+      <text class="phone_num">{{MyCard[0].phone||'暂未填写'}}</text>
+      <image class="mail_icon" src="{{iconUrl}}/btn/mail.png"></image>
+      <text class="mail_address">{{MyCard[0].email||'暂未填写'}}</text>
+    </view>
+    <navigator url='/pages/referralCode/referralCode?user_realName={{user_realName}}'>
+        <image class="erweima" src="{{iconUrl}}/btn/erweima.png"></image>
+    </navigator>
+    <navigator wx:if="{{!(MyCard[0].real_name!=''&& MyCard[0].job !=''&&MyCard[0].name!=''&&MyCard[0].phone!=''&& MyCard[0].email!='')}}" class="ellipsis" url='/pages/basicInfo/basicInfo'>
+      <!-- <image class="ellipsis" src="{{iconUrl}}/btn/ellipsis.png"></image>  -->
+      去完善
+    </navigator>
+  </view>

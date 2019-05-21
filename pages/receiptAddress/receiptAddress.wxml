@@ -1,0 +1,36 @@
+<view class="place"></view>
+ <view class="mainbox">
+    <view  class="receiptAddress"  wx:for="{{addressList}}"  wx:key="{{index}}">
+      <view class="receiptAddress_item" bindtouchstart="touchS" bindtouchmove="touchM" bindtouchend="touchE" data-index="{{index}}"  data-mid='{{item.id}}' data-id='{{item.store_id}}' style="{{item.txtStyle}}"   catchtap='setDefault'  >
+        <view class="receiptAddress_item_one">
+          <view class="receiptAddress_item_one_l">
+            <view class="receiptAddress_item_one_name">{{item.name}}</view>
+            <view class="receiptAddress_item_one_phone">{{item.mobile}}</view>
+          </view>
+          <view class="receiptAddress_item_one_r" catchtap="gotoEdit" data-id="{{item.id}}" >
+            <image src="{{iconUrl}}/btn/edit.png"></image>
+          </view>
+        </view>
+        <view class="receiptAddress_item_two">
+          {{item.province}}{{item.city}}{{item.area}}{{item.address}}
+        </view>
+        <!-- 判断是否为默认地址 -->
+        <view class="receiptAddress_item_three" >
+          <view class="agreement" >
+            <icon type="{{checkedId == item.id ?'success':'circle'}}"    color="{{checkedId == item.id?'#3190FE':'#d5d5d5'}}" />
+            <!-- <view class="agreement_bottom" wx:if="{{checkedId == item.id?'true':'false'}}">默认显示
+            </view> -->
+            <view class="agreement_bottom" wx:if="{{checkedId == item.id}}">默认显示
+            </view>
+            <view class="agreement_bottom" wx:else>设为默认
+            </view>
+          </view>
+        </view>
+        <view data-index="{{item.id}}" catchtap="remove"  class="list_del del">删除</view>
+      </view>
+    </view >
+ </view>
+
+<navigator  class='add' url="/pages/newAddress/newAddress?from=new">
+  新增收货地址
+</navigator>

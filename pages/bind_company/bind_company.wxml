@@ -1,0 +1,38 @@
+
+<!-- 搜索框 -->
+<!-- bindconfirm='goSearch' bindblur="blursearch"  -->
+<view class='soso-box'>
+  <image src="{{iconUrl}}/btn/search_btn.png"></image>
+  <input type='text' placeholder-class="place" placeholder="请输入公司名称、关键字" value='{{inputVal}}' confirm-type='search' focus="{{autoFocus}}" bindinput='inputsearch'  bindblur="blursearch" bindfocus="inputfocus"></input>
+</view>
+<form  bindsubmit="bindFormSubmit" wx:if="{{radio.length > 0}}">
+  <scroll-view class='link-box ' scroll-y="true">
+    <radio-group name="radio">
+      <view class="list " wx:for="{{radio}}" wx:key="{{key}}">
+        <view class="list_item">
+            <text class='fz30'>{{item.title|| ""}}</text>
+            <!-- <view class='f26-44'>
+              <text>电话：</text>
+              <text class='m-r'>{{item.tel || ""}}</text>
+            </view> -->
+            <view class=''>
+              <text class='fz24'>{{item.address|| ""}}</text>
+            </view>
+        </view>
+        <view class="list_item">
+          <!-- <radio checked='' color='#c4261d'></radio> -->
+          <radio checked='{{item.checked}}' value='{{item.userid}}' color='#008cd6'></radio>
+        </view>
+      </view>
+    </radio-group>
+  </scroll-view>
+
+  <!-- catchtap='catchtap' -->
+  <button class='footert-btn f32-ff' form-type="submit" >立即绑定</button>
+</form>
+
+
+
+
+
+

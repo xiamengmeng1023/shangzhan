@@ -1,0 +1,139 @@
+.header {
+  width: 690rpx;
+  margin: 0 auto;
+}
+.header .header_tit {
+  font-size: 30rpx;
+  display: flex;
+  justify-content: center;
+  border-bottom: 6rpx solid transparent;
+  margin-bottom: 30rpx;
+  position: fixed;
+  top: 0;
+  left: 50%;
+  width: 100%;
+  transform: translate(-50%);
+  background-color: red;
+}
+.header .header_tit .header_tit_one {
+  padding: 28rpx 0;
+  color: #999999;
+  margin-right: 130rpx;
+}
+.header .header_tit .header_tit_two {
+  padding: 28rpx 0;
+  color: #999999;
+}
+.header .header_tit .active {
+  color: #000;
+  font-weight: 700;
+  border-bottom: 6rpx solid #3190FE;
+}
+.header .header_main {
+  margin-top: 110rpx;
+}
+.header .header_main .goods_item {
+  width: 690rpx;
+  height: 180rpx;
+  margin: 0 auto;
+  background-color: #fff;
+  padding: 30rpx 0;
+  border: 1rpx solid #F5F5F5;
+  display: flex;
+}
+.header .header_main .goods_item .goods_img {
+  width: 180rpx;
+  height: 180rpx;
+  background-color: pink;
+  margin-right: 33rpx;
+  border-radius: 10rpx;
+}
+.header .header_main .goods_item .goods_item_r .goods_tit {
+  padding: 0 25rpx;
+  font-size: 26rpx;
+  padding-bottom: 25rpx;
+}
+.header .header_main .goods_item .goods_item_r .goods_tit_label {
+  margin-bottom: 32rpx;
+  display: flex;
+  margin-left: 22rpx;
+}
+.header .header_main .goods_item .goods_item_r .goods_tit_label .goods_tit_label_item {
+  font-size: 18rpx;
+  height: 25rpx;
+  color: #F5A623;
+  border: 1rpx solid #F5A623;
+  margin-right: 15rpx;
+  padding: 5rpx;
+}
+.header .header_main .goods_item .goods_item_r .goods_price_info {
+  display: flex;
+  align-items: baseline;
+  align-content: flex-end;
+}
+.header .header_main .goods_item .goods_item_r .goods_price_info .sign {
+  color: #fc4c40;
+  font-size: 24rpx;
+}
+.header .header_main .goods_item .goods_item_r .goods_price_info .goods_price {
+  font-size: 48rpx;
+  color: #fc4c40;
+  margin-right: 15rpx;
+}
+.header .header_main .goods_item .goods_item_r .goods_price_info .goods_oldPrice {
+  font-size: 24rpx;
+  color: #999999;
+  text-decoration: line-through;
+}
+.header .header_main .job {
+  display: flex;
+  justify-content: space-between;
+  align-content: center;
+  margin-bottom: 60rpx;
+}
+.header .header_main .job .job_item {
+  display: flex;
+}
+.header .header_main .job .job_item .job_item_img {
+  width: 80rpx;
+  height: 80rpx;
+  border-radius: 50%;
+  margin-right: 24rpx;
+}
+.header .header_main .job .job_item .job_item_img_one .job_item_img_one_t {
+  margin-bottom: 10rpx;
+}
+.header .header_main .job .job_item .job_item_img_one .job_item_img_one_c {
+  margin-bottom: 30rpx;
+}
+.header .header_main .job .job_item .job_item_img_one .job_item_img_one_b {
+  color: #999999;
+}
+.header .header_main .job .job_item_img_two {
+  color: #F63C33;
+  padding-top: 50rpx;
+}
+.header .header_main .noneBox {
+  display: flex;
+  margin-top: 300rpx;
+  background-color: #fff;
+  flex-direction: column;
+  align-items: center;
+}
+.header .header_main .noneBox .noneImage {
+  width: 132rpx;
+  height: 100rpx;
+}
+.header .header_main .noneBox .noneTxt {
+  font-size: 40rpx;
+  text-align: center;
+  font-weight: 700;
+  color: #999;
+  margin-top: 30rpx;
+}
+.fz30 {
+  font-size: 30rpx;
+}
+.fz24 {
+  font-size: 24rpx;
+}

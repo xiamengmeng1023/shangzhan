@@ -1,0 +1,39 @@
+.referralCode_main {
+  text-align: center;
+  position: relative;
+}
+.referralCode_main .referralCode_main_img {
+  height: 750rpx;
+  width: 100%;
+  background-color: pink;
+  margin-bottom: 52rpx;
+}
+.referralCode_main .referralCode_main_code {
+  position: absolute;
+  top: 387rpx;
+  right: 10%;
+  width: 300rpx;
+  height: 300rpx;
+  border-radius: 20rpx;
+  transform: translate(-50%);
+  background-color: skyblue;
+}
+.referralCode_main .referralCode_main_name {
+  font-size: 48rpx;
+  margin-bottom: 30rpx;
+}
+.referralCode_main .referralCode_main_tit {
+  font-size: 30rpx;
+  font-weight: 500;
+  color: #999;
+  margin-bottom: 20rpx;
+}
+.referralCode_main .referralCode_main_num {
+  font-size: 36rpx;
+  font-weight: 700;
+  margin-bottom: 132rpx;
+}
+.referralCode_main .referralCode_main_footer {
+  font-size: 24rpx;
+  color: #999;
+}

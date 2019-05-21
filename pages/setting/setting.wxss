@@ -1,0 +1,32 @@
+.place {
+  height: 15rpx;
+  width: 100%;
+  background-color: #F5F5F5;
+}
+.mainbox {
+  background-color: #F5F5F5;
+}
+.mainbox .item {
+  height: 100rpx;
+  padding: 0 30rpx;
+  background-color: #fff;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  color: #000;
+  border-bottom: 1rpx solid #F5F5F5;
+}
+.mainbox .item:nth-child(1) {
+  margin-top: 14rpx;
+}
+.mainbox .item:nth-child(4),
+.mainbox .item:nth-child(2) {
+  border-bottom: 14rpx solid #F5F5F5;
+}
+.mainbox .item .itemLeft {
+  font-size: 30rpx;
+}
+.mainbox .item .itemRight image {
+  width: 12rpx;
+  height: 21rpx;
+}

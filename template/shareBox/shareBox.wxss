@@ -1,0 +1,119 @@
+.flx-alert {
+  position: fixed;
+  bottom: 280rpx;
+  right: 25rpx;
+  z-index: 999;
+  overflow-y: scroll;
+  height: auto;
+  -webkit-overflow-scrolling: touch;
+}
+.flx-alert .f-list image {
+  width: 100rpx;
+  height: 100rpx;
+  box-sizing: border-box;
+  border-radius: 50%;
+  margin-bottom: 20rpx;
+}
+.cancel_btn {
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  height: 88rpx;
+  font-size: 30rpx;
+  text-align: center;
+  line-height: 88rpx;
+  width: 100%;
+  background-color: #fff;
+  color: #999999;
+  z-index: 10;
+}
+/* .share-btn {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+  z-index: 10;
+} */
+.share-alert {
+  position: fixed;
+  left: 0;
+  bottom: 100rpx;
+  width: 100%;
+  height: 250rpx;
+  padding-top: 90rpx;
+  background-color: #fff;
+  padding-bottom: 80rpx;
+  box-sizing: border-box;
+  z-index: 999;
+}
+.share-alert image {
+  width: 84rpx;
+  height: 84rpx;
+}
+.share-alert .share-box {
+  display: flex;
+  justify-content: center;
+  background-color: #fff;
+  width: 100%;
+  position: fixed;
+}
+.share-alert .share-box .share-friend {
+  margin-right: 60rpx;
+}
+.share-alert .share-box .share-friend button {
+  width: 240rpx;
+  height: 80rpx;
+  background-color: #3190FE;
+  font-size: 24rpx;
+  color: #fff;
+  text-align: center;
+  line-height: 80rpx;
+  border-radius: 40px;
+}
+.share-alert .share-box .mr0 {
+  margin-right: 0;
+}
+.share-alert .share-box .alert-bg {
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 10;
+}
+.alert-img {
+  position: fixed;
+  left: 50%;
+  top: 50rpx;
+  transform: translate(-50%);
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  box-sizing: border-box;
+  background-color: #F5F5F5;
+  margin: 0 auto !important;
+  z-index: 10;
+}
+.alert-img image {
+  height: 900rpx;
+  width: 530rpx;
+}
+.alert-down {
+  width: 600rpx;
+  height: 70rpx;
+  line-height: 70rpx;
+  background: #008cd6;
+}
+.canvas-box {
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  left: 0;
+  top: 999999rpx;
+  /* top: 0; */
+  /* z-index: 999; */
+  box-sizing: border-box;
+  background: rgba(0, 0, 0, 0.7);
+}

@@ -1,0 +1,64 @@
+<!--pages/collect/collect.wxml-->
+<view class='header'>
+  <view class="header_tit">
+    <view class="header_tit_one {{isSelect==1?'active':''}}" catchtap='isSelectfunc' data-index='1'>
+    商品
+    </view>
+    <view class="header_tit_two  {{isSelect==2?'active':''}}"  catchtap='isSelectfunc' data-index='2'>
+      职位
+    </view>
+  </view>
+  <!-- 收藏商品 -->
+  <view  wx:if="{{isSelect==1}}" class="header_main">
+
+    <block wx:if="{{goodslist.length>0}}" wx:for="{{goodslist}}"   wx:key="{{item.id}}">
+      <navigator class="goods_item" url="/pages/goods_details/goods_details?id={{item.goods_id}}&cardId={{cardId}}" >
+        <image class="goods_img"  mode="widthFix" src="{{item.icon}}" ></image>
+        <view class="goods_item_r">
+          <view class="goods_tit">{{item.title}}</view>
+          <view class="goods_tit_label">
+            <!-- <view class="goods_tit_label_item">买赠</view>
+              <view class="goods_tit_label_item">明星同款</view> -->
+          </view>
+          <view class="goods_price_info">
+              <view class="sign">￥</view>
+              <view class="goods_price" >{{item.m_price}}</view>
+              <view class="goods_oldPrice">￥{{item.v_price}}</view>
+        </view>
+        </view>
+      </navigator>
+
+    </block>
+    <block wx:if="{{goodslist.length==0}}">
+       <view class="noneBox">
+        <image class="noneImage" src="/assets/btn/none.png"></image>
+        <view class="noneTxt">暂无收藏</view>
+      </view>
+    </block>
+  </view>
+  <!-- 收藏职位 -->
+  <view wx:if="{{isSelect==2}}" class="header_main">
+    <!-- <view class="job">
+      <view class="job_item">
+        <image class="job_item_img" src="{{iconUrl}}/order_img.png"></image>
+        <view  class="job_item_img_one" >
+          <view  class="job_item_img_one_t fz30">
+            商栈网络科技有限公司
+          </view>
+          <view  class="job_item_img_one_c fz24">
+            java工程师
+          </view>
+          <view  class="job_item_img_one_b fz24">
+            上海 | 大专 | 2018/04/01
+          </view>
+        </view>
+      </view>
+      <view class="job_item_img_two fz30">10k~20k </view>
+    </view> -->
+      <view class="noneBox">
+        <!-- <image class="noneImage" src="/assets/btn/none.png"></image> -->
+        <view class="noneTxt">暂无收藏</view>
+      </view>
+   <view></view>
+  </view>
+</view>

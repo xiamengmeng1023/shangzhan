@@ -1,0 +1,357 @@
+page {
+  background-color: #F5F5F5;
+  padding-top: 125rpx;
+}
+.newsCenter_main .newsCenter_main_head {
+  padding: 0 30rpx;
+  margin: 0 auto;
+  position: relative;
+  margin-top: 65rpx;
+  margin-bottom: 65rpx;
+  background-color: #fff;
+}
+.newsCenter_main .newsCenter_main_head .backbtn {
+  width: 18rpx;
+  height: 34rpx;
+  position: absolute;
+  top: 3rpx;
+}
+.newsCenter_main .newsCenter_main_head .homebtn {
+  width: 40rpx;
+  height: 40rpx;
+  position: absolute;
+  top: 3rpx;
+  left: 60rpx;
+}
+.newsCenter_main .newsCenter_main_head .newsCenter_main_tit {
+  height: 35rpx;
+  line-height: 1;
+  font-size: 35rpx;
+  text-align: center;
+}
+.newsCenter_main .newsCenter_main_footer .newsCenter_main_footer_banner {
+  position: fixed;
+  top: 0;
+  left: 0;
+  box-sizing: border-box;
+  width: 750rpx;
+  padding-top: 30rpx;
+  display: flex;
+  text-align: center;
+  font-size: 30rpx;
+  margin-bottom: 20rpx;
+  color: #999999;
+  background-color: #fff;
+  justify-content: space-around;
+  z-index: 99;
+}
+.newsCenter_main .newsCenter_main_footer .newsCenter_main_footer_banner .line {
+  position: absolute;
+  bottom: 0rpx;
+  height: 6rpx;
+  width: 60rpx;
+  border-radius: 1rpx;
+}
+.newsCenter_main .newsCenter_main_footer .newsCenter_main_footer_banner .lef1 {
+  left: 98rpx;
+}
+.newsCenter_main .newsCenter_main_footer .newsCenter_main_footer_banner .lef2 {
+  left: 350rpx;
+}
+.newsCenter_main .newsCenter_main_footer .newsCenter_main_footer_banner .lef3 {
+  left: 600rpx;
+}
+.newsCenter_main .newsCenter_main_footer .newsCenter_main_footer_banner .redDotNum_leida {
+  position: absolute;
+  top: 20rpx;
+  left: 145rpx;
+  width: 30rpx;
+  height: 30rpx;
+  line-height: 30rpx;
+  text-align: center;
+  border-radius: 50%;
+  background-color: #FC4A40;
+  color: #fff;
+  font-size: 18rpx;
+}
+.newsCenter_main .newsCenter_main_footer .newsCenter_main_footer_banner .redDotNum_hudong {
+  position: absolute;
+  top: 20rpx;
+  left: 645rpx;
+  width: 30rpx;
+  height: 30rpx;
+  line-height: 30rpx;
+  text-align: center;
+  border-radius: 50%;
+  background-color: #FC4A40;
+  color: #fff;
+  font-size: 18rpx;
+}
+.newsCenter_main .newsCenter_main_footer .newsCenter_main_footer_banner .redDotNum_tongzhi {
+  position: absolute;
+  top: 20rpx;
+  left: 400rpx;
+  width: 30rpx;
+  height: 30rpx;
+  line-height: 30rpx;
+  text-align: center;
+  border-radius: 50%;
+  background-color: #FC4A40;
+  color: #fff;
+  font-size: 18rpx;
+}
+.newsCenter_main .newsCenter_main_footer .newsCenter_main_footer_banner .flex1 {
+  flex: 1;
+  height: 70rpx;
+  padding-right: 80rpx;
+  padding-left: 80rpx;
+}
+.newsCenter_main .newsCenter_main_footer .newsCenter_main_footer_banner .interaction {
+  border-bottom: 6rpx solid transparent;
+}
+.newsCenter_main .newsCenter_main_footer .newsCenter_main_footer_banner .activ {
+  color: #000;
+}
+.newsCenter_main .newsCenter_main_footer .newsCenter_main_footer_banner .activLine {
+  background-color: #3190fe;
+}
+.newsCenter_main .newsCenter_main_footer .interaction_main {
+  padding-bottom: 30rpx;
+}
+.newsCenter_main .newsCenter_main_footer .interaction_main .loading {
+  margin: 0 auto;
+  text-align: center;
+  font-size: 24rpx;
+  color: #999;
+}
+.newsCenter_main .newsCenter_main_footer .interaction_main .loading image {
+  width: 100rpx;
+  height: 100rpx;
+}
+.newsCenter_main .newsCenter_main_footer .interaction_main .noneBox {
+  display: flex;
+  margin-top: 330rpx;
+  flex-direction: column;
+  align-items: center;
+}
+.newsCenter_main .newsCenter_main_footer .interaction_main .noneBox .noneImage {
+  width: 132rpx;
+  height: 100rpx;
+}
+.newsCenter_main .newsCenter_main_footer .interaction_main .noneBox .noneTxt {
+  font-size: 30rpx;
+  font-weight: 700rpx;
+  text-align: center;
+  color: #999;
+  margin-top: 30rpx;
+}
+.newsCenter_main .newsCenter_main_footer .interaction_main .newsCenter_main_footer_news_interaction {
+  padding: 0 30rpx;
+  background-color: #fff;
+  position: relative;
+  padding-top: 50rpx;
+  margin-bottom: 20rpx;
+  padding-bottom: 50rpx;
+}
+.newsCenter_main .newsCenter_main_footer .interaction_main .newsCenter_main_footer_news_interaction .newsCenter_main_footer_news_interaction_one {
+  height: 60rpx;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  margin-bottom: 28rpx;
+}
+.newsCenter_main .newsCenter_main_footer .interaction_main .newsCenter_main_footer_news_interaction .newsCenter_main_footer_news_interaction_one .newsCenter_main_footer_news_one_img {
+  width: 60rpx;
+  height: 60rpx;
+  margin-right: 22rpx;
+}
+.newsCenter_main .newsCenter_main_footer .interaction_main .newsCenter_main_footer_news_interaction .newsCenter_main_footer_news_interaction_one .newsCenter_main_footer_news_one_name {
+  font-size: 30rpx;
+  font-weight: 700;
+  margin-right: 13rpx;
+  display: inline-block;
+}
+.newsCenter_main .newsCenter_main_footer .interaction_main .newsCenter_main_footer_news_interaction .newsCenter_main_footer_news_interaction_one .newsCenter_main_footer_news_one_position {
+  font-size: 24rpx;
+  color: #999;
+  display: inline-block;
+}
+.newsCenter_main .newsCenter_main_footer .interaction_main .newsCenter_main_footer_news_interaction .newsCenter_main_footer_news_interaction_two {
+  font-size: 30rpx;
+  height: 30rpx;
+  line-height: 1;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  margin-bottom: 45rpx;
+  color: #999999;
+}
+.newsCenter_main .newsCenter_main_footer .interaction_main .newsCenter_main_footer_news_interaction .newsCenter_main_footer_news_interaction_three {
+  color: #999;
+  font-size: 24rpx;
+}
+.newsCenter_main .newsCenter_main_footer .interaction_main .newsCenter_main_footer_news_interaction .message_icon {
+  height: 33rpx;
+  width: 38rpx;
+  position: absolute;
+  right: 30rpx;
+}
+.newsCenter_main .newsCenter_main_footer .interaction_main .newsCenter_main_footer_news_interaction .redDot {
+  position: absolute;
+  right: 25rpx;
+  width: 20rpx;
+  height: 20rpx;
+  border-radius: 50%;
+  background-color: #fc4a40;
+  bottom: 40rpx;
+}
+.newsCenter_main .newsCenter_main_footer .radar_main .loading {
+  margin: 0 auto;
+  text-align: center;
+  font-size: 24rpx;
+  color: #999;
+}
+.newsCenter_main .newsCenter_main_footer .radar_main .loading image {
+  width: 100rpx;
+  height: 100rpx;
+}
+.newsCenter_main .newsCenter_main_footer .radar_main .noneBox {
+  display: flex;
+  margin-top: 330rpx;
+  flex-direction: column;
+  align-items: center;
+}
+.newsCenter_main .newsCenter_main_footer .radar_main .noneBox .noneImage {
+  width: 132rpx;
+  height: 100rpx;
+}
+.newsCenter_main .newsCenter_main_footer .radar_main .noneBox .noneTxt {
+  font-size: 30rpx;
+  text-align: center;
+  color: #999;
+  margin-top: 30rpx;
+}
+.newsCenter_main .newsCenter_main_footer .radar_main .footer_text {
+  margin: 0 auto;
+  text-align: center;
+  font-size: 24rpx;
+  color: #999;
+  padding: 50rpx;
+}
+.newsCenter_main .newsCenter_main_footer .radar_main .newsCenter_main_footer_news_radar {
+  padding: 0 30rpx;
+  padding-top: 50rpx;
+  padding-bottom: 30rpx;
+  background-color: #fff;
+  font-size: 30rpx;
+  margin-bottom: 20rpx;
+  position: relative;
+}
+.newsCenter_main .newsCenter_main_footer .radar_main .newsCenter_main_footer_news_radar .newsCenter_main_footer_news_radar_t {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  margin-bottom: 45rpx;
+}
+.newsCenter_main .newsCenter_main_footer .radar_main .newsCenter_main_footer_news_radar .newsCenter_main_footer_news_radar_t .newsCenter_main_footer_news_radar_img image {
+  margin-right: 22rpx;
+  width: 60rpx;
+  height: 60rpx;
+}
+.newsCenter_main .newsCenter_main_footer .radar_main .newsCenter_main_footer_news_radar .newsCenter_main_footer_news_radar_t .news_info {
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 2;
+  overflow: hidden;
+}
+.newsCenter_main .newsCenter_main_footer .radar_main .newsCenter_main_footer_news_radar .newsCenter_main_footer_news_radar_t .news_info .news_type {
+  color: #fc4a3f;
+}
+.newsCenter_main .newsCenter_main_footer .radar_main .newsCenter_main_footer_news_radar .news_info_time {
+  font-size: 24rpx;
+  color: #999;
+}
+.newsCenter_main .newsCenter_main_footer .radar_main .newsCenter_main_footer_news_radar .message_icon {
+  height: 33rpx;
+  width: 38rpx;
+  position: absolute;
+  bottom: 30rpx;
+  right: 30rpx;
+}
+.newsCenter_main .newsCenter_main_footer .radar_main .newsCenter_main_footer_news_radar .message_icon image {
+  height: 33rpx;
+  width: 38rpx;
+}
+.newsCenter_main .newsCenter_main_footer .radar_main .newsCenter_main_footer_news_radar .redDot {
+  right: 0rpx;
+  width: 20rpx;
+  height: 20rpx;
+  border-radius: 50%;
+  background-color: #fc4a40;
+  position: absolute;
+  right: 30rpx;
+  bottom: 50rpx;
+}
+.newsCenter_main .newsCenter_main_footer .notice_main .notice_item {
+  background-color: #fff;
+  margin-bottom: 20rpx;
+  width: 100%;
+  padding: 50rpx 30rpx;
+}
+.newsCenter_main .newsCenter_main_footer .notice_main .notice_item .notice_item_flex {
+  position: relative;
+  margin-bottom: 30rpx;
+  overflow: hidden;
+}
+.newsCenter_main .newsCenter_main_footer .notice_main .notice_item .notice_item_flex .notice_item_img {
+  margin-right: 20rpx;
+  float: left;
+}
+.newsCenter_main .newsCenter_main_footer .notice_main .notice_item .notice_item_flex .notice_item_img image {
+  width: 80rpx;
+  height: 80rpx;
+}
+.newsCenter_main .newsCenter_main_footer .notice_main .notice_item .notice_item_flex .notice_item_text {
+  float: left;
+  position: absolute;
+  left: 17rpx;
+  top: 15rpx;
+  font-size: 24rpx;
+  color: #fff;
+}
+.newsCenter_main .newsCenter_main_footer .notice_main .notice_item .notice_item_flex .notice_item_tit {
+  width: 580rpx;
+  float: left;
+  font-size: 30rpx;
+  color: #000;
+}
+.newsCenter_main .newsCenter_main_footer .notice_main .notice_item .notice_item_flex .notice_item_tit .notice_item_newicon {
+  display: inline-block;
+  position: relative;
+  top: 4rpx;
+  left: -10rpx;
+}
+.newsCenter_main .newsCenter_main_footer .notice_main .notice_item .notice_item_flex .notice_item_tit .notice_item_newicon image {
+  width: 70rpx;
+  height: 30rpx;
+}
+.newsCenter_main .newsCenter_main_footer .notice_main .notice_item .notice_addtime {
+  font-size: 30rpx;
+  color: #999;
+}
+.noneBox {
+  display: flex;
+  margin-top: 330rpx;
+  flex-direction: column;
+  align-items: center;
+}
+.noneBox .noneImage {
+  width: 132rpx;
+  height: 100rpx;
+}
+.noneBox .noneTxt {
+  font-size: 30rpx;
+  text-align: center;
+  color: #999;
+  margin-top: 30rpx;
+}

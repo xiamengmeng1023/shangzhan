@@ -1,0 +1,65 @@
+
+<import src="../../wxParse/wxParse.wxml" />
+<view class='bg f-box'>
+  <view class='t-box'>
+    <view class='f34-28 m-d'>
+      <text>{{employ.title}}</text>
+    </view>
+    <view class='f26-8c m-d'>
+      <text>{{employ.addtime}}</text>
+    </view>
+
+    <view class='flex'>
+      <view class='f30-8c m-d m-r title-box'>
+        <text>地址：</text>
+      </view>
+      <view class='f30-28 m-d'>
+        <text>{{employ.address}}</text>
+      </view>
+    </view>
+    <view class='flex a-items'>
+      <view class='f30-8c m-d m-r title-box'>
+        <text>经验：</text>
+      </view>
+      <view class='f30-28 m-d'>
+        <text>{{employ.jingyan}}</text>
+      </view>
+    </view>
+    <view class='flex a-items'>
+      <view class='f30-8c m-d m-r title-box'>
+        <text>学历：</text>
+      </view>
+      <view class='f30-28 m-d'>
+        <text>{{employ.xueli}}</text>
+      </view>
+    </view>
+    <view class='flex a-items'>
+      <view class='f30-8c m-d m-r title-box'>
+        <text>薪资：</text>
+      </view>
+      <view class='f30-28 m-d'>
+        <text>{{employ.xinzi}}</text>
+      </view>
+    </view>
+    <view class='f30-8c'>
+      <text>岗位职责：</text>
+    </view>
+    <view class='f30-28 m-d'>
+      <template is="wxParse" data="{{wxParseData:responsibility.nodes}}" />
+    </view>
+    <view class='f30-8c'>
+      <text>任职要求：</text>
+    </view>
+    <view class='f30-28 m-d'>
+      <template is="wxParse" data="{{wxParseData:summary.nodes}}" />
+    </view>
+
+  </view>
+</view>
+<import src="/template/complainBox/complain.wxml" />
+<view class='pading-lr m-t'>
+  <template is="complain"></template>
+</view>
+
+
+<component-tag-name  obj="{{employ}}"></component-tag-name>

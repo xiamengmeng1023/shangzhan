@@ -1,0 +1,29 @@
+   <!-- 个人名片信息 -->
+  <view class="home_selfCard" catchtap="ml_toCardDetails">
+    <view class="home_selfCard_one">
+        <image class="home_selfCard_one_l" src="{{iconUrl}}/order_img.png"></image>
+        <view class="home_selfCard_one_r">
+        <view class="home_selfCard_one_r_t">
+          <text class="home_selfCard_one_r_t_name">Jason</text>
+          <image class="home_selfCard_icon" src="{{iconUrl}}/btn/zuan.png"></image>
+        </view>
+          <view class="home_selfCard_one_r_b">高级ui设计师</view>
+        </view>
+    </view>
+    <view class="home_selfCard_two">
+      <image class="home_selfCard_two_img" src="{{iconUrl}}/order_img.png"></image>
+      <text class="company_name">上海科技有限公司</text>
+          <image class="address_icon" src="{{iconUrl}}/btn/dingwei.png"></image>
+    </view>
+    <view class="home_selfCard_three">
+      <image class="phone_icon" src="{{iconUrl}}/btn/phone.png"></image>
+      <view class="phone_num">12222222222</view>
+    
+    </view>
+    <view class="home_selfCard_four">
+      <image class="mail_icon" src="{{iconUrl}}/btn/mail.png"></image>
+      <view class="mail_address">123456@qq.com</view>
+    </view>
+    <image class="erweima" src="{{iconUrl}}/btn/fenxiang.png"></image>
+    <image class="ellipsis" src="{{iconUrl}}/btn/ellipsis.png"></image>
+  </view>

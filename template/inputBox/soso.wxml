@@ -1,0 +1,6 @@
+<template name="sosoBox">
+  <view class='s-box bg f22-8c'>
+    <image src='https://www.shangzhanyun.com/Public/Style/images/applets/img/soso.png' class='soso m-r img-icon'></image>
+    <text>搜索</text>
+  </view>
+</template>

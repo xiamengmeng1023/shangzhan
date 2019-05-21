@@ -1,0 +1,118 @@
+<view class="newsCenter_main">
+  <!-- 内容 -->
+  <view class="newsCenter_main_footer">
+    <!-- 点击切换 -->
+    <view class="newsCenter_main_footer_banner">
+      <view class="flex1  interaction {{isShowIndex==1?'activ':''}}"  data-index="1" catchtap="navTap">雷达</view>
+      <view class="redDotNum_leida">{{firstCount}}</view>
+      <view class="line lef1  {{isShowIndex==1?'activLine':''}}"></view>
+
+      <view class="flex1 interaction {{isShowIndex==2?'activ':''}}" data-index="2" catchtap="navTap">互动</view>
+      <view class="redDotNum_hudong">{{screndCount}}</view>
+      <view class="line lef2  {{isShowIndex==2?'activLine':''}}"></view>
+
+      <view class="flex1  interaction {{isShowIndex==3?'activ':''}}"  data-index="3" catchtap="navTap">通知</view>
+      <view class="redDotNum_tongzhi">{{threeCount}}</view>
+      <view class="line lef3  {{isShowIndex==3?'activLine':''}}"></view>
+
+    </view>
+    <!-- 雷达内容 -->
+    <view  wx:if="{{isShowIndex==1}}" class="radar_main">
+      <block  wx:if="{{radarList.length > 0}}"  wx:for="{{radarList}}" wx:key="{{index}}">
+        <view  class="newsCenter_main_footer_news_radar" data-id="{{item.id}}" data-from="{{item.msg_from}}"     catchtap="{{item.msg_from>0 && item.msg_to >0 ?'msgTap':''}}" >
+          <view class="newsCenter_main_footer_news_radar_t">
+            <view class="newsCenter_main_footer_news_radar_img">
+              <image src='{{item.icon}}' wx:if="{{item.icon != ''}}"></image>
+              <image wx:else  src="https://www.shangzhanyun.com/Public/Style/images/applets/img/log.png"></image>
+            </view>
+            <text class="news_info"><text class="news_type">[{{item.title}}]</text>{{item.content}}</text>
+          </view>
+            <view class="news_info_time">{{item.addtime}}</view>
+            <view  class="message_icon">
+              <image src="{{iconUrl}}/btn/message_icon.png"></image>
+            </view>
+            <!-- 消息提示红点 -->
+            <view class="redDot" wx:if="{{item.speaker_id !==token&&item.status == 0}}"></view>
+        </view>
+      </block>
+      <block>
+        <view class="loading">
+          加载中...
+          <!-- <image src="/assets/loading.gif"></image> -->
+        </view>
+      </block>
+      <block wx:if="{{radarList.length==0}}">
+        <view class="noneBox">
+          <!-- <image class="noneImage" src="/assets/btn/none.png"></image> -->
+          <view class="noneTxt">暂无消息</view>
+        </view>
+      </block>
+       <!-- <view class="footer_text">——暂无更多消息——</view> -->
+    </view>
+    <!-- 互动内容 -->
+    <view  wx:if="{{isShowIndex==2}}" class="interaction_main">
+      <block  wx:if="{{msgList.length > 0}}"  wx:for="{{msgList}}" wx:key="{{index}}">
+        <view class="newsCenter_main_footer_news_interaction"  catchtap='msgTap' data-id="{{item.speaker_id !==token ?item.speaker_id : item.audience_id}}" data-speakerName="{{item.real_name}}" data-singlechat="{{item.singlechat}}">
+          <!-- 名片信息 -->
+          <view class="newsCenter_main_footer_news_interaction_one">
+            <image src='{{picUrl}}{{item.speaker_icon}}' wx:if="{{item.singlechat == 0}}" class="newsCenter_main_footer_news_one_img">
+            </image>
+             <image src="{{item.speaker_id !==token ? item.speaker_icon : item.audience_icon}}" wx:if="{{item.singlechat == 1}}" class="newsCenter_main_footer_news_one_img"></image>
+            <text class="newsCenter_main_footer_news_one_name">{{item.real_name}}</text>
+            <text class="newsCenter_main_footer_news_one_position">{{item.job}}</text>
+          </view>
+          <!-- 消息预览 -->
+          <view class="newsCenter_main_footer_news_interaction_two">
+              {{item.content}}
+          </view>
+          <view class="newsCenter_main_footer_news_interaction_three">
+            {{item.create_time}}
+          </view>
+          <image class="message_icon" src="{{iconUrl}}/btn/message_icon.png"></image>
+          <!-- 消息提示红点 -->
+          <view class="redDot" wx:if="{{item.speaker_id !==token && item.status == 0}}"></view>
+        </view>
+      </block>
+      <!-- <view class="loading" wx:if="{{loadShow}}">
+        加载中...
+      </view> -->
+      <block wx:if="{{msgList.length==0}}">
+        <view class="noneBox">
+          <!-- <image class="noneImage" src="/assets/btn/none.png"></image> -->
+          <view class="noneTxt">暂无消息</view>
+        </view>
+      </block>
+    </view>
+    <!-- 通知内容 -->
+    <view  wx:if="{{isShowIndex==3}}" class="notice_main" >
+      <!-- <view>下拉加载更多</view> -->
+      <block  wx:if="{{NoticeList.length>0}}"  wx:for="{{NoticeList}}" wx:key="{{index}}">
+      <!-- url='/pages/messageDetail/messageDetail?id={{item.id}}' -->
+        <view class="notice_item" >
+          <view class="notice_item_flex">
+            <view class="notice_item_img">
+              <image src="{{iconUrl}}btn/tongzhi_bg.png"></image>
+              <view class="notice_item_text">通知</view>
+            </view>
+            <view class="notice_item_tit"> 
+              {{item.title}}
+              <view class="notice_item_newicon" wx:if="{{!item.is_read=='1'}}">
+                <image src="{{iconUrl}}btn/newicon.png"></image>
+              </view>
+            </view>
+          </view>
+          <view class="notice_addtime">{{item.addtime}}</view>
+        </view>
+      </block>
+      <block  wx:if="{{NoticeList.length == 0}}" >
+        <view class="noneBox">
+          <!-- <image class="noneImage" src="/assets/btn/none.png"></image> -->
+          <view class="noneTxt">暂无消息</view>
+        </view>
+      </block>
+    </view>
+  </view>
+</view>
+
+
+

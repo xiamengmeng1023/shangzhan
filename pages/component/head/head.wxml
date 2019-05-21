@@ -1,0 +1,8 @@
+<!--pages/head/head.wxml-->
+  <!-- 头部 -->
+  <view class="main_head">
+    <image class="backbtn" src="{{iconUrl}}/btn/backbtn.png" catchtap="ml_Back"></image>
+    <image class="homebtn" src="{{iconUrl}}/btn/home_btn.png" catchtap="ml_Home"></image>
+    <view class="main_tit">消息中心</view>
+    
+  </view>

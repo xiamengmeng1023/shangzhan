@@ -1,0 +1,13 @@
+<template name="btnbox">
+  <view class='flx-alert'>
+    <navigator url='/pages/index/index' class='f-list' open-type="switchTab">
+      <image src='https://www.shangzhanyun.com/Public/Style/images/applets/img/backindex.png' class='f-img t-block'></image>
+      <text class='f26-44 t-block w1 t-center'>首页</text>
+    </navigator>
+    <view class='f-list f-share'>
+      <button class='share-btn' open-type="share"></button>
+      <image src='https://www.shangzhanyun.com/Public/Style/images/applets/img/fenxiang.png' class='f-img t-block'></image>
+      <text class='f26-44 t-block w1 t-center'>分享</text>
+    </view>
+  </view>
+</template>

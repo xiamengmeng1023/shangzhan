@@ -1,0 +1,70 @@
+.Personal_image {
+  width: 690rpx;
+  margin: 0 auto;
+}
+.Personal_image .Personal_image_tit {
+  margin-bottom: 50rpx;
+  margin-top: 45rpx;
+}
+.Personal_image .Personal_image_box {
+  display: flex;
+  flex-wrap: wrap;
+}
+.Personal_image .Personal_image_box .Personal_image_box_item {
+  position: relative;
+  width: 33%;
+  float: left;
+}
+.Personal_image .Personal_image_box .Personal_image_box_item image {
+  width: 210rpx;
+  height: 210rpx;
+  margin-right: 30rpx;
+  margin-bottom: 30rpx;
+}
+.Personal_image .Personal_image_box .Personal_image_box_item image:nth-child(3n) {
+  margin-right: 0;
+}
+.Personal_image .Personal_image_box .Personal_image_box_item .remore-box {
+  width: 210rpx;
+  height: 210rpx;
+  position: absolute;
+  top: 0rpx;
+  left: 0rpx;
+  background: rgba(0, 0, 0, 0.5);
+}
+.Personal_image .Personal_image_box .Personal_image_box_item .remore-box image {
+  position: absolute;
+  left: 50%;
+  top: 30%;
+  transform: translate(-50%);
+  width: 48rpx;
+  height: 48rpx;
+  opacity: 0.8;
+}
+.Personal_image .Personal_image_box .Personal_image_addbtn {
+  width: 210rpx;
+  height: 210rpx;
+  font-size: 70rpx;
+  text-align: center;
+  line-height: 210rpx;
+  background-color: #F5F5F5;
+  position: relative;
+}
+.Personal_image .Personal_image_box .Personal_image_addbtn .one {
+  background-color: #ccc;
+  width: 36rpx;
+  height: 4rpx;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%);
+}
+.Personal_image .Personal_image_box .Personal_image_addbtn .two {
+  background-color: #ccc;
+  height: 36rpx;
+  width: 4rpx;
+  position: absolute;
+  top: 43%;
+  left: 50%;
+  transform: translate(-50%);
+}

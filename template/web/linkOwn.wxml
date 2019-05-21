@@ -1,0 +1,54 @@
+<template name="linkOwn">
+  <block wx:if="{{cateid == 24}}">
+    <block wx:for="{{datacon}}" wx:key="{{index}}">
+      <view class='demand-box pading-lr bg'>
+        <view class='link-box f28-28 flex a-items j-content'>
+          <text class='t-block link-name'>公司：</text>
+          <text>{{item.title}}</text>
+        </view>
+        <view class='link-box f28-28 flex a-items j-content'>
+          <text class='t-block link-name'>电话：</text>
+          <text>{{item.tel}}</text>
+        </view>
+        <view class='link-box f28-28 flex a-items j-content'>
+          <text class='t-block link-name'>邮箱：</text>
+          <text>{{item.email}}</text>
+        </view>
+        <view class='link-box f28-28 flex a-items j-content'>
+          <text class='t-block link-name'>网址：</text>
+          <text>{{item.web_name}}</text>
+        </view>
+        <view class='link-box f28-28 flex a-items j-content'>
+          <text class='t-block link-name'>地址：</text>
+          <text>{{item.address}}</text>
+        </view>
+      </view>
+    </block>
+  </block>
+  <block wx:elif="{{cateid == 25}}">
+    <block wx:for="{{datacon}}" wx:key="{{index}}">
+      <view class='demand-box pading-lr bg'>
+        <view class='link-box f28-28 flex a-items'>
+          <image src='{{picUrl}}/Style/images/applets/img/gongsi.png' class='link-icon m-r'></image>
+          <text>{{item.title}}</text>
+        </view>
+        <view class='link-box f28-28 flex a-items'>
+          <image src='{{picUrl}}/Style/images/applets/img/dianhua.png' class='link-icon m-r'></image>
+          <text>{{item.tel}}</text>
+        </view>
+        <view class='link-box f28-28 flex a-items'>
+          <image src='{{picUrl}}/Style/images/applets/img/youxiang.png' class='link-icon m-r'></image>
+          <text>{{item.email}}</text>
+        </view>
+        <view class='link-box f28-28 flex a-items'>
+          <image src='{{picUrl}}/Style/images/applets/img/wangzhi.png' class='link-icon m-r'></image>
+          <text>{{item.web_name}}</text>
+        </view>
+        <view class='link-box f28-28 flex a-items'>
+          <image src='{{picUrl}}/Style/images/applets/img/dizhi.png' class='link-icon m-r'></image>
+            <text>{{item.address}}</text>
+        </view>
+      </view>
+    </block>
+  </block>
+</template>

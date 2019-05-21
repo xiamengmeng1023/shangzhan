@@ -1,0 +1,7 @@
+<template name="navBox">
+  <view class='pading-lr pading-ud bg flex j-bet nav-box'>
+    <view wx:for="{{topnav}}">
+      <text class="t-block nav-list {{index == navIndex ? 'f28-d4 nav-border':'f28-44'}}" data-index="{{index}}" catchtap='navTap'>{{item}}</text>
+    </view>
+  </view>
+</template>

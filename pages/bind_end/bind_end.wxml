@@ -1,0 +1,54 @@
+<!--pages/bind_end/bind_end.wxml--> 
+ <view class="examine">
+  <block wx:if="{{status==1}}">
+    <view class="examine_img_ok"  >
+      <image src="{{iconUrl}}/btn/shenhe_ok.png"  class="icon_succ"></image>
+    </view>
+  
+    <view class="examine_tit1">已通过审核</view>
+    <view class="examine_tit2">你绑定的公司是</view>
+    <!-- <view class="examine_tit3">{{info.title}}</view> -->
+    <view class="examine_tit3">{{info.title}}</view>
+    <view class="examine_btn_box" >
+      <view class="examine_btn_box_one mr30" catchtap="goReBind" >
+      更换绑定
+      </view>
+      <view class="examine_btn_box_one" >
+      解除绑定
+      </view>
+    </view>
+  </block>
+  
+  <block wx:elif="{{status==2}}">
+    <view class="examine_img_ing">
+      <image src="{{iconUrl}}/btn/shenhe_ing.png" class="icon_ing"></image>
+    </view>
+    <view class="examine_tit1" >审核中</view>
+    <view class="examine_tit2">你绑定的公司是</view>
+    <view class="examine_tit3">{{info.title}}</view>
+    <view class="examine_btn_box" >
+      <view class="examine_btn_box_one mr30"  catchtap="goReBind">
+      更换绑定
+      </view>
+      <view class="examine_btn_box_one" >
+      解除绑定
+      </view>
+    </view>
+  </block>
+  <block wx:elif="{{status==3}}">
+    <view class="examine_img_ing">
+      <image src="{{iconUrl}}/btn/shenhe_no.png" class='icon_no'></image>
+    </view>
+    <view class="examine_tit1">申请失败</view>
+    <view class="examine_tit2">你绑定的公司是</view>
+    <view class="examine_tit3">{{info.title}}</view>
+    <view class="examine_btn_box" >
+      <view class="examine_btn_box_two" catchtap="goReBind" >
+      重新绑定
+      </view>
+    </view>
+  </block>
+  <view class="text">
+    提交绑定后，我们将在3个工作日内进行审核回馈 如有问题，可咨询商栈客服
+  </view>
+</view>

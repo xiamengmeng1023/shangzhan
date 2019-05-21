@@ -1,0 +1,17 @@
+
+<view class="place"></view>
+<view class="Change_binding">
+  <view class="Change_binding_one">
+    <view class="Change_binding_one_l">  
+      <view class="Change_binding_one_l_tit">手机</view>
+      <view class="Change_binding_one_l_num">175****7162</view>
+    </view>
+    <view class="Change_binding_one_r">获取验证码</view>
+  </view>
+  <view class="Change_binding_two">
+    <view class="Change_binding_two_tit">输入验证码</view>
+    <input type="text"/>
+  </view>
+</view>
+
+

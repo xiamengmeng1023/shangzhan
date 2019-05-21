@@ -1,0 +1,94 @@
+<view class="friend_dynamics">
+朋友动态中心
+  <view  class="friend_dynamics_minebox"   >
+    <image class="friend_dynamics_minebox_img" mode="aspectFill"  wx:if="{{!userInfo.dynamic_pic || cardId == 0 }}" src="/assets/newsimg.png" ></image>
+    <image  class="friend_dynamics_minebox_img"  wx:else src="{{picUrl}}{{userInfo.dynamic_pic}}"></image>
+    <view class="friend_dynamics_minebox_mine">
+     <image src="{{userInfo.icon}}"></image>
+     </view>
+    <view class="friend_dynamics_minebox_name">
+      <text>
+      {{userInfo.nick_name}}
+      </text>
+    </view>
+  </view>
+  <block wx:if="{{dList.length>0}}" wx:for="{{dList}}" wx:key="{{index}}">
+    <navigator class="friend_dynamics_item" url='/pages/friend_dynamics_details/friend_dynamics_details?id={{item.id}}'>
+        <!-- 头部 -->
+      <view class="friend_dynamics_header">
+        <!-- <image class="friend_dynamics_header_one" src="{{item.avatar_url}}"></image> -->
+        <view  class="friend_dynamics_flex">
+          <view class="friend_dynamics_header_one">
+            <image src="{{userInfo.icon}}"></image>
+          </view>
+          <view class="friend_dynamics_header_two">{{item.nick_name}}</view>
+          <view class="friend_dynamics_header_three">设计总监</view>
+        </view>
+        <view  class="friend_dynamics_del" catchtap="delTap" data-id="{{item.id}}">
+          <image src="{{iconUrl}}btn/del.png"></image>
+        </view>
+      </view> 
+      <!-- 标题 -->
+      <view class="friend_dynamics_tit">
+        {{item.content}}
+      </view>
+      <!-- 时间 -->
+      <view class="friend_dynamics_time">
+        <view class="friend_dynamics_time_l">
+          {{item.addtime}}
+        </view>
+        <!-- 点赞 -->
+        <!-- <block wx:if="{{item.addlike_status==1?true:false}}">
+          <view class="v-body ">
+            <view class="v-canvas">
+              <canvas canvas-id="canvas_wi" style="{{canvas_style}}" class="myCanvas"/>
+            </view>
+            <view class="v-img" catchtap="onClickImage" data-id="{{item.id}}" data-type="2">
+               <image src="/assets/btn/dianzan1.png" class="bt-img" ></image>
+            </view>
+          </view>
+        </block>
+        <block wx:else>
+          <view class="v-body ">
+            <view class="v-img" catchtap="onClickImage" data-id="{{item.id}}" data-type="1">
+              <image src="{{iconUrl}}/btn/find_search_zan.png" class="bt-img"></image>
+            </view>
+          </view>
+        </block> -->
+      </view>
+      <!-- 单张 -->
+      <view wx:if="{{item.pic.typeOf===string}}" class="friend_dynamics_main_1">
+        <view class="friend_dynamics_main_item">
+          <image mode='aspectFit' class="img"  src="{{picUrl}}{{item.pic}}"></image>
+        </view>
+      </view>
+      <!-- 6张图 -->
+      <view wx:else  class="friend_dynamics_main_2" >
+        <view class="friend_dynamics_main_item">
+          <image mode='aspectFit' class="img"  src="{{picUrl}}{{item.pic}}"></image>
+        </view>
+      </view>
+    </navigator>
+  </block>
+  <block wx:if="{{dList.length>0}}">
+    <view class='t-center bg' wx:if="{{loadShow}}">
+      <image src='/assets/loading.gif' class='loading'></image>
+    </view>
+    <view wx:else class='f30-44 t-center pading-ud'>
+      <text>暂无更多数据</text>
+    </view>
+  </block>
+  <block wx:else>
+    <!-- <image src="{{iconUrl}}btn/none.png"></image> -->
+    <view class="none_box">
+      <image class="none_img" src="/assets/btn/none.png"></image>
+      <view class="none_tit">暂无动态！</view>
+    </view>
+  </block>
+
+
+</view>
+
+
+
+

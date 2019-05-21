@@ -1,0 +1,21 @@
+
+<import src="../../wxParse/wxParse.wxml"/>
+
+<view class="newsDetails_main">
+  <view class="newsDetails_main_tit">{{news.title}}</view>
+  <view class="newsDetails_main_flex">
+    <view class="newsDetails_main_time">{{news.addtime}}</view>
+  </view>
+  <image class="newsDetails_main_img" src="{{news.pic}}"></image>
+  <view class="newsDetails_main_text">
+    <template is="wxParse" data="{{wxParseData:summary.nodes}}"/> 
+  </view>
+</view>
+<!-- 分享按钮 -->
+
+
+<label class="sendcard" for="share">
+  <image class="share_btn_img" src="{{iconUrl}}/btn/Suspension_sharing.png" >
+  </image>
+</label>
+  <button id='share' open-type="share" size="mini" plain='true' hidden='true'></button>

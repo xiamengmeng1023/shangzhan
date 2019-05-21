@@ -1,0 +1,41 @@
+page {
+  background: #f4f4f6;
+}
+
+.title-box {
+  height: 300rpx;
+  width: 750rpx;
+}
+
+.nav-box {
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 750rpx;
+  z-index: 5;
+  background: #f4f4f6;
+}
+
+.input-box {
+  width: 60%;
+  padding: 0 20rpx;
+  border-radius: 24rpx 0 0 24rpx;
+  height: 60rpx;
+  line-height: 60rpx;
+}
+
+.input-txt {
+  width: 25%;
+  line-height: 60rpx;
+  background: #008cd6;
+  border-radius: 0 24rpx 24rpx 0;
+}
+
+.txt {
+  width: 33%;
+  margin-bottom: 40rpx;
+}
+
+.failMsg{
+  height: 500rpx;
+}

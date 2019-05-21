@@ -1,0 +1,32 @@
+ <!-- 订单 -->
+  <block wx:if="{{isShowOrder}}">
+    <view class="order" catchtap="goToOrder" >
+      <view class="order_head" >
+        <image class="order_icon" src="{{iconUrl}}/btn/order_icon.png"></image>
+        <view class="order_text leida_text1">最近订单</view>
+        <image class="arrow" src="{{iconUrl}}/btn/arrow.png"></image>
+      </view>
+      <view class="order_footer">
+        <view class="order_footer_l">
+          <view class="order_footer_l_t">
+          {{order_status}}
+          </view>
+          <view class="order_footer_l_b">
+            <image class="order_footer_l_b_img" src="{{picUrl}}{{order_data.icon}}"></image>
+            <view class="order_footer_l_b_info">
+              <text>订单处理中</text>
+              <text>{{order_data.title}}</text>
+              <text>{{order_data.order_time}}</text>
+            </view>
+          </view>
+        </view>
+        <view class="order_footer_r">
+          <view class="order_footer_r_flex">
+              <view>￥</view>
+            <view>{{order_data.goods_total_price}}</view>
+          </view>
+          <view class="order_footer_r_num">x{{order_data.goods_num}}</view>
+        </view>
+      </view>
+    </view>
+  </block>

@@ -1,0 +1,48 @@
+.flx-alert {
+  position: fixed;
+  bottom: 200rpx;
+  right: 25rpx;
+  z-index: 999;
+}
+
+.f-list {
+  width: 100rpx;
+  height: 100rpx;
+  padding: 10rpx;
+  box-sizing: border-box;
+  border-radius: 50%;
+  /* background: rgba(0, 0, 0, 0.6); */
+  margin-bottom: 20rpx;
+  border:2rpx solid #dcdcdc;
+  background: #ffffff;
+}
+
+.f-img {
+  width: 44rpx;
+  height: 44rpx;
+  margin: 0 auto;
+}
+
+.f-share {
+  position: relative;
+}
+
+.share-btn {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+  z-index: 10;
+}
+
+/* .share-btn {
+  outline: none;
+   width: 100rpx;
+  height: 100rpx;
+  padding: 10rpx;
+  box-sizing: border-box;
+  border-radius: 50%;
+  background: rgba(0, 0, 0, 0.6);
+} */

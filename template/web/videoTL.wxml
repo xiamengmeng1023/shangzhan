@@ -1,0 +1,10 @@
+<template name="videoTL">
+  <view class='pading-lr bg f26-8c pading-ud t-text' wx:for="{{3}}">
+    <view>
+      <image src='https://www.shangzhanyun.com/Public/Style/images/applets/imgs/web.jpg' class='big-img '></image>
+    </view>
+    <view>
+      <text class='t-block ellipsis'>微名片作为一种新式名片，特点新颖。微名片作为一种新式名片，特点新颖。微名片作为一种新式名片，特点新颖。</text>
+    </view>
+  </view>
+</template>

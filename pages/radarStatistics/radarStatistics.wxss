@@ -1,0 +1,125 @@
+.radarStatistics_main {
+  width: 690rpx;
+  margin: 0 auto;
+}
+.radarStatistics_main .leida .leida_head {
+  margin-top: 30rpx;
+  margin-bottom: 55rpx;
+}
+.radarStatistics_main .leida .leida_head .leida_icon {
+  width: 30rpx;
+  height: 30rpx;
+  margin-right: 20rpx;
+  margin-bottom: -3rpx;
+}
+.radarStatistics_main .leida .leida_head .leida_text {
+  font-size: 30rpx;
+  font-weight: 700;
+  display: inline-block;
+}
+.radarStatistics_main .leida .leida_head .leida_text2 {
+  color: #4299ff;
+  font-weight: 700;
+  margin-left: 12rpx;
+  letter-spacing: 2rpx;
+}
+.radarStatistics_main .leida .leida_head .arrow {
+  height: 34rpx;
+  width: 31rpx;
+  float: right;
+  margin-top: 10rpx;
+}
+.radarStatistics_main .leida .leida_footer {
+  box-sizing: border-box;
+  overflow: hidden;
+  margin-bottom: 45rpx;
+}
+.radarStatistics_main .leida .leida_footer .leida_footer_class {
+  float: left;
+  width: 33.3%;
+  text-align: center;
+  color: #b8b8b8;
+}
+.radarStatistics_main .leida .leida_footer .leida_footer_class .leida_footer_class_txt {
+  text-align: left;
+  padding-left: 50rpx;
+  font-size: 24rpx;
+}
+.radarStatistics_main .leida .leida_footer .leida_footer_class .leida_footer_class_profit_txt {
+  text-align: right;
+}
+.radarStatistics_main .leida .leida_footer .leida_footer_class .newfriend_num {
+  padding: 0 50rpx;
+  height: 48rpx;
+  font-size: 64rpx;
+  font-weight: 700;
+  text-align: left;
+  margin-bottom: 35rpx;
+  line-height: 48rpx;
+  color: #000;
+}
+.radarStatistics_main .leida .leida_footer .leida_footer_class .profit,
+.radarStatistics_main .leida .leida_footer .leida_footer_class .browse_times {
+  margin-bottom: 35rpx;
+  font-weight: 700;
+  text-align: left;
+  height: 48rpx;
+  line-height: 48rpx;
+  font-size: 48rpx;
+  color: #000;
+}
+.radarStatistics_main .leida .leida_footer .leida_footer_class .browse_times {
+  padding-left: 50rpx;
+}
+.radarStatistics_main .leida .leida_footer .leida_footer_class .profit {
+  text-align: right !important;
+}
+.radarStatistics_main .radarStatistics_Cartoon_box {
+  position: relative;
+  margin-bottom: 50rpx;
+}
+.radarStatistics_main .radarStatistics_Cartoon_box .radarStatistics_Cartoon {
+  width: 100%;
+  height: 190rpx;
+}
+.radarStatistics_main .radarStatistics_Cartoon_box .userimg_1,
+.radarStatistics_main .radarStatistics_Cartoon_box .userimg_2 {
+  height: 60rpx;
+  width: 60rpx;
+  border-radius: 50%;
+  border: 2rpx solid #2b77c8;
+  position: absolute;
+  z-index: 9;
+}
+.radarStatistics_main .radarStatistics_Cartoon_box .userimg_1 {
+  bottom: 139rpx;
+  left: 35rpx;
+}
+.radarStatistics_main .radarStatistics_Cartoon_box .userimg_2 {
+  bottom: 72rpx;
+  right: 19rpx;
+}
+.radarStatistics_main .radarStatistics_Cartoon_box .identifier {
+  color: #fff;
+  font-weight: 700;
+  font-size: 24rpx;
+  position: absolute;
+  bottom: 16rpx;
+  left: 27rpx;
+}
+.radarStatistics_main .radarStatistics_Cartoon_box .expansion {
+  font-size: 18rpx;
+  position: absolute;
+  bottom: 53rpx;
+  left: 150rpx;
+  font-weight: 700;
+}
+.radarStatistics_main .radarStatistics_Cartoon_box .transcend_btn {
+  height: 65rpx;
+  width: 178rpx;
+  background-color: transparent;
+  border-radius: 40rpx;
+  position: absolute;
+  top: 40rpx;
+  left: 255rpx;
+}

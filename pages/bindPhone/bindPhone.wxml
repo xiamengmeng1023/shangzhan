@@ -1,0 +1,17 @@
+<view class="place"></view>
+<form bindsubmit="formSubmit">
+    <view class="container">
+        <view class='number'>
+            <view class='number_tit_one' decode="true">手机+86</view>
+            <input class="number_tit_two" placeholder='请输入手机号' name="phone" maxlength='11' bindinput="fauseTel" bindblur="blurTel" value="{{phone}}"></input>
+            <view class="number_tit_three">
+                <button class="btn" catchtap='getCode' disabled='{{disabled}}'>{{verifyCode}}</button>
+            </view>
+        </view>
+        <view class='code'>
+            <view class='code_tit'>输入验证码</view>
+            <input class="code_tit_two" placeholder='请输入验证码' name="code" class='f32-28'></input>
+        </view>
+        <button  class='true' formType="submit">绑定手机号</button>
+    </view>
+</form>

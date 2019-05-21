@@ -1,0 +1,18 @@
+<view class='top_img'>
+  <view class="img_ing" wx:if="{{info.status==0}}" >
+    <image src='{{iconUrl}}{{imageUrl}}' ></image>
+  </view>
+  <view class="img_ok"  wx:if="{{info.status==1}}" >
+    <image src='{{iconUrl}}{{imageUrl}}' ></image>
+  </view>
+  <view  class="img_no"  wx:if="{{info.status==2}}" >
+    <image src='{{iconUrl}}{{imageUrl}}'></image>
+  </view>
+  <view class="img_ing" wx:if="{{info.status==3}}" >
+    <image src='{{iconUrl}}{{imageUrl}}' ></image>
+  </view>
+  <view class='top_txt'>{{status}}</view>
+  <view class='btn' catchtap='back'>{{backBtn}}</view>
+  <view class="footer_text_one">申请认证后，我们将在3个工作日内进行审核回馈</view>
+  <view class="footer_text_one">如有问题，可咨询商栈客服</view>
+</view>

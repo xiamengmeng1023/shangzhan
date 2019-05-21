@@ -1,0 +1,28 @@
+<import src="../../wxParse/wxParse.wxml"/>
+<view class='pading-lr pading-ud'>
+  <view class='bg f-box'>
+    <view class='bg-box'>
+      <image src='/assets/imgs/eqa1.png'></image>
+      <view class='m-box f30-ff'>
+        <text class='t-block'>商栈云</text>
+        <!-- <text class='t-block m-d'>星期五</text> -->
+        <text class='t-block'>{{notice.addtime}}</text>
+      </view>
+    </view>
+    <view class='t-box'>
+      <view class='f36-28 f-w f-title m-d'>
+        <text>{{notice.title}}</text>
+      </view>
+      <view class='f28-44'>
+        <text>{{notice.content}}</text>
+      </view>
+    </view>
+  </view>
+</view>
+
+<!-- <view class='pading-lr pading-ud  t-center m-d'>
+  <image src='https://www.shangzhanyun.com/Public/Style/images/applets/img/detaillog.png' class='log-img'></image>
+  <text class='t-block f22-8c'>商栈提供技术支持</text>
+</view> -->
+<import src="/template/footer/footer.wxml" />
+<template is="footer"></template>

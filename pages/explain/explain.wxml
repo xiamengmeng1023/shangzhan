@@ -1,0 +1,13 @@
+<!-- pages/explain/explain.wxml -->
+<view class="box">
+    <view class="title">点亮身份有何作用？</view>
+    <view class="content">
+    点亮身份可提升自己名片的曝光度，对于宣传和打造定制化电子名片及品牌度，有着不可估量的作用。 
+    </view>
+    <view class="content">
+    每种身份享受不同的权限，点亮身份越多，则自身享受的优质服务越全面。
+    </view>
+    <view class="content">
+     其中企业管理身份为企业管理人员专属权限，填写名片信息后，自动点亮。
+    </view>
+</view>

@@ -1,0 +1,60 @@
+<view class="main">
+  <view class="imageLabel">
+    <view class="imageLabel_header">
+      <view class="imageLabel_tit1 fz40 {{isShowInput?'fw500':''}}" wx:if="{{isShowInput}}" >
+       <input type="text" name='custom' value='{{custom}}' maxlength="4" bindinput='inputVal' placeholder="输入你的标签(最多4字)"/>
+       <view class="close_btn fz30" catchtap="clickAddImageLabel">取消</view>
+      </view>
+      <view class="imageLabel_tit1  {{isShowInput?'fw500':''}}" wx:else>
+        添加符合自己的标签
+      </view>
+      <view class="imageLabel_tit2 c999 fz24 }}" wx:if="{{!isWarning}}" >
+        最多添加8个标签，已添加{{checkedList.length}}个
+      </view >
+      <view class="imageLabel_tit2 c999 fz24 warning}}" wx:else >
+       最多添加8个标签，不能继续添加了
+      </view >
+    </view>
+    <!-- 选中标签 -->
+    <view class="imageLabel_default" >
+      <block wx:for="{{checkedList}}"  wx:key="index">
+        <view class="imageLabel_default_item c999 fz24 " style="color:{{ item.checked?'#999999':''}} ;background-color:{{item.checked?'#F5F5F5':''}}" data-id='{{item.id}}' data-index="{{index}}" catchtap='removeTagTap'>
+          <view>{{item.title}}</view>    
+        </view>
+      </block>
+    </view>
+  </view>
+</view>
+    <!-- 自定义标签 -->
+<view class="imageLabel_custom_box">             
+  <view class="imageLabel_custom">
+    <block wx:for="{{tagList}}"  wx:key="index">
+      <view class="imageLabel_custom_item c999 fz24" wx:if="{{index%3==0}}" style="color:{{item.checked?'#fff':randomColorArr[item.id]}};background-color:{{item.checked?randomColorArr[item.id]:'#fff'}}" data-index="{{index}}" catchtap="tagTap"  bindload="tagTap" data-labval="{{item}}" >
+        <view>{{item.title}}</view> 
+      </view>
+    </block>
+  </view>
+  <view class="imageLabel_custom">
+    <block wx:for="{{tagList}}"  wx:key="index">
+      <view class="imageLabel_custom_item c999 fz24" wx:if="{{index%3==1}}" style="color:{{item.checked? '#fff':randomColorArr[item.id]}} ;background-color:{{item.checked?randomColorArr[item.id]:'#fff'}}" data-index="{{index}}" catchtap="tagTap" data-labval="{{item}}" >
+        <view>{{item.title}}</view> 
+      </view>
+    </block>
+  </view>
+  <view class="imageLabel_custom">
+    <block wx:for="{{tagList}}"  wx:key="index">
+      <view class="imageLabel_custom_item c999 fz24" wx:if="{{index%3==2}}" style="color:{{item.checked? '#fff':randomColorArr[item.id]}} ;background-color:{{item.checked?randomColorArr[item.id]:'#fff'}}" data-index="{{index}}" catchtap="tagTap" data-labval="{{item}}" >
+        <view>{{item.title}}</view> 
+      </view>
+    </block>
+  </view>
+
+</view>
+<!-- 点击添加自定义标签 -->
+<view class="addImageLabel_btn fz24" catchtap="clickAddImageLabel">+自定义标签</view>
+<view class="save_btn fz30" wx:if="{{!isShowInput}}" catchtap="sub">保存</view>
+<view class="save_btn fz30" wx:else catchtap="saveTab">保存标签</view>
+<!-- <view class="model" catchtap="tagTap">
+  <view class="model_btn">点击上部的标签可删除</view>
+</view> -->
+

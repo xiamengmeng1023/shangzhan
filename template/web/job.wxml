@@ -1,0 +1,44 @@
+<template name="job">
+  <block wx:if="{{cateid == 22}}">
+    <block wx:for="{{datacon}}" wx:key="{{index}}">
+      <navigator url='/pages/employ/employ?id={{item.id}}' class='demand-box pading-lr bg flex a-items j-bet w1'>
+        <view class='w2'>
+          <view class='flex a-items j-bet'>
+            <text class='t-block f28-44 m-d'>{{item.title}}</text>
+            <view>
+              <text class='m-r f24-44'>薪资:</text>
+              <text class='l-demand f24-c4red'>{{item.xinzi}}</text>
+            </view>
+          </view>
+          <view class='f24-44'>
+            <text class='m-r'>经验:</text>
+            <text class='l-demand'>{{item.jingyan}}</text>
+            <text class='m-l m-r'>学历:</text>
+            <text class='l-demand'>{{item.xueli}}</text>
+          </view>
+        </view>
+        <view>
+          <image src='{{picUrl}}/Style/images/applets/img/more.png' class='more'></image>
+        </view>
+      </navigator>
+    </block>
+  </block>
+  <block wx:if="{{cateid == 23}}">
+    <block wx:for="{{datacon}}" wx:key="{{index}}">
+      <navigator url='/pages/employ/employ?id={{item.id}}' class='demand-box pading-lr bg flex a-items j-bet w1'>
+        <view class='flex a-items j-bet w2 job-box'>
+          <view class='t-text'>
+            <text class='f28-44'>{{item.title}}</text>
+          </view>
+          <view class='t-text'>
+            <text class='m-r f24-44'>薪资:</text>
+            <text class='f24-c4red'>{{item.xinzi}}</text>
+          </view>
+        </view>
+        <view>
+          <image src='{{picUrl}}/Style/images/applets/img/more.png' class='more'></image>
+        </view>
+      </navigator>
+    </block>
+  </block>
+</template>

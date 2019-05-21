@@ -1,0 +1,72 @@
+<!--pages/ticketBag/ticketBag.wxml-->
+<view class='header'>
+  <view  class="header_banner" >
+    <view class="banner_item {{isSelect==1?'active':''}}" catchtap='getMemberOffer' data-index='1'>可用</view>
+    <view class="banner_item {{isSelect==2?'active':''}}" catchtap='getInvalid' data-index='2'>失效</view>
+  </view>
+</view>
+<view class='ticket'>
+  <!-- 这是正常 -->
+  <block wx:if="{{isSelect==1}}">
+    <view class='usefulTicketItem' wx:for='{{list}}' wx:key="{{index}}">
+      <view class='ticketItemTitle'>
+        <view class='ticketItemTitleContent'>
+          <image src='{{iconUrl}}/imgs/ticket-icon.png' class='icon'></image>
+          <!-- <image src='{{iconUrl}}/imgs/ticket-icon2.png' class='icon'></image> -->
+          <view class='ticketItemDetail'>
+            <text>优惠券￥{{item.money}}</text>
+            <text>{{item.title}}</text>
+          </view>
+        </view>
+        <view class='ticketItemTitleuser' catchtap="goToUse">去使用</view>
+      </view>
+      <view class='ticketItemContent'>
+        <text>{{item.comment}}</text>
+        <text>有效期：{{item.end_time}}</text>
+      </view>
+    </view>
+  </block>
+  <!-- 这是已使用 -->
+  <block wx:if="{{isSelect==2}}">
+    <block  wx:for='{{templist}}' wx:key="{{index}}">
+      <view wx:if="{{item.type==2}} " class="usefulTicketItem expired  blue">
+        <view class='ticketItemTitle'>
+          <view class='ticketItemTitleContent'>
+            <image src='{{iconUrl}}/imgs/ticket-icon2.png' class='icon'></image>
+            <view class='ticketItemDetail'>
+            <text>优惠券￥{{item.money}}</text>
+              <text>{{item.title}}</text>
+            </view>
+          </view>
+          <view class='ticketItemTitleuser'>已使用</view>
+        </view>
+        <view class='ticketItemContent'>
+        <text>{{item.comment}}</text>
+          <text>使用时间{{item.end_time}}</text>
+        </view>
+      </view>
+      <view wx:if="{{item.type==3}} " class="usefulTicketItem expired ">
+        <view class='ticketItemTitle'>
+          <view class='ticketItemTitleContent'>
+            <image src='{{iconUrl}}/imgs/ticket-icon2.png' class='icon'></image>
+            <view class='ticketItemDetail'>
+            <text>优惠券￥{{item.money}}</text>
+              <text>{{item.title}}</text>
+            </view>
+          </view>
+          <view class='ticketItemTitleuser'>已过期</view>
+        </view>
+        <view class='ticketItemContent'>
+        <text>{{item.comment}}</text>
+          <text>过期时间{{item.end_time}}</text>
+        </view>
+      </view>
+    </block>
+  </block>
+  <block wx:if="{{list.length==0}}">
+    <view class="noneBox">
+      <image class="noneImage" src="/assets/btn/none.png"></image>
+      <view class="noneTxt">暂无更多数据</view>
+    </view>
+  </block>
+</view>

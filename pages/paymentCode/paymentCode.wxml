@@ -1,0 +1,26 @@
+<view class="place"></view>
+
+<view class="container">
+    <view class='number'>
+        <view class="number_tit_one">
+            <view class="number_tit_one_l">手机</view>
+            <input class="number_tit_one_r" placeholder="15555555555" placeholder-class="pla_color"></input>
+        </view>
+        <view class="number_tit_two">获取验证码</view>
+    </view>
+    <view class="code">
+        <view class='code_tit'>输入验证码</view>
+        <input class="code_tit_two"></input>
+    </view>
+    <view class="paymentCode">
+        <view class='paymentCode_tit'>支付密码</view>
+        <input class="paymentCode_tit_two" placeholder-class="pla_color" placeholder="请设置6位数字密码" ></input>
+    </view>
+    <view class="confirmPassword">
+        <view class="confirmPassword_tit">确认密码</view>
+        <input class="confirmPassword_tit_two" placeholder-class="pla_color" placeholder="请再次确认密码" ></input>
+    </view>
+    <view class='true'>
+      确认
+    </view>
+</view>

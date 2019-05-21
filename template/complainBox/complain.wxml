@@ -1,0 +1,5 @@
+<template name="complain">
+  <navigator url='/pages/commodity/commodity' class='t-center w1 m-t m-d'>
+    <text class='f24-8c complain-text'>信息投诉与建议</text>
+  </navigator>
+</template>

@@ -1,0 +1,121 @@
+
+<form bindsubmit="formSubmit">
+  <view class="basicInfo">
+    <view class="basicInfo_top" catchtap='upLoadImg'>
+      <view class="basicInfo_top_tit fz30">
+      头像
+      </view>
+      <view class="basicInfo_top_tit_userimg">
+        <block wx:if="{{imgUrl}}">
+          <image class="basicInfo_top_tit_userimg_op" src="{{imgUrl}}"></image>
+        </block>
+        <block wx:else>
+          <open-data class=" " type="userAvatarUrl"></open-data>   
+        </block>
+        <image src="{{iconUrl}}/btn/arrow.png" ></image>
+      </view>
+    </view>
+    <view class="basicInfo_main">
+      <view class="basicInfo_main_item fz30">
+        姓名<text class="must">（必填）</text>  
+      </view>
+      <view class="basicInfo_main_item">
+        <view class="basicInfo_main_item_val fz30">
+          <input value="{{rname}}" name="rname"  placeholder="请输入姓名"/>
+        </view>
+      </view>
+    </view>
+    <view class="basicInfo_main">
+      <view class="basicInfo_main_item fz30">
+       手机 <text class="must">（必填）</text> 
+      </view>
+      <view class="basicInfo_main_item">
+        <view class="basicInfo_main_item_val fz30">
+          <input value="{{phone}}"  name="phone" placeholder="请输入手机号" />
+        </view>
+      </view>
+    </view>
+    <view class="basicInfo_main">
+      <view class="basicInfo_main_item fz30">
+        邮箱 
+      </view>
+      <view class="basicInfo_main_item">
+        <view class="basicInfo_main_item_val fz30">
+          <input value="{{email}}" name="email"  placeholder="请输入邮箱" />
+        </view>
+      </view>
+    </view>
+    <view class="basicInfo_main ma_b10">
+      <view class="basicInfo_main_item fz30">
+        微信 <text class="must">（必填）</text>  
+      </view>
+      <view class="basicInfo_main_item">
+        <view class="basicInfo_main_item_val fz30">
+          <input value="{{weixin}}"  name="weixin" placeholder="请输入微信号" />
+        </view>
+      </view>
+    </view>
+    <view class="basicInfo_main">
+      <view class="basicInfo_main_item fz30">
+        公司名称 
+      </view>
+        <view class="basicInfo_main_item">
+          <view class="basicInfo_main_item_val fz30">
+            <input value="{{company}}" name="company" placeholder="请输入公司名称 " />
+          </view>
+        </view>
+    </view>
+    <view class="basicInfo_main" catchtap="logoImg">
+      <view class="basicInfo_main_item fz30">
+        企业Logo 
+      </view>
+      <view class="basicInfo_main_item">
+        <!-- <view class="basicInfo_main_item_val fz30">
+          <input value="{{item.itemVal}}" />
+        </view> -->
+        <view wx:if="{{logoUrl == ''}}">
+          <view class="fz28">建议提供尺寸100*100的图片</view>
+        </view>
+        <view wx:else>
+           <image class="comp_logo" src="{{logoUrl}}" ></image>
+        </view>
+        <image src="{{iconUrl}}/btn/arrow.png" ></image>
+      </view>
+    </view>
+    <view class="basicInfo_main">
+      <view class="basicInfo_main_item fz30">
+        职位 
+      </view>
+      <view class="basicInfo_main_item">
+        <view  class="basicInfo_main_item_val fz30">
+          <input value="{{job}}"  name="job" placeholder="请输入职位" />
+        </view>
+      </view>
+    </view>
+    <view class="basicInfo_main ma_b10">
+      <view class="basicInfo_main_item fz30">
+        公司地址 
+      </view>
+      <view class="basicInfo_main_item">
+        <view  class="basicInfo_main_item_val fz30">
+          <input value="{{address}}"  name="address" placeholder="请输入地址" />
+        </view>
+      </view>
+    </view>
+    <view class="basicInfo_main">
+        <view class="basicInfo_main_item fz30">
+          个性签名 
+        </view>
+        <view class="basicInfo_main_item">
+        <view  class="basicInfo_main_item_val fz30">
+          <input value="{{signature}}" name="signature" placeholder="编写个性签名" />
+        </view>
+      </view>
+    </view>
+  </view>
+  <view>
+    <button class="save_btn fz30"  disabled='{{IsSub}}' form-type='submit' >
+    保存
+    </button>
+  </view>
+</form>

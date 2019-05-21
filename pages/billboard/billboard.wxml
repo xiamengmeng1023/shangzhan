@@ -1,0 +1,183 @@
+
+<!-- 风云榜 -->
+<block wx:if="{{isShowType===1}}">
+  <view class="billboard">
+    <view class="billboard_header">
+      <view class="billboard_header_one {{flag==='1'?'active':''}}" data-index="1" catchtap="getIndex">
+        拓客榜
+        <text >(人数)</text>
+        <view class="line" wx:if="{{flag=='1'}}"></view>
+      </view>
+      <view class="billboard_header_two {{flag==='2'?'active':''}}" data-index="2" catchtap="getIndex">
+        财富榜
+        <text >(金额)</text>
+        <view class="line"  wx:if="{{flag=='2'}}"></view>
+      </view>
+    </view>
+
+    <view class="billboard_main" wx:if="{{flag==='1'}}">
+      <block wx:for="{{list}}" wx:key="{{item.id}}" data-index="{{index}}">
+        <view class="billboard_main_item">
+          <view class="billboard_main_item_l">
+            <block wx:if="{{item.ranking==='01'||item.ranking==='02'||item.ranking==='03'}}">
+              <image class="billboard_main_item_l_one" src="{{iconUrl}}/btn/rank1.png" wx:if="{{item.ranking==='01'}}"></image>
+              <image class="billboard_main_item_l_one" src="{{iconUrl}}/btn/rank2.png" wx:if="{{item.ranking==='02'}}"></image>
+              <image class="billboard_main_item_l_one" src="{{iconUrl}}/btn/rank3.png" wx:if="{{item.ranking==='03'}}"></image>
+            </block>
+            <block wx:else>
+              <view class="billboard_num">
+                {{item.ranking}}  
+              </view>
+            </block>
+            <image class="billboard_main_item_l_two" src="{{item.icon}}"></image>
+            <view class="billboard_main_item_l_three">{{item.nick_name}}</view>
+          </view>
+          <view class="billboard_main_item_r">
+            {{item.zhi_num}}
+          </view>
+        </view>
+      </block>
+    </view>
+    <view class="billboard_main" wx:if="{{flag==='2'}}">
+      <block wx:for="{{list}}" wx:key="{{item.id}}" data-index="{{index}}">
+        <view class="billboard_main_item">
+          <view class="billboard_main_item_l">
+            <block wx:if="{{item.ranking==='01'||item.ranking==='02'||item.ranking==='03'}}">
+              <image class="billboard_main_item_l_one" src="{{iconUrl}}/btn/rank1.png" wx:if="{{item.ranking==='01'}}"></image>
+              <image class="billboard_main_item_l_one" src="{{iconUrl}}/btn/rank2.png" wx:if="{{item.ranking==='02'}}"></image>
+              <image class="billboard_main_item_l_one" src="{{iconUrl}}/btn/rank3.png" wx:if="{{item.ranking==='03'}}"></image>
+            </block>
+            <block wx:else>
+              <view class="billboard_num">
+                {{item.ranking}}  
+              </view>
+            </block>
+            <image class="billboard_main_item_l_two" src="{{item.icon}}"></image>
+            <view class="billboard_main_item_l_three">{{item.nick_name}}</view>
+          </view>
+          <view class="billboard_main_item_r">
+            {{item.wealth}}
+          </view>
+        </view>
+      </block>
+    </view>
+  </view>
+  <!-- 个人 -->
+  <view class="myself_main_item" wx:if="{{flag==='1'}}">
+    <view class="billboard_main_item_l">
+      <view class="billboard_num">
+      {{info.ranking}}
+      </view>
+      <image class="billboard_main_item_l_two" src="{{info.icon}}"></image>
+      <view class="billboard_main_item_l_three">{{info.nick_name}}</view>
+    </view>
+    <view class="billboard_main_item_r">
+    {{info.zhi_num}}
+    </view>
+  </view>
+  <view class="myself_main_item" wx:if="{{flag==='2'}}">
+    <view class="billboard_main_item_l">
+      <view class="billboard_num">
+      {{info.ranking}}
+      </view>
+      <image class="billboard_main_item_l_two" src="{{info.icon}}"></image>
+      <view class="billboard_main_item_l_three">{{info.nick_name}}</view>
+    </view>
+    <view class="billboard_main_item_r">
+    {{info.wealth}}
+    </view>
+  </view>
+</block>
+
+<!-- 企业榜 -->
+<block wx:if="{{isShowType===2}}">
+  <view class="billboard">
+    <view class="billboard_header">
+          <!-- 企业榜 -->
+      <view class="billboard_header_one {{flag==='3'?'active':''}}" data-index="3" catchtap="getIndex">
+        拓客榜
+        <text >(人数)</text>
+          <view class="line"  wx:if="{{flag=='3'}}"></view>
+      </view>
+      <view class="billboard_header_two {{flag==='4'?'active':''}}" data-index="4" catchtap="getIndex">
+        财富榜
+        <text >(金额)</text>
+         <view class="line"  wx:if="{{flag=='4'}}"></view>
+      </view>
+    </view>
+
+    <view class="billboard_main" wx:if="{{flag=='3'}}" >
+      <block wx:for="{{list}}" wx:key="{{item.id}}" data-index="{{index}}">
+        
+        <view class="billboard_main_item">
+          <view class="billboard_main_item_l">
+            <block wx:if="{{item.ranking==='01'||item.ranking==='02'||item.ranking==='03'}}">
+              <image class="billboard_main_item_l_one" src="{{iconUrl}}/btn/rank1.png" wx:if="{{item.ranking==='01'}}"></image>
+              <image class="billboard_main_item_l_one" src="{{iconUrl}}/btn/rank2.png" wx:if="{{item.ranking==='02'}}"></image>
+              <image class="billboard_main_item_l_one" src="{{iconUrl}}/btn/rank3.png" wx:if="{{item.ranking==='03'}}"></image>
+            </block>
+            <block wx:else>
+              <view class="billboard_num">
+                {{item.ranking}}  
+              </view>
+            </block>
+            <image class="billboard_main_item_l_two" src="{{item.icon}}"></image>
+            <view class="billboard_main_item_l_three">{{item.nick_name}}</view>
+          </view>
+          <view class="billboard_main_item_r">
+            {{item.zhi_num}}
+          </view>
+        </view>
+      </block>
+    </view>
+    <view class="billboard_main" wx:if="{{flag=='4'}}">
+      <block wx:for="{{list}}" wx:key="{{item.id}}" data-index="{{index}}">
+        <view class="billboard_main_item">
+          <view class="billboard_main_item_l">
+            <block wx:if="{{item.ranking==='01'||item.ranking==='02'||item.ranking==='03'}}">
+              <image class="billboard_main_item_l_one" src="{{iconUrl}}/btn/rank1.png" wx:if="{{item.ranking==='01'}}"></image>
+              <image class="billboard_main_item_l_one" src="{{iconUrl}}/btn/rank2.png" wx:if="{{item.ranking==='02'}}"></image>
+              <image class="billboard_main_item_l_one" src="{{iconUrl}}/btn/rank3.png" wx:if="{{item.ranking==='03'}}"></image>
+            </block>
+            <block wx:else>
+              <view class="billboard_num">
+                {{item.ranking}}  
+              </view>
+            </block>
+            <image class="billboard_main_item_l_two" src="{{item.icon}}"></image>
+            <view class="billboard_main_item_l_three">{{item.nick_name}}</view>
+          </view>
+          <view class="billboard_main_item_r">
+            {{item.wealth}}
+          </view>
+        </view>
+      </block>
+    </view>
+  </view>
+  <!-- 个人 -->
+  <view class="myself_main_item" wx:if="{{flag=='3'}}">
+    <view class="billboard_main_item_l">
+      <view class="billboard_num">
+      {{info.ranking}}
+      </view>
+      <image class="billboard_main_item_l_two" src="{{info.icon}}"></image>
+      <view class="billboard_main_item_l_three">{{info.nick_name}}</view>
+    </view>
+    <view class="billboard_main_item_r">
+    {{info.zhi_num}}
+    </view>
+  </view>
+  <view class="myself_main_item" wx:if="{{flag=='4'}}">
+    <view class="billboard_main_item_l">
+      <view class="billboard_num">
+      {{info.ranking}}
+      </view>
+      <image class="billboard_main_item_l_two" src="{{info.icon}}"></image>
+      <view class="billboard_main_item_l_three">{{info.nick_name}}</view>
+    </view>
+    <view class="billboard_main_item_r">
+    {{info.wealth}}
+    </view>
+  </view>
+</block>
+

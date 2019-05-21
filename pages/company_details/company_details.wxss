@@ -1,0 +1,235 @@
+::-webkit-scrollbar {
+  width: 0;
+  height: 0;
+  color: transparent;
+}
+.company_details_main {
+  width: 690rpx;
+  margin: 0 auto;
+}
+.company_details_main .swiper-container {
+  position: relative;
+}
+.company_details_main .swiper-container .swiper .img {
+  border-radius: 10rpx;
+  width: 100%;
+  height: 240rpx;
+}
+.company_details_main .swiper-container .dots {
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 210rpx;
+  display: flex;
+  justify-content: center;
+}
+.company_details_main .swiper-container .dots .dot {
+  margin: 0 8rpx;
+  width: 20rpx;
+  height: 5rpx;
+  background-color: transparent;
+  border-radius: 8rpx;
+  background-color: #e3e1df;
+  transition: all 0.6s ease-in-out;
+}
+.company_details_main .swiper-container .dots .dot.active {
+  background: #fff;
+}
+.company_details_main .product_mian .product_main_head {
+  height: 80rpx;
+  margin-bottom: 35rpx;
+}
+.company_details_main .product_mian .product_main_head .product_main_head_img {
+  float: left;
+  height: 80rpx;
+  width: 80rpx;
+  border-radius: 50%;
+  border: 1rpx solid #000;
+  margin-right: 13rpx;
+}
+.company_details_main .product_mian .product_main_head .product_main_head_tit {
+  float: left;
+  font-size: 30rpx;
+  line-height: 80rpx;
+}
+.company_details_main .product_mian .product_main_head .card_details_main_shopBanner_b {
+  float: right;
+  position: relative;
+  top: 10rpx;
+}
+.company_details_main .product_mian .product_main_head .card_details_main_shopBanner_b .card_details_main_shopBanner_b_btn {
+  width: 180rpx;
+  height: 55rpx;
+  border-radius: 30rpx;
+  background-color: #3190FE;
+  box-shadow: 0rpx 8rpx 5rpx #86c9ff;
+}
+.company_details_main .product_mian .product_main_head .card_details_main_shopBanner_b .card_details_main_shopBanner_b_btn_txt {
+  font-size: 25rpx;
+  font-weight: 700;
+  color: #fff;
+  position: absolute;
+  top: 10rpx;
+  right: 50rpx;
+}
+.company_details_main .product_mian .coupon {
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+}
+.company_details_main .product_mian .coupon .coupon_item {
+  position: relative;
+  width: 330rpx;
+  margin-right: 30rpx;
+}
+.company_details_main .product_mian .coupon .coupon_item:last-child {
+  margin-right: 0rpx;
+}
+.company_details_main .product_mian .coupon .coupon_item image {
+  height: 130rpx;
+  width: 330rpx;
+  background-color: skyblue;
+}
+.company_details_main .product_mian .coupon .coupon_item .yhq_main {
+  width: 330rpx;
+  display: flex;
+  justify-content: flex-start;
+  position: absolute;
+  top: 0;
+  left: 0;
+  text-align: center;
+}
+.company_details_main .product_mian .coupon .coupon_item .yhq_main .yhq_main_one {
+  margin-top: 5rpx;
+  margin-left: 35rpx;
+  margin-right: 15rpx;
+}
+.company_details_main .product_mian .coupon .coupon_item .yhq_main .yhq_main_one .fz64 {
+  font-size: 64rpx;
+  color: #fff;
+}
+.company_details_main .product_mian .coupon .coupon_item .yhq_main .yhq_main_one .fz24 {
+  font-size: 24rpx;
+  color: #F8E71C;
+}
+.company_details_main .product_mian .coupon .coupon_item .yhq_main .yhq_main_two {
+  margin-top: 21rpx;
+  margin-right: 20rpx;
+}
+.company_details_main .product_mian .coupon .coupon_item .yhq_main .yhq_main_two .fz36 {
+  color: #fff;
+  font-size: 36rpx;
+  margin-bottom: 5rpx;
+}
+.company_details_main .product_mian .coupon .coupon_item .yhq_main .yhq_main_two .fz24 {
+  color: #fff;
+  font-size: 24rpx;
+}
+.company_details_main .product_mian .coupon .coupon_item .yhq_main .yhq_main_three {
+  color: #fff;
+  font-size: 24rpx;
+  width: 30rpx;
+}
+.company_details_main .product_mian .coupon .coupon_item .yhq_main .yhq_main_four {
+  position: absolute;
+  right: 13rpx;
+  top: 0rpx;
+  color: #fff;
+  font-size: 24rpx;
+  width: 24rpx;
+}
+.company_details_main .product_mian .coupon .coupon_item .yhq_main .yhq_main_five {
+  position: absolute;
+  right: 13rpx;
+  top: 16rpx;
+  color: #fff;
+  font-size: 24rpx;
+  width: 24rpx;
+}
+.company_details_main .classification {
+  height: 60rpx;
+  margin-bottom: 50rpx;
+}
+.company_details_main .classification .scroll_box {
+  height: 300rpx;
+  overflow: hidden;
+  white-space: nowrap;
+}
+.company_details_main .classification .scroll_box .eventSegment {
+  font-size: 24rpx;
+  color: #9c9c9c;
+  height: 50rpx;
+  display: inline-block;
+  line-height: 50rpx;
+  text-align: center;
+  padding: 0 30rpx;
+  border-radius: 25rpx;
+}
+.company_details_main .classification .scroll_box .activ {
+  background-color: #3190fe !important;
+  color: #fff;
+}
+.company_details_main .goods_main {
+  width: 690rpx;
+  margin: 0 auto;
+  column-count: 2;
+  margin-bottom: 50rpx;
+}
+.company_details_main .goods_main .goods_item {
+  width: 340rpx;
+  margin-bottom: 10rpx;
+  box-shadow: 3rpx 10rpx 10rpx #E8E8E8;
+  border-radius: 10rpx;
+  display: inline-block;
+  vertical-align: top;
+}
+.company_details_main .goods_main .goods_item .goods_img {
+  width: 340rpx;
+  height: 340rpx;
+  margin-bottom: 35rpx;
+}
+.company_details_main .goods_main .goods_item .goods_price_info {
+  padding: 0 25rpx;
+  display: flex;
+  align-items: baseline;
+  justify-items: flex-start;
+  margin-bottom: 35rpx;
+}
+.company_details_main .goods_main .goods_item .goods_price_info .sign {
+  color: #fc4c40;
+  font-size: 24rpx;
+}
+.company_details_main .goods_main .goods_item .goods_price_info .goods_price {
+  font-size: 48rpx;
+  color: #fc4c40;
+  margin-right: 15rpx;
+}
+.company_details_main .goods_main .goods_item .goods_price_info .goods_oldPrice {
+  font-size: 24rpx;
+  color: #999999;
+  text-decoration: line-through;
+}
+.company_details_main .goods_main .goods_item .goods_tit {
+  width: 290rpx;
+  padding: 0 25rpx;
+  font-size: 26rpx;
+  padding-bottom: 35rpx;
+}
+.company_details_main .goods_main .goods_item .goods_tit_label {
+  margin-bottom: 22rpx;
+  display: flex;
+  margin-left: 22rpx;
+}
+.company_details_main .goods_main .goods_item .goods_tit_label .goods_tit_label_item {
+  font-size: 18rpx;
+  height: 25rpx;
+  color: #F5A623;
+  border: 1rpx solid #F5A623;
+  margin-right: 15rpx;
+  padding: 5rpx;
+}
+.ticket-items {
+  width: 310rpx;
+  margin-right: 50rpx;
+  position: relative;
+}

@@ -1,0 +1,108 @@
+<view class="enterprise_details">
+  <view class="enterprise_main">
+    <block wx:for="{{dynamic}}" wx:key="{{index}}" wx:if="{{dynamic.length > 0}}">
+       <!--  0：新闻；1：产品；2：招聘;3：文章;4：祝福语' -->
+      <block wx:if="{{item.type == 0}}">
+        <navigator class="enterprise_main_item" url='/pages/enterprise_dynamics_details/enterprise_dynamics_details?id={{item.con_id}}'>
+          <view class="enterprise_main_item_l">
+            <view class="enterprise_main_item_l_one">
+              <text class="enterprise_main_item_l_one_type">新闻</text>
+            {{item.title}}
+            </view> 
+            <view class="enterprise_main_item_l_two">
+              <view class="enterprise_main_item_l_two_tit">{{item.addtime}} 来自：{{item.user_nick}}</view>
+            </view>
+            <view class="enterprise_main_item_l_three">
+              <image class="enterprise_main_item_l_three_icon" src="{{iconUrl}}/btn/tiems.png"></image>
+              <view class="enterprise_main_item_l_three_tit">27889次</view>
+            </view>
+          </view> 
+          <image class="enterprise_main_item_r" src="{{item.icon}}" >
+          </image>
+        </navigator>
+      </block>
+      <block wx:if="{{item.type == 1}}">
+        <navigator class="enterprise_main_item" url='/pages/enterprise_dynamics_details/enterprise_dynamics_details?id={{item.con_id}}'>
+          <view class="enterprise_main_item_l">
+            <view class="enterprise_main_item_l_one">
+              <text class="enterprise_main_item_l_one_type">产品</text>
+            {{item.title}}
+            </view> 
+            <view class="enterprise_main_item_l_two">
+              <view class="enterprise_main_item_l_two_tit">{{item.addtime}} 来自：{{item.user_nick}}</view>
+            </view>
+            <view class="enterprise_main_item_l_three">
+              <image class="enterprise_main_item_l_three_icon" src="{{iconUrl}}/btn/tiems.png"></image>
+              <view class="enterprise_main_item_l_three_tit">27889次</view>
+            </view>
+          </view> 
+          <image class="enterprise_main_item_r" src="{{item.icon}}" >
+          </image>
+        </navigator>
+      </block>
+      <block wx:if="{{item.type == 2}}">
+        <navigator class="enterprise_main_item" url='/pages/enterprise_dynamics_details/enterprise_dynamics_details?id={{item.con_id}}'>
+          <view class="enterprise_main_item_l">
+            <view class="enterprise_main_item_l_one">
+              <text class="enterprise_main_item_l_one_type">招聘</text>
+            {{item.title}}
+            </view> 
+            <view class="enterprise_main_item_l_two">
+              <view class="enterprise_main_item_l_two_tit">{{item.addtime}} 来自：{{item.user_nick}}</view>
+            </view>
+            <view class="enterprise_main_item_l_three">
+              <image class="enterprise_main_item_l_three_icon" src="{{iconUrl}}/btn/tiems.png"></image>
+              <view class="enterprise_main_item_l_three_tit">27889次</view>
+            </view>
+          </view> 
+          <!-- <image class="enterprise_main_item_r" src="{{item.icon}}" >
+          </image> -->
+        </navigator>
+      </block>
+      <block wx:if="{{item.type == 3}}">
+        <navigator class="enterprise_main_item" url='/pages/enterprise_dynamics_details/enterprise_dynamics_details?id={{item.con_id}}'>
+          <view class="enterprise_main_item_l">
+            <view class="enterprise_main_item_l_one">
+              <text class="enterprise_main_item_l_one_type">文章</text>
+            {{item.title}}
+            </view> 
+            <view class="enterprise_main_item_l_two">
+              <view class="enterprise_main_item_l_two_tit">{{item.addtime}} 来自：{{item.user_nick}}</view>
+            </view>
+            <view class="enterprise_main_item_l_three">
+              <image class="enterprise_main_item_l_three_icon" src="{{iconUrl}}/btn/tiems.png"></image>
+              <view class="enterprise_main_item_l_three_tit">27889次</view>
+            </view>
+          </view> 
+          <image class="enterprise_main_item_r" src="{{item.icon}}" >
+          </image>
+        </navigator>
+      </block>
+      <block wx:if="{{item.type == 4}}">
+        <navigator class="enterprise_main_item" url='/pages/enterprise_dynamics_details/enterprise_dynamics_details?id={{item.con_id}}'>
+          <view class="enterprise_main_item_l">
+            <view class="enterprise_main_item_l_one">
+              <text class="enterprise_main_item_l_one_type">祝福语</text>
+            {{item.title}}
+            </view> 
+            <view class="enterprise_main_item_l_two">
+              <view class="enterprise_main_item_l_two_tit">{{item.addtime}} 来自：{{item.user_nick}}</view>
+            </view>
+            <view class="enterprise_main_item_l_three">
+              <image class="enterprise_main_item_l_three_icon" src="{{iconUrl}}/btn/tiems.png"></image>
+              <view class="enterprise_main_item_l_three_tit">27889次</view>
+            </view>
+          </view> 
+          <image class="enterprise_main_item_r" src="{{item.icon}}" >
+          </image>
+        </navigator>
+      </block>
+    </block>
+    <block wx:if="{{dynamic.length == 0}}">
+      <view class="none_box">
+        <image class="none_img" src="{{iconUrl}}btn/none.png"></image>
+        <view class="none_tit">暂无企业动态！</view>
+      </view>
+    </block>
+  </view> 
+</view>

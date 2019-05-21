@@ -1,0 +1,416 @@
+button::after {
+  border: none;
+}
+button {
+  background: none !important;
+}
+.card_details_main .top_box {
+  width: 100%;
+  padding-top: 40rpx;
+  height: 88rpx;
+  background-color: #fff;
+  position: fixed;
+  left: 0;
+  z-index: 9;
+}
+.card_details_main .top_box .top_box_tit {
+  height: 88rpx;
+  font-size: 36rpx;
+  line-height: 88rpx;
+  text-align: center;
+}
+.card_details_main .backbtn {
+  margin-top: 65rpx;
+  width: 18rpx;
+  height: 34rpx;
+  margin-bottom: 15rpx;
+  position: fixed;
+  top: 0rpx;
+  left: 30rpx;
+  z-index: 10;
+}
+.card_details_main .card_details_main_head {
+  position: relative;
+  height: 220rpx;
+  margin-bottom: 35rpx;
+  padding-top: 104rpx;
+  width: 100%;
+  background: url('https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1554344111&di=673181da7c4ce6bd791b9c8af581e4b5&imgtype=jpg&er=1&src=http%3A%2F%2Fpic37.nipic.com%2F20140110%2F10558908_011141832000_2.jpg');
+}
+.card_details_main .card_details_main_head .card_details_main_infoBox {
+  width: 690rpx;
+  margin: 0 auto;
+  position: relative;
+}
+.card_details_main .card_details_main_head .card_details_main_infoBox .card_details_main_job {
+  text-align: center;
+  font-size: 48rpx;
+  color: #fff;
+  margin-bottom: 20rpx;
+}
+.card_details_main .card_details_main_head .card_details_main_infoBox .card_details_main_company {
+  font-size: 24rpx;
+  text-align: center;
+  color: #fff;
+}
+.card_details_main .card_details_main_head .card_details_main_infoBox .card_details_main_img {
+  height: 150rpx;
+  width: 150rpx;
+  border-radius: 50%;
+  border: 4rpx solid #fff;
+  position: absolute;
+  bottom: -170rpx;
+  left: 0rpx;
+}
+.card_details_main .card_details_main_title {
+  margin: 0rpx 30rpx 50rpx 200rpx;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.card_details_main .card_details_main_title .card_details_main_title_box {
+  display: flex;
+  align-items: baseline;
+}
+.card_details_main .card_details_main_title .card_details_main_title_box .card_details_main_title_name {
+  font-size: 48rpx;
+  margin-right: 15rpx;
+}
+.card_details_main .card_details_main_title .card_details_main_title_box .card_details_main_title_icon_box {
+  display: flex;
+  justify-content: space-between;
+}
+.card_details_main .card_details_main_title .card_details_main_title_box .card_details_main_title_icon_box .card_details_main_title_icon {
+  width: 30rpx;
+  height: 30rpx;
+  margin-right: 10rpx;
+}
+.card_details_main .card_details_main_title .card_details_main_title_box .card_details_main_title_icon_box .card_details_main_title_icon_tit {
+  font-size: 24rpx;
+  margin-right: 15rpx;
+  color: #999999;
+}
+.card_details_main .card_details_main_title .card_details_main_title_vipIcon {
+  width: 40rpx;
+  height: 32rpx;
+}
+.card_details_main .card_details_main_function {
+  height: 50rpx;
+  width: 690rpx;
+  margin: 0 auto;
+  display: flex;
+  text-align: center;
+  margin-bottom: 50rpx;
+}
+.card_details_main .card_details_main_function .card_details_main_function_list {
+  flex: 1;
+  margin-right: 30rpx;
+  line-height: 18rpx;
+  padding: 15rpx 0rpx;
+  font-size: 24rpx;
+  border: 1rpx solid #cccccc;
+  border-radius: 2rpx;
+  color: #ccc;
+}
+.card_details_main .card_details_main_function .card_details_main_function_list:last-child {
+  margin-right: 0;
+}
+.card_details_main .card_details_main_function .activ {
+  border: 1rpx solid #86c9ff;
+  color: #86c9ff;
+}
+.card_details_main .card_details_main_shopBanner {
+  width: 690rpx;
+  margin: 0 auto;
+  height: 150rpx;
+  display: flex;
+  align-items: center;
+  margin-bottom: 50rpx;
+  border-radius: 20rpx;
+  box-shadow: 5rpx 10rpx 10rpx #eaeaea;
+}
+.card_details_main .card_details_main_shopBanner .card_details_main_shopBanner_l {
+  margin-left: 20rpx;
+  margin-right: 30rpx;
+  width: 150rpx;
+  height: 110rpx;
+}
+.card_details_main .card_details_main_shopBanner .card_details_main_shopBanner_c .card_details_main_shopBanner_c_t {
+  white-space: nowrap;
+  font-size: 36rpx;
+  margin-bottom: 25rpx;
+}
+.card_details_main .card_details_main_shopBanner .card_details_main_shopBanner_c .card_details_main_shopBanner_c_b {
+  white-space: nowrap;
+  font-size: 24rpx;
+  color: #999999;
+}
+.card_details_main .card_details_main_shopBanner .card_details_main_shopBanner_b {
+  position: relative;
+  margin-left: 30rpx;
+}
+.card_details_main .card_details_main_shopBanner .card_details_main_shopBanner_b .card_details_main_shopBanner_b_btn {
+  width: 180rpx;
+  height: 55rpx;
+  border-radius: 30rpx;
+  box-shadow: 0rpx 8rpx 5rpx #86c9ff;
+}
+.card_details_main .card_details_main_shopBanner .card_details_main_shopBanner_b .card_details_main_shopBanner_b_btn_txt {
+  font-size: 26rpx;
+  font-weight: 700;
+  color: #fff;
+  position: absolute;
+  top: 12%;
+  right: 50%;
+  transform: translate(50%);
+}
+.card_details_main .card_details_main_detailedInfo {
+  width: 660rpx;
+  margin: 0 auto;
+  padding-top: 30rpx;
+  padding-left: 30rpx;
+  padding-bottom: 30rpx;
+  box-shadow: 0rpx 8rpx 20rpx #e8e8e8;
+  margin-bottom: 55rpx;
+  color: #333;
+}
+.card_details_main .card_details_main_detailedInfo .card_details_main_detailedInfo_box {
+  height: 70rpx;
+  display: flex;
+  align-items: center;
+  margin-bottom: 30rpx;
+}
+.card_details_main .card_details_main_detailedInfo .card_details_main_detailedInfo_box:last-child {
+  margin-bottom: 0rpx;
+}
+.card_details_main .card_details_main_detailedInfo .card_details_main_detailedInfo_box .card_details_main_detailedInfo_l {
+  width: 70rpx;
+  height: 70rpx;
+  margin-right: 30rpx;
+}
+.card_details_main .card_details_main_detailedInfo .card_details_main_detailedInfo_box .card_details_main_detailedInfo_r {
+  font-size: 30rpx;
+  margin-right: 10rpx;
+}
+.card_details_main .card_details_main_detailedInfo .card_details_main_detailedInfo_box .card_details_main_detailedInfo_icon {
+  width: 21rpx;
+  height: 24rpx;
+  margin-top: 5rpx;
+}
+.card_details_main .profile_tit {
+  width: 690rpx;
+  margin: 0 auto;
+  font-size: 30rpx;
+  margin-bottom: 30rpx;
+  font-weight: 700;
+}
+.card_details_main .profile_main {
+  font-size: 30rpx;
+  width: 660rpx;
+  margin: 0 auto;
+  padding: 30rpx;
+  color: #666666;
+  line-height: 40rpx;
+  margin-bottom: 55rpx;
+  box-shadow: 0rpx 8rpx 20rpx #e8e8e8;
+}
+.card_details_main .myLabel {
+  width: 690rpx;
+  margin: 0 auto;
+  margin-bottom: 55rpx;
+  overflow: hidden;
+}
+.card_details_main .myLabel .myLabel_item {
+  text-align: center;
+  float: left;
+  padding: 15rpx 30rpx;
+  background-color: #f5f5f5;
+  margin-right: 15rpx;
+  color: #999999;
+  font-size: 24rpx;
+  margin-bottom: 20rpx;
+}
+.card_details_main .myLabel_tit,
+.card_details_main .my_img_tit,
+.card_details_main .my_needs_tit,
+.card_details_main .advantage_tit {
+  margin-left: 30rpx;
+  font-size: 30rpx;
+  margin-bottom: 25rpx;
+  font-weight: 700;
+}
+.card_details_main .my_needs,
+.card_details_main .advantage {
+  font-size: 24rpx;
+  width: 690rpx;
+  margin: 0 auto;
+  padding: 30rpx;
+  padding-left: 0;
+  padding-right: 0;
+  color: #666666;
+  line-height: 40rpx;
+}
+.card_details_main .my_img {
+  width: 690rpx;
+  margin: 0 auto;
+  display: flex;
+  flex-wrap: wrap;
+  margin-bottom: 50rpx;
+}
+.card_details_main .my_img .my_img_item {
+  width: 690rpx;
+  margin-bottom: 10rpx;
+}
+.card_details_mask {
+  height: 100%;
+  width: 750rpx;
+  position: fixed;
+  top: 0rpx;
+  z-index: 2;
+  background: rgba(0, 0, 0, 0.4);
+}
+.card_details_popup {
+  width: 590rpx;
+  background-color: #fff;
+  position: fixed;
+  top: 30%;
+  left: 50%;
+  padding: 50rpx 30rpx;
+  padding-top: 110rpx;
+  transform: translate(-50%);
+  z-index: 9;
+  text-align: center !important;
+}
+.card_details_popup .card_details_mask_close {
+  width: 32rpx;
+  height: 32rpx;
+  position: absolute;
+  right: 40rpx;
+  top: 40rpx;
+}
+.card_details_popup .card_details_popup_one {
+  font-size: 30rpx;
+  margin-bottom: 25rpx;
+  color: #999999;
+}
+.card_details_popup .card_details_popup_two {
+  font-size: 48rpx;
+  margin-bottom: 85rpx;
+  font-weight: 700;
+  color: #1d9aff;
+}
+.card_details_popup .card_details_popup_three {
+  font-size: 64rpx;
+  font-weight: 700;
+  margin-bottom: 85rpx;
+}
+.card_details_popup .card_details_popup_four {
+  height: 90rpx;
+  background-color: #1d9aff;
+  color: #fff;
+  border-radius: 7rpx;
+  line-height: 90rpx;
+  font-size: 36rpx;
+}
+.mask {
+  height: 100%;
+  width: 750rpx;
+  background-color: #e5e5e5;
+  opacity: 0.7;
+  position: fixed;
+  top: 0rpx;
+  z-index: 2;
+}
+.card_AddAndDelete {
+  height: 860rpx;
+  width: 100%;
+  position: fixed;
+  bottom: 0rpx;
+  left: 0rpx;
+  background-color: #fff;
+  z-index: 20;
+  box-sizing: border-box;
+  padding: 0 30rpx;
+  padding-top: 50rpx;
+}
+.card_AddAndDelete .card_AddAndDelete_top {
+  display: flex;
+  justify-content: space-between;
+}
+.card_AddAndDelete .card_AddAndDelete_top .card_AddAndDelete_tit {
+  margin-bottom: 30rpx;
+  font-size: 48rpx;
+  font-weight: 700;
+  letter-spacing: 2rpx;
+}
+.card_AddAndDelete .card_AddAndDelete_top image {
+  width: 30rpx;
+  height: 30rpx;
+  margin-right: 20rpx;
+}
+.card_AddAndDelete .card_AddAndDelete_ipt {
+  font-size: 30rpx;
+  border-bottom: 1rpx solid #000;
+  margin-bottom: 70rpx;
+}
+.card_AddAndDelete .grouping_name_main {
+  display: flex;
+  font-size: 30rpx;
+  color: #999;
+  align-items: baseline;
+  margin-bottom: 67rpx;
+}
+.card_AddAndDelete .grouping_name_main .grouping_name_main_one {
+  color: #1D9AFF;
+  margin-left: 10rpx;
+  margin-right: 10rpx;
+  font-size: 48rpx;
+}
+.card_AddAndDelete .grouping_tit {
+  font-size: 30rpx;
+  margin-bottom: 65rpx;
+}
+.card_AddAndDelete .eventSegment {
+  font-size: 24rpx;
+  color: #9c9c9c;
+  height: 50rpx;
+  line-height: 50rpx;
+  text-align: center;
+  padding: 0 30rpx;
+  border-radius: 25rpx;
+  margin-right: 20rpx;
+  display: inline-block;
+  margin-bottom: 30rpx;
+  border: 1rpx solid #ccc;
+  position: relative;
+}
+.card_AddAndDelete .eventSegment .card_close_btn {
+  width: 24rpx;
+  height: 24rpx;
+  position: absolute;
+  top: -15rpx;
+  right: 0rpx;
+}
+.card_AddAndDelete .del_btn {
+  width: 30rpx;
+  height: 30rpx;
+  position: absolute;
+  top: 125rpx;
+  right: 65rpx;
+}
+.card_AddAndDelete .add_btn {
+  width: 80rpx;
+  height: 80rpx;
+  position: absolute;
+  bottom: 50rpx;
+  right: 50%;
+  transform: translateX(50%);
+}
+.card_AddAndDelete .default {
+  color: #d2d2d2;
+  border: 1rpx solid #e5e5e5;
+}
+.card_AddAndDelete .activ {
+  color: #3190fe;
+  border: 1rpx solid #3190fe;
+}

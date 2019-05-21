@@ -1,0 +1,111 @@
+<!-- 订单详情-待付款 -->
+<view class="obligation" wx:if="{{hasOrder}}">
+  <view class="obligation_top">
+    <view class="flexbox">
+      <view class="obligation_top_img ">
+        <image src="{{iconUrl}}/btn/order_add.png"></image>
+      </view>
+      <view class="obligation_top_center">
+        <view class="obligation_top_center_one">
+          <view class="obligation_top_center_one_l fz30">
+            {{order_detail.address.name}}
+          </view>
+          <view class="obligation_top_center_one_r fz30">
+            {{order_detail.address.mobile}}
+          </view>
+        </view>
+        <view class="obligation_top_center_two fz26">
+         {{order_detail.address.province}}{{order_detail.address.city}}{{order_detail.address.area}}{{order_detail.address.address}}
+        </view>
+      </view>
+    </view>
+   
+    <view class="obligation_top_right">
+      <image src="{{iconUrl}}/btn/arrow.png"></image>
+    </view>
+  </view>
+  <view class="line">
+    <image  src="{{iconUrl}}/btn/line.png"></image>
+  </view>
+  <!-- 商品详情 -->
+  <view class="obligation_main">
+    <view class="obligation_main_color">
+      <view class="obligation_main_top">
+        <view class="obligation_main_top_flexbox">
+          <image class="obligation_main_top_img" src="{{iconUrl}}/btn/order_shop.png"> </image>    
+          <view class="obligation_main_top_tit fz26"> {{order_detail.store_list[0].store_name}}</view>
+        </view>
+        <view class="obligation_main_top_status fz24">{{order_detail.order_status}}</view>
+      </view>
+      <view class="obligation_main_center">
+        <view class="obligation_main_center_img">
+          <image src="{{picUrl}}{{order_detail.store_list[0].goods_list[0].icon}}"></image>
+        </view>
+        <view class="obligation_main_center_infobox">
+          <view class="obligation_main_center_name fz30">
+         {{order_detail.store_list[0].goods_list[0].title}}
+          </view>
+          <view class="obligation_main_center_price fz30">
+            <view class="fz24">￥</view>{{order_detail.store_list[0].goods_list[0].goods_price}}
+          </view>
+        </view>
+      </view>
+      <view class="obligation_main_footer fz26">
+        共{{order_detail.store_list[0].goods_list[0].goods_num}}件商品需支付￥{{order_detail.store_list[0].goods_list[0].goods_total_price}}
+      </view>
+    </view>
+  </view>
+  <!-- 底部 -->
+  <view class="obligation_footer">
+    <!-- <view class="obligation_footer_item">
+      <view class="obligation_footer_item_l fz26">优惠券</view>
+      <view class="obligation_footer_item_t fz26">满1000减100</view>
+    </view> -->
+    <view class="obligation_footer_item" catchtap='textPaste' >
+      <view class="obligation_footer_item_l fz26">
+        订单号
+        <view class="c999">（点击编号可复制）</view>
+      </view>
+      <view class="obligation_footer_item_t order_sn fz26"  >
+        {{order_detail.order_sn}}
+      </view>
+    </view>
+    <view class="obligation_footer_item">
+      <view class="obligation_footer_item_l fz26">
+        下单时间
+      </view>
+      <view class="obligation_footer_item_t fz26">
+          {{order_detail.create_time}}
+      </view>
+    </view>
+    <view class="obligation_footer_item"  catchtap='calling'>
+      <view class="obligation_footer_item_l fz26">
+        联系客服 
+        <view class="c999">(点击号码可拨打)</view>
+      </view>
+      <view class="obligation_footer_item_t fz26">
+       021-4000-8888
+      </view>
+    </view>
+    
+  </view>
+</view>
+<view  wx:else>
+  商品已下架
+</view>
+
+<!-- 判断是否是未付款订单 -->
+
+<block wx:if="{{!order_detail.order_status==='未付款'}}">
+  <view class="settleAccounts">
+    <view class="settleAccounts_l ">
+      <view class="settleAccounts_l_one fz24">
+      实付款:
+      </view>
+      <view class="settleAccounts_l_two fz36">
+      ￥{{order_detail.store_list[0].goods_list[0].goods_total_price}}
+      </view>
+    </view>
+    <view class="settleAccounts_r fz30">立即支付</view>
+  </view>
+</block>

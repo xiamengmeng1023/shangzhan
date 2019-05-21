@@ -1,0 +1,15 @@
+page {
+  border-top: 30rpx solid #f4f4f6;
+}
+
+.log {
+  display: block;
+  width: 182rpx;
+  height: 182rpx;
+  margin: 54rpx auto 100rpx;
+}
+
+.userImg {
+  width: 100rpx;
+  height: 100rpx;
+}

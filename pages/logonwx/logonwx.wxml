@@ -1,0 +1,14 @@
+<image src='{{picUrl}}/Style/images/applets/img/log.png' mode='widthFix' class='log'></image>
+<form>
+  <view class='pading-lr pading-ud'>
+    <view class='flex a-items j-content pading-lr pading-ud m-u m-d bg'>
+     <open-data type="userAvatarUrl" class="userImg"></open-data>
+    </view>
+     <view class='flex a-items j-content pading-lr pading-ud m-u m-d bg'>
+     <open-data type="userNickName"></open-data>
+    </view>
+    <view style='margin-top:80rpx;margin-bottom:45rpx;'>
+      <button class='open-vip f30-ff' disabled='{{disabled}}' open-type="getUserInfo" bindgetuserinfo="bindGetUserInfo" >登录</button>
+    </view>
+  </view>
+</form>

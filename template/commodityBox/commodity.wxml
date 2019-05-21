@@ -1,0 +1,11 @@
+<template name="commodity">
+  <view class='flex a-items j-bet f-wrap'>
+    <block>
+      <navigator url="/pages/details/details?id={{item.id}}" class='bg c-list m-d' wx:for="{{goodsList}}" wx:key="{{index}}" catchtap='goodsTap'>
+        <image src="{{item.icon}}" class='img m-d m-t'></image>
+        <text class='t-block f28-44 ellipsis'>{{item.title}}</text>
+        <text class='t-block f28-d4 f-w'>¥{{item.v_price}}</text>
+      </navigator>
+    </block>
+  </view>
+</template>

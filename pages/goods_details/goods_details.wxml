@@ -1,0 +1,72 @@
+<import src="../../wxParse/wxParse.wxml" />
+
+<view class="goods_details">
+  <image class="goods_details_top" src="{{goods.big_pic}}">
+  </image>
+  <view class="goods_details_info">
+    <view class="goods_details_info_one">{{goods.title}}
+    </view>
+    <view class="goods_details_info_two">
+      <view class="goods_details_info_two_l">￥</view>
+      <view class="goods_details_info_two_r">{{goods.v_price}}</view>
+    </view>
+  </view>
+
+  <!-- 标签信息 -->
+  <view class="lab_info">
+    <view class="lab_info_item">
+      <image src="{{iconUrl}}/btn/goods_lab3.png"></image>
+      <view class="lab_info_item_price  Delete_line ">￥{{goods.m_price}}</view>
+    </view>
+    <view class="lab_info_item">
+       <image src="{{iconUrl}}/btn/goods_lab2.png"></image>
+      <view class="lab_info_item_price">{{goods.sales}}件</view>
+    </view>
+    <view class="lab_info_item">
+       <image src="{{iconUrl}}/btn/goods_lab1.png"></image>
+      <view class="lab_info_item_price">买赠</view>
+    </view>
+  </view>
+  <view class="imgbox_tit_box">
+    <view class="imgbox_tit">图文详情</view>
+  </view>
+  <view class="imgbox">
+    <template is="wxParse" data="{{wxParseData:summary.nodes}}" />
+  </view>
+  <view class="footer"></view>
+</view>
+
+<view class="bottom_btn">
+  <view class="bottom_btn_l">
+    <view class="bottom_btn_l_zx">
+      <image class="bottom_btn_l_zx_img" src="{{iconUrl}}btn/Shape.png"></image>
+      <view class="bottom_btn_l_zx_tit">咨询</view>
+    </view>
+    <view class="bottom_btn_l_sc" wx:if="{{favorite!== 2}}"  catchtap="favoriteTap">
+      <image class="bottom_btn_l_sc_img" src="{{iconUrl}}btn/Shape2.png"></image>
+      <view class="bottom_btn_l_sc_tit" >收藏</view>
+    </view>
+    <view class="bottom_btn_l_sc" wx:else  catchtap='removeFavoriteTap'>
+      <image class="bottom_btn_l_sc_img" src="{{iconUrl}}btn/Shape2{{favorite == 2 ?'_activ':''}}.png"></image>
+      <view class="bottom_btn_l_sc_tit" >已收藏</view>
+    </view>
+  </view>
+  <!-- 1可以购买 0不能购买 -->
+  <view class="bottom_btn_r" wx:if="{{goods.goods_type=='1'&&is_pay==1}}">
+    <view class="bottom_btn_l_jr" data-index='1' catchtap="shopCar">
+    加入购物车
+    </view>
+    <view class="bottom_btn_r_gm" data-index='2' catchtap="shopCar">
+    立即购买
+    </view>
+  </view>
+  <!-- 资讯类显示 -->
+  <view class="bottom_btn_Prohibit" wx:if="{{is_pay==0}}">
+    该商品暂时不支持直接购买
+  </view>
+</view>
+
+<view class="suspension_button">
+  <image  class="suspension_button_shopping_cart" src="{{iconUrl}}/btn/goshoppingcart.png" catchtap="goToshoppingCar"></image>
+  <image class="suspension_button_shopping_cart" src="{{iconUrl}}/btn/Suspension_sharing.png"></image>
+</view>

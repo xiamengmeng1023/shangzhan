@@ -1,0 +1,58 @@
+<template name="swich">
+  <!-- swicthNum -->
+  <view class='footer pading-lr bg flex j-bet a-items'>
+    <block wx:if="{{swicthNum == 1}}">
+      <navigator class='t-center' open-type="redirect" url=''>
+        <image src="{{swicthNum == 1 ? '/img/mingpians.png': '/img/mingpian.png'}}" mode='widthFix' class='mp'></image>
+        <text class="{{swicthNum == 1?'f22-c4red':'f22-8c'}} t-block">名片</text>
+      </navigator>
+    </block>
+    <block wx:else>
+     <navigator class='t-center' open-type="redirect" url="/pages/showPage/showPage?cardId={{cardId}}">
+        <image src="{{swicthNum == 1 ? '/img/mingpians.png': '/img/mingpian.png'}}" mode='widthFix' class='mp'></image>
+        <text class="{{swicthNum == 1?'f22-c4red':'f22-8c'}} t-block">名片</text>
+      </navigator>
+    </block>
+
+    <block wx:if="{{swicthNum == 2}}">
+     <view class='t-center' open-type="redirect">
+      <image src="{{swicthNum == 2?'/img/weidians.png':'/img/weidian.png'}}" mode='widthFix' class='wd'></image>
+      <text class="{{swicthNum == 2?'f22-c4red':'f22-8c'}} t-block">产品</text>
+    </view>
+    </block>
+    <block wx:else>
+     <navigator class='t-center' open-type="redirect" url="/pages/personalShops/personalShops?cardId={{cardId}}">
+      <image src="{{swicthNum == 2?'/img/weidians.png':'/img/weidian.png'}}" mode='widthFix' class='wd'></image>
+      <text class="{{swicthNum == 2?'f22-c4red':'f22-8c'}} t-block">产品</text>
+    </navigator>
+    </block>
+    <block wx:if="{{swicthNum == 3}}">
+  <navigator class='t-center' open-type="redirect" url="">
+      <image src="{{swicthNum == 3?'/img/dynamics.png':'/img/dynamic.png'}}" mode='widthFix' class='dynamic'></image>
+      <text class="{{swicthNum == 3?'f22-c4red':'f22-8c'}} t-block">动态</text>
+    </navigator>
+    </block>
+<block wx:else>
+  <navigator class='t-center' open-type="redirect" url="/pages/dynamicShop/dynamicShop?cardId={{cardId}}">
+      <image src="{{swicthNum == 3?'/img/dynamics.png':'/img/dynamic.png'}}" mode='widthFix' class='dynamic'></image>
+      <text class="{{swicthNum == 3?'f22-c4red':'f22-8c'}} t-block">动态</text>
+    </navigator>
+    </block>
+    <block wx:if="{{swicthNum == 4}}">
+    <navigator class='t-center' open-type="redirect" url="">
+      <image src="{{swicthNum == 4?'/img/guanwangs.png':'/img/guanwang.png'}}" mode='widthFix' class='gw'></image>
+      <text class="{{swicthNum == 4?'f22-c4red':'f22-8c'}} t-block">官网</text>
+    </navigator>
+    </block>
+    <block wx:else>
+    <navigator class='t-center' open-type="redirect" url="/pages/officialWeb/officialWeb?cardId={{cardId}}">
+      <image src="{{swicthNum == 4?'/img/guanwangs.png':'/img/guanwang.png'}}" mode='widthFix' class='gw'></image>
+      <text class="{{swicthNum == 4?'f22-c4red':'f22-8c'}} t-block">官网</text>
+    </navigator>
+    </block>
+    <navigator class='t-center' open-type="switchTab" url="/pages/personal/personal">
+      <image src="{{swicthNum == 5?'/img/personals.png':'/img/personal.png'}}" mode='widthFix' class='my'></image>
+      <text class="{{swicthNum == 5?'f22-c4red':'f22-8c'}} t-block">我的</text>
+    </navigator>
+  </view>
+</template>

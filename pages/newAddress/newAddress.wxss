@@ -1,0 +1,150 @@
+/* 重写 checkbox 样式 */
+/* 未选中的 背景样式 */
+checkbox .wx-checkbox-input {
+  border-radius: 50%;
+  /* 圆角 */
+  width: 40rpx;
+  /* 背景的宽 */
+  height: 40rpx;
+  /* 背景的高 */
+}
+/* 选中后的 背景样式 （红色背景 无边框 可根据UI需求自己修改） */
+checkbox .wx-checkbox-input.wx-checkbox-input-checked {
+  border: 1rpx solid #3190FE;
+  background: #3190FE;
+}
+/* 选中后的 对勾样式 （白色对勾 可根据UI需求自己修改） */
+checkbox .wx-checkbox-input.wx-checkbox-input-checked::before {
+  border-radius: 50%;
+  /* 圆角 */
+  width: 40rpx;
+  /* 选中后对勾大小，不要超过背景的尺寸 */
+  height: 40rpx;
+  /* 选中后对勾大小，不要超过背景的尺寸 */
+  line-height: 40rpx;
+  text-align: center;
+  font-size: 30rpx;
+  /* 对勾大小 30rpx */
+  color: #fff;
+  /* 对勾颜色 白色 */
+  background: transparent;
+  transform: translate(-50%, -50%) scale(1);
+  -webkit-transform: translate(-50%, -50%) scale(1);
+}
+.realNameAuthentication .realNameAuthentication_main {
+  width: 690rpx;
+  margin: 0 auto;
+  margin-top: 30rpx;
+  margin-bottom: 50rpx;
+}
+.realNameAuthentication .realNameAuthentication_main .realNameAuthentication_main_item {
+  font-size: 30rpx;
+  padding-bottom: 8rpx;
+  display: flex;
+  margin-bottom: 60rpx;
+  border-bottom: 2rpx solid #E5E5E5;
+  align-items: center;
+  text-align: left;
+  position: relative;
+}
+.realNameAuthentication .realNameAuthentication_main .realNameAuthentication_main_item .region_tit {
+  margin-right: 20rpx;
+}
+.realNameAuthentication .realNameAuthentication_main .realNameAuthentication_main_item .region_placeholder {
+  position: absolute;
+  top: 0rpx;
+  left: 170rpx;
+  font-size: 30rpx;
+  height: 100rpx;
+  width: 400rpx;
+  color: #999;
+  background-color: #fff;
+  z-index: 2;
+}
+.realNameAuthentication .realNameAuthentication_main .realNameAuthentication_main_item .section {
+  color: #999999;
+}
+.realNameAuthentication .realNameAuthentication_main .realNameAuthentication_main_item input {
+  margin-left: 50rpx;
+  color: #999999;
+}
+.realNameAuthentication .realNameAuthentication_main .idCard {
+  width: 630rpx;
+  margin: 0 auto;
+  display: flex;
+  justify-content: center;
+  margin-bottom: 10rpx;
+}
+.realNameAuthentication .realNameAuthentication_main .idCard .idCard_item {
+  margin-right: 30rpx;
+  height: 180rpx;
+  width: 300rpx;
+  display: table-cell;
+  line-height: 180rpx;
+  vertical-align: middle;
+  text-align: center;
+  border: 1rpx dashed #999;
+}
+.realNameAuthentication .realNameAuthentication_main .idCard .idCard_item:nth-child(2) {
+  margin-right: 0rpx;
+}
+.realNameAuthentication .realNameAuthentication_main .idCard .idCard_item image {
+  width: 44rpx;
+  margin: 0 auto;
+  height: 36rpx;
+  display: inline-block;
+  margin-bottom: 10rpx;
+}
+.realNameAuthentication .realNameAuthentication_main .idCard_item_tit {
+  width: 690rpx;
+  margin: 0 auto;
+  height: 24rpx;
+  font-size: 24rpx;
+  display: flex;
+  justify-content: space-around;
+  margin-bottom: 50rpx;
+}
+.realNameAuthentication .realNameAuthentication_main .agreement {
+  display: flex;
+  align-items: center;
+  margin-bottom: 80rpx;
+}
+.realNameAuthentication .realNameAuthentication_main .agreement .agreement_bottom {
+  font-size: 24rpx;
+  margin-left: 20rpx;
+}
+.realNameAuthentication .realNameAuthentication_main .agreement .agreement_bottom .agreement_bottom_r {
+  color: #3190FE;
+}
+.realNameAuthentication .realNameAuthentication_main .submit_new {
+  height: 88rpx;
+  line-height: 88rpx;
+  text-align: center;
+  background-color: #3190FE;
+  color: #fff;
+  font-size: 30rpx;
+  border-radius: 5rpx;
+}
+.realNameAuthentication .realNameAuthentication_main .flexbox {
+  display: flex;
+}
+.realNameAuthentication .realNameAuthentication_main .flexbox .submit {
+  height: 88rpx;
+  width: 330rpx;
+  line-height: 88rpx;
+  text-align: center;
+  background-color: #3190FE;
+  color: #fff;
+  font-size: 30rpx;
+  border-radius: 5rpx;
+}
+.realNameAuthentication .realNameAuthentication_main .flexbox .submit:nth-child(1) {
+  margin-right: 30rpx;
+  background-color: #F5F5F5;
+  color: #FC4A40;
+}
+.place {
+  height: 15rpx;
+  width: 100%;
+  background-color: #F5F5F5;
+}

@@ -1,0 +1,113 @@
+<view class="search_main">
+  <view class="search_main_head">
+    <input placeholder-class="phcolor" value="{{inputVal}}" bindinput="bindinput" bindblur='sub' bindfocus="focus" maxlength="32" class="search_main_head_ipt" type="text" placeholder="请输入姓名、公司名称、职位" />
+    <!-- <view class="search_main_head_btn">取消</view> -->
+  </view>
+  <view class="search_main_footer" wx:if="{{!isShow}}">
+    <view class="search_main_footer_tit" wx:if="{{searchEd.length>0}}">
+      最近搜索
+    </view>
+    <view class="search_main_footer_list" wx:if="{{searchEd.length>0}}">
+      <block wx:for="{{searchEd}}" wx:key="index">
+        <view class="history_box">
+          <image class="history_box_t" src="{{item.icon}}"></image>
+          <view class="history_box_b">{{item.reel_name}}</view>
+        </view>
+      </block>
+    </view>
+    <view wx:else>
+      <view class="none_history">
+      <image src="{{iconUrl}}btn/none.png"></image>
+        <view class="none_history_txt">暂无历史记录</view>
+      </view>
+    </view>
+  </view>
+</view>
+
+<view class="card_main" wx:if="{{isShow}}">
+  <block wx:if="{{cardList.length > 0}}">
+    <view catchtap="ml_clickSwitch" class="down_btn">
+      <image class="down_btn_img" src="{{iconUrl}}/btn/{{isimg}}.png">
+      </image>
+    </view>
+    <!-- 名片列表 -->
+    <!-- wx:if="{{card_group_id==clickId}}" -->
+    <block wx:for="{{cardList}}" wx:key="{{index}}">
+      <!-- 模板1 -->
+      <block wx:if="{{item.templet_id==4}}">
+        <view class="home_selfCard_1" catchtap="ml_toCardDetails" data-id='{{item.card_id}}' catchtap="nextTap">
+          <view class="home_selfCard_one">
+            <image class="home_selfCard_one_l" src="{{item.icon}}"></image>
+            <view class="home_selfCard_one_r">
+              <view class="home_selfCard_one_r_t">
+                <text class="home_selfCard_one_r_t_name">{{item.reel_name||'暂未填写'}}</text>
+                <block wx:if="{{item.is_vip == 1}}">
+                  <image class="home_selfCard_icon" src="{{iconUrl}}/btn/zuan.png"></image>
+                </block>
+              </view>
+              <view class="home_selfCard_one_r_b">{{item.job||'暂未填写'}}</view>
+            </view>
+          </view>
+          <view class="home_selfCard_two">
+            <image class="home_selfCard_two_img" src="{{picUrl}}{{item.logo}}"></image>
+            <text class="company_name">{{item.name||'暂未填写'}}</text>
+            <image class="address_icon" src="{{iconUrl}}/btn/dingwei.png"></image>
+          </view>
+          <view class="home_selfCard_three">
+            <image class="phone_icon" src="{{iconUrl}}/btn/phone.png"></image>
+            <view class="phone_num">{{item.phone||'暂未填写'}}</view>
+
+          </view>
+          <view class="home_selfCard_four">
+            <image class="mail_icon" src="{{iconUrl}}/btn/mail.png"></image>
+            <view class="mail_address">{{item.email||'暂未填写'}}</view>
+          </view>
+          <image class="erweima" src="{{iconUrl}}/btn/fenxiang.png"></image>
+          <image class="ellipsis" src="{{iconUrl}}/btn/ellipsis.png"></image>
+        </view>
+      </block>
+      <!-- 模板2 -->
+      <!-- {{item.is_vip!=0?'nextTap':'nextAlert'}} -->
+      <block wx:if="{{item.templet_id ==5}}">
+        <view class="home_selfCard_2" catchtap="ml_toCardDetails" data-id='{{item.card_id}}' catchtap="nextTap">
+
+          <view class="home_selfCard_one">
+            <image class="home_selfCard_one_l" src="{{item.icon}}"></image>
+            <view class="home_selfCard_one_r">
+              <view class="home_selfCard_one_r_t">
+                <text class="home_selfCard_one_r_t_name">{{item.reel_name||'暂未填写'}}</text>
+                <block wx:if="{{item.is_vip == 1}}">
+                  <image class="home_selfCard_icon" src="{{iconUrl}}/btn/zuan.png"></image>
+                </block>
+              </view>
+              <view class="home_selfCard_one_r_b">{{item.job||'暂未填写'}}</view>
+            </view>
+          </view>
+          <view class="home_selfCard_two">
+            <view class="home_selfCard_two_l">
+              <text class="company_name">{{item.name||'暂未填写'}}</text>
+              <image class="address_icon" src="{{iconUrl}}/btn/dingwei.png"></image>
+            </view>
+            <view class="home_selfCard_two_r">
+              <image class="home_selfCard_two_img" src="{{picUrl}}{{item.logo}}"></image>
+            </view>
+          </view>
+          <view class="home_selfCard_three">
+            <image class="phone_icon" src="{{iconUrl}}/btn/phone.png"></image>
+            <view class="phone_num">{{item.phone||'暂未填写'}}</view>
+            <image class="mail_icon" src="{{iconUrl}}/btn/mail.png"></image>
+            <view class="mail_address">{{item.email||'暂未填写'}}</view>
+          </view>
+          <image class="erweima" src="{{iconUrl}}/btn/fenxiang.png"></image>
+          <image class="ellipsis" src="{{iconUrl}}/btn/ellipsis.png"></image>
+        </view>
+      </block>
+    </block>
+  </block>
+  <block wx:else>
+   <view class="none_history">
+      <image src="{{iconUrl}}btn/none.png"></image>
+      <view class="none_history_txt">暂未搜索到相关名片</view>
+  </view>
+  </block>
+</view>

@@ -1,0 +1,241 @@
+/* 重写 checkbox 样式 */
+/* 未选中的 背景样式 */
+checkbox .wx-checkbox-input {
+  border-radius: 50%;
+  /* 圆角 */
+  width: 40rpx;
+  /* 背景的宽 */
+  height: 40rpx;
+  /* 背景的高 */
+}
+
+/* 选中后的 背景样式 （红色背景 无边框 可根据UI需求自己修改） */
+checkbox .wx-checkbox-input.wx-checkbox-input-checked {
+  border: 1rpx solid #3190FE;
+  background: #3190FE;
+}
+
+/* 选中后的 对勾样式 （白色对勾 可根据UI需求自己修改） */
+checkbox .wx-checkbox-input.wx-checkbox-input-checked::before {
+  border-radius: 50%;
+  /* 圆角 */
+  width: 40rpx;
+  /* 选中后对勾大小，不要超过背景的尺寸 */
+  height: 40rpx;
+  /* 选中后对勾大小，不要超过背景的尺寸 */
+  line-height: 40rpx;
+  text-align: center;
+  font-size: 30rpx;
+  /* 对勾大小 30rpx */
+  color: #fff;
+  /* 对勾颜色 白色 */
+  background: transparent;
+  transform: translate(-50%, -50%) scale(1);
+  -webkit-transform: translate(-50%, -50%) scale(1);
+}
+
+.Shopping_Cart {
+  background-color: #F5F5F5;
+
+  .Shopping_Cart_header {
+    padding: 30rpx;
+    background-color: #fff;
+    display: flex;
+    // margin-bottom: 80rpx;
+    justify-content: space-between;
+
+    .Shopping_Cart_header_l {
+      display: flex;
+      align-items: center;
+
+      checkbox {
+        margin-right: 30rpx
+      }
+
+      image {
+        width: 30rpx;
+        height: 30rpx;
+        margin-right: 30rpx
+      }
+
+      .shop_tit {
+        font-size: 26rpx;
+      }
+    }
+
+    .Shopping_Cart_header_r {
+      image {
+        width: 12rpx;
+        height: 21rpx;
+      }
+    }
+  }
+
+
+  .Shopping_Cart_main {
+    padding: 30rpx;
+    margin-bottom: 15rpx;
+    background-color: #fff;
+
+    &:last-child {
+      margin-bottom: 120rpx
+    }
+
+    .Shopping_Cart_main_item {
+      display: flex;
+      justify-content: space-between;
+      position: relative;
+
+      .Shopping_Cart_main_item_delbox {
+        background: rgba(0, 0, 0, 0.4);
+        width: 640rpx;
+        height: 100%;
+        line-height: 1;
+        margin-left: 50rpx;
+        margin-right: -30rpx;
+        position: absolute;
+        z-index: 9;
+        left: 0;
+        top: 0;
+
+        .del_btn {
+          margin: 0 auto;
+          width: 100rpx;
+          margin-top: 40rpx;
+          height: 100rpx;
+          color: #fff;
+          border-radius: 50%;
+          background: #ff4200;
+          font-size: 28rpx;
+          line-height: 100rpx;
+          text-align: center;
+        }
+      }
+
+      .Shopping_Cart_main_flexbox {
+        display: flex;
+        align-items: center;
+
+        .Shopping_Cart_main_one {
+          margin-right: 30rpx
+        }
+
+        .Shopping_Cart_main_two {
+          image {
+            width: 180rpx;
+            height: 180rpx;
+            margin-right: 20rpx
+          }
+        }
+
+        .Shopping_Cart_main_three {
+
+          .Shopping_Cart_main_three_t {
+            margin-top: 43rpx;
+            margin-bottom: 50rpx
+          }
+
+          .Shopping_Cart_main_three_b {}
+        }
+      }
+
+      .Shopping_Cart_main_four {
+        text-align: center;
+        display: flex;
+        margin-top: 125rpx;
+
+        .Shopping_Cart_main_four_l {
+          width: 50rpx;
+          height: 50rpx;
+          border: 1rpx solid #E5E5E5;
+          line-height: 50rpx;
+          margin: 0 auto;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+
+          .reduce_icon {
+            width: 25rpx;
+            height: 2rpx;
+          }
+        }
+
+        .Shopping_Cart_main_four_c {
+          height: 50rpx;
+          width: 64rpx;
+          border: 1rpx solid #E5E5E5;
+          border-left: 0;
+          border-right: 0;
+        }
+
+        .Shopping_Cart_main_four_r {
+          width: 50rpx;
+          height: 50rpx;
+          border: 1rpx solid #E5E5E5;
+          line-height: 50rpx;
+          margin: 0 auto;
+
+          .add_icon {
+            width: 25rpx;
+            height: 25rpx;
+          }
+        }
+      }
+
+    }
+
+  }
+}
+
+.Shopping_Cart_footer {
+  height: 110rpx;
+  // width: 100%;
+  position: fixed;
+  bottom: 0;
+  right: 0;
+  display: flex;
+  box-shadow: #ebebeb 10rpx -4rpx 15rpx;
+
+  .Shopping_Cart_footer_flexbox {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #fff;
+    width: 530rpx;
+
+    .Shopping_Cart_footer_l {
+      display: flex;
+      align-items: baseline;
+      padding-left: 30rpx;
+
+      .Shopping_Cart_footer_l_item {
+        &:nth-child(1) {
+          margin-right: 20rpx
+        }
+      }
+
+    }
+
+    .Shopping_Cart_footer_r {
+      display: flex;
+      margin-right: 43rpx;
+    }
+  }
+
+  .Shopping_Cart_footer_btn {
+    width: 220rpx;
+    background-color: #3190FE;
+    height: 110rpx;
+    text-align: center;
+    line-height: 110rpx;
+    color: #fff
+  }
+}
+
+.fz30 {
+  font-size: 30rpx;
+}
+
+.fz24 {
+  font-size: 24rpx;
+}

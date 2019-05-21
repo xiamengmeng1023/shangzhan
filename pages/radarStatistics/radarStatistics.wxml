@@ -1,0 +1,35 @@
+<view class="radarStatistics_main">
+  <view class="leida">
+      <view class="leida_head">
+        <image class="leida_icon" src="{{iconUrl}}/btn/leida_icon.png"></image>
+        <view class="leida_text leida_text1">当前数据</view>
+        <view class="leida_text leida_text2">1月份</view>
+        <image class="arrow" src="{{iconUrl}}/btn/leida_Statistics.png" catchtap="goToSelectionDate"></image>
+      </view>
+      <view class="leida_footer">
+        <view class=" leida_footer_class">
+          <view class="newfriend_num">{{profit.num}}</view>
+          <view class="leida_footer_class_txt">新增好友</view>
+        </view>
+        <view class=" leida_footer_class">
+          <view class="browse_times">{{profit.hits}}</view>
+          <view class="leida_footer_class_txt ">浏览次数(次)</view>
+        </view>
+        <view class=" leida_footer_class">
+          <view class="profit">{{profit.profit}}</view>
+          <view class='leida_footer_class_txt  leida_footer_class_profit_txt'>本月收益(元)</view>
+        </view>
+      </view>
+  </view>
+
+  <view class="radarStatistics_Cartoon_box">
+    <image class="radarStatistics_Cartoon" src="{{iconUrl}}/radarStatistics_Cartoon.png"></image>
+    <image  class="userimg_1" src="{{iconUrl}}/order_img.png"></image>
+    <image  class="userimg_2" src="{{iconUrl}}/order_img.png"></image>
+    <view class="identifier">NO.666</view>
+    <view class="expansion">已拓客<text>453</text>
+    </view>
+     <button class="transcend_btn" open-type='share'>
+    </button>
+  </view>
+</view>

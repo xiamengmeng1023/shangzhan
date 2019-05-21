@@ -1,0 +1,278 @@
+page {
+  background-color: #F5F5F5;
+
+}
+
+.friend_dynamics {
+
+  .friend_dynamics_minebox {
+    width: 100%;
+    margin-bottom: 50rpx;
+    position: relative;
+
+    .friend_dynamics_minebox_img {
+      height: 325rpx;
+      background-color: pink;
+    }
+
+    .friend_dynamics_minebox_mine {
+      position: absolute;
+      left: 30rpx;
+      bottom: -20rpx;
+      z-index: 5;
+
+      border-radius: 75rpx;
+      background-color: #fff;
+
+      open-data {
+        width: 150rpx;
+        height: 150rpx;
+        display: block;
+        overflow: hidden;
+        border-radius: 50%;
+      }
+    }
+
+    .friend_dynamics_minebox_name {
+      position: absolute;
+      left: 210rpx;
+      bottom: 25rpx;
+
+      open-data {
+        color: #fff;
+        font-size: 36rpx
+      }
+    }
+
+    .friend_dynamics_minebox_send {
+      position: absolute;
+      right: 30rpx;
+      text-align: center;
+      top: 30rpx;
+      width: 60rpx;
+      height: 60rpx;
+      line-height: 60rpx;
+      background-color: #fff;
+      border-radius: 50%;
+      font-weight: 500;
+
+      .one {
+        position: absolute;
+        top: 45%;
+        right: 25%;
+        height: 4rpx;
+        width: 30rpx;
+        background-color: #000;
+      }
+
+      .two {
+        position: absolute;
+        top: 25%;
+        right: 45%;
+        height: 30rpx;
+        width: 4rpx;
+        background-color: #000;
+      }
+    }
+  }
+
+  .friend_dynamics_item {
+    padding: 0 30rpx;
+    margin: 0 auto;
+    padding-top: 50rpx;
+    background-color: #fff;
+
+    .friend_dynamics_header {
+      display: flex;
+      align-items: center;
+      margin-bottom: 20rpx;
+      justify-content: space-between;
+
+      .friend_dynamics_flex {
+        display: flex;
+        justify-content: flex-start;
+
+        .friend_dynamics_header_one {
+          background-color: #ffffff;
+          margin-right: 20rpx;
+
+          open-data {
+            width: 60rpx;
+            height: 60rpx;
+            display: block;
+            overflow: hidden;
+          }
+        }
+
+        .friend_dynamics_header_two {
+          margin-right: 10rpx;
+          font-size: 30rpx;
+        }
+
+        .friend_dynamics_header_three {
+          font-size: 24rpx;
+          color: #999999;
+        }
+
+      }
+
+      .friend_dynamics_del {
+        image {
+          width: 30rpx;
+          height: 30rpx;
+        }
+      }
+    }
+
+    .friend_dynamics_tit {
+      font-size: 30rpx;
+      margin-bottom: 30rpx
+    }
+
+    .friend_dynamics_time {
+      display: flex;
+      white-space: nowrap;
+      justify-content: space-between;
+      margin-bottom: 30rpx;
+
+      .friend_dynamics_time_l {
+        font-size: 24rpx;
+        color: #999999;
+      }
+
+      .bt-img {
+        z-index: 10;
+        transform: scale(1);
+        -webkit-transform: scale(1);
+        -webkit-transition: ease all;
+        -moz-transition: ease all;
+        transition: ease all;
+        -webkit-transition-duration: 700ms;
+        -moz-transition-duration: 700ms;
+        transition-duration: 700ms;
+
+        image {
+          width: 34rpx;
+          height: 31rpx;
+        }
+
+      }
+
+      // 点赞
+      // .v-body {
+      //   position: relative;
+      //   right: 15rpx;
+      //   top: -15rpx;
+      //   z-index: 999;
+      //   width: 90rpx;
+
+      //   .v-canvas {
+      //     position: absolute;
+      //     right: -25rpx;
+      //     bottom: 0rpx;
+      //     width: 90rpx;
+      //     height: 200rpx;
+      //     background-color: transparent;
+
+      //     .myCanvas {
+      //       background-color: transparent;
+      //       width: 90rpx;
+      //       height: 200rpx;
+      //     }
+
+      //   }
+
+      //   .v-img {
+      //     position: absolute;
+      //     right: 0px;
+      //     bottom: -25px;
+      //     width: 60rpx;
+      //     height: 60rpx;
+      //     background-color: transparent;
+
+      //     .bt-img {
+      //       width: 34rpx;
+      //       height: 31rpx;
+      //       position: absolute;
+      //       top: 20%;
+      //       left: 25%;
+      //       transform: translate(-50%);
+      //       transform: scale(1);
+      //       -webkit-transform: scale(1);
+      //       -webkit-transition: ease all;
+      //       -moz-transition: ease all;
+      //       transition: ease all;
+      //       -webkit-transition-duration: 700ms;
+      //       -moz-transition-duration: 700ms;
+      //       transition-duration: 700ms;
+      //     }
+      //   }
+      // }
+
+
+    }
+
+    // <!-- 单张 -->
+
+    .friend_dynamics_main_1 {
+
+      width: 690rpx;
+      margin-bottom: 20rpx;
+
+      .friend_dynamics_main_item {}
+    }
+
+    // <!-- 6张图 -->
+    .friend_dynamics_main_2 {
+
+      width: 690rpx;
+      margin-bottom: 50rpx;
+      display: flex;
+      flex-wrap: wrap;
+
+      .friend_dynamics_main_item {
+        image {
+          height: 225rpx;
+          background: red;
+          width: 225rpx;
+          margin-right: 7rpx;
+          margin-bottom: 7rpx;
+
+          &:nth-child(3n) {
+            margin-right: 0rpx;
+          }
+        }
+      }
+    }
+
+
+  }
+
+  .none_box {
+    text-align: center;
+    margin: 0 auto;
+
+    .none_img {
+      width: 132rpx;
+      height: 100rpx;
+      margin-top: 300rpx;
+      margin-bottom: 30rpx;
+    }
+
+    .none_tit {
+      font-size: 24rpx;
+      color: #999
+    }
+  }
+
+  .senddyc {
+    position: fixed;
+    top: 65%;
+    right: 5%;
+
+    image {
+      width: 100rpx;
+      height: 100rpx;
+    }
+  }
+}

@@ -1,0 +1,77 @@
+.examine {
+  margin: 0 auto;
+  margin-top: 200rpx;
+  text-align: center;
+}
+.examine .examine_img_ok {
+  text-align: center;
+  margin-bottom: 30rpx;
+}
+.examine .examine_img_ok image {
+  height: 150rpx;
+  width: 126rpx;
+}
+.examine .examine_img_ing {
+  text-align: center;
+  margin-bottom: 30rpx;
+}
+.examine .examine_img_ing image {
+  height: 150rpx;
+  width: 156rpx;
+}
+.examine .examine_tit1 {
+  font-size: 36rpx;
+  margin-bottom: 30rpx;
+}
+.examine .examine_tit2 {
+  font-size: 24rpx;
+  margin-bottom: 20rpx;
+  color: #999999;
+}
+.examine .examine_tit3 {
+  margin-bottom: 60rpx;
+  font-size: 24rpx;
+}
+.examine .examine_btn_box {
+  display: flex;
+  justify-content: center;
+}
+.examine .examine_btn_box .examine_btn_box_one {
+  font-size: 30rpx;
+  color: #999;
+  padding: 20rpx 60rpx;
+  border-radius: 40rpx;
+  border: 1rpx solid #ccc;
+}
+.examine .examine_btn_box .examine_btn_box_two {
+  background-color: #3190FE;
+  color: #fff;
+  font-size: 30rpx;
+  padding: 20rpx 60rpx;
+  border-radius: 40rpx;
+}
+.examine .examine_btn_box .mr30 {
+  margin-right: 30rpx !important;
+}
+.examine .examine_btn_box .icon_no {
+  width: 185rpx;
+  height: 150rpx;
+}
+.examine .examine_btn_box .icon_succ {
+  width: 126rpx;
+  height: 150rpx;
+}
+.examine .examine_btn_box .icon_ing {
+  width: 156rpx;
+  height: 150rpx;
+}
+.text {
+  position: fixed;
+  bottom: 50rpx;
+  left: 50%;
+  transform: translate(-50%);
+  color: #999999;
+  font-size: 24rpx;
+  width: 520rpx;
+  text-align: center;
+}

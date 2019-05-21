@@ -1,0 +1,5 @@
+<view class="payment_success">
+    <image src="{{iconUrl}}/btn/paysucc.png"></image>
+    <view class="payment_success_one">支付成功</view>
+    <view class="payment_success_two">查看订单</view>
+</view>

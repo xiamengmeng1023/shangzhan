@@ -1,0 +1,9 @@
+<view class="selectionDate_main">
+  <view class="selectionDate_main_tit">2019年</view>
+  <view class="selectionDate_main_month_box" >
+      <view class="selectionDate_main_month {{item.id == active?'activ':''}}" wx:for="{{date}}" data-index="{{item.id}}" catchtap="choose">
+        <view class="selectionDate_main_month_t">{{item.name}}</view>
+        <view class="selectionDate_main_month_b">拓客22</view>
+      </view>
+  </view>
+</view>
