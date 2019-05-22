@@ -1,0 +1,92 @@
+<view class='pading-lr bg flex j-bet title_box'>
+  <view class='list_img'>
+    <image src='{{details.pic}}'></image>
+  </view>
+  <view class='details_box'>
+    <view class='f30-28 f-w w1 ellipsis'>
+      {{details.name}}
+    </view>
+    <view class='num_box flex a-items f24-99'>
+      <view class=''>群主微信号：</view>
+      <view wx:if="{{details.identity == 0}}">{{details.weixin}}</view>
+      <view class='m-l f30-c4red' wx:if="{{details.identity == 0}}" data-num="{{details.weixin}}" catchtap='copyNum'>复制</view>
+    </view>
+    <view class='num_box flex a-items f24-28' wx:if="{{details.identity == 1}}">
+      <view>{{details.weixin}}</view>
+      <view class='m-l f30-c4red' data-num="{{details.weixin}}" catchtap='copyNum'>复制</view>
+    </view>
+  </view>
+  <view>
+    <view class='flex a-items' catchtap='alertShow'>
+      <image src='{{details.thumb_code}}' class='code m-r'></image>
+      <image src='{{picUrl}}/Style/images/applets/img/more.png' class='more'></image>
+    </view>
+  </view>
+</view>
+
+<view class='tag_box flex a-items pading-lr bg'>
+  <view class='tag' wx:if="{{!!details.city}}">{{details.city}}</view>
+  <view class='tag' wx:if="{{!!details.scale}}">{{details.scale}}人群</view>
+  <view class='tag' wx:if="{{!!details.cate}}">{{details.cate}}</view>
+</view>
+<view class='pading-lr group_details bg'>
+  <view class='title f30-28 f-w'>
+    群简介
+  </view>
+  <view class='f26-66 m-t'>
+    {{details.summary}}
+  </view>
+</view>
+<view class='pading-lr group_details bg'>
+  <view class='title f30-28 f-w'>
+    群图片
+  </view>
+  <block wx:for="{{details.pics}}" wx:key="index">
+    <view class='img_box'>
+      <image src='{{item.pic}}' mode='widthFix'></image>
+    </view>
+  </block>
+</view>
+
+<view class='pading-lr t-center add_box' catchtap='alertShow'>
+  <view class='f30-ff'>一键进群</view>
+</view>
+
+
+<!-- 弹窗   -->
+<view class='alert_bg' wx:if="{{alertShow}}" catchtap='alertShow'></view>
+<view class='alert_box w1' wx:if="{{alertShow}}">
+  <view class='bg pading-lr w1 alert'>
+    <view class='flex'>
+      <view class='alert_t_img m-r'>
+        <image src='{{details.pic}}'></image>
+      </view>
+      <view class='details_box'>
+        <view class='f30-28 f-w w1 ellipsis'>
+          {{details.name}}
+        </view>
+        <view class='num_box flex a-items f24-28'>
+          <view class='f24-99' wx:if="{{identity == 0}}">群主微信号：</view>
+          <view>{{details.weixin}}</view>
+          <view class='m-l f30-c4red' data-num="{{details.weixin}}" catchtap='copyNum'>复制</view>
+        </view>
+      </view>
+    </view>
+    <view class='alert_img'>
+      <image src='{{details.code}}'></image>
+    </view>
+    <view class='f26-66 w1 t-center alert_text'>
+      扫描上方二维码请求进群
+    </view>
+    <view class='f26-66 w1 t-center alert_text'>
+      也可复制微信号进群
+    </view>
+  </view>
+  <view>
+    <view class='flex a-items j-bet'>
+      <view class='f30-28 t-center alert_btn cancel_btn' catchtap='alertShow'>取消</view>
+      <view class='f30-ff t-center alert_btn save_btn' catchtap='downPic'>保存至手机</view>
+    </view>
+  </view>
+
+</view>

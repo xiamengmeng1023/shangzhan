@@ -15,7 +15,7 @@ Page({
     iconUrl: iconUrl,
     user_realName: "",
     codeDetail: {
-      codeimg: picUrl + "/Style/images/applets/img/imgs/expandCard.png",
+      // codeimg: picUrl + "/Style/images/applets/img/imgs/expandCard.png",
       codeNum: "M1288506",
       codeName: "admin",
       codePhone: "",
@@ -48,7 +48,7 @@ Page({
           codeDetail.codeImg = resData.qrcode || ""
           that.setData({
             codeDetail: codeDetail,
-            user_realName: options.user_realName
+            user_realName: options.user_realName,
           })
         }
       },

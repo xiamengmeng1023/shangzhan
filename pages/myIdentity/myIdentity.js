@@ -16,57 +16,245 @@ Page({
     dueTime: '',
     // 是否是vip
     isVip: 0,
-    is_company_member: 1,
+    is_company_member: 0,
     alliance_status: 0,
     // showModalStatus: false,
     orderType: 0,
     isDownOrUp: '',
     showFxModal: false,
     vipState: 0,
-    list: [{
-        icon: '/imgs/myIden-iden',
-        name: '尊贵身份'
+    num: 0,
+    setMealList_1: [{
+        image: picUrl + "/Style/images/applets/assets/v3_topUpVip_protectionidentity.png",
+        //  listName: "noble",
+        listName: "img",
+        setMealName: "环保身份"
       },
       {
-        icon: '/imgs/myiden-idcard',
-        name: '定制名片'
+        image: picUrl + "/Style/images/applets/assets/v3_topUpVip_businesscard.png",
+        //  listName: "makeCard",
+        listName: "img",
+        setMealName: "制作名片"
       },
       {
-        icon: '/imgs/myiden-myShop',
-        name: '微店绑定'
+        image: picUrl + "/Style/images/applets/assets/v3_topUpVip_message.png",
+        //  listName: "smallShop",
+        listName: "img",
+        setMealName: "立体消息"
+      },
+
+      {
+        image: picUrl + "/Style/images/applets/assets/v3_topUpVip_officialwebsite.png",
+        //  listName: "website",
+        listName: "img",
+        setMealName: "绑定官网"
       },
       {
-        icon: '/imgs/myiden-www',
-        name: '官网绑定'
+        image: picUrl + "/Style/images/applets/assets/v3_topUpVip_Smallshop.png",
+        //  listName: "application",
+        listName: "img",
+        setMealName: "绑定微店"
       },
       {
-        icon: '/imgs/myiden-has',
-        name: '收益加成'
+        image: picUrl + "/Style/images/applets/assets/v3_topUpVip_share.png",
+        //  listName: "application",
+        listName: "img",
+        setMealName: "分享有奖"
       },
       {
-        icon: '/imgs/myIden-iden',
-        name: '尊贵身份'
+        image: picUrl + "/Style/images/applets/assets/v3_topUpVip_protectionaward.png",
+        //  listName: "application",
+        listName: "img",
+        setMealName: "环保有奖"
       },
       {
-        icon: '/imgs/myiden-idcard',
-        name: '定制名片'
+        image: picUrl + "/Style/images/applets/assets/v3_topUpVip_rebate.png",
+        //  listName: "application",
+        listName: "img",
+        setMealName: "两级返佣"
       },
       {
-        icon: '/imgs/myiden-myShop',
-        name: '微店绑定'
-      },
-      {
-        icon: '/imgs/myiden-www',
-        name: '官网绑定'
-      },
-      {
-        icon: '/imgs/myiden-myShop',
-        name: '微店绑定'
+        image: picUrl + "/Style/images/applets/assets/v3_topUpVip_appcenter.png",
+        //  listName: "application",
+        listName: "img",
+        setMealName: "应用中心"
       }
+    ],
+    setMealList_2: [{
+        image: picUrl + "/Style/images/applets/assets/v3_enterpriseStatus_managementidentity.png",
+        // listName: "noble",
+        listName: "img",
+        setMealName: "管理身份"
+      },
+      {
+        image: picUrl + "/Style/images/applets/assets/v3_join_present.png",
+        // listName: "makeCard",
+        listName: "img",
+        setMealName: "账户赠送"
+      },
+      {
+        image: picUrl + "/Style/images/applets/assets/v3_join_privilege.png",
+        // listName: "smallShop",
+        listName: "img",
+        setMealName: "推广特权"
+      },
+
+      {
+        image: picUrl + "/Style/images/applets/assets/v3_join_award.png",
+        // listName: "website",
+        listName: "img",
+        setMealName: "全栈有奖"
+      },
+      {
+        image: picUrl + "/Style/images/applets/assets/v3_join_interspace.png",
+        // listName: "application",
+        listName: "img",
+        setMealName: "商栈空间"
+      }, {
+        image: picUrl + "/Style/images/applets/assets/v3_topUpVip_businesscard.png",
+        //  listName: "makeCard",
+        listName: "img",
+        setMealName: "制作名片"
+      },
+      {
+        image: picUrl + "/Style/images/applets/assets/v3_topUpVip_message.png",
+        //  listName: "smallShop",
+        listName: "img",
+        setMealName: "立体消息"
+      },
+
+      {
+        image: picUrl + "/Style/images/applets/assets/v3_topUpVip_officialwebsite.png",
+        //  listName: "website",
+        listName: "img",
+        setMealName: "绑定官网"
+      },
+      {
+        image: picUrl + "/Style/images/applets/assets/v3_topUpVip_Smallshop.png",
+        //  listName: "application",
+        listName: "img",
+        setMealName: "绑定微店"
+      },
+      {
+        image: picUrl + "/Style/images/applets/assets/v3_topUpVip_share.png",
+        //  listName: "application",
+        listName: "img",
+        setMealName: "分享有奖"
+      },
+      {
+        image: picUrl + "/Style/images/applets/assets/v3_topUpVip_protectionaward.png",
+        //  listName: "application",
+        listName: "img",
+        setMealName: "环保有奖"
+      },
+      {
+        image: picUrl + "/Style/images/applets/assets/v3_topUpVip_rebate.png",
+        //  listName: "application",
+        listName: "img",
+        setMealName: "两级返佣"
+      },
+      {
+        image: picUrl + "/Style/images/applets/assets/v3_topUpVip_appcenter.png",
+        //  listName: "application",
+        listName: "img",
+        setMealName: "应用中心"
+      },
+      {
+        image: picUrl + "/Style/images/applets/assets/v3_enterpriseStatus_identitypresent.png",
+        // listName: "makeCard",
+        listName: "img",
+        setMealName: "身份赠送"
+      },
+      {
+        image: picUrl + "/Style/images/applets/assets/v3_enterpriseStatus_CRMback-stagemanagement.png",
+        // listName: "smallShop",
+        listName: "img",
+        setMealName: "CRM管理"
+      },
+    ],
+    setMealList_3: [{
+        image: picUrl + "/Style/images/applets/assets/v3_join_Identity.png",
+        // listName: "noble",
+        listName: "img",
+        setMealName: "联盟身份"
+      },
+      {
+        image: picUrl + "/Style/images/applets/assets/v3_join_present.png",
+        // listName: "makeCard",
+        listName: "img",
+        setMealName: "账户赠送"
+      },
+      {
+        image: picUrl + "/Style/images/applets/assets/v3_join_privilege.png",
+        // listName: "smallShop",
+        listName: "img",
+        setMealName: "推广特权"
+      },
+
+      {
+        image: picUrl + "/Style/images/applets/assets/v3_join_award.png",
+        // listName: "website",
+        listName: "img",
+        setMealName: "全栈有奖"
+      },
+      {
+        image: picUrl + "/Style/images/applets/assets/v3_join_interspace.png",
+        // listName: "application",
+        listName: "img",
+        setMealName: "商栈空间"
+      }, {
+        image: picUrl + "/Style/images/applets/assets/v3_topUpVip_businesscard.png",
+        //  listName: "makeCard",
+        listName: "img",
+        setMealName: "制作名片"
+      },
+      {
+        image: picUrl + "/Style/images/applets/assets/v3_topUpVip_message.png",
+        //  listName: "smallShop",
+        listName: "img",
+        setMealName: "立体消息"
+      },
+
+      {
+        image: picUrl + "/Style/images/applets/assets/v3_topUpVip_officialwebsite.png",
+        //  listName: "website",
+        listName: "img",
+        setMealName: "绑定官网"
+      },
+      {
+        image: picUrl + "/Style/images/applets/assets/v3_topUpVip_Smallshop.png",
+        //  listName: "application",
+        listName: "img",
+        setMealName: "绑定微店"
+      },
+      {
+        image: picUrl + "/Style/images/applets/assets/v3_topUpVip_share.png",
+        //  listName: "application",
+        listName: "img",
+        setMealName: "分享有奖"
+      },
+      {
+        image: picUrl + "/Style/images/applets/assets/v3_topUpVip_protectionaward.png",
+        //  listName: "application",
+        listName: "img",
+        setMealName: "环保有奖"
+      },
+      {
+        image: picUrl + "/Style/images/applets/assets/v3_topUpVip_rebate.png",
+        //  listName: "application",
+        listName: "img",
+        setMealName: "两级返佣"
+      },
+      {
+        image: picUrl + "/Style/images/applets/assets/v3_topUpVip_appcenter.png",
+        //  listName: "application",
+        listName: "img",
+        setMealName: "应用中心"
+      },
     ],
     radio: [{
         name: '月度环保使者',
-        price: 0.01,
+        price: 9.9,
         oldPrice: 30,
       },
       {
@@ -80,8 +268,8 @@ Page({
         oldPrice: 3600,
       },
       {
-        name: '企业至尊版',
-        price: 9999,
+        name: '企业定制版',
+        price: 5000,
         oldPrice: 9999,
       },
       {
@@ -101,6 +289,7 @@ Page({
       }
     ]
   },
+
   onShow() {
     let [
       that,
@@ -138,6 +327,9 @@ Page({
               alliance_status: 1
             })
           }
+          that.setData({
+            num: that.data.isVip + that.data.is_company_member + that.data.alliance_status
+          })
           // wx.setStorageSync("isVip", resData.is_vip)
           // that.setData({
           //   phone: resData.phone || "",

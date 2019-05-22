@@ -4,15 +4,21 @@
     <!-- 点击切换 -->
     <view class="newsCenter_main_footer_banner">
       <view class="flex1  interaction {{isShowIndex==1?'activ':''}}"  data-index="1" catchtap="navTap">雷达</view>
-      <view class="redDotNum_leida">{{firstCount}}</view>
+        <block wx:if="{{firstCount>0}}">
+          <view class="redDotNum_leida">{{firstCount}}</view>
+        </block>
       <view class="line lef1  {{isShowIndex==1?'activLine':''}}"></view>
 
       <view class="flex1 interaction {{isShowIndex==2?'activ':''}}" data-index="2" catchtap="navTap">互动</view>
-      <view class="redDotNum_hudong">{{screndCount}}</view>
+        <block wx:if="{{screndCount>0}}">
+          <view class="redDotNum_hudong">{{screndCount}}</view>
+        </block>
       <view class="line lef2  {{isShowIndex==2?'activLine':''}}"></view>
 
       <view class="flex1  interaction {{isShowIndex==3?'activ':''}}"  data-index="3" catchtap="navTap">通知</view>
-      <view class="redDotNum_tongzhi">{{threeCount}}</view>
+      <block wx:if="{{threeCount>0}}">
+        <view class="redDotNum_tongzhi">{{threeCount}}</view>
+      </block>
       <view class="line lef3  {{isShowIndex==3?'activLine':''}}"></view>
 
     </view>
@@ -35,13 +41,7 @@
             <view class="redDot" wx:if="{{item.speaker_id !==token&&item.status == 0}}"></view>
         </view>
       </block>
-      <block>
-        <view class="loading">
-          加载中...
-          <!-- <image src="/assets/loading.gif"></image> -->
-        </view>
-      </block>
-      <block wx:if="{{radarList.length==0}}">
+      <block wx:if="{{!radarList.length==0}}">
         <view class="noneBox">
           <!-- <image class="noneImage" src="/assets/btn/none.png"></image> -->
           <view class="noneTxt">暂无消息</view>

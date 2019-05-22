@@ -1,5 +1,5 @@
 <view class="referralCode_main">
-  <image class="referralCode_main_img" src="{{iconUrl}}/referralCode.png"></image>
+  <image class="referralCode_main_img" src=""></image>
   <image src="{{picUrl}}{{codeDetail.codeImg}}" class="referralCode_main_code"></image>
   <view class="referralCode_main_name">
    {{user_realName}}

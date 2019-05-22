@@ -1,0 +1,272 @@
+<!-- <block wx:for="{{imgUrl}}" wx:key="index">
+  <view class='img-box' data-id='{{item.id}}' bindtap='checkTap'>
+    <image src='{{picUrl}}{{item.img_url}}' mode="widthFix"></image>
+    <icon type="{{item.is_check?'success':'circle'}}" class='checked' data-id='{{item.store_id}}' color="{{item.is_check?'#008cd6':'#d5d5d5'}}" />
+  </view>
+</block> -->
+<view class="card_main">
+
+  <block>
+      <!-- 模板1 -->
+    <block>
+      <view class="home_selfCard_1" catchtap="ml_toCardDetails"  data-id='{{item.card_id}}' catchtap="nextTap" >
+        <view class="home_selfCard_one">
+            <image class="home_selfCard_one_l" src="{{imgUrl}}"></image>
+            <view class="home_selfCard_one_r">
+            <view class="home_selfCard_one_r_t">
+              <text class="home_selfCard_one_r_t_name">{{item.real_name||item.reel_name||'暂未填写'}}</text>
+              <block wx:if="{{item.is_vip == 1}}">
+                <image class="home_selfCard_icon" src="{{iconUrl}}/btn/zuan.png"></image>
+              </block>
+              <block wx:if="{{item.alliance_status == 1}}">
+                <image class="home_selfCard_icon" src="{{iconUrl}}/btn/hblm.png"></image>
+              </block>
+              <block wx:if="{{item.is_company_member == 1}}">
+                <image class="home_selfCard_icon" src="{{iconUrl}}/btn/qygl.png"></image>
+              </block>
+            </view>
+              <view class="home_selfCard_one_r_b">{{item.job||'暂未填写'}}</view>
+            </view>
+        </view>
+        <view class="home_selfCard_two">
+          <image class="home_selfCard_two_img" src="{{item.logo}}"></image>
+          <text class="company_name">{{item.name||'暂未填写'}}</text>
+              <image class="address_icon" src="{{iconUrl}}/btn/dingwei.png"></image>
+        </view>
+        <view class="home_selfCard_three">
+          <image class="phone_icon" src="{{iconUrl}}/btn/phone.png"></image>
+          <view class="phone_num">{{item.phone||'暂未填写'}}</view>
+        
+        </view>
+        <view class="home_selfCard_four">
+          <image class="mail_icon" src="{{iconUrl}}/btn/mail.png"></image>
+          <view class="mail_address">{{item.email||'暂未填写'}}</view>
+        </view>
+        <image class="erweima" src="{{iconUrl}}/btn/fenxiang.png"></image>
+        <image class="ellipsis" src="{{iconUrl}}/btn/ellipsis.png"></image>
+      </view>
+    </block>
+      <!-- 模板2 -->
+    <block>
+      <view class="home_selfCard_2" catchtap="ml_toCardDetails"  data-id='{{item.card_id}}' catchtap="nextTap">
+        <view class="home_selfCard_one">
+            <image class="home_selfCard_one_l" src="{{imgUrl}}"></image>
+            <view class="home_selfCard_one_r">
+            <view class="home_selfCard_one_r_t">
+              <text class="home_selfCard_one_r_t_name">{{item.real_name||item.reel_name||'暂未填写'}}</text>
+              <block wx:if="{{item.is_vip == 1}}">
+                <image class="home_selfCard_icon" src="{{iconUrl}}/btn/zuan.png"></image>
+              </block>
+              <block wx:if="{{item.alliance_status == 1}}">
+                <image class="home_selfCard_icon" src="{{iconUrl}}/btn/hblm.png"></image>
+              </block>
+              <block wx:if="{{item.is_company_member == 1}}">
+                <image class="home_selfCard_icon" src="{{iconUrl}}/btn/qygl.png"></image>
+              </block>
+            </view>
+            <view class="home_selfCard_one_r_b">{{item.job||'暂未填写'}}</view>
+            </view>
+        </view>
+        <view class="home_selfCard_two">
+          <view class="home_selfCard_two_l">
+            <text class="company_name">{{item.name||'暂未填写'}}</text>
+            <image class="address_icon" src="{{iconUrl}}/btn/dingwei.png"></image>
+          </view>
+          <view class="home_selfCard_two_r">
+            <image class="home_selfCard_two_img" src="{{item.logo}}"></image>
+          </view>
+        </view>
+        <view class="home_selfCard_three">
+          <image class="phone_icon" src="{{iconUrl}}/btn/phone.png"></image>
+          <view class="phone_num">{{item.phone||'暂未填写'}}</view>
+          <image class="mail_icon" src="{{iconUrl}}/btn/mail.png"></image>
+          <view class="mail_address">{{item.email||'暂未填写'}}</view>
+        </view>
+        <image class="erweima" src="{{iconUrl}}/btn/fenxiang.png"></image>
+        <image class="ellipsis" src="{{iconUrl}}/btn/ellipsis.png"></image>
+      </view>
+    </block>
+    <!-- 模板3 -->
+    <block>
+      <view class='module' catchtap="ml_toCardDetails"  data-id='{{item.card_id}}' catchtap="nextTap">
+        <view class='module_t'>
+          <view class='module_t_pic'><image src='{{imgUrl}}'></image></view>
+          <view class='module_t_pic'><image src='{{item.logo}}'></image></view>
+          <image class='module_t_share' src='{{iconUrl}}/btn/fenxiang.png' ></image>
+        </view>
+        <view class='module_c'>
+          <text class='module_c_name'>{{item.real_name||item.reel_name||'暂未填写'}}</text>
+            <block wx:if="{{item.is_vip == 1}}">
+              <image class='module_c_rank' src='{{iconUrl}}/btn/zuan.png'></image>
+            </block>
+            <block wx:if="{{item.alliance_status == 1}}">
+              <image class="module_c_rank" src="{{iconUrl}}/btn/hblm.png"></image>
+            </block>
+             <block wx:if="{{item.is_company_member == 1}}">
+              <image class="module_c_rank" src="{{iconUrl}}/btn/qygl.png"></image>
+            </block>
+          <text class='module_c_job mt'>{{item.job||'暂未填写'}}</text>
+        </view>
+
+        <view class='module_phone'>
+          <view class='module_phone_tel'><image src='{{iconUrl}}/btn/phone.png'></image><text>{{item.phone||'暂未填写'}}</text></view>
+          <view class='module_phone_mail'><image src='{{iconUrl}}/btn/mail.png'></image><text>{{item.email||'暂未填写'}}</text></view>
+        </view>
+
+        <view class='module_company'>
+          <text>{{item.name||'暂未填写'}}</text><image src='{{iconUrl}}/btn/dingwei.png'></image>
+        </view>
+
+        <view class='module_dot'>
+          <image src='{{iconUrl}}/btn/ellipsis.png'></image>
+        </view>
+      </view>
+    </block>
+  
+      <!-- 模板4 -->
+   <block >
+    <view class='module' catchtap="ml_toCardDetails"  data-id='{{item.card_id}}' catchtap="nextTap">
+      <view class='module_4'>
+        <text class='module_c_name'>{{item.real_name||item.reel_name||'暂未填写'}}</text>
+        <view class='module_4_c'>
+            <view class='module_t_pic'><image src='{{item.thumb_icon||item.icon}}'></image></view>
+            <view class='module_t_pic'><image src='{{item.logo}}'></image></view>
+        </view>
+        <image class='module_t_share' src='{{iconUrl}}/btn/fenxiang.png' ></image>
+      </view>
+
+      <view class='module_4_z'>
+        <text class='module_c_job mg_1'>{{item.job||'暂未填写'}}</text>
+      </view>
+
+      <view class='module_phone just_c'>
+        <view class='module_phone_tel'><image src='{{iconUrl}}/btn/phone.png'></image><text>{{item.phone||'暂未填写'}}</text></view>
+        <view class='module_phone_mail'><image src='{{iconUrl}}/btn/mail.png'></image><text>{{item.email||'暂未填写'}}</text></view>
+      </view>
+
+      <view class='module_company just_c'>
+        <text>{{item.name||'暂未填写'}}</text><image src='{{iconUrl}}/btn/dingwei.png'></image>
+      </view>
+
+      <view class='module_dot'>
+        <image src='{{iconUrl}}/btn/ellipsis.png'></image>
+      </view>
+
+    </view>
+   </block>
+
+      <!-- 模板5 -->
+    <block >
+      <view class='module' catchtap="ml_toCardDetails"  data-id='{{item.card_id}}' catchtap="nextTap">
+          <view class='module_5'>
+            <view class='module_t_pic module_5_icon'><image src='{{imgUrl}}'></image></view>
+            <text class='module_c_name'>{{item.real_name||item.reel_name||'暂未填写'}}</text>
+            <block wx:if="{{item.is_vip == 1}}">
+              <image class='module_c_rank' src='{{iconUrl}}/btn/zuan.png'></image>
+            </block>
+            <block wx:if="{{item.alliance_status == 1}}">
+              <image class='module_c_rank' src='{{iconUrl}}/btn/hblm.png'></image>
+            </block>
+            <block wx:if="{{item.is_company_member == 1}}">
+              <image class='module_c_rank' src='{{iconUrl}}/btn/qygl.png'></image>
+            </block>
+            <image class='module_t_share' src='{{iconUrl}}/btn/fenxiang.png' ></image>
+          </view>
+
+          <view class='module_5_c'>
+            <text class='module_post'>{{item.job||'暂未填写'}}</text>
+            <view class='module_phone_tel'><image src='{{iconUrl}}/btn/phone.png'></image><text>{{item.phone||'暂未填写'}}</text></view>
+            <view class='module_phone_mail mt_5'><image src='{{iconUrl}}/btn/mail.png'></image><text>{{item.email||'暂未填写'}}</text></view>
+            <view class='module_company'>
+                <text>{{item.name||'暂未填写'}}</text><image src='{{iconUrl}}/btn/dingwei.png'></image>
+            </view>
+          </view>
+
+          <view class='module_t_pic module_5_pic'><image src='{{item.logo}}'></image></view>
+
+          <view class='module_dot'>
+            <image src='{{iconUrl}}/btn/ellipsis.png'></image>
+          </view>
+      </view>
+    </block>
+  
+
+      <!-- 模板6 -->
+    <block >
+      <view class='module' catchtap="ml_toCardDetails"  data-id='{{item.card_id}}' catchtap="nextTap">
+        <view class='module_5'>
+          <view class='module_t_pic module_5_icon'><image src='{{item.logo}}'></image></view>
+          <view class='module_company'>
+              <text>{{item.name||'暂未填写'}}</text><image src='{{iconUrl}}/btn/dingwei.png'></image>
+          </view>
+          <image class='module_t_share' src='{{iconUrl}}/btn/fenxiang.png' ></image>
+        </view>
+
+        <view class='module_6_c'>
+          <view class='module_t_pic mr_6'><image src='{{imgUrl}}'></image></view>
+          <text class='module_c_name module_6_name'>{{item.real_name||item.reel_name||'暂未填写'}}</text>
+
+          <block wx:if="{{item.is_vip == 1}}">
+            <image class='module_c_rank module_6_rank' src='{{iconUrl}}/btn/zuan.png'></image>
+          </block>
+          <block  wx:if="{{item.alliance_status == 1}}">
+            <image class='module_c_rank module_6_rank' src='{{iconUrl}}/btn/hblm.png'></image>
+          </block>
+          <block  wx:if="{{item.is_company_member == 1}}">
+            <image class='module_c_rank module_6_rank' src='{{iconUrl}}/btn/qygl.png'></image>
+          </block>
+
+          <text class='module_post module_6_p'>{{item.job||'暂未填写'}}</text>
+        </view>
+
+        <view class='module_phone_tel mb_6'><image src='{{iconUrl}}/btn/phone.png'></image><text>{{item.phone||'暂未填写'}}</text></view>
+        <view class='module_phone_mail'><image src='{{iconUrl}}/btn/mail.png'></image><text>{{item.email||'暂未填写'}}</text></view>
+        
+        <view class='module_dot'>
+          <image src='{{iconUrl}}/btn/ellipsis.png'></image>
+        </view>
+
+      </view>
+    </block>
+   
+
+        <!-- 模板7 -->
+    <block >
+        <view class='module' catchtap="ml_toCardDetails"  data-id='{{item.card_id}}' catchtap="nextTap">
+          <view class='module_5'>
+            <text class='module_c_name'>{{item.real_name||item.reel_name||'暂未填写'}}</text>
+            <block wx:if="{{item.is_vip == 1}}">
+              <image class='module_c_rank' src='{{iconUrl}}/btn/zuan.png'></image>
+            </block>
+            <block  wx:if="{{item.alliance_status == 1}}">
+              <image class='module_c_rank' src='{{iconUrl}}/btn/hblm.png'></image>
+            </block>
+            <block wx:if="{{item.is_company_member == 1}}">
+              <image class='module_c_rank' src='{{iconUrl}}/btn/qygl.png'></image>
+            </block>
+            <image class='module_t_share' src='{{iconUrl}}/btn/fenxiang.png' ></image>
+          </view>
+
+          <view class='module_7_c'>
+            <view class='module_7_pic'><image src="{{imgUrl}}"></image></view> 
+            <view class='module_job_r'>
+                <text class='module_post'>{{item.job||'暂未填写'}}</text>
+                <view class='module_phone_tel mb_7'><image src='{{iconUrl}}/btn/phone.png'></image><text>{{item.phone||'暂未填写'}}</text></view>
+                <view class='module_phone_mail'><image src='{{iconUrl}}/btn/mail.png'></image><text>{{item.email||'暂未填写'}}</text></view>
+            </view>
+          </view>
+
+          <view class='module_5 mb_c_7'>
+            <view class='module_t_pic module_5_icon'><image src="{{item.logo||'暂未填写'}}"></image></view>
+            <view class='module_company'>
+                <text>{{item.name||'暂未填写'}}</text><image src='{{iconUrl}}/btn/dingwei.png'></image>
+            </view>
+          </view>
+          
+          <view class='module_dot'>
+            <image src='{{iconUrl}}/btn/ellipsis.png'></image>
+          </view>
+        </view>
+    </block>
+  </block>
+</view>

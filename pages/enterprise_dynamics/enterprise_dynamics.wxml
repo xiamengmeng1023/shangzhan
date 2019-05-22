@@ -100,7 +100,7 @@
     </block>
     <block wx:if="{{dynamic.length == 0}}">
       <view class="none_box">
-        <image class="none_img" src="{{iconUrl}}btn/none.png"></image>
+        <!-- <image class="none_img" src="{{iconUrl}}btn/none.png"></image> -->
         <view class="none_tit">暂无企业动态！</view>
       </view>
     </block>

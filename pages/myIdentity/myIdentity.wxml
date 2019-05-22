@@ -3,7 +3,7 @@
   <view class='lmText'>
     <!-- <text>点亮身份权限</text>
         <text>商栈，您的私人订制品牌助手</text> -->
-    <text>已点亮：1/3</text>
+    <text>已点亮：{{num}}/3</text>
   </view>
   <view class="medal">
     <view class="medalItem"  data-index="1" catchtap="getindex" >
@@ -14,7 +14,7 @@
     <view class="medalItem" data-index="2" catchtap="getindex">
       <image src="{{iconUrl}}/imgs/myIdentity-manager.png"  wx:if="{{is_company_member==1}}" />
       <image src="{{iconUrl}}/imgs/myIdentity-manager_n.png"  wx:else />
-      <text>企业管理</text>
+      <text>企业版</text>
     </view>
     <view class="medalItem" data-index="3"  catchtap="getindex">
       <image src="{{iconUrl}}/imgs/myIdentity-amb.png" wx:if="{{alliance_status==1}}"/>
@@ -39,9 +39,9 @@
     </view>
   </view>
   <view class="identityMiddle">
-    <view class="identityMiddleItem" wx:for='{{list}}' wx:key="{{index}}">
-      <image src="{{iconUrl}}{{item.icon}}{{vipState==1?'1':''}}.png" />
-      <text>{{item.name}}</text>
+    <view class="identityMiddleItem" wx:for='{{setMealList_1}}' wx:key="{{index}}">
+      <image src="{{item.image}}" />
+      <text>{{item.setMealName}}</text>
     </view>
   </view>
   <view wx:if="{{isVip==1}}" class="identityBottom" >开通更多身份，即可享受更多专属服务</view>
@@ -52,16 +52,16 @@
   <view class="identity">
     <view class="identityTop">
       <view class="identityTopLeft">
-        <view class="identityTopLeft_tit_one">企业码</view>
+        <view class="identityTopLeft_tit_one">企业版</view>
         <!-- <view class="identityTopLeft_tit_two" wx:if="{{isVip==1}}">有效期: {{dueTime}}</view> -->
       </view>
-      <view class="vipState_no"  catchtap="showBuyModal">去申请</view>
+      <view class="vipState_no"  catchtap="showBuyModal">购买</view>
     </view>
   </view>
   <view class="identityMiddle">
-    <view class="identityMiddleItem" wx:for='{{list}}' wx:key="{{index}}">
-      <image src="{{iconUrl}}{{item.icon}}{{vipState==1?'1':''}}.png" />
-      <text>{{item.name}}</text>
+    <view class="identityMiddleItem" wx:for='{{setMealList_2}}' wx:key="{{index}}">
+      <image src="{{item.image}}" />
+      <text>{{item.setMealName}}</text>
     </view>
   </view>
   
@@ -82,9 +82,9 @@
     </view>
   </view>
   <view class="identityMiddle">
-    <view class="identityMiddleItem" wx:for='{{list}}' wx:key="{{index}}">
-      <image src="{{iconUrl}}{{item.icon}}{{vipState==1?'1':''}}.png" />
-      <text>{{item.name}}</text>
+    <view class="identityMiddleItem" wx:for='{{setMealList_3}}' wx:key="{{index}}">
+      <image src="{{item.image}}" />
+      <text>{{item.setMealName}}</text>
     </view>
   </view>
   
@@ -119,21 +119,21 @@
           <text>{{radio[0].name}}</text>
           <view class='price'> 
             <text>￥{{radio[0].price}}元</text>
-            <text>￥{{radio[0].oldPrice}}元</text>
+            <!-- <text>￥{{radio[0].oldPrice}}元</text> -->
           </view>
         </view>
         <view class="item {{orderType==1?'select':''}}" data-index='1' catchtap="getOrderType">
           <text>{{radio[1].name}}</text>
           <view class='price'>
             <text>￥{{radio[1].price}}元</text>
-            <text>￥{{radio[1].oldPrice}}元</text>
+            <!-- <text>￥{{radio[1].oldPrice}}元</text> -->
           </view>
         </view>
       </view>
       <view class='listPrice'>
         <view class='listItem'>
-          <text class='priceName'>价格</text>
-          <text class='defaultPrice'>￥{{radio[orderType].price}}</text>
+          <text class='priceName'>原价</text>
+          <text class='oldPrice'>￥{{radio[orderType].oldPrice}}</text>
         </view>
         <!-- <view class='listItem'>
           <text class='priceName'>余额抵扣</text>
@@ -162,7 +162,7 @@
           </view>
         </view>
         <view class="item  {{orderType==3?'select':''}}"  catchtap="getOrderType" data-index='3'>
-          <text>企业至尊版</text>
+          <text>企业定制版</text>
           <view class='price'>
             <text>￥{{radio[3].price}}元/年</text>
           </view>
@@ -170,8 +170,8 @@
       </view>
       <view class='listPrice'>
         <view class='listItem'>
-          <text class='priceName'>价格</text>
-          <text class='defaultPrice'>￥{{radio[orderType].price}}</text>
+          <text class='priceName'>原价</text>
+          <text class='oldPrice'>￥{{radio[orderType].oldPrice}}</text>
         </view>
         <view class='listItem'>
           <text class='priceName'>实付金额</text>
@@ -210,7 +210,7 @@
       <view class='listPrice'>
         <view class='listItem'>
           <text class='priceName'>原价</text>
-          <text class='defaultPrice'>￥{{radio[orderType].price}}</text>
+          <text class='oldPrice'>￥{{radio[orderType].oldPrice}}</text>
         </view>
         <view class='listItem'>
           <text class='priceName'>实付金额</text>

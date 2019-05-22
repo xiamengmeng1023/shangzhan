@@ -139,11 +139,14 @@ page {
   height: 100rpx;
 }
 .newsCenter_main .newsCenter_main_footer .interaction_main .noneBox .noneTxt {
-  font-size: 30rpx;
-  font-weight: 700rpx;
+  font-size: 40rpx;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%);
   text-align: center;
+  font-weight: 700;
   color: #999;
-  margin-top: 30rpx;
 }
 .newsCenter_main .newsCenter_main_footer .interaction_main .newsCenter_main_footer_news_interaction {
   padding: 0 30rpx;

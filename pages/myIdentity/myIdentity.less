@@ -135,16 +135,15 @@
     margin-top: 30rpx;
     display: flex;
     flex-wrap: wrap;
-    justify-content: space-around;
+    justify-content: flex-start;
 
     .identityMiddleItem {
-        float: left;
+        display: flex;
         height: 95rpx;
         width: 20%;
         padding-bottom: 50rpx;
-        display: flex;
         flex-direction: column;
-        justify-content: space-between;
+        justify-content: space-around;
         align-items: center;
 
         image {
@@ -266,22 +265,22 @@
 
         .priceName {
             font-size: 30rpx;
-            font-family: PingFangSC-Regular;
-            font-weight: 400;
             color: rgba(0, 0, 0, 1);
+        }
+
+        .oldPrice {
+            font-size: 36rpx;
+            color: #999;
+            text-decoration: line-through; //删除线
         }
 
         .defaultPrice {
             font-size: 36rpx;
-            font-family: PingFangSC-Regular;
-            font-weight: 400;
             color: rgba(49, 144, 254, 1);
         }
 
         .normalPrice {
             font-size: 36rpx;
-            font-family: PingFangSC-Regular;
-            font-weight: 400;
             color: rgba(0, 0, 0, 1);
         }
     }

@@ -1,0 +1,117 @@
+page {
+  background: rgba(245, 245, 245, 1);
+}
+
+.nav {
+  line-height: 68rpx;
+
+}
+
+.m_r40 {
+  margin-right: 40rpx
+}
+
+.f26-99 {
+  font-size: 26rpx;
+  color: #999
+}
+
+.nav_box {
+  font-size: 48rpx;
+  font-weight: 700rpx;
+}
+
+.nav_border {
+  width: 60rpx;
+  height: 6rpx;
+  background: rgba(49, 144, 254, 1);
+  border-radius: 3rpx;
+  margin: 4rpx auto;
+}
+
+.add_box {
+  width: 130rpx;
+  height: 50rpx;
+  line-height: 50rpx;
+  background: rgba(50, 142, 233, 1);
+  box-shadow: 0rpx 10rpx 10rpx 0rpx rgba(211, 231, 255, 1);
+  border-radius: 40rpx;
+}
+
+.list_box {
+  padding-top: 30rpx;
+  padding-bottom: 30rpx;
+  margin-bottom: 14rpx;
+}
+
+.list_img {
+  width: 150rpx;
+  height: 150rpx;
+  background: rgba(255, 255, 255, 1);
+  border-radius: 6rpx;
+}
+
+.list_img image {
+  width: 150rpx;
+  height: 150rpx;
+  border-radius: 6rpx;
+}
+
+.details_box {
+  padding-left: 20rpx;
+  width: 390rpx;
+  box-sizing: border-box;
+}
+
+.tag_box {
+  margin-top: 22rpx;
+}
+
+.tag {
+  height: 28rpx;
+  line-height: 28rpx;
+  font-size: 18rpx;
+  color: rgba(245, 166, 35, 1);
+  background: rgba(255, 254, 247, 1);
+  border-radius: 1px;
+  border: 1px solid rgba(245, 166, 35, 1);
+  margin-right: 18rpx;
+  margin-bottom: 10rpx;
+  padding: 0rpx 7rpx;
+}
+
+.details {
+  margin-top: 30rpx;
+}
+
+.in_group {
+  width: 130rpx;
+  height: 50rpx;
+  line-height: 50rpx;
+  font-size: 24rpx;
+  color: rgba(50, 142, 233, 1);
+  background: rgba(255, 255, 255, 1);
+  border-radius: 40rpx;
+  border: 2rpx solid rgba(50, 142, 233, 1);
+}
+
+.auditing {
+  color: rgba(126, 211, 33, 1);
+  border: 1px solid rgba(126, 211, 33, 1);
+}
+
+.footer {
+  margin-top: 30rpx;
+  margin-bottom: 30rpx;
+}
+
+.nonumber {
+  margin-top: 320rpx;
+  line-height: 38rpx;
+}
+
+.nonumber image {
+  width: 240rpx;
+  height: 270rpx;
+  margin-bottom: 30rpx;
+}

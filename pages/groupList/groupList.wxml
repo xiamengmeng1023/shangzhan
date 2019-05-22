@@ -1,0 +1,135 @@
+<view class='pading-lr flex a-items j-bet nav bg m-d'>
+  <view class='flex a-items f30-28'>
+    <view class="m_r40 {{navId==1?'nav_box':''}}" data-id='1' catchtap="find">
+      <text>发现群</text>
+      <view class='nav_border' wx:if="{{navId==1}}"></view>
+    </view>
+    <view class="{{navId==2?'nav_box':''}}" data-id='2' catchtap='find'>
+      <text>我的群</text>
+      <view class='nav_border' wx:if="{{navId==2}}"></view>
+    </view>
+  </view>
+  <view class='add_box f24-ff t-center' catchtap='nextAddGroup' data-id="0">
+    添加群
+  </view>
+</view>
+<view wx:if="{{navId == 1}}">
+  <block wx:if="{{findGroud.length>0}}">
+    <block wx:for="{{findGroud}}" wx:key="index">
+      <view class='pading-lr bg list_box'>
+        <view class='flex a-items j-bet'>
+          <view class='list_img'>
+            <image src='{{item.pic}}'></image>
+          </view>
+          <view class='details_box'>
+            <view class='f30-28 f-w w1 ellipsis'>
+              {{item.name}}
+            </view>
+            <view class='tag_box flex a-items f-wrap'>
+              <!-- <view class='tag'>{{item.cate}}</view> -->
+              <view class='tag' wx:if="{{!!item.city}}">{{item.city}}</view>
+              <view class='tag' wx:if="{{!!item.scale}}">{{item.scale}}人群</view>
+              <view class='tag' wx:if="{{!!item.cate}}">{{item.cate}}</view>
+            </view>
+            <view class='w1 f24-66 details ellipsis'>
+              {{item.summary}}
+            </view>
+          </view>
+          <view class='in_group t-center' data-id='{{item.id}}' bindtap='inGroupTap'>
+            进群
+          </view>
+        </view>
+      </view>
+    </block>
+  </block>
+  <block wx:else>
+    <view class='nonumber t-center'>
+      <view>
+        <image src='{{picUrl}}/Style/images/applets//img/nonumber.png'></image>
+      </view>
+      <view class='f26-99'>
+        <text>暂无任何数据</text>
+      </view>
+      <view class='f26-99'>
+        贡献1个微信群即可获得10个微信群信息
+      </view>
+    </view>
+  </block>
+</view>
+<view wx:if="{{navId == 2}}">
+  <block wx:if="{{myGroud.length > 0}}">
+    <block wx:for="{{myGroud}}" wx:key="index">
+      <view class='pading-lr bg list_box'>
+        <view class='flex a-items j-bet'>
+          <view class='list_img'>
+            <image src='{{item.pic}}'></image>
+          </view>
+          <view class='details_box'>
+            <view class='f30-28 f-w w1 ellipsis'>
+              {{item.name}}
+            </view>
+            <view class='tag_box flex a-items'>
+              <!-- <view class='tag'>{{item.cate}}</view> -->
+              <view class='tag' wx:if="{{!!item.city}}">{{item.city}}</view>
+              <view class='tag' wx:if="{{!!item.scale}}">{{item.scale}}人群</view>
+              <view class='tag' wx:if="{{!!item.cate}}">{{item.cate}}</view>
+            </view>
+            <view class='w1 f24-66 details ellipsis'>
+              {{item.summary}}
+            </view>
+          </view>
+          <view class='in_group auditing t-center' wx:if="{{item.status==0}}" data-id='{{item.id}}'>
+            审核中
+          </view>
+          <view class='in_group t-center' wx:if="{{item.status==1}}" data-id='{{item.id}}' bindtap='setGroupTap'>
+            管理
+          </view>
+          <view class='in_group t-center' wx:if="{{item.status==2}}" data-id='{{item.id}}' bindtap='setGroupTap'>
+            审核失败
+          </view>
+        </view>
+      </view>
+    </block>
+  </block>
+  <block wx:else>
+    <view class='nonumber t-center'>
+      <view>
+        <image src='{{picUrl}}/Style/images/applets//img/nonumber.png'></image>
+      </view>
+      <view class='f26-99'>
+        <text>暂无任何数据</text>
+      </view>
+      <view class='f26-99'>
+        贡献1个微信群即可获得10个微信群信息
+      </view>
+    </view>
+  </block>
+</view>
+
+<block wx:if="{{navId == 1 && findGroud.length > 5}}">
+  <view class='t-center flex j-content f26-99 footer'>
+    <view>
+      ——
+    </view>
+    <view class='m-r m-l'>
+      没有更多了
+    </view>
+    <view>
+      ——
+    </view>
+  </view>
+</block>
+
+<block wx:if="{{navId == 2 && myGroud.length > 5}}">
+  <view class='t-center flex j-content f26-99 footer'>
+    <view>
+      ——
+    </view>
+    <view class='m-r m-l'>
+      没有更多了
+    </view>
+    <view>
+      ——
+    </view>
+  </view>
+</block>

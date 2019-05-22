@@ -50,7 +50,7 @@
     </view>
     <block wx:if="{{orderList.length==0}}">
       <view class="noneBox">
-        <image class="noneImage" src="/assets/btn/none.png"></image>
+        <!-- <image class="noneImage" src="/assets/btn/none.png"></image> -->
         <view class="noneTxt">暂无订单</view>
       </view>
     </block>

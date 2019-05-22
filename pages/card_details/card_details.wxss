@@ -35,7 +35,14 @@ button {
   margin-bottom: 35rpx;
   padding-top: 104rpx;
   width: 100%;
-  background: url('https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1554344111&di=673181da7c4ce6bd791b9c8af581e4b5&imgtype=jpg&er=1&src=http%3A%2F%2Fpic37.nipic.com%2F20140110%2F10558908_011141832000_2.jpg');
+  background-color: #fff;
+}
+.card_details_main .card_details_main_head .topbg {
+  width: 100%;
+  height: 325rpx;
+  position: absolute;
+  top: 0rpx;
+  left: 0rpx;
 }
 .card_details_main .card_details_main_head .card_details_main_infoBox {
   width: 690rpx;

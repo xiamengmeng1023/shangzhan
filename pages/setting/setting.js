@@ -14,36 +14,9 @@ Page({
     iconUrl: iconUrl,
     picUrl: picUrl,
     status: "",
-    isRealName: true,
     isOpenCompany: 0,
     phoneNum: '',
     is_password: 1
-    // list: [{
-    //     name: '实名认证',
-    //     url: '/pages/realNameAuthentication/realNameAuthentication'
-    //   },
-    //   {
-    //     name: '手机绑定',
-    //     url: '/pages/bindPhone/bindPhone'
-    //   },
-    //   {
-    //     name: '支付密码',
-
-    //     url: "/pages/Set_password/Set_password"
-    //   },
-    //   {
-    //     name: '收货地址',
-    //     url: '/pages/receiptAddress/receiptAddress'
-    //   },
-    //   {
-    //     name: '商栈客服',
-    //     url: '/pages/customer_service/customer_service'
-    //   },
-    //   {
-    //     name: '关于我们',
-    //     url: '/pages/aboutUs/aboutUs'
-    //   },
-    // ]
   },
 
   /**
@@ -77,7 +50,7 @@ Page({
 
           if (resData == '') {
             that.setData({
-              isRealName: false
+              isRealName: 0
             })
             return
           }
@@ -93,39 +66,9 @@ Page({
           }
           console.log('Number(resData.status)', Number(resData.status))
           let status = Number(resData.status)
-          if (status == 1) {
-            that.setData({
-              isRealName: true
-            })
-
-          } else if (status == 0 || 2 || 3) {
-            that.setData({
-              isRealName: false
-            })
-          }
-
-          // switch (Number(resData.status)) {
-          //   case 0:
-          //     that.setData({
-          //       isRealName: false
-          //     })
-          //     break;
-          //   case 1:
-          //     that.setData({
-          //       isRealName: true
-          //     })
-          //     break;
-          //   case 2:
-          //     that.setData({
-          //       isRealName: false
-          //     })
-          //     break;
-          //   case 3:
-          //     that.setData({
-          //       isRealName: false
-          //     })
-          //     break;
-          // }
+          that.setData({
+            status: status
+          })
         }
       },
       fail: res => {

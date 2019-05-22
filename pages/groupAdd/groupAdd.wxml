@@ -1,0 +1,137 @@
+<form bindsubmit="formSubmit">
+  <view class='bg pading-lr m_d14'>
+    <view class='flex a-items j-bet label'>
+      <view class='f30-28'>
+        <text class='color'>*</text>
+        <text>群二维码</text>
+        <text class='f24-99'>(建议7天更换)</text>
+        <view class='hint'>(没有群二维码，请上传自己二维码)</view>
+      </view>
+      <view class='flex a-items'>
+        <view class='add_code' catchtap='groupCode'>
+          <image src="{{codeUrl}}" wx:if="{{codeUrl}}"></image>
+          <image src='{{picUrl}}/Style/images/applets/img/jiahao.png' wx:else></image>
+        </view>
+        <view class='m-l'>
+          <image src='{{picUrl}}/Style/images/applets/img/more.png' class='more'></image>
+        </view>
+      </view>
+    </view>
+    <view class='flex a-items j-bet label'>
+      <view class='f30-28'>
+        <text class='color'>*</text>
+        <text>群名称</text>
+        <text class='f24-99'>(最多14个字符)</text>
+      </view>
+      <input type='text' placeholder='请输入群名称' value='{{gName}}' name="gName" maxlength='14' class='f30-28 t-right'></input>
+    </view>
+  </view>
+
+  <view class='bg pading-lr m_d14'>
+    <picker bindchange="identity" mode="selector" name="identity" value="{{index}}" range="{{identityList}}" range-key="{{'text'}}">
+      <view class='flex a-items j-bet label w1'>
+        <view class='f30-28'>
+          <text class='color'>*</text>
+          <text>选择身份</text>
+        </view>
+        <view class='f30-28 flex a-items'>
+          <text class='f30-8c' wx:if="{{index == -1}}">请选择身份</text>
+          <text class='m-r' wx:eles>{{identityList[index].text}}</text>
+          <image src='{{picUrl}}/Style/images/applets/img/more.png' class='more'></image>
+        </view>
+      </view>
+    </picker>
+    <view class='flex a-items j-bet label'>
+      <view class='f30-28'>
+        <text class='color'>*</text>
+        <text>微信号</text>
+      </view>
+      <input type='text' placeholder='请输入微信号' value='{{weixin}}' name="wxNum" class='f30-28 t-right'></input>
+    </view>
+  </view>
+
+
+  <view class='bg pading-lr m_d14'>
+    <picker mode="region" bindchange='regionCity' value='index'>
+      <view class='flex a-items j-bet label'>
+        <view class='f30-28'>
+          <text>所在城市</text>
+        </view>
+        <view class='f30-28 flex a-items'>
+          <text class='m-r' wx:if="{{region.length > 0}}">{{region[1]}}</text>
+          <text class='m-r f30-8c' wx:else>请选择城市</text>
+
+          <image src='{{picUrl}}/Style/images/applets/img/more.png' class='more'></image>
+        </view>
+      </view>
+    </picker>
+    <picker bindchange="scaleTap" mode="selector" name="scale" value="{{scaleList[scaleIndex].id}}" range="{{scaleList}}" range-key="{{'text'}}">
+      <view class='flex a-items j-bet label'>
+        <view class='f30-28'>
+          <text>群规模</text>
+        </view>
+        <view class='f30-28 flex a-items'>
+          <text class='m-r'>{{scaleList[scaleIndex].text || "请选择人数"}}</text>
+          <image src='{{picUrl}}/Style/images/applets/img/more.png' class='more'></image>
+        </view>
+      </view>
+    </picker>
+
+    <view class='flex a-items j-bet label'>
+      <view class='f30-28'>
+        <text>群分类</text>
+        <text class='f24-99'>(最多4个字符)</text>
+      </view>
+      <input type='text' placeholder='请输入群分类' value='{{cate}}' name="cate" maxlength='4' class='f30-28 t-right'></input>
+    </view>
+  </view>
+
+
+  <view class='bg pading-lr m_d14'>
+    <view class='f30-28 flex a-items'>
+      <view class='f30-28'>
+        <text class='color'>*</text>
+        <text>群简介</text>
+      </view>
+    </view>
+    <textarea class='textarea f26-28' value='{{summary}}' maxlength='200' name="summary" placeholder='请输入群简介'></textarea>
+  </view>
+  <view class='bg pading-lr m_d14'>
+    <view class='f30-28 flex a-items'>
+      <view class='f30-28'>
+        <text class='color'>*</text>
+        <text>群图片</text>
+        <text class='f24-99'>(最少需上传1张图，最多4张)</text>
+      </view>
+    </view>
+    <view class='flex'>
+      <block wx:if="{{groupImgList.length > 0}}">
+        <block wx:for="{{groupImgList}}" wx:key="index">
+          <view class='ji_img' catchtap='groupImg'>
+            <image src='{{item}}'></image>
+          </view>
+        </block>
+      </block>
+      <block wx:if="{{groupImgList.length < 4}}">
+      <view class='ji_img' catchtap='groupImg'>
+        <image src='{{picUrl}}/Style/images/applets/img/jiahao.png'></image>
+      </view>
+      </block>
+    </view>
+  </view>
+  <view class='bg pading-lr m_d14'>
+    <view class='add_hint'>
+      <text>建群须知</text>
+    </view>
+    <view class='f24-28 text_box'>
+      <view>1. 为有效招揽优质群友,建议上传最新生成的微信群二维码</view>
+      <view>2. 微信群二维码有效期7天,及时更新群二维码，会有效提高群质量</view>
+      <view>3. 微信群二维码即将到期时,系统会通过雷达推送提醒你更换群二维码</view>
+      <view>4. 保存创建群或修改群信息后,系统会在1个工作日内进行信息审核</view>
+      <view>5. 修改群信息后,系统审核期间不影响原来群信息的展示</view>
+    </view>
+  </view>
+  <view class='save pading-lr bg'>
+    <button class='f30-ff sub' form-type="submit">保存</button>
+  </view>
+</form>

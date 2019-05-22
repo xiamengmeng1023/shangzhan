@@ -2,7 +2,7 @@
 <view class='pading-lr pading-ud'>
   <view class='bg f-box'>
     <view class='bg-box'>
-      <image src='/assets/imgs/eqa1.png'></image>
+      <image src='imgs/eqa1.png'></image>
       <view class='m-box f30-ff'>
         <text class='t-block'>商栈云</text>
         <!-- <text class='t-block m-d'>星期五</text> -->

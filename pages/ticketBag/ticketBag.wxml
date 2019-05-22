@@ -63,9 +63,9 @@
       </view>
     </block>
   </block>
-  <block wx:if="{{list.length==0}}">
+  <block wx:if="{{list.length==0}}">   
     <view class="noneBox">
-      <image class="noneImage" src="/assets/btn/none.png"></image>
+      <!-- <image class="noneImage" src="/assets/btn/none.png"></image> -->
       <view class="noneTxt">暂无更多数据</view>
     </view>
   </block>

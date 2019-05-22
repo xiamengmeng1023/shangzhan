@@ -53,7 +53,8 @@ Page({
       },
       {
         icon: '/imgs/my-appCenter.png',
-        text: '应用中心'
+        text: '应用中心',
+        url: '/pages/groupList/groupList'
       },
       {
         icon: '/imgs/my-collection.png',

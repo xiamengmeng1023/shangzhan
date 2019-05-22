@@ -5,7 +5,7 @@
   <!-- 实名认证状态 -->
 
   
-  <block  wx:if="{{isRealName}}" >
+  <block  wx:if="{{status==1}}" >
     <navigator  class="item" url='/pages/realNameAuthentication/realNameAuthentication'>
       <view class='itemLeft'>
         实名认证
@@ -16,7 +16,7 @@
     </navigator>
   </block>
 
-  <block  wx:else>
+  <block wx:elif="{{status==3||0||2}}">
     <navigator  class="item" url='/pages/realNamereSult/realNamereSult'>
       <view class='itemLeft'>
         实名认证

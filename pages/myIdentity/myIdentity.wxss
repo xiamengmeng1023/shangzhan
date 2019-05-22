@@ -96,16 +96,15 @@
   margin-top: 30rpx;
   display: flex;
   flex-wrap: wrap;
-  justify-content: space-around;
+  justify-content: flex-start;
 }
 .identityMiddle .identityMiddleItem {
-  float: left;
+  display: flex;
   height: 95rpx;
   width: 20%;
   padding-bottom: 50rpx;
-  display: flex;
   flex-direction: column;
-  justify-content: space-between;
+  justify-content: space-around;
   align-items: center;
 }
 .identityMiddle .identityMiddleItem image {
@@ -208,20 +207,19 @@
 }
 .listPrice .listItem .priceName {
   font-size: 30rpx;
-  font-family: PingFangSC-Regular;
-  font-weight: 400;
   color: #000000;
+}
+.listPrice .listItem .oldPrice {
+  font-size: 36rpx;
+  color: #999;
+  text-decoration: line-through;
 }
 .listPrice .listItem .defaultPrice {
   font-size: 36rpx;
-  font-family: PingFangSC-Regular;
-  font-weight: 400;
   color: #3190fe;
 }
 .listPrice .listItem .normalPrice {
   font-size: 36rpx;
-  font-family: PingFangSC-Regular;
-  font-weight: 400;
   color: #000000;
 }
 .erweima {

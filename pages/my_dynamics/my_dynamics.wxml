@@ -2,9 +2,11 @@
   <view  class="friend_dynamics_minebox"   >
     <image class="friend_dynamics_minebox_img" mode="aspectFill"  wx:if="{{!userInfo.dynamic_pic || cardId == 0 }}" src="/assets/newsimg.png"  catchtap="uploadDynamic"></image>
     <image  class="friend_dynamics_minebox_img"  wx:else src="{{picUrl}}{{userInfo.dynamic_pic}}"  catchtap="uploadDynamic"></image>
-    <view class="friend_dynamics_minebox_mine"> <open-data type="userAvatarUrl"></open-data></view>
+    <view class="friend_dynamics_minebox_mine">
+      <image src="{{userInfo.icon}}"></image>
+    </view>
     <view class="friend_dynamics_minebox_name">
-      <open-data type="userNickName" ></open-data> 
+      <text>{{userInfo.nick_name}}</text>
     </view>
     <view class="friend_dynamics_minebox_send"  catchtap="senddyc">
       <view class="one"></view>
@@ -21,15 +23,11 @@
             <open-data type="userAvatarUrl"></open-data>
           </view>
           <view class="friend_dynamics_header_two">{{item.nick_name}}</view>
-          <view class="friend_dynamics_header_three">设计总监</view>
+          <!-- <view class="friend_dynamics_header_three">设计总监</view> -->
         </view>
         <view  class="friend_dynamics_del" catchtap="delTap" data-id="{{item.id}}">
           <image src="{{iconUrl}}btn/del.png"></image>
         </view>
- 
- 
-
-
       </view> 
       <!-- 标题 -->
       <view class="friend_dynamics_tit">

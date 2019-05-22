@@ -1,5 +1,4 @@
 <view class="friend_dynamics">
-朋友动态中心
   <view  class="friend_dynamics_minebox"   >
     <image class="friend_dynamics_minebox_img" mode="aspectFill"  wx:if="{{!userInfo.dynamic_pic || cardId == 0 }}" src="/assets/newsimg.png" ></image>
     <image  class="friend_dynamics_minebox_img"  wx:else src="{{picUrl}}{{userInfo.dynamic_pic}}"></image>
@@ -81,7 +80,7 @@
   <block wx:else>
     <!-- <image src="{{iconUrl}}btn/none.png"></image> -->
     <view class="none_box">
-      <image class="none_img" src="/assets/btn/none.png"></image>
+      <!-- <image class="none_img" src="/assets/btn/none.png"></image> -->
       <view class="none_tit">暂无动态！</view>
     </view>
   </block>

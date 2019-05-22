@@ -1,0 +1,79 @@
+page {
+  background: rgba(245, 245, 245, 1);
+}
+
+.color {
+  color: rgba(253, 80, 70, 1);
+}
+
+.m_d14 {
+  margin-bottom: 14rpx;
+}
+
+.f24-28 {
+  font-size: 26rpx;
+
+}
+
+.label {
+  padding-top: 30rpx;
+  padding-bottom: 30rpx;
+}
+
+.hint {
+  font-size: 20rpx;
+  color: #f5a623;
+}
+
+.add_hint {
+  font-size: 30rpx;
+  color: #f5a623;
+  margin-bottom: 14rpx;
+}
+
+.add_code image {
+  width: 100rpx;
+  height: 100rpx;
+  background: rgba(245, 245, 245, 1);
+  border-radius: 6rpx;
+}
+
+.textarea {
+  width: 100%;
+  height: 190rpx;
+  line-height: 40rpx;
+  padding: 20rpx;
+  box-sizing: border-box;
+}
+
+.ji_img {
+  width: 150rpx;
+  height: 150rpx;
+  margin-top: 30rpx;
+  margin-right: 10rpx;
+}
+
+.ji_img image {
+  width: 150rpx;
+  height: 150rpx;
+}
+
+.text_box view {
+  margin-top: 14rpx;
+  margin-bottom: 20rpx;
+}
+
+.save {
+  background: rgba(255, 255, 255, 1);
+  box-shadow: 0rpx -10rpx 10rpx 0rpx rgba(0, 0, 0, 0.05);
+  margin-top: 20rpx;
+  padding-top: 16rpx;
+  padding-bottom: 16rpx;
+}
+
+.sub {
+  height: 88rpx;
+  line-height: 88rpx;
+  background: rgba(49, 144, 254, 1);
+  border-radius: 4rpx;
+}

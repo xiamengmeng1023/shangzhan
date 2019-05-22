@@ -1,0 +1,153 @@
+page {
+  /* width: 100%; *//* height: 100%; */
+  background: rgba(245, 245, 245, 1);
+}
+
+.title_box {
+  padding-top: 30rpx;
+  padding-bottom: 30rpx;
+  margin-bottom: 14rpx;
+}
+
+.list_img {
+  width: 150rpx;
+  height: 150rpx;
+  background: rgba(255, 255, 255, 1);
+  border-radius: 6rpx;
+}
+
+.list_img image {
+  width: 150rpx;
+  height: 150rpx;
+  border-radius: 6rpx;
+}
+
+.details_box {
+  width: 390rpx;
+}
+
+.num_box {
+  margin-top: 18rpx;
+  margin-bottom: 18rpx;
+}
+
+.code {
+  width: 40px;
+  height: 40px;
+  background: rgba(68, 68, 68, 1);
+}
+
+.tag_box {
+  padding-top: 50rpx;
+  padding-bottom: 50rpx;
+  margin-bottom: 14rpx;
+}
+
+.tag {
+  height: 28rpx;
+  line-height: 28rpx;
+  font-size: 18rpx;
+  color: rgba(245, 166, 35, 1);
+  background: rgba(255, 254, 247, 1);
+  border-radius: 1px;
+  border: 1px solid rgba(245, 166, 35, 1);
+  margin-right: 18rpx;
+  padding: 0rpx 7rpx;
+}
+
+.group_details {
+  padding-top: 50rpx;
+  padding-bottom: 50rpx;
+  margin-bottom: 14rpx;
+}
+
+.img_box {
+  padding-top: 30rpx;
+  padding-bottom: 50rpx;
+  margin-bottom: 14rpx;
+}
+
+.img_box image {
+  margin-bottom: 10rpx;
+}
+
+.add_box {
+  height: 120rpx;
+  background: rgba(255, 255, 255, 1);
+  box-shadow: 0rpx -10rpx 10rpx 0rpx rgba(0, 0, 0, 0.05);
+  padding-top: 16rpx;
+  box-sizing: border-box;
+}
+
+.add_box view {
+  height: 88rpx;
+  line-height: 88rpx;
+  background: rgba(49, 144, 254, 1);
+  border-radius: 4rpx;
+}
+
+.alert_bg {
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  left: 0;
+  top: 0;
+  background: rgba(0, 0, 0, 0.1);
+  z-index: 2;
+}
+
+.alert_box {
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  z-index: 3;
+}
+
+.alert {
+  padding-top: 30rpx;
+  padding-bottom: 50rpx;
+}
+
+.alert_t_img {
+  width: 100rpx;
+  height: 100rpx;
+}
+
+.alert_t_img image {
+  width: 100rpx;
+  height: 100rpx;
+}
+
+.alert_img {
+  width: 582rpx;
+  height: 582rpx;
+  margin: 50rpx auto;
+}
+.alert_img image{
+  width: 100%;
+  height: 100%;
+}
+
+.alert_text {
+  line-height: 40rpx;
+}
+
+.cancel {
+  height: 100rpx;
+  line-height: 100rpx;
+  background: rgba(255, 255, 255, 1);
+  box-shadow: 0rpx -10rpx 10rpx 0rpx rgba(0, 0, 0, 0.05);
+}
+
+.alert_btn {
+  width: 50%;
+  height: 100rpx;
+  line-height: 100rpx;
+  background: rgba(255, 255, 255, 1);
+}
+.cancel_btn{
+  background:rgba(236,247,255,1);
+}
+.save_btn{
+  background:rgba(25,155,255,1);
+}

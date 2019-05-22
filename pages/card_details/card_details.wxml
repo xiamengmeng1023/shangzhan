@@ -5,6 +5,7 @@
   <image class="backbtn" src="{{iconUrl}}/btn/backbtn.png" catchtap="ml_Back"></image>
   <view class="card_details_main_head">
     <!-- 信息 -->
+    <image  class="topbg" src="{{iconUrl}}home_banner.png"></image>
     <view class="card_details_main_infoBox">
       <view class="card_details_main_job">{{cardDetails.job||'暂未填写'}}</view>
       <view class="card_details_main_company">—— {{cardDetails.bind_company||'暂未填写'}} ——</view>
@@ -18,18 +19,18 @@
         <view class="card_details_main_title_name">
         {{cardDetails.real_name||'暂未填写'}}
         </view>
-        <block>
+        <block wx:if="{{is_myself_card}}">
+          <navigator class="card_details_main_title_icon_box" url="/pages/my_dynamics/my_dynamics?cardId={{cardId}}">
+          <image class="card_details_main_title_icon" src="{{iconUrl}}/btn/dynamic.png"></image>
+          <view class="card_details_main_title_icon_tit">动态</view>
+          </navigator>
+        </block>
+        <block wx:else >
           <navigator class="card_details_main_title_icon_box" url="/pages/frendsDynamicsCenter/frendsDynamicsCenter?cardId={{cardId}}">
             <image class="card_details_main_title_icon" src="{{iconUrl}}/btn/dynamic.png"></image>
             <view class="card_details_main_title_icon_tit">动态</view>
           </navigator>
         </block>
-        <!-- <block>
-          <navigator class="card_details_main_title_icon_box" url="/pages/my_dynamics/my_dynamics?cardId={{cardId}}">
-          <image class="card_details_main_title_icon" src="{{iconUrl}}/btn/dynamic.png"></image>
-          <view class="card_details_main_title_icon_tit">动态</view>
-        </navigator>
-        </block> -->
     </view>
     <image wx:if="{{IsShowVip}}" class="card_details_main_title_vipIcon" src="{{iconUrl}}/btn/zuan.png"></image>
   </view>

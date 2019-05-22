@@ -199,6 +199,10 @@ Page({
       wx.navigateTo({
         url: `/pages/Personal_image/Personal_image?card_id=${this.data.card_id}`
       })
+    } else if (index === '7') {
+      wx.navigateTo({
+        url: "/pages/particularTem/particularTem"
+      })
     } else if (index === '8') {
       let info = this.data.info;
       console.log('info', info);
@@ -213,5 +217,6 @@ Page({
       }
     }
   }
+
 
 })

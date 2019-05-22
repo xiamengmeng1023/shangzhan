@@ -115,7 +115,12 @@ Page({
               resData[i].listMore = false
             }
           }
-          if (resData.length >= 0) {
+          if (resData.length > 0 && resData.length <= 3) {
+            that.setData({
+              cardList: resData,
+              getcardListPage: getcardListPage,
+            })
+          } else if (resData.length > 3) {
             getcardListPage++
             that.setData({
               cardList: that.data.cardList.concat(resData),
@@ -135,7 +140,6 @@ Page({
 
   // 触底加载
   onReachBottom() {
-    console.log('111111111111111111111111111');
     let getcardListPage = this.data.getcardListPage
 
     console.log('getcardListPage', getcardListPage);
@@ -493,7 +497,7 @@ Page({
       success: res => {
         // is_make_card  0：未填写   1 :填写
         let resData = res.data.data
-        console.log('resData11111111111', resData);
+        // console.log('resData11111111111', resData);
         if (res.data.code == 0) {
           // debugger
           wx.showToast({
@@ -582,15 +586,20 @@ Page({
 
   // 下拉刷新
   onPullDownRefresh() {
-    // wx.showToast({
-    //   title: '正在刷新',
-    //   icon: 'loading'
-    // })
-    this.onLoad()
+    wx.showToast({
+      title: '正在刷新',
+      icon: 'loading'
+    })
+    this.onShow()
     setTimeout(() => {
       wx.stopPullDownRefresh()
-    }, 500);
+    }, 700);
+    wx.showToast({
+      title: '更新成功',
+      icon: 'success',
+      duration: 700,
+      success: () => {}
+    })
   },
-
 
 })
