@@ -34,7 +34,6 @@ Page({
     // 获取雷达消息列表
     // this.getRadarList()
     // 获取互动消息列表
-    this.getMessageList()
     // 获取通知消息列表
     // this.getNoticeList()
   },
@@ -42,36 +41,36 @@ Page({
     // this.setData({
     //   loadShow: !this.data.loadShow
     // })
-    // let [
-    //   that,
-    //   url,
-    //   token,
-    // ] = [
-    //   this,
-    //   dataUrl + '/Api/Message/getRadarMessageList',
-    //   wx.getStorageSync('uid'),
-    // ]
-    // let data1 = {
-    //   token: token,
-    // }
-    // network.POST({
-    //   params: data1,
-    //   url: url,
-    //   success: res => {
-    //     if (res.data.code === 0) {
-    //       let resData = res.data.data;
-    //       that.setData({
-    //         msgList: resData
-    //       })
-    //     }
-    //   },
-    //   fail: res => {
-    //     console.log(res)
-    //   }
-    // })
-    // this.setData({
-    //   msgList: []
-    // })
+    let [
+      that,
+      url,
+      token,
+    ] = [
+      this,
+      dataUrl + '/Api/Message/getRadarMessageList',
+      wx.getStorageSync('uid'),
+    ]
+    let data1 = {
+      token: token,
+    }
+    network.POST({
+      params: data1,
+      url: url,
+      success: res => {
+        if (res.data.code === 0) {
+          let resData = res.data.data;
+          that.setData({
+            msgList: resData
+          })
+        }
+      },
+      fail: res => {
+        console.log(res)
+      }
+    })
+    this.setData({
+      msgList: []
+    })
 
     // 获取雷达未读数目
     this.getFirstCount()
@@ -103,7 +102,7 @@ Page({
       this.getRadarList()
     } else if (isShowIndex == 2) {
       this.setData({
-        MessagePage: this.data.MessagePage++
+        MessagePage: this.data.MessagePage + 1
       })
       this.getMessageList()
     }
@@ -302,9 +301,8 @@ Page({
     ]
     let params = {
       token: token,
-      // token: 1642,
       page: MessagePage,
-      list_rows: 3
+      list_rows: 5
     }
     network.POST({
       params: params,
@@ -314,21 +312,19 @@ Page({
           let resData = res.data.data
           console.log('MessagePage resData', resData);
 
-          if (resData.length > 0 && resData.length <= 3) {
-            console.log('MessagePage', MessagePage);
+          if (resData.length >= 0) {
+            // console.log('MessagePage', MessagePage);
             that.setData({
-              msgList: resData,
-              MessagePage: MessagePage
+              msgList: that.data.msgList.concat(resData),
               // loadShow: !that.data.loadShow
             })
             // console.log('获取消息列表', that.data.msgList)
-          } else if (resData.length > 3) {
-            MessagePage++
-            that.setData({
-              msgList: that.data.msgList.concat(resData),
-              MessagePage: MessagePage
-              // loadShow: !that.data.loadShow
-            })
+          } else {
+            if (MessagePage > 1) {
+              that.setData({
+                MessagePage: that.data.MessagePage - 1
+              })
+            }
           }
         }
       },

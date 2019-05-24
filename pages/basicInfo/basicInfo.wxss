@@ -27,6 +27,11 @@
   height: 21rpx;
   margin-left: 30rpx;
 }
+.basicInfo .basicInfo_top .basicInfo_top_tit_userimg open-data {
+  width: 12rpx;
+  height: 21rpx;
+  margin-left: 30rpx;
+}
 .basicInfo .basicInfo_main {
   padding: 0 30rpx;
   background-color: #fff;

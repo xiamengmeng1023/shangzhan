@@ -99,7 +99,7 @@ Page({
             res.data.data[2],
             res.data.data[6].datacon,
             res.data.data[3].datacon,
-            res.data.data[8].datacon[0],
+            res.data.data[8],
             res.data.data[7],
           ]
 
@@ -185,5 +185,96 @@ Page({
     wx.navigateBack({
       delta: 1
     })
+  },
+  callTap: function () {
+    let cardDetails = this.data.cardDetails
+    // console.log('cardDetails.phone', cardDetails.phone);
+    wx.makePhoneCall({
+      phoneNumber: cardDetails.phone || '暂无号码'
+    })
+  },
+  // 复制文本
+  copyText: function (e) {
+    // console.log("e", e)
+    let [copy, ContactInfo] = [
+      e.currentTarget.dataset.copy,
+      this.data.ContactInfo
+    ]
+
+    if (copy === '1') {
+      wx.setClipboardData({
+        data: ContactInfo.datacon[0].tel || '',
+        success: function (res) {
+          wx.getClipboardData({
+            success: function (res) {
+              wx.showToast({
+                title: '复制成功'
+              })
+            }
+          })
+        }
+      })
+      return
+    }
+    if (copy === '2') {
+      wx.setClipboardData({
+        data: ContactInfo.datacon[0].email || '',
+        success: function (res) {
+          wx.getClipboardData({
+            success: function (res) {
+              wx.showToast({
+                title: '复制成功'
+              })
+            }
+          })
+        }
+      })
+      return
+    }
+    if (copy === '3') {
+      wx.setClipboardData({
+        data: ContactInfo.datacon[0].web_name || '',
+        success: function (res) {
+          wx.getClipboardData({
+            success: function (res) {
+              wx.showToast({
+                title: '复制成功'
+              })
+            }
+          })
+        }
+      })
+      return
+    }
+    if (copy === '4') {
+      wx.setClipboardData({
+        data: ContactInfo.datacon[0].title || '',
+        success: function (res) {
+          wx.getClipboardData({
+            success: function (res) {
+              wx.showToast({
+                title: '复制成功'
+              })
+            }
+          })
+        }
+      })
+      return
+    }
+    if (copy === '5') {
+      wx.setClipboardData({
+        data: ContactInfo.datacon[0].address || '',
+        success: function (res) {
+          wx.getClipboardData({
+            success: function (res) {
+              wx.showToast({
+                title: '复制成功'
+              })
+            }
+          })
+        }
+      })
+      return
+    }
   }
 })

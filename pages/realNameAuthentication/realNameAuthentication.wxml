@@ -50,7 +50,7 @@
         </view>
         <checkbox-group bindchange="checkboxChange" class="agreement">
           <checkbox checked='{{checked}}'></checkbox>
-          <view class="agreement_bottom" >我已阅读并同意 <text class="agreement_bottom_r" >《服务协议》</text></view>
+          <view class="agreement_bottom" >我已阅读并同意 <text class="agreement_bottom_r" catchtap="gotoProtocol"  >《服务协议》</text></view>
         </checkbox-group>
         <!-- 提交 -->
         <button class="submit" form-type='submit'>提交</button>

@@ -41,7 +41,7 @@
             <view class="redDot" wx:if="{{item.speaker_id !==token&&item.status == 0}}"></view>
         </view>
       </block>
-      <block wx:if="{{!radarList.length==0}}">
+      <block wx:if="{{radarList.length==0}}">
         <view class="noneBox">
           <!-- <image class="noneImage" src="/assets/btn/none.png"></image> -->
           <view class="noneTxt">暂无消息</view>

@@ -1,0 +1,7 @@
+<import src="../../wxParse/wxParse.wxml"/>
+<view class='pading-lr'>
+  {{info.title}}
+</view>
+<view class='pading-lr'>
+ <template is="wxParse" data="{{wxParseData:summary.nodes}}"/> 
+</view>

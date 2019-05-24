@@ -52,7 +52,8 @@ Page({
     let params = {
       token: token,
       // token: 277,
-      app_id: "wxde059b418de529cd",
+      // app_id: "wxde059b418de529cd",
+      app_id: "wx5550cef350778b61",
       group_id: id == 0 ? "" : id
     }
     wx.chooseImage({
@@ -103,7 +104,7 @@ Page({
       count: 4 - that.data.groupImgList.length, // 最多可以选择的图片张数，默认9
       sizeType: ['original', 'compressed'], // original 原图，compressed 压缩图，默认二者都有
       sourceType: ['album', 'camera'], // album 从相册选图，camera 使用相机，默认二者都有
-      success: function(res) {
+      success: function (res) {
         var imgsrc = res.tempFilePaths;
         var groupImgList = that.data.groupImgList
         console.log("groupImgList", groupImgList.length)
@@ -124,10 +125,10 @@ Page({
           })
         }
       },
-      fail: function() {
+      fail: function () {
         // fail
       },
-      complete: function() {
+      complete: function () {
         // complete
       }
     })
@@ -303,7 +304,7 @@ Page({
       params: params,
       url: url,
       success: res => {
-        console.log("setGroup",res.data.data)
+        console.log("setGroup", res.data.data)
         if (res.data.code == 0) {
           let resData = res.data.msg
           wx.hideLoading()
@@ -406,7 +407,7 @@ Page({
   /**
    * 生命周期函数--监听页面加载
    */
-  onLoad: function(options) {
+  onLoad: function (options) {
     let id = options.id
     this.setData({
       id: id
@@ -417,49 +418,49 @@ Page({
   /**
    * 生命周期函数--监听页面初次渲染完成
    */
-  onReady: function() {
+  onReady: function () {
 
   },
 
   /**
    * 生命周期函数--监听页面显示
    */
-  onShow: function() {
+  onShow: function () {
 
   },
 
   /**
    * 生命周期函数--监听页面隐藏
    */
-  onHide: function() {
+  onHide: function () {
 
   },
 
   /**
    * 生命周期函数--监听页面卸载
    */
-  onUnload: function() {
+  onUnload: function () {
 
   },
 
   /**
    * 页面相关事件处理函数--监听用户下拉动作
    */
-  onPullDownRefresh: function() {
+  onPullDownRefresh: function () {
 
   },
 
   /**
    * 页面上拉触底事件的处理函数
    */
-  onReachBottom: function() {
+  onReachBottom: function () {
 
   },
 
   /**
    * 用户点击右上角分享
    */
-  onShareAppMessage: function() {
+  onShareAppMessage: function () {
 
   }
 })

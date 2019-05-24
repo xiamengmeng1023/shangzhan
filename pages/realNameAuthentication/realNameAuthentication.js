@@ -100,36 +100,6 @@ Page({
       })
     }
   },
-  // 测试图片上传
-  // uplocad() {
-  //   let [that, url, token] = [this, dataUrl + "/Api/MemberIdcard/idCard", wx.getStorageSync('uid')]
-  //   wx.chooseImage({
-  //     success(res) {
-  //       const tempFilePaths = res.tempFilePaths
-  //       that.setData({
-  //         front: tempFilePaths[0]
-  //       })
-  //       var params = {
-  //         token: token,
-  //         // type: 2,
-  //         app_id: "wx5550cef350778b61"
-  //       }
-  //       wx.uploadFile({
-  //         url: url,
-  //         filePath: tempFilePaths[0],
-  //         name: 'idcard_zm',
-  //         formData: params,
-  //         success(res) {
-  //           console.log("MemberIdcardres", res)
-  //           // const data = res.data
-  //         },
-  //         fail: res => {
-  //           console.log("fail", res)
-  //         }
-  //       })
-  //     }
-  //   })
-  // },
 
   formSubmit: function (e) {
     let [
@@ -430,7 +400,7 @@ Page({
     wx.chooseImage({
       count: 1,
       sizeType: ['original', 'copmpressed'],
-      sourceType: ['camera'],
+      sourceType: ['album', 'camera'],
       success: function (res) {
         var tempFilePaths = res.tempFilePaths[0]
         that.setData({
@@ -502,8 +472,8 @@ Page({
               rname: resData.real_name,
               rCode: resData.card_number,
               phone: resData.phone,
-              front: resData.idcard_fm,
-              reverse: resData.idcard_zm,
+              front: resData.idcard_zm,
+              reverse: resData.idcard_fm,
               Isfront: 1,
               Isreverse: 1,
               isRealName: resData.status == '1' ? false : true
@@ -518,6 +488,11 @@ Page({
       }
     })
   },
+  gotoProtocol() {
+    wx.navigateTo({
+      url: "/pages/protocol/protocol",
+    })
+  }
 })
 
 

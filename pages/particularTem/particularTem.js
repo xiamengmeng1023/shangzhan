@@ -1,5 +1,7 @@
 const app = getApp();
 const picUrl = app.globalData.imgUrl;
+const iconUrl = app.globalData.iconUrl;
+
 const dataUrl = app.globalData.url;
 const network = require("../../utils/util.js");
 Page({
@@ -9,10 +11,15 @@ Page({
    */
   data: {
     picUrl: picUrl,
+    iconUrl: iconUrl,
+    MyCard: [],
     imgUrl: '',
+    checked: 2,
+    checkedId: 1
   },
   checkTap: function (e) {
-    console.log("e", e)
+    console.log("e", e.currentTarget.dataset.id)
+
     let [that, imgUrl, id, token, url] = [this, this.data.imgUrl, e.currentTarget.dataset.id, wx.getStorageSync("uid"), dataUrl + "/Api/Cardlist/setTemplet"]
     wx.showModal({
       title: '提示',
@@ -34,11 +41,15 @@ Page({
             params: params,
             url: url,
             success: res => {
+              console.log(res.data.data);
+
               if (res.data.code == 0) {
                 that.setData({
-                  imgUrl: imgUrl
+                  imgUrl: imgUrl,
+                  // checkedIndex: this.data.checkedIndex
                 })
               }
+              that.onShow()
             },
             fail: res => {
               console.log("resFail", res)
@@ -51,24 +62,47 @@ Page({
     })
   },
 
-  /**
-   * 生命周期函数--监听页面加载
-   */
-  onLoad: function (options) {
+  getbussness() {
+    let [that, token, getMyCardUrl] = [
+      this,
+      wx.getStorageSync('uid'),
+      dataUrl + '/Api/Cardlist/getMyCard',
+    ]
 
+    let data = {
+      token: token,
+      order_status: 0
+    }
+    // 微名片请求
+    network.POST({
+      params: data,
+      url: getMyCardUrl,
+      success: res => {
+        // console.log("微名片请求", res);
+        if (res.data.code === 0) {
+          let resData = res.data.data
+
+          that.setData({
+            MyCard: resData[0],
+          })
+
+          let reg = /^(\d{3})\d*(\d{4})$/;
+          let str2 = resData[0].phone.replace(reg, '$1****$2')
+          this.setData({
+            phPhone: str2
+          })
+
+        }
+      },
+      fail: res => {
+        console.log(res)
+      }
+    })
   },
 
-  /**
-   * 生命周期函数--监听页面初次渲染完成
-   */
-  onReady: function () {
 
-  },
-
-  /**
-   * 生命周期函数--监听页面显示
-   */
   onShow: function () {
+    this.getbussness()
     let [that, token, url] = [this, wx.getStorageSync("uid"), dataUrl + "/Api/Cardlist/getTempletList"]
     let params = {
       token: token
@@ -78,9 +112,18 @@ Page({
       url: url,
       success: res => {
         if (res.data.code == 0) {
-          that.setData({
-            imgUrl: res.data.data
-          })
+          let checkedData = res.data.data
+          for (let i = 0, len = checkedData.length; i < len; i++) {
+            if (checkedData[i].is_check == true) {
+              console.log('checkedData[i]', Number(checkedData[i].id));
+              that.setData({
+                checkedId: Number(checkedData[i].id)
+              })
+            } else {
+
+            }
+          }
+
         }
       },
       fail: res => {

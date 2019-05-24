@@ -1,6 +1,6 @@
 {
   "pages": [
-    "pages/home/home",
+    "pages/index/index",
     "pages/card/card",
     "pages/find/find",
     "pages/user/user",
@@ -75,7 +75,8 @@
     "pages/bind_end/bind_end",
     "pages/logonwx/logonwx",
     "pages/realNamereSult/realNamereSult",
-    "pages/sendDyc/sendDyc"
+    "pages/sendDyc/sendDyc",
+    "pages/protocol/protocol"
   ],
   "window": {
     "navigationBarTitleText": "商栈云名片",
@@ -89,7 +90,7 @@
     "borderStyle": "black",
     "selectedColor": "#3190fe",
     "list": [{
-        "pagePath": "pages/home/home",
+        "pagePath": "pages/index/index",
         "text": "首页",
         "iconPath": "assets/tabs/home.png",
         "selectedIconPath": "assets/tabs/home-activ.png"

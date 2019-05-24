@@ -136,7 +136,7 @@ Page({
           setTimeout(() => {
             wx.setStorageSync("phone", phone)
             wx.switchTab({
-              url: '/pages/home/home',
+              url: '/pages/index/index',
             })
           }, 800)
         } else {

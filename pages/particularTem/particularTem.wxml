@@ -9,12 +9,12 @@
   <block>
       <!-- 模板1 -->
     <block>
-      <view class="home_selfCard_1" catchtap="ml_toCardDetails"  data-id='{{item.card_id}}' catchtap="nextTap" >
+      <view class="home_selfCard_1" catchtap="ml_toCardDetails"  data-id='1' catchtap="checkTap" >
         <view class="home_selfCard_one">
-            <image class="home_selfCard_one_l" src="{{imgUrl}}"></image>
+            <image class="home_selfCard_one_l" src="{{MyCard.icon}}"></image>
             <view class="home_selfCard_one_r">
             <view class="home_selfCard_one_r_t">
-              <text class="home_selfCard_one_r_t_name">{{item.real_name||item.reel_name||'暂未填写'}}</text>
+              <text class="home_selfCard_one_r_t_name">{{MyCard.real_name||'暂未填写'}}</text>
               <block wx:if="{{item.is_vip == 1}}">
                 <image class="home_selfCard_icon" src="{{iconUrl}}/btn/zuan.png"></image>
               </block>
@@ -25,35 +25,38 @@
                 <image class="home_selfCard_icon" src="{{iconUrl}}/btn/qygl.png"></image>
               </block>
             </view>
-              <view class="home_selfCard_one_r_b">{{item.job||'暂未填写'}}</view>
+              <view class="home_selfCard_one_r_b">{{MyCard.job||'暂未填写'}}</view>
             </view>
         </view>
         <view class="home_selfCard_two">
-          <image class="home_selfCard_two_img" src="{{item.logo}}"></image>
-          <text class="company_name">{{item.name||'暂未填写'}}</text>
+          <image class="home_selfCard_two_img" src="{{MyCard.logo}}"></image>
+          <text class="company_name">{{MyCard.name||'暂未填写'}}</text>
               <image class="address_icon" src="{{iconUrl}}/btn/dingwei.png"></image>
         </view>
         <view class="home_selfCard_three">
           <image class="phone_icon" src="{{iconUrl}}/btn/phone.png"></image>
-          <view class="phone_num">{{item.phone||'暂未填写'}}</view>
+          <view class="phone_num">{{MyCard.phone||'暂未填写'}}</view>
         
         </view>
         <view class="home_selfCard_four">
           <image class="mail_icon" src="{{iconUrl}}/btn/mail.png"></image>
-          <view class="mail_address">{{item.email||'暂未填写'}}</view>
+          <view class="mail_address">{{MyCard.email||'暂未填写'}}</view>
         </view>
         <image class="erweima" src="{{iconUrl}}/btn/fenxiang.png"></image>
         <image class="ellipsis" src="{{iconUrl}}/btn/ellipsis.png"></image>
+
+        <icon wx:if="{{checkedId==1}}" type="success"  data-id='1' data-mindex="1"  color="#3190FE"  />
+        <icon wx:else type="circle" data-mindex="2"  catchtap='checkTap' color="#d5d5d5" />
       </view>
     </block>
       <!-- 模板2 -->
     <block>
-      <view class="home_selfCard_2" catchtap="ml_toCardDetails"  data-id='{{item.card_id}}' catchtap="nextTap">
+      <view class="home_selfCard_2" catchtap="ml_toCardDetails"  data-id='2' catchtap="checkTap">
         <view class="home_selfCard_one">
-            <image class="home_selfCard_one_l" src="{{imgUrl}}"></image>
+            <image class="home_selfCard_one_l" src="{{MyCard.icon}}"></image>
             <view class="home_selfCard_one_r">
             <view class="home_selfCard_one_r_t">
-              <text class="home_selfCard_one_r_t_name">{{item.real_name||item.reel_name||'暂未填写'}}</text>
+              <text class="home_selfCard_one_r_t_name">{{MyCard.real_name||'暂未填写'}}</text>
               <block wx:if="{{item.is_vip == 1}}">
                 <image class="home_selfCard_icon" src="{{iconUrl}}/btn/zuan.png"></image>
               </block>
@@ -64,38 +67,41 @@
                 <image class="home_selfCard_icon" src="{{iconUrl}}/btn/qygl.png"></image>
               </block>
             </view>
-            <view class="home_selfCard_one_r_b">{{item.job||'暂未填写'}}</view>
+            <view class="home_selfCard_one_r_b">{{MyCard.job||'暂未填写'}}</view>
             </view>
         </view>
         <view class="home_selfCard_two">
           <view class="home_selfCard_two_l">
-            <text class="company_name">{{item.name||'暂未填写'}}</text>
+            <text class="company_name">{{MyCard.name||'暂未填写'}}</text>
             <image class="address_icon" src="{{iconUrl}}/btn/dingwei.png"></image>
           </view>
           <view class="home_selfCard_two_r">
-            <image class="home_selfCard_two_img" src="{{item.logo}}"></image>
+            <image class="home_selfCard_two_img" src="{{picUrl}}{{MyCard.img_url}}"></image>
           </view>
         </view>
         <view class="home_selfCard_three">
           <image class="phone_icon" src="{{iconUrl}}/btn/phone.png"></image>
-          <view class="phone_num">{{item.phone||'暂未填写'}}</view>
+          <view class="phone_num">{{MyCard.phone||'暂未填写'}}</view>
           <image class="mail_icon" src="{{iconUrl}}/btn/mail.png"></image>
-          <view class="mail_address">{{item.email||'暂未填写'}}</view>
+          <view class="mail_address">{{MyCard.email||'暂未填写'}}</view>
         </view>
         <image class="erweima" src="{{iconUrl}}/btn/fenxiang.png"></image>
         <image class="ellipsis" src="{{iconUrl}}/btn/ellipsis.png"></image>
+        
+        <icon wx:if="{{checkedId==2}}" type="success"  data-id='2' data-mindex="1" color="#3190FE"  />
+        <icon wx:else type="circle" data-mindex="2"  catchtap='checkTap' color="#d5d5d5" />
       </view>
     </block>
     <!-- 模板3 -->
     <block>
-      <view class='module' catchtap="ml_toCardDetails"  data-id='{{item.card_id}}' catchtap="nextTap">
+      <view class='module' catchtap="ml_toCardDetails"  data-id='3' catchtap="checkTap">
         <view class='module_t'>
-          <view class='module_t_pic'><image src='{{imgUrl}}'></image></view>
-          <view class='module_t_pic'><image src='{{item.logo}}'></image></view>
+          <view class='module_t_pic'><image src='{{MyCard.icon}}'></image></view>
+          <view class='module_t_pic'><image src='{{MyCard.logo}}'></image></view>
           <image class='module_t_share' src='{{iconUrl}}/btn/fenxiang.png' ></image>
         </view>
         <view class='module_c'>
-          <text class='module_c_name'>{{item.real_name||item.reel_name||'暂未填写'}}</text>
+          <text class='module_c_name'>{{MyCard.real_name||MyCard.reel_name||'暂未填写'}}</text>
             <block wx:if="{{item.is_vip == 1}}">
               <image class='module_c_rank' src='{{iconUrl}}/btn/zuan.png'></image>
             </block>
@@ -105,62 +111,68 @@
              <block wx:if="{{item.is_company_member == 1}}">
               <image class="module_c_rank" src="{{iconUrl}}/btn/qygl.png"></image>
             </block>
-          <text class='module_c_job mt'>{{item.job||'暂未填写'}}</text>
+          <text class='module_c_job mt'>{{MyCard.job||'暂未填写'}}</text>
         </view>
 
         <view class='module_phone'>
-          <view class='module_phone_tel'><image src='{{iconUrl}}/btn/phone.png'></image><text>{{item.phone||'暂未填写'}}</text></view>
-          <view class='module_phone_mail'><image src='{{iconUrl}}/btn/mail.png'></image><text>{{item.email||'暂未填写'}}</text></view>
+          <view class='module_phone_tel'><image src='{{iconUrl}}/btn/phone.png'></image><text>{{MyCard.phone||'暂未填写'}}</text></view>
+          <view class='module_phone_mail'><image src='{{iconUrl}}/btn/mail.png'></image><text>{{MyCard.email||'暂未填写'}}</text></view>
         </view>
 
         <view class='module_company'>
-          <text>{{item.name||'暂未填写'}}</text><image src='{{iconUrl}}/btn/dingwei.png'></image>
+          <text>{{MyCard.name||'暂未填写'}}</text><image src='{{iconUrl}}/btn/dingwei.png'></image>
         </view>
 
         <view class='module_dot'>
           <image src='{{iconUrl}}/btn/ellipsis.png'></image>
         </view>
+        
+        <icon wx:if="{{checkedId==3}}" type="success"  data-id='3' data-mindex="1" color="#3190FE"  />
+        <icon wx:else type="circle" data-mindex="2"  catchtap='checkTap' color="#d5d5d5" />
       </view>
     </block>
   
       <!-- 模板4 -->
    <block >
-    <view class='module' catchtap="ml_toCardDetails"  data-id='{{item.card_id}}' catchtap="nextTap">
+    <view class='module' catchtap="ml_toCardDetails"  data-id='4' catchtap="checkTap">
       <view class='module_4'>
-        <text class='module_c_name'>{{item.real_name||item.reel_name||'暂未填写'}}</text>
+        <text class='module_c_name'>{{MyCard.real_name||MyCard.reel_name||'暂未填写'}}</text>
         <view class='module_4_c'>
-            <view class='module_t_pic'><image src='{{item.thumb_icon||item.icon}}'></image></view>
-            <view class='module_t_pic'><image src='{{item.logo}}'></image></view>
+            <view class='module_t_pic'><image src='{{MyCard.thumb_icon||MyCard.icon}}'></image></view>
+            <view class='module_t_pic'><image src='{{MyCard.logo}}'></image></view>
         </view>
         <image class='module_t_share' src='{{iconUrl}}/btn/fenxiang.png' ></image>
       </view>
 
       <view class='module_4_z'>
-        <text class='module_c_job mg_1'>{{item.job||'暂未填写'}}</text>
+        <text class='module_c_job mg_1'>{{MyCard.job||'暂未填写'}}</text>
       </view>
 
       <view class='module_phone just_c'>
-        <view class='module_phone_tel'><image src='{{iconUrl}}/btn/phone.png'></image><text>{{item.phone||'暂未填写'}}</text></view>
-        <view class='module_phone_mail'><image src='{{iconUrl}}/btn/mail.png'></image><text>{{item.email||'暂未填写'}}</text></view>
+        <view class='module_phone_tel'><image src='{{iconUrl}}/btn/phone.png'></image><text>{{MyCard.phone||'暂未填写'}}</text></view>
+        <view class='module_phone_mail'><image src='{{iconUrl}}/btn/mail.png'></image><text>{{MyCard.email||'暂未填写'}}</text></view>
       </view>
 
       <view class='module_company just_c'>
-        <text>{{item.name||'暂未填写'}}</text><image src='{{iconUrl}}/btn/dingwei.png'></image>
+        <text>{{MyCard.name||'暂未填写'}}</text><image src='{{iconUrl}}/btn/dingwei.png'></image>
       </view>
 
       <view class='module_dot'>
         <image src='{{iconUrl}}/btn/ellipsis.png'></image>
       </view>
+      
+      <icon wx:if="{{checkedId==4}}" type="success"  data-id='4' data-mindex="1" color="#3190FE"  />
+      <icon wx:else type="circle" data-mindex="2"   color="#d5d5d5" />
 
     </view>
    </block>
 
       <!-- 模板5 -->
     <block >
-      <view class='module' catchtap="ml_toCardDetails"  data-id='{{item.card_id}}' catchtap="nextTap">
+      <view class='module' catchtap="ml_toCardDetails"  data-id='5' catchtap="checkTap">
           <view class='module_5'>
-            <view class='module_t_pic module_5_icon'><image src='{{imgUrl}}'></image></view>
-            <text class='module_c_name'>{{item.real_name||item.reel_name||'暂未填写'}}</text>
+            <view class='module_t_pic module_5_icon'><image src='{{MyCard.icon}}'></image></view>
+            <text class='module_c_name'>{{MyCard.real_name||MyCard.reel_name||'暂未填写'}}</text>
             <block wx:if="{{item.is_vip == 1}}">
               <image class='module_c_rank' src='{{iconUrl}}/btn/zuan.png'></image>
             </block>
@@ -174,37 +186,40 @@
           </view>
 
           <view class='module_5_c'>
-            <text class='module_post'>{{item.job||'暂未填写'}}</text>
-            <view class='module_phone_tel'><image src='{{iconUrl}}/btn/phone.png'></image><text>{{item.phone||'暂未填写'}}</text></view>
-            <view class='module_phone_mail mt_5'><image src='{{iconUrl}}/btn/mail.png'></image><text>{{item.email||'暂未填写'}}</text></view>
+            <text class='module_post'>{{MyCard.job||'暂未填写'}}</text>
+            <view class='module_phone_tel'><image src='{{iconUrl}}/btn/phone.png'></image><text>{{MyCard.phone||'暂未填写'}}</text></view>
+            <view class='module_phone_mail mt_5'><image src='{{iconUrl}}/btn/mail.png'></image><text>{{MyCard.email||'暂未填写'}}</text></view>
             <view class='module_company'>
-                <text>{{item.name||'暂未填写'}}</text><image src='{{iconUrl}}/btn/dingwei.png'></image>
+                <text>{{MyCard.name||'暂未填写'}}</text><image src='{{iconUrl}}/btn/dingwei.png'></image>
             </view>
           </view>
 
-          <view class='module_t_pic module_5_pic'><image src='{{item.logo}}'></image></view>
+          <view class='module_t_pic module_5_pic'><image src='{{MyCard.logo}}'></image></view>
 
           <view class='module_dot'>
             <image src='{{iconUrl}}/btn/ellipsis.png'></image>
           </view>
+          
+        <icon wx:if="{{checkedId==5}}" type="success"  data-id='5' data-mindex="1" color="#3190FE"  />
+        <icon wx:else type="circle" data-mindex="2"   color="#d5d5d5" />
       </view>
     </block>
   
 
       <!-- 模板6 -->
-    <block >
-      <view class='module' catchtap="ml_toCardDetails"  data-id='{{item.card_id}}' catchtap="nextTap">
+    <!-- <block >
+      <view class='module' catchtap="ml_toCardDetails"  data-id='6' catchtap="checkTap">
         <view class='module_5'>
-          <view class='module_t_pic module_5_icon'><image src='{{item.logo}}'></image></view>
+          <view class='module_t_pic module_5_icon'><image src='{{MyCard.logo}}'></image></view>
           <view class='module_company'>
-              <text>{{item.name||'暂未填写'}}</text><image src='{{iconUrl}}/btn/dingwei.png'></image>
+              <text>{{MyCard.name||'暂未填写'}}</text><image src='{{iconUrl}}/btn/dingwei.png'></image>
           </view>
           <image class='module_t_share' src='{{iconUrl}}/btn/fenxiang.png' ></image>
         </view>
 
         <view class='module_6_c'>
-          <view class='module_t_pic mr_6'><image src='{{imgUrl}}'></image></view>
-          <text class='module_c_name module_6_name'>{{item.real_name||item.reel_name||'暂未填写'}}</text>
+          <view class='module_t_pic mr_6'><image src='{{MyCard.icon}}'></image></view>
+          <text class='module_c_name module_6_name'>{{MyCard.real_name||MyCard.reel_name||'暂未填写'}}</text>
 
           <block wx:if="{{item.is_vip == 1}}">
             <image class='module_c_rank module_6_rank' src='{{iconUrl}}/btn/zuan.png'></image>
@@ -216,25 +231,27 @@
             <image class='module_c_rank module_6_rank' src='{{iconUrl}}/btn/qygl.png'></image>
           </block>
 
-          <text class='module_post module_6_p'>{{item.job||'暂未填写'}}</text>
+          <text class='module_post module_6_p'>{{MyCard.job||'暂未填写'}}</text>
         </view>
 
-        <view class='module_phone_tel mb_6'><image src='{{iconUrl}}/btn/phone.png'></image><text>{{item.phone||'暂未填写'}}</text></view>
-        <view class='module_phone_mail'><image src='{{iconUrl}}/btn/mail.png'></image><text>{{item.email||'暂未填写'}}</text></view>
+        <view class='module_phone_tel mb_6'><image src='{{iconUrl}}/btn/phone.png'></image><text>{{MyCard.phone||'暂未填写'}}</text></view>
+        <view class='module_phone_mail'><image src='{{iconUrl}}/btn/mail.png'></image><text>{{MyCard.email||'暂未填写'}}</text></view>
         
         <view class='module_dot'>
           <image src='{{iconUrl}}/btn/ellipsis.png'></image>
         </view>
 
+        <icon wx:if="{{checkedId==6}}" type="success"  data-id='6' data-mindex="1" color="#3190FE"  />
+        <icon wx:else type="circle" data-mindex="2"  color="#d5d5d5" />
       </view>
-    </block>
+    </block> -->
    
 
         <!-- 模板7 -->
-    <block >
-        <view class='module' catchtap="ml_toCardDetails"  data-id='{{item.card_id}}' catchtap="nextTap">
+    <!-- <block >
+        <view class='module' catchtap="ml_toCardDetails"  data-id='7' catchtap="checkTap">
           <view class='module_5'>
-            <text class='module_c_name'>{{item.real_name||item.reel_name||'暂未填写'}}</text>
+            <text class='module_c_name'>{{MyCard.real_name||MyCard.reel_name||'暂未填写'}}</text>
             <block wx:if="{{item.is_vip == 1}}">
               <image class='module_c_rank' src='{{iconUrl}}/btn/zuan.png'></image>
             </block>
@@ -248,25 +265,28 @@
           </view>
 
           <view class='module_7_c'>
-            <view class='module_7_pic'><image src="{{imgUrl}}"></image></view> 
+            <view class='module_7_pic'><image src="{{MyCard.icon}}"></image></view> 
             <view class='module_job_r'>
-                <text class='module_post'>{{item.job||'暂未填写'}}</text>
-                <view class='module_phone_tel mb_7'><image src='{{iconUrl}}/btn/phone.png'></image><text>{{item.phone||'暂未填写'}}</text></view>
-                <view class='module_phone_mail'><image src='{{iconUrl}}/btn/mail.png'></image><text>{{item.email||'暂未填写'}}</text></view>
+                <text class='module_post'>{{MyCard.job||'暂未填写'}}</text>
+                <view class='module_phone_tel mb_7'><image src='{{iconUrl}}/btn/phone.png'></image><text>{{MyCard.phone||'暂未填写'}}</text></view>
+                <view class='module_phone_mail'><image src='{{iconUrl}}/btn/mail.png'></image><text>{{MyCard.email||'暂未填写'}}</text></view>
             </view>
           </view>
 
           <view class='module_5 mb_c_7'>
-            <view class='module_t_pic module_5_icon'><image src="{{item.logo||'暂未填写'}}"></image></view>
+            <view class='module_t_pic module_5_icon'><image src="{{MyCard.logo||'暂未填写'}}"></image></view>
             <view class='module_company'>
-                <text>{{item.name||'暂未填写'}}</text><image src='{{iconUrl}}/btn/dingwei.png'></image>
+                <text>{{MyCard.name||'暂未填写'}}</text><image src='{{iconUrl}}/btn/dingwei.png'></image>
             </view>
           </view>
           
           <view class='module_dot'>
             <image src='{{iconUrl}}/btn/ellipsis.png'></image>
           </view>
+          
+        <icon wx:if="{{checkedId==7}}" type="success"  data-id='7' data-mindex="1"  color="#3190FE"  />
+        <icon wx:else type="circle" data-mindex="2" color="#d5d5d5" />
         </view>
-    </block>
+    </block> -->
   </block>
 </view>

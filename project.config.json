@@ -37,7 +37,7 @@
 			"list": []
 		},
 		"miniprogram": {
-			"current": 55,
+			"current": 57,
 			"list": [
 				{
 					"id": -1,
@@ -428,6 +428,21 @@
 					"id": -1,
 					"name": "1111111111111",
 					"pathName": "pages/groupList/groupList",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "111111111111",
+					"pathName": "pages/official_web/official_web",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "111111111111",
+					"pathName": "pages/particularTem/particularTem",
+					"query": "token=1954",
 					"scene": null
 				}
 			]

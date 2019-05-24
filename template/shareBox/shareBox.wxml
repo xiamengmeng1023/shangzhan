@@ -1,6 +1,6 @@
 <view class='flx-alert'>
   <!-- 首页 -->
-  <navigator url='/pages/home/home' class='f-list' open-type="switchTab">
+  <navigator url='/pages/index/index' class='f-list' open-type="switchTab">
     <image src='{{iconUrl}}btn/gohome.png' ></image>
   </navigator>
   <!-- 分享 -->
@@ -9,29 +9,30 @@
   </view>
 </view>
 
-<!-- <view class='alert-bg' wx:if="{{isShow}}" catchtap='shareTap' catchtouchmove='{{true}}'></view> -->
 <!-- 海报 -->
-<view class='alert-img' wx:if="{{isShow}}" >
-  <image src='{{imgUrl}}' mode='widthFix'></image>
-  <!-- {{picUrl}}/Style/images/applets/img/haibao.png -->
-  <button disabled='{{IsSub}}' class='open-vip f30-ff' catchtap='down'>保存</button>
-</view>
-<view class='share-alert' wx:if="{{isShow}}">
-  <view class='share-box '>
-    <view class="share-friend mr60">
-      <button open-type="share">分享给朋友</button>
-    </view>
-    <view class="share-friend mr0">
-      <button disabled='{{IsSub}}' catchtap='down'>保存图片</button>
-    </view>
+<view  class="tc_main " animation="{{animationData}}" >
+  <view class='alert-img' >
+    <image src='{{imgUrl}}' mode='widthFix'></image>
+    <!-- {{picUrl}}/Style/images/applets/img/haibao.png -->
+    <!-- <button disabled='{{IsSub}}' class='open-vip f30-ff' catchtap='down'>保存</button> -->
   </view>
-  <!-- <view class='share-box' catchtap='imgShow'>
-  </view> -->
-</view>
-<!-- 点击取消 -->
-<view class="cancel_btn"  wx:if="{{isShow}}" catchtap='shareTap'>取消</view>
+  <view class='share-alert' >
+    <view class='share-box '>
+      <view class="share-friend mr60">
+        <button open-type="share">分享给朋友</button>
+      </view>
+      <view class="share-friend mr0">
+        <button disabled='{{IsSub}}' catchtap='down'>保存图片</button>
+      </view>
+    </view>
+    <!-- <view class='share-box' catchtap='imgShow'>
+    </view> -->
+  </view>
+  <!-- 点击取消 -->
+  <view class="cancel_btn"  catchtap='hideBuyModal'>取消</view>
 
-
-<view class="canvas-box">
-  <canvas canvas-id="myCanvas" style='width:100%;height:{{windowH}}px'></canvas>
+  <view class="canvas-box">
+    <canvas canvas-id="myCanvas" style='width:100%;height:{{windowH}}px'></canvas>
+  </view>
 </view>
+

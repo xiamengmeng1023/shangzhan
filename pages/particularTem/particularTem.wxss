@@ -17,6 +17,21 @@
   margin-bottom: 45rpx;
 }
 
+.home_selfCard_1,
+.home_selfCard_2,
+.module {
+  position: relative;
+}
+
+.home_selfCard_1 icon,
+.home_selfCard_2 icon,
+.module icon {
+  position: absolute;
+  top: 5rpx;
+  right: 0rpx;
+}
+
+
 .card_main .home_selfCard_1 .home_selfCard_one .home_selfCard_one_l {
   width: 100rpx;
   height: 100rpx;

@@ -28,15 +28,51 @@ Page({
     cardList: [],
     cardGroup: [],
     IsShow: false,
-    page: 2,
     rows: 4,
-    getcardListPage: 1,
+    getcardListPage: 2,
     loadShow: false,
   },
 
   onShow: function () {
     this.getGroup()
-    this.getcardList()
+    let [
+      that,
+      token,
+      getcardListPage,
+      cardListUrl,
+    ] = [
+      this,
+      wx.getStorageSync('uid'),
+      this.data.getcardListPage,
+      dataUrl + "/Api/Cardlist/getCardlist",
+    ]
+    let data = {
+      token: token,
+      page: 1,
+      list_rows: 4
+    }
+    network.POST({
+      params: data,
+      url: cardListUrl,
+      success: res => {
+        if (res.data.code === 0) {
+          // console.log('res111111111', res);
+          let [resData, cardList] = [res.data.data, that.data.cardList]
+          for (let i = 0, len = resData.length; i < len; i++) {
+            if (!(resData[i].icon.substring(-1, 2) == "ht")) {
+              resData[i].icon = picUrl + resData[i].icon
+              resData[i].listMore = false
+            }
+          }
+          that.setData({
+            cardList: resData,
+          })
+        }
+      },
+      fail: res => {
+        console.log(res)
+      }
+    })
   },
 
   // 获取分组
@@ -83,9 +119,9 @@ Page({
   },
   // 获取名片列表
   getcardList() {
-    this.setData({
-      loadShow: !this.data.loadShow
-    })
+    // this.setData({
+    //   loadShow: !this.data.loadShow
+    // })
     let [
       that,
       token,
@@ -109,40 +145,36 @@ Page({
         if (res.data.code === 0) {
           // console.log('res111111111', res);
           let [resData, cardList] = [res.data.data, that.data.cardList]
-          for (let i = 0, len = resData.length; i < len; i++) {
-            if (!(resData[i].icon.substring(-1, 2) == "ht")) {
-              resData[i].icon = picUrl + resData[i].icon
-              resData[i].listMore = false
-            }
-          }
-          if (resData.length > 0 && resData.length <= 3) {
-            that.setData({
-              cardList: resData,
-              getcardListPage: getcardListPage,
-            })
-          } else if (resData.length > 3) {
+          if (resData.length > 0) {
             getcardListPage++
+            for (let i = 0, len = resData.length; i < len; i++) {
+              if (!(resData[i].icon.substring(-1, 2) == "ht")) {
+                resData[i].icon = picUrl + resData[i].icon
+                resData[i].listMore = false
+              }
+            }
             that.setData({
               cardList: that.data.cardList.concat(resData),
               getcardListPage: getcardListPage,
             })
           }
         }
+        that.setData({
+          loadShow: false
+        })
       },
       fail: res => {
         console.log(res)
+        that.setData({
+          loadShow: false
+        })
       }
     })
-    that.setData({
-      loadShow: !this.data.loadShow
-    })
+
   },
 
   // 触底加载
   onReachBottom() {
-    let getcardListPage = this.data.getcardListPage
-
-    console.log('getcardListPage', getcardListPage);
     this.getcardList()
   },
   nextAlert: function () {

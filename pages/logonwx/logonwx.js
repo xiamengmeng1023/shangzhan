@@ -42,7 +42,7 @@ Page({
           wx.setStorageSync("uid", resData.uid)
           wx.setStorageSync("isVip", resData.is_vip)
           wx.switchTab({
-            url: '/pages/home/home',
+            url: '/pages/index/index',
           })
         }
         that.setData({

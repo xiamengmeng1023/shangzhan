@@ -15,9 +15,7 @@ Component({
   properties: {
     isHide: {
       type: Boolean,
-      observer() {
-        this.shareTap()
-      }
+      observer() {}
     },
     obj: {
       type: Object,
@@ -32,7 +30,7 @@ Component({
     picUrl: picUrl,
     iconUrl: iconUrl,
     isShow: false,
-    slide: true,
+    // slide: true,
     alertImg: false,
     IsSub: false,
     codeImg: "",
@@ -451,13 +449,6 @@ Component({
         }
       }, that)
     },
-
-    shareTap() {
-      this.setData({
-        isShow: !this.data.isShow,
-        slide: !this.data.slide,
-      })
-    },
     imgShow() {
       wx.getSetting({
         success(res) {
@@ -473,7 +464,7 @@ Component({
       })
       this.setData({
         isShow: !this.data.isShow,
-        slide: !this.data.slide,
+        // slide: !this.data.slide,
         alertImg: true,
       })
     },
@@ -528,6 +519,65 @@ Component({
           })
         }
       })
-    }
+    },
+
+    // 弹窗动画
+    shareTap(e) {
+      // 显示遮罩层
+      var animation = wx.createAnimation({
+        duration: 300,
+        /**
+         * http://cubic-bezier.com/
+         * linear 动画一直较为均匀
+         * ease 从匀速到加速在到匀速
+         * ease-in 缓慢到匀速
+         * ease-in-out 从缓慢到匀速再到缓慢
+         *
+         * http://www.tuicool.com/articles/neqMVr
+         * step-start 动画一开始就跳到 100% 直到动画持续时间结束 一闪而过
+         * step-end 保持 0% 的样式直到动画持续时间结束 一闪而过
+         */
+        timingFunction: 'ease',
+        delay: 0
+      })
+      this.animation = animation
+      animation.translateY(800).step()
+      this.setData({
+        animationData: animation.export(), // export 方法每次调用后会清掉之前的动画操作。
+        isShow: true,
+      })
+      setTimeout(() => {
+        animation.translateY(0).step()
+        this.setData({
+          animationData: animation.export() // export 方法每次调用后会清掉之前的动画操作。
+        })
+        // console.log(this)
+      }, 200)
+    },
+    // 关闭弹窗
+    hideBuyModal() {
+      // 隐藏遮罩层
+      var animation = wx.createAnimation({
+        duration: 300,
+        timingFunction: 'ease',
+        delay: 0
+      })
+      this.animation = animation
+      animation.translateY(0).step()
+      this.setData({
+        animationData: animation.export()
+      })
+      setTimeout(
+        function () {
+          animation.translateY(800).step()
+          this.setData({
+            animationData: animation.export(),
+            isShow: false,
+          })
+          // console.log(this)
+        }.bind(this),
+        100
+      )
+    },
   }
 })

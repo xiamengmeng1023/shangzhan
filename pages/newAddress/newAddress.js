@@ -118,7 +118,7 @@ Page({
       return
     }
 
-    if (phone === "" || !(/^1[3-9][0-9]\d{4,8}$/.test(phone))) {
+    if (phone === "" || !(/^1[3-9][0-9]{9}$/.test(phone))) {
       wx.showModal({
         title: '提示',
         showCancel: false,

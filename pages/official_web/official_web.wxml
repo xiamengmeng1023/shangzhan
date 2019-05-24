@@ -50,22 +50,19 @@
        <!-- 公司简介1 -->
     <block  wx:if="{{companyData.cateid==10}}">
       <view class='brief_2'>
-        <image src='https://www.shangzhanyun.com/Public/Uploads/companypics/20190127/5c4d9aa70c943.jpg'></image>
+        <image src='{{picUrl}}{{companyData.datacon[0].pic}}'></image>
       </view>
     </block>
     <!-- 公司简介 2-->
     <block wx:elif="{{companyData.cateid==29}}">
-      <!-- <view class='ji_jie'>
-        <image src='https://www.shangzhanyun.com/Public/Uploads/companypics/20190127/5c4d9aa70c943.jpg'></image>
-      </view> -->
       <view class="official_web_main_detailedInfo">
-        <view class="profile_main">{{companyData.summary}}</view>
+        <view class="profile_main">{{companyData.datacon[0].summary}}</view>
       </view>
     </block>
     <!-- 公司简介3 -->
     <block  wx:elif="{{companyData.cateid==30}}">
       <view class='brief_2'>
-        <image src='https://www.shangzhanyun.com/Public/Uploads/companypics/20190127/5c4d9aa70c943.jpg'></image>
+        <image src='{{picUrl}}{{companyData.datacon[0].pic}}'></image>
         <text>{{companyData.datacon[0].summary}}</text>
       </view>
     </block>
@@ -103,14 +100,6 @@
          </view>
         </view>
       </block>
-
-       <!-- 成功样式4 -->
-      <!-- 公司简介2 -->
-      <!-- <view class='brief_2'>
-         <image src='https://www.shangzhanyun.com/Public/Uploads/companypics/20190127/5c4d9aa70c943.jpg'></image>
-         <text>One of the keys to reaching your goals is to eliminate any escape routes. It is tempting to retreat to safety and comfort when</text>
-      </view> -->
-
     </view>
     <!-- 企业招聘 -->
     <view class="recruit">
@@ -211,14 +200,14 @@
       </view>
       <block wx:if="{{1==1}}">
         <view class="enterpris_info_main">
-          <view class="enterpris_info_main_item" wx:for="{{EnterpriseInfo}}" wx:key="{{item.id}}">
+          <navigator class="enterpris_info_main_item" wx:for="{{EnterpriseInfo}}"  wx:key="{{item.id}}"  url="/pages/newsDetails/newsDetails?newsId={{item.id}}&typeId=3" >
             <view class="enterpris_info_main_item_l">
               <view class="enterpris_info_main_item_l_t">{{item.title}}</view>
               <view class="enterpris_info_main_item_l_b">{{item.addtime}}</view>
             </view>
             <image class="enterpris_info_main_item_r" src="{{picUrl}}{{item.pic}}">
             </image>
-          </view>
+          </navigator>
         </view>
       </block>
     </view>
@@ -296,7 +285,7 @@
          </view>  
       </view> -->
     <!-- 联系我们 -->
-    <block wx:if="{{1==1}}">
+    <block wx:if="{{ContactInfo.cateid==25}}">
       <view class="contact_us">
         <view class="contact_us_tit">
           联系我们
@@ -304,65 +293,69 @@
         <view class="contact_us_item">
           <image class="contact_us_l" src="{{iconUrl}}/btn/detailedInfo_5.png">
           </image>
-          <view class="contact_us_r">
-          {{ContactInfo.tel}}
+          <view class="contact_us_r" data-copy="1">
+          {{ContactInfo.datacon[0].tel}}
           </view>
         </view>
         <view class="contact_us_item">
           <image class="contact_us_l" src="{{iconUrl}}/btn/detailedInfo_4.png">
           </image>
-          <view class="contact_us_r">
-          {{ContactInfo.email}}
+          <view class="contact_us_r" data-copy="2">
+          {{ContactInfo.datacon[0].email}}
           </view>
         </view>
-        <view class="contact_us_item">
+        <view class="contact_us_item" data-copy="3">
           <image class="contact_us_l" src="{{iconUrl}}/btn/detailedInfo_3.png">
           </image>
           <view class="contact_us_r">
-          {{ContactInfo.web_name}}
+          {{ContactInfo.datacon[0].web_name}}
           </view>
         </view>
-        <view class="contact_us_item">
+        <view class="contact_us_item" data-copy="4">
           <image class="contact_us_l" src="{{iconUrl}}/btn/detailedInfo_2.png">
           </image>
-          <view class="contact_us_r">
-          {{ContactInfo.title}}
+          <view class="contact_us_r" >
+          {{ContactInfo.datacon[0].title}}
           </view>
         </view>
-        <view class="contact_us_item">
+        <view class="contact_us_item" data-copy="5">
           <image class="contact_us_l" src="{{iconUrl}}/btn/detailedInfo_1.png">
           </image>
           <view class="contact_us_r">
-          {{ContactInfo.address}}
+          {{ContactInfo.datacon[0].address}}
           </view>
         </view>
       </view>
     </block>
       <!-- 联系我们2 -->
-    <block wx:if="{{1==2}}">
+    <block wx:if="{{ContactInfo.cateid==11111111}}">
       <view class='relation_2'>
         <view>
           <text>电话:</text>
-          <text>17521581164</text>
+          <text> {{ContactInfo.datacon[0].tel}}</text>
         </view>
         <view>
           <text>邮箱:</text>
-          <text>kaden.leffler@msn.com</text>
+          <text>{{ContactInfo.datacon[0].email}}</text>
         </view>
         <view>
-          <text>微信:</text>
-          <text>www.shangzhanyun.com</text>
+          <text>官网:</text>
+          <text>{{ContactInfo.datacon[0].web_name}}</text>
         </view>
         <view>
           <text>公司:</text>
-          <text>上海胧月网络科技有限公司</text>
+          <text>{{ContactInfo.datacon[0].title}}</text>
         </view>
         <view>
           <text>地址:</text>
-          <text>上海市浦东新区东靖路</text>
+          <text>{{ContactInfo.datacon[0].address}}</text>
         </view>
       </view>
     </block>
   </view>
  </view>
  
+<import src="/template/footer/footer.wxml" />
+<template is="footer"></template>
+ 
+<component-tag-name></component-tag-name>
