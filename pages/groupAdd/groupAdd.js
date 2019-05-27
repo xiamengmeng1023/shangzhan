@@ -1,60 +1,69 @@
-const app = getApp();
-const dataUrl = app.globalData.url;
-const network = require("../../utils/util.js");
-const picUrl = app.globalData.imgUrl;
-const patrn = app.globalData.patrn;
+const app = getApp()
+const dataUrl = app.globalData.url
+const network = require('../../utils/util.js')
+const picUrl = app.globalData.imgUrl
+const patrn = app.globalData.patrn
 Page({
   /**
    * 页面的初始数据
    */
   data: {
     picUrl: picUrl,
-    id: "", //群id 当id是0的时候  属于新建
-    codeUrl: "", //二维码图片
-    gName: "", //群昵称
-    weixin: "", //微信号
-    cate: "", //分类
-    summary: "",
-    identityList: [{ //选择身份
+    id: '', //群id 当id是0的时候  属于新建
+    codeUrl: '', //二维码图片
+    gName: '', //群昵称
+    weixin: '', //微信号
+    cate: '', //分类
+    summary: '',
+    identityList: [
+      {
+        //选择身份
         id: 0,
-        text: "我是群主"
+        text: '我是群主'
       },
       {
         id: 1,
-        text: "我是群友"
+        text: '我是群友'
       }
     ],
-    scaleList: [{ //选择人数
+    scaleList: [
+      {
+        //选择人数
         id: 50,
-        text: "50人"
+        text: '50人'
       },
       {
         id: 100,
-        text: "100人"
+        text: '100人'
       },
       {
         id: 200,
-        text: "200人"
+        text: '200人'
       },
       {
         id: 500,
-        text: "500人"
-      },
+        text: '500人'
+      }
     ],
     scaleIndex: -1,
     region: [],
     index: -1,
-    groupImgList: [],
+    groupImgList: []
   },
   // 上传二维码图片
   groupCode() {
-    let [that, token, id, url] = [this, wx.getStorageSync("uid"), this.data.id, dataUrl + "/Api/Group/uploadGroupCode"]
+    let [that, token, id, url] = [
+      this,
+      wx.getStorageSync('uid'),
+      this.data.id,
+      dataUrl + '/Api/Group/uploadGroupCode'
+    ]
     let params = {
       token: token,
       // token: 277,
       // app_id: "wxde059b418de529cd",
-      app_id: "wx5550cef350778b61",
-      group_id: id == 0 ? "" : id
+      app_id: 'wx5550cef350778b61',
+      group_id: id == 0 ? '' : id
     }
     wx.chooseImage({
       success(res) {
@@ -66,7 +75,7 @@ Page({
           formData: params,
           success(res) {
             let resData = JSON.parse(res.data)
-            console.log("res", resData)
+            console.log('res', resData)
             if (resData.code == 0) {
               that.setData({
                 codeUrl: tempFilePaths[0],
@@ -104,16 +113,16 @@ Page({
       count: 4 - that.data.groupImgList.length, // 最多可以选择的图片张数，默认9
       sizeType: ['original', 'compressed'], // original 原图，compressed 压缩图，默认二者都有
       sourceType: ['album', 'camera'], // album 从相册选图，camera 使用相机，默认二者都有
-      success: function (res) {
-        var imgsrc = res.tempFilePaths;
+      success: function(res) {
+        var imgsrc = res.tempFilePaths
         var groupImgList = that.data.groupImgList
-        console.log("groupImgList", groupImgList.length)
+        console.log('groupImgList', groupImgList.length)
         if (groupImgList.length < 4) {
           that.setData({
             groupImgList: that.data.groupImgList.concat(imgsrc)
           })
           that.uploadimg({
-            url: dataUrl + "/Api/Group/uploadGroupPic", //这里是你图片上传的接口
+            url: dataUrl + '/Api/Group/uploadGroupPic', //这里是你图片上传的接口
             path: imgsrc //这里是选取的图片的地址数组
           })
         } else {
@@ -125,10 +134,10 @@ Page({
           })
         }
       },
-      fail: function () {
+      fail: function() {
         // fail
       },
-      complete: function () {
+      complete: function() {
         // complete
       }
     })
@@ -139,24 +148,24 @@ Page({
       i = data.i ? data.i : 0, //当前上传的哪张图片
       success = data.success ? data.success : 0, //上传成功的个数
       fail = data.fail ? data.fail : 0, //上传失败的个数
-      token = wx.getStorageSync("uid"),
-      id = that.data.id;
+      token = wx.getStorageSync('uid'),
+      id = that.data.id
     var params = {
       token: token,
       // token: 277,
 
-      app_id: "wxde059b418de529cd",
-      group_id: id == 0 ? "" : id
-    };
+      app_id: 'wx5550cef350778b61',
+      group_id: id == 0 ? '' : id
+    }
     wx.uploadFile({
       url: data.url,
       filePath: data.path[i],
       name: 'pic', //这里根据自己的实际情况改
       formData: params, //这里是上传图片时一起上传的数据
-      success: (resp) => {
-        success++; //图片上传成功，图片上传成功的变量+1
+      success: resp => {
+        success++ //图片上传成功，图片上传成功的变量+1
         console.log(resp)
-        console.log(i);
+        console.log(i)
         if (resp.code == 0) {
           that.setData({
             id: resp.data.group_id
@@ -164,32 +173,63 @@ Page({
         }
         //这里可能有BUG，失败也会执行这里,所以这里应该是后台返回过来的状态码为成功时，这里的success才+1
       },
-      fail: (res) => {
-        fail++; //图片上传失败，图片上传失败的变量+1
-        console.log('fail:' + i + "fail:" + fail);
+      fail: res => {
+        fail++ //图片上传失败，图片上传失败的变量+1
+        console.log('fail:' + i + 'fail:' + fail)
       },
       complete: () => {
-        console.log(i);
-        i++; //这个图片执行完上传后，开始上传下一张
-        if (i == data.path.length) { //当图片传完时，停止调用          
-          console.log('执行完毕');
-          console.log('成功：' + success + " 失败：" + fail);
-        } else { //若图片还没有传完，则继续调用函数
-          console.log(i);
-          data.i = i;
-          data.success = success;
-          data.fail = fail;
-          that.uploadimg(data);
+        console.log(i)
+        i++ //这个图片执行完上传后，开始上传下一张
+        if (i == data.path.length) {
+          //当图片传完时，停止调用
+          console.log('执行完毕')
+          console.log('成功：' + success + ' 失败：' + fail)
+        } else {
+          //若图片还没有传完，则继续调用函数
+          console.log(i)
+          data.i = i
+          data.success = success
+          data.fail = fail
+          that.uploadimg(data)
         }
-
       }
-    });
+    })
   },
 
   // 群消息提交
   formSubmit(e) {
-    console.log("e", e)
-    let [that, id, gName, identityId, wxNum, region, scaleIndex, scale, cate, summary, codeUrl, groupImgList, token, url] = [this, this.data.id, e.detail.value.gName, e.detail.value.identity, e.detail.value.wxNum, this.data.region, this.data.scaleIndex, e.detail.value.scale, e.detail.value.cate, e.detail.value.summary, this.data.codeUrl, this.data.groupImgList, wx.getStorageSync("uid"), dataUrl + "/Api/Group/setGroup"]
+    console.log('e', e)
+    let [
+      that,
+      id,
+      gName,
+      identityId,
+      wxNum,
+      region,
+      scaleIndex,
+      scale,
+      cate,
+      summary,
+      codeUrl,
+      groupImgList,
+      token,
+      url
+    ] = [
+      this,
+      this.data.id,
+      e.detail.value.gName,
+      e.detail.value.identity,
+      e.detail.value.wxNum,
+      this.data.region,
+      this.data.scaleIndex,
+      e.detail.value.scale,
+      e.detail.value.cate,
+      e.detail.value.summary,
+      this.data.codeUrl,
+      this.data.groupImgList,
+      wx.getStorageSync('uid'),
+      dataUrl + '/Api/Group/setGroup'
+    ]
     // 判断是否上传图片二维码
     if (!codeUrl) {
       wx.showModal({
@@ -218,7 +258,7 @@ Page({
       })
       return
     }
-    console.log("identityId", identityId)
+    console.log('identityId', identityId)
     if (identityId < 0) {
       wx.showModal({
         title: '提示',
@@ -275,7 +315,7 @@ Page({
     }
 
     // console.log("params", params)
-    console.log("scale", scale)
+    console.log('scale', scale)
     let params = {
       token: token,
       // token: 277,
@@ -283,7 +323,7 @@ Page({
       name: gName,
       identity: identityId,
       weixin: wxNum,
-      summary: summary,
+      summary: summary
     }
     if (region.length > 0) {
       params.province = region[0]
@@ -297,14 +337,14 @@ Page({
       params.cate = cate
     }
     wx.showLoading({
-      title: '正在生成中...',
+      title: '正在生成中...'
     })
 
     network.POST({
       params: params,
       url: url,
       success: res => {
-        console.log("setGroup", res.data.data)
+        console.log('setGroup', res.data.data)
         if (res.data.code == 0) {
           let resData = res.data.msg
           wx.hideLoading()
@@ -332,14 +372,17 @@ Page({
           })
         }
       },
-      fail: res => {
-
-      }
+      fail: res => {}
     })
   },
   // 群查询
   getGroupDetail() {
-    let [that, token, id, url] = [this, wx.getStorageSync("uid"), this.data.id, dataUrl + "/Api/Group/getGroupDetail"]
+    let [that, token, id, url] = [
+      this,
+      wx.getStorageSync('uid'),
+      this.data.id,
+      dataUrl + '/Api/Group/getGroupDetail'
+    ]
     if (id == 0) {
       return
     }
@@ -352,25 +395,25 @@ Page({
       params: params,
       url: url,
       success: res => {
-        console.log("res", res)
+        console.log('res', res)
         if (res.data.code == 0) {
           let resData = res.data.data
-          let region = [];
+          let region = []
           if (!!resData.city) {
             region[0] = resData.province
             region[1] = resData.city
             region[2] = resData.area
           }
-          let scale = Math.floor(resData.scale);
-          let scaleList = that.data.scaleList;
-          let scaleIndex;
+          let scale = Math.floor(resData.scale)
+          let scaleList = that.data.scaleList
+          let scaleIndex
           for (let i = 0, len = scaleList.length; i < len; i++) {
             if (scaleList[i].id == scale) {
-              scaleIndex = i;
+              scaleIndex = i
               break
             }
           }
-          let pics = [];
+          let pics = []
           for (let i = 0, len = resData.pics.length; i < len; i++) {
             pics.push(resData.pics[i].thumb_pic)
           }
@@ -385,7 +428,7 @@ Page({
             summary: resData.summary,
             groupImgList: pics
           })
-          console.log("scaleIndex", that.data.scaleIndex)
+          console.log('scaleIndex', that.data.scaleIndex)
         } else {
           // let resData = res.data.msg
           // wx.showModal({
@@ -394,20 +437,19 @@ Page({
           //   showCancel: false,
           //   success(res) {}
           // })
-          console.log("getGroupDetail", res)
+          console.log('getGroupDetail', res)
         }
       },
       fail: res => {
-        console.log("fail", res)
+        console.log('fail', res)
       }
     })
   },
 
-
   /**
    * 生命周期函数--监听页面加载
    */
-  onLoad: function (options) {
+  onLoad: function(options) {
     let id = options.id
     this.setData({
       id: id
@@ -418,49 +460,35 @@ Page({
   /**
    * 生命周期函数--监听页面初次渲染完成
    */
-  onReady: function () {
-
-  },
+  onReady: function() {},
 
   /**
    * 生命周期函数--监听页面显示
    */
-  onShow: function () {
-
-  },
+  onShow: function() {},
 
   /**
    * 生命周期函数--监听页面隐藏
    */
-  onHide: function () {
-
-  },
+  onHide: function() {},
 
   /**
    * 生命周期函数--监听页面卸载
    */
-  onUnload: function () {
-
-  },
+  onUnload: function() {},
 
   /**
    * 页面相关事件处理函数--监听用户下拉动作
    */
-  onPullDownRefresh: function () {
-
-  },
+  onPullDownRefresh: function() {},
 
   /**
    * 页面上拉触底事件的处理函数
    */
-  onReachBottom: function () {
-
-  },
+  onReachBottom: function() {},
 
   /**
    * 用户点击右上角分享
    */
-  onShareAppMessage: function () {
-
-  }
+  onShareAppMessage: function() {}
 })

@@ -155,7 +155,6 @@
   margin-top: 50rpx;
   display: flex;
   justify-content: space-between;
-  background: #f5f5f5;
   color: #000000;
 }
 .fxmodal .fxselect .item {
@@ -169,6 +168,7 @@
   height: 125rpx;
   margin-right: 15rpx;
   border-radius: 4rpx;
+  background: #f5f5f5;
 }
 .fxmodal .fxselect .item:last-child {
   margin-right: 0rpx;

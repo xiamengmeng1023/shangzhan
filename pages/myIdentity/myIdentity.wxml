@@ -76,9 +76,7 @@
         <view class="identityTopLeft_tit_one">环保联盟身份</view>
         <!-- <view class="identityTopLeft_tit_two" wx:if="{{isVip==1}}">有效期: {{dueTime}}</view> -->
       </view>
-      <view class="vipState_no" wx:if="{{isVip==0}}"  catchtap="showBuyModal">去点亮</view>
-      <view class="vipState_no renew" wx:elif="{{isVip==1}}" catchtap="showBuyModal" >续费</view>
-      <view class="vipState_ok" wx:else>已点亮</view>
+      <view class="vipState_no " wx:if="{{alliance_status==0}}" catchtap="showBuyModal" >购买</view>
     </view>
   </view>
   <view class="identityMiddle">

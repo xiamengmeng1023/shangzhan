@@ -1,15 +1,86 @@
 page {
-  border-top: 30rpx solid #f4f4f6;
+  /* border-top: 30rpx solid #f4f4f6; */
+  position: relative;
 }
 
 .log {
   display: block;
-  width: 182rpx;
-  height: 182rpx;
-  margin: 54rpx auto 100rpx;
+  width: 750rpx;
+  height: 640rpx;
 }
 
 .userImg {
-  width: 100rpx;
-  height: 100rpx;
+  width: 182rpx;
+  height: 182rpx;
+  overflow: hidden;
+  display: inline-block;
+  margin-top: 40rpx;
+  border-radius: 50%;
+}
+
+.userName {
+  margin-top: 40rpx;
+  font-size: 36rpx;
+  margin-bottom: 105rpx;
+}
+
+.loginUserInfo {
+  position: absolute;
+  width: 638rpx;
+  height: 623rpx;
+  top: 450rpx;
+  left: 50%;
+  border-radius: 5rpx;
+  z-index: 20;
+  transform: translateX(-50%)
+}
+
+.btn button {
+  height: 95rpx;
+  width: 390rpx;
+  background-color: #3190FE;
+  line-height: 95rpx;
+  border-radius: 50rpx;
+  font-size: 32rpx;
+  box-shadow: 0rpx 10rpx 10rpx #C9E1FF;
+  color: #fff
+}
+
+.footer {
+  font-size: 24rpx;
+  text-align: center;
+  margin-top: 590rpx;
+  /* position: fixed; */
+  /* bottom: 58rpx; */
+  /* left: 50%; */
+  /* transform: translateX(-50%); */
+  color: #999
+}
+
+.loginlogo {
+  width: 191rpx;
+  height: 119rpx;
+  position: absolute;
+  top: 213rpx;
+  left: 50%;
+  transform: translateX(-50%)
+}
+
+.footer::before,
+.footer::after {
+  content: "  —————  ";
+  height: 5rpx;
+  margin-left: 20rpx;
+  margin-right: 20rpx;
+  color: #999
+}
+
+.loginUserInfoImg {
+  width: 638rpx;
+  height: 623rpx;
+  z-index: 10;
+  position: absolute;
+  top: 450rpx;
+  left: 50%;
+  transform: translateX(-50%)
 }

@@ -1,7 +1,7 @@
 <view class="friend_dynamics">
   <view  class="friend_dynamics_minebox"   >
     <image class="friend_dynamics_minebox_img" mode="aspectFill"  wx:if="{{!userInfo.dynamic_pic}}" src="/assets/newsimg.png" ></image>
-    <image class="friend_dynamics_minebox_img" mode="aspectFill"  wx:else src="/assets/newsimg.png" ></image>
+    <!-- <image class="friend_dynamics_minebox_img" mode="aspectFill"  wx:else src="/assets/newsimg.png" ></image> -->
     <view class="friend_dynamics_minebox_mine">
      <image src="{{userInfo.icon}}"></image>
      </view>

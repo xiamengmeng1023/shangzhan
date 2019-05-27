@@ -47,7 +47,7 @@
     </view>
     <view class="basicInfo_main ma_b10">
       <view class="basicInfo_main_item fz30">
-        微信 <text class="must">（必填）</text>  
+        微信
       </view>
       <view class="basicInfo_main_item">
         <view class="basicInfo_main_item_val fz30">

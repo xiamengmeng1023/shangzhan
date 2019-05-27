@@ -3,6 +3,8 @@ const app = getApp();
 const dataUrl = app.globalData.url;
 const network = require("../../utils/util.js");
 const picUrl = app.globalData.imgUrl;
+const iconUrl = app.globalData.iconUrl;
+
 Page({
 
   /**
@@ -10,6 +12,7 @@ Page({
    */
   data: {
     picUrl: picUrl,
+    iconUrl: iconUrl,
     disabled: ""
   },
 
@@ -106,6 +109,34 @@ Page({
   onReachBottom: function () {
 
   },
-
-
+  getPhoneNumber: function (e) {
+    console.log(e.detail.iv);
+    console.log(e.detail.encryptedData);
+    wx.login({
+      success: res => {
+        console.log(res.code);
+        wx.request({
+          url: 'https://你的解密地址',
+          data: {
+            'encryptedData': encodeURIComponent(e.detail.encryptedData),
+            'iv': e.detail.iv,
+            'code': res.code
+          },
+          method: 'GET', // OPTIONS, GET, HEAD, POST, PUT, DELETE, TRACE, CONNECT
+          header: {
+            'content-type': 'application/json'
+          }, // 设置请求的 header
+          success: function (res) {
+            if (res.status == 1) { //我后台设置的返回值为1是正确
+              //存入缓存即可
+              wx.setStorageSync('phone', res.phone);
+            }
+          },
+          fail: function (err) {
+            console.log(err);
+          }
+        })
+      }
+    })
+  }
 })
