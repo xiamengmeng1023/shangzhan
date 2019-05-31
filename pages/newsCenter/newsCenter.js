@@ -72,6 +72,57 @@ Page({
       msgList: []
     })
 
+
+    this.setData({
+      loadShow: !this.data.loadShow
+    })
+
+
+    let [
+      url1,
+      radarPage,
+      radarRows,
+      radarList
+    ] = [
+      dataUrl + '/Api/Notice/getMessage',
+      wx.getStorageSync('uid'),
+      this.data.radarPage,
+      this.data.radarRows,
+      this.data.radarList
+    ]
+    let data2 = {
+      page: radarPage,
+      list_rows: radarRows
+      // token: 1642,
+      // app_id: 'wxde059b418de529cd'
+    }
+
+    network.POST({
+      params: data2,
+      url: url1,
+      success: res => {
+        if (res.data.code === 0) {
+          let resData = res.data.data
+          // console.log('获取雷达(第一个)列表数据', resData)
+          if (resData.length > 0 && resData.length < 5) {
+            that.setData({
+              radarList: resData,
+              loadShow: !that.data.loadShow
+            })
+          } else if (resData.length > 5) {
+            radarPage++
+            that.setData({
+              radarList: that.data.radarList.concat(resData),
+              radarPage: radarPage,
+              loadShow: !that.data.loadShow
+            })
+          }
+        }
+      },
+      fail: res => {
+        console.log(res)
+      }
+    })
     // 获取雷达未读数目
     this.getFirstCount()
     // 获取互动未读数目

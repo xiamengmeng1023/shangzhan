@@ -1,6 +1,6 @@
 {
   "usingComponents": {
-
+    "component-tag-name": "/template/shareBox/shareBox"
   },
   "backgroundTextStyle": "light",
   "navigationBarBackgroundColor": "#fff",

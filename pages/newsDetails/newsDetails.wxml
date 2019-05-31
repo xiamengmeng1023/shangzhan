@@ -8,3 +8,4 @@
     <template is="wxParse" data="{{wxParseData:summary.nodes}}" />
   </view>
 </view>
+<component-tag-name obj="{{pageData}}"></component-tag-name>

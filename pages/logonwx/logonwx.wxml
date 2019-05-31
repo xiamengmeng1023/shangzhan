@@ -14,6 +14,5 @@
     </view>
   </view>
 </form>
-<view  class="footer">商栈技术提供
-</view>
-<button open-type="getPhoneNumber" bindgetphonenumber="getPhoneNumber">获取号码</button>
+<view  class="footer">商栈技术提供</view>
+<!-- <button open-type="getPhoneNumber" bindgetphonenumber="getPhoneNumber">获取号码</button> -->

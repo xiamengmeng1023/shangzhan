@@ -1,7 +1,6 @@
 {
-
   "usingComponents": {
-    "head": "/pages/component/head/head"
+    "component-tag-name": "/template/shareBox/shareBox"
   },
   "backgroundTextStyle": "light",
   "navigationBarBackgroundColor": "#fff",

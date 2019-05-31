@@ -77,8 +77,7 @@ Page({
     let token = wx.getStorageSync('uid')
     // let token = 1
     let data = {
-      token: token,
-      // app_id: 'wxde059b418de529cd',
+      app_id: 'wxde059b418de529cd',
       id: that.data.newsId
     }
 

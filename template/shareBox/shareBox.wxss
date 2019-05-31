@@ -15,9 +15,9 @@
   margin-bottom: 20rpx;
 }
 .tc_main {
-  height: 100%;
   width: 100%;
-  background-color: rgba(0, 0, 0, 0.4);
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
   position: fixed;
   left: 0;
   top: 0;
@@ -33,21 +33,22 @@
 } */
 }
 .tc_main .cancel_btn {
-  height: 88rpx;
-  font-size: 30rpx;
-  text-align: center;
-  line-height: 88rpx;
+  position: fixed;
+  bottom: 30rpx;
+  left: 0;
   width: 100%;
-  background-color: #fff;
-  color: #999999;
-  z-index: 10;
+  z-index: 999;
+  margin: 0 auto;
+  text-align: center;
+}
+.tc_main .cancel_btn image {
+  height: 60rpx;
+  width: 60rpx;
 }
 .tc_main .share-alert {
   width: 100%;
-  height: 250rpx;
-  padding-top: 90rpx;
-  background-color: #fff;
-  padding-bottom: 80rpx;
+  margin-top: 60rpx;
+  padding-bottom: 67rpx;
   box-sizing: border-box;
   margin-bottom: 10rpx;
   z-index: 999;
@@ -59,9 +60,7 @@
 .tc_main .share-alert .share-box {
   display: flex;
   justify-content: center;
-  background-color: #fff;
   width: 100%;
-  position: fixed;
 }
 .tc_main .share-alert .share-box .share-friend {
   margin-right: 60rpx;
@@ -92,14 +91,12 @@
   padding-top: 50rpx;
   text-align: center;
   box-sizing: border-box;
-  background-color: #fff;
-  box-shadow: #e7e7e7 0rpx 7rpx 20rpx;
   margin: 0 auto !important;
   z-index: 10;
 }
 .tc_main .alert-img image {
-  height: 900rpx;
-  width: 530rpx;
+  height: 800rpx;
+  width: 550rpx;
 }
 .tc_main .alert-down {
   width: 600rpx;
@@ -113,8 +110,5 @@
   position: fixed;
   left: 0;
   top: 999999rpx;
-  /* top: 0; */
-  /* z-index: 999; */
   box-sizing: border-box;
-  background: rgba(0, 0, 0, 0.7);
 }

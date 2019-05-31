@@ -29,7 +29,9 @@
     </view> -->
   </view>
   <!-- 点击取消 -->
-  <view class="cancel_btn"  catchtap='hideBuyModal'>取消</view>
+  <view class="cancel_btn"  catchtap='hideBuyModal'>
+    <image src="/assets/btn/shareClose.png"></image>
+  </view>
 
   <view class="canvas-box">
     <canvas canvas-id="myCanvas" style='width:100%;height:{{windowH}}px'></canvas>

@@ -72,10 +72,8 @@ Page({
       dataUrl + "/Api/Cardlist/website"
     ]
     let data = {
-      // token: token,
-      // card_id: cardId
-      token: 1954,
-      card_id: 1785,
+      token: token,
+      card_id: cardId,
     }
     network.POST({
       params: data,
@@ -175,11 +173,6 @@ Page({
    */
   onShareAppMessage: function () {
 
-  },
-  goToRecruitmentDetails() {
-    wx.navigateTo({
-      url: '/pages/recruitment_details/recruitment_details'
-    })
   },
   ml_toCompany_details() {
     wx.navigateBack({

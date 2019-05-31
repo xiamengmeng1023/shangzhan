@@ -37,7 +37,7 @@
 			"list": []
 		},
 		"miniprogram": {
-			"current": 57,
+			"current": 62,
 			"list": [
 				{
 					"id": -1,
@@ -443,6 +443,41 @@
 					"name": "111111111111",
 					"pathName": "pages/particularTem/particularTem",
 					"query": "token=1954",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "1111",
+					"pathName": "pages/official_web/official_web",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "1111",
+					"pathName": "pages/recruitment_details/recruitment_details",
+					"query": "id=4&typeId=2",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "223",
+					"pathName": "pages/newsDetails/newsDetails",
+					"query": "newsId=4&typeId=3",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "223",
+					"pathName": "pages/newsDetails/newsDetails",
+					"query": "newsId=25&typeId=0",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "223",
+					"pathName": "pages/goods_details/goods_details",
+					"query": "cardId=1785&id=8",
 					"scene": null
 				}
 			]

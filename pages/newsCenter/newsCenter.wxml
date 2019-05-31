@@ -113,6 +113,5 @@
     </view>
   </view>
 </view>
-
-
+<component-tag-name obj="{{pageData}}"></component-tag-name>
 

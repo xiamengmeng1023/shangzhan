@@ -46,6 +46,7 @@ Component({
   },
   ready() {
     this.reqCode()
+    console.log('obj', this.properties.obj);
   },
 
   /**
@@ -66,6 +67,8 @@ Component({
           if (res.data.code == 0) {
             let [codeImg, resData, obj] = [that.data.codeDetail, res.data.data, that.properties.obj]
             codeImg = picUrl + resData.qrcode
+
+
             wx.downloadFile({
               url: codeImg,
               success: res => {
@@ -269,65 +272,87 @@ Component({
       let windowH = that.data.windowH
       let codeImg = that.data.codeImg
       let news = that.data.news
+      let format_time = news.format_time
+      let format_time_Y = format_time.split('/')[0]
+      let format_time_day = format_time.split('/')[1] + "/" + format_time.split('/')[2]
       if (news.title.length > 16) { //用户昵称显示一行 截取
         news.title = news.title.slice(0, 16) + '...'
       };
-      let bgPath = '/assets/imgs/news_bg.png'
+      if (news.format_content.length > 16) { //用户昵称显示一行 截取
+        news.format_content = news.format_content.slice(0, 16) + '...'
+      };
+      let bgPath = '/assets/poster/wenzhang_1.png'
+
       that.setData({
         scale: 1.6
       })
       ctx.save()
       ctx.setFillStyle('#fff')
       ctx.fillRect(0, 0, windowW, windowH)
-      ctx.drawImage(bgPath, 36, 16, 303, 192)
+      ctx.drawImage(bgPath, -6, 0, 395, 600)
       ctx.setTextAlign('left');
       ctx.setFillStyle('#282828')
-      ctx.setFontSize(18)
-      ctx.fillText(news.title, 75 / 2, 236)
+      ctx.setFontSize(24)
+      ctx.fillText(news.title, 15, 520)
       ctx.setTextAlign('left');
-      ctx.setFillStyle('#8c8c8c')
-      ctx.setFontSize(14)
-      ctx.fillText(news.addtime, 75 / 2, 264)
+      ctx.setFillStyle('#000')
+      ctx.setFontSize(32)
+      ctx.fillText(format_time_Y, 15, 450)
+      ctx.setTextAlign('left')
+      ctx.setFillStyle('#999')
+      ctx.setFontSize(58)
+      ctx.fillText(format_time_day, 105, 470)
       ctx.setTextAlign('left');
       ctx.setFillStyle('#444444')
       ctx.setFontSize(16)
-      let chr = news.format_content.split("")
-      let temp = "";
-      let row = [];
-      for (let a = 0, len = chr.length; a < len; a++) {
-        if (ctx.measureText(temp).width < 260) {
-          temp += chr[a];
-        } else {
-          a--; //这里添加了a-- 是为了防止字符丢失，效果图中有对比
-          row.push(temp);
-          temp = "";
-        }
-      }
-      row.push(temp);
-      if (row.length > 2) {
-        var rowCut = row.slice(0, 2);
-        var rowPart = rowCut[1];
-        var test = "";
-        var empty = [];
-        for (var a = 0; a < rowPart.length; a++) {
-          if (ctx.measureText(test).width < 260) {
-            test += rowPart[a];
-          } else {
-            break;
-          }
-        }
-        empty.push(test);
-        var group = empty[0] + "..." //这里只显示两行，超出的用...表示
-        rowCut.splice(1, 1, group);
-        row = rowCut;
-      }
-      for (var b = 0; b < row.length; b++) {
-        ctx.fillText(row[b], 75 / 2, 310 + b * 30);
-      }
+      ctx.setTextAlign('left')
+      ctx.setFillStyle('#282828')
+      ctx.setFontSize(20)
+      ctx.fillText("精选读物", 15, 480)
+      // let chr = news.format_content.split("")
+      // let temp = "";
+      // let row = [];
+
+      // if (news.format_content.length > 15) {
+      //   news.format_content = news.format_content.slice(0, 15) + '...'
+      // };
+      // for (let a = 0, len = chr.length; a < len; a++) {
+      //   if (ctx.measureText(temp).width < 260) {
+      //     temp += chr[a];
+      //   } else {
+      //     a--; //这里添加了a-- 是为了防止字符丢失，效果图中有对比
+      //     row.push(temp);
+      //     temp = "";
+      //   }
+      // }
+      // row.push(temp);
+      // if (row.length > 2) {
+      //   var rowCut = row.slice(0, 2);
+      //   var rowPart = rowCut[1];
+      //   var test = "";
+      //   var empty = [];
+      //   for (var a = 0; a < rowPart.length; a++) {
+      //     if (ctx.measureText(test).width < 260) {
+      //       test += rowPart[a];
+      //     } else {
+      //       break;
+      //     }
+      //   }
+      //   empty.push(test);
+      //   var group = empty[0] + "..." //这里只显示两行，超出的用...表示
+      //   rowCut.splice(1, 1, group);
+      //   row = rowCut;
+      // }
+      // for (var b = 0; b < row.length; b++) {
+      //   ctx.fillText(row[b], 75 / 2, 310 + b * 30);
+      // }
       ctx.setTextAlign('center')
       ctx.setFontSize(16)
-      ctx.drawImage(codeImg, 275 / 2, 365, 100, 100)
-      ctx.fillText('点击图片保存到相册', 187.5, 500)
+      ctx.drawImage(codeImg, 270, 405, 100, 100)
+      ctx.setTextAlign('center');
+      ctx.setFillStyle('#999')
+      ctx.setFontSize(18)
+      ctx.fillText(news.format_content, 160, 560)
       ctx.draw(true, setTimeout(function () {
         that.daochu()
       }, 1000))
@@ -341,37 +366,43 @@ Component({
       let windowH = that.data.windowH
       let codeImg = that.data.codeImg
       let text = that.data.textContent
-      let bgPath = '/assets/imgs/text_bg.png'
+      let bgPath = '/assets/poster/wenzhang_1.png'
+      let format_time = text.format_time
+      let format_time_Y = format_time.split('/')[0]
+      let format_time_day = format_time.split('/')[1] + "/" + format_time.split('/')[2]
       if (text.title.length > 10) {
         text.title = text.title.slice(0, 10) + '...'
       };
       if (text.format_content.length > 14) { //用户昵称显示一行 截取
         text.format_content = text.format_content.slice(0, 14) + '...'
       };
+
+
       ctx.save()
       ctx.setFillStyle('#fff')
       ctx.fillRect(0, 0, windowW, windowH)
-      ctx.drawImage(bgPath, 75 / 2, 75 / 2, 303, 353)
-      ctx.setTextAlign('center');
+      ctx.drawImage(bgPath, -6, 0, 395, 600)
+      ctx.setTextAlign('left')
       ctx.setFillStyle('#282828')
-      ctx.setFontSize(16)
-      ctx.fillText(text.format_time, 187.5, 75)
-      ctx.setTextAlign('center');
+      ctx.setFontSize(32)
+      ctx.fillText(format_time_Y, 15, 450)
+      ctx.setTextAlign('left')
       ctx.setFillStyle('#282828')
+      ctx.setFontSize(20)
+      ctx.fillText("精选读物", 15, 480)
+      ctx.setTextAlign('left')
+      ctx.setFillStyle('#999')
       ctx.setFontSize(58)
-      ctx.fillText(text.date, 187.5, 140)
+      ctx.fillText(format_time_day, 105, 470)
+      ctx.setTextAlign('center');
+      ctx.setFillStyle('#999')
+      ctx.setFontSize(20)
+      ctx.fillText(text.format_content, 160, 560)
       ctx.setTextAlign('center');
       ctx.setFillStyle('#282828')
       ctx.setFontSize(24)
-      ctx.fillText(text.title, 187.5, 180)
-      ctx.setTextAlign('left');
-      ctx.setFillStyle('#282828')
-      ctx.setFontSize(16)
-      ctx.fillText(text.format_content, 58, 330)
-      ctx.drawImage(codeImg, 230, 340, 100, 100)
-      ctx.setTextAlign('left')
-      ctx.setFontSize(16)
-      ctx.fillText('点击图片保存到相册', 75 / 2, 440)
+      ctx.fillText(text.title, 140, 520)
+      ctx.drawImage(codeImg, 270, 405, 100, 100)
       ctx.draw(true, setTimeout(function () {
         that.daochu()
       }, 1000))
@@ -381,6 +412,7 @@ Component({
     jobImage() {
       let that = this
       const ctx = wx.createCanvasContext('myCanvas', that)
+
       let windowW = that.data.windowW
       let windowH = that.data.windowH
       let job = that.data.job
@@ -389,24 +421,39 @@ Component({
       if (job.title.length > 16) { //用户昵称显示一行 截取
         job.title = job.title.slice(0, 9) + '...'
       };
-      let bgPath = '/assets/imgs/job_bg.jpg'
+      if (job.company_name.length > 10) { //用户昵称显示一行 截取
+        job.company_name = job.company_name.slice(0, 9) + '...'
+      };
+      let bgPath = '/assets/poster/zhaopin_1.png'
       that.setData({
         scale: 1.6
       })
       ctx.save()
       ctx.setFillStyle('#fff')
       ctx.fillRect(0, 0, windowW, windowH)
-      ctx.drawImage(bgPath, 75 / 2, 75 / 2, 300, 150)
+      ctx.drawImage(bgPath, -6, 0, 395, 600)
       ctx.setTextAlign('left');
-      ctx.setFillStyle('#282828')
-      ctx.setFontSize(18)
-      ctx.fillText('岗位：' + job.title, 75 / 2, 220)
-      ctx.setFontSize(14)
-      ctx.fillText('薪资：' + job.xinzi, 75 / 2, 250)
-      ctx.drawImage(codeImg, 225 / 2, 265, 150, 150)
+      ctx.setFillStyle('#fff')
+      ctx.setFontSize(24)
+      ctx.fillText(job.company_name, 20, 50, 230, 220)
+      // ----------------画一个正方形开始------------
+      ctx.setFillStyle('#017888')
+      ctx.fillRect(20, 490, 100, 100)
+      ctx.setFillStyle('#fff')
+      ctx.fillRect(260, 20, 100, 100)
+      // 画一个正方形结束
+      ctx.setFontSize(48)
+      ctx.fillText('聘', 45, 560)
+      ctx.setFontSize(28)
+      ctx.setFillStyle('#000')
+      ctx.fillText('职位: ' + job.title, 150, 530)
+      ctx.setFillStyle('#F74238')
+      ctx.setFontSize(24)
+      ctx.fillText(job.xinzi, 150, 570)
+      ctx.drawImage(codeImg, 260, 20, 100, 100)
       ctx.setTextAlign('center')
-      ctx.setFontSize(16)
-      ctx.fillText('点击图片保存到相册', 187.5, 440)
+      // ctx.setFontSize(16)
+      // ctx.fillText('点击图片保存到相册', 187.5, 440)
       ctx.draw(true, setTimeout(function () {
         that.daochu()
       }, 1000))

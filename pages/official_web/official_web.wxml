@@ -108,7 +108,7 @@
       <block  wx:if="{{recruitInfo.cateid==22}}">
         <view class="recruit_main">
           <block wx:for="{{recruitInfo.datacon}}" wx:key="{{item.id}}">
-          <navigator  class="recruit_main_item" url= '/pages/recruitment_details/recruitment_details?id={{item.id}}'  catchtap="goToRecruitmentDetails" data-id="{{item.id}}" >
+          <navigator  class="recruit_main_item" url= '/pages/recruitment_details/recruitment_details?id={{item.id}}&typeId=2'  data-id="{{item.id}}" >
               <view class="recruit_main_flexbox">
                 <view class="recruit_main_item_img" data-index="{{index}}"  style="background-color:{{index/2==0?rColorList[1]:rColorList[2]}}">
                   {{item.firstKey}} </view>
@@ -129,7 +129,7 @@
       <block  wx:if="{{recruitInfo.cateid==23}}">
         <view class="recruit_main">
           <block wx:for="{{recruitInfo.datacon}}" wx:key="{{item.id}}">
-            <navigator class="recruit_main_item"  url= '/pages/recruitment_details/recruitment_details?id={{item.id}}'  catchtap="goToRecruitmentDetails" data-id="{{item.id}}">
+            <navigator class="recruit_main_item"  url= '/pages/recruitment_details/recruitment_details?id={{item.id}}&typeId=2'  data-id="{{item.id}}">
               <view class="recruit_main_flexbox">
                 <view class="recruit_main_item_center">
                     <view class="recruit_main_item_center_t">
@@ -200,7 +200,7 @@
       </view>
       <block wx:if="{{1==1}}">
         <view class="enterpris_info_main">
-          <navigator class="enterpris_info_main_item" wx:for="{{EnterpriseInfo}}"  wx:key="{{item.id}}"  url="/pages/newsDetails/newsDetails?newsId={{item.id}}&typeId=3" >
+          <navigator class="enterpris_info_main_item" wx:for="{{EnterpriseInfo}}"  wx:key="{{item.id}}"  url="/pages/newsDetails/newsDetails?newsId={{item.id}}&typeId=0" >
             <view class="enterpris_info_main_item_l">
               <view class="enterpris_info_main_item_l_t">{{item.title}}</view>
               <view class="enterpris_info_main_item_l_b">{{item.addtime}}</view>
@@ -358,4 +358,4 @@
 <import src="/template/footer/footer.wxml" />
 <template is="footer"></template>
  
-<component-tag-name></component-tag-name>
+<component-tag-name obj="{{news}}"></component-tag-name>

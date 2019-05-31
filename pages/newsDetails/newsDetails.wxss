@@ -2,8 +2,8 @@ page {
   position: relative;
 }
 image {
-  width: 690rpx !important;
-  margin: 0 auto !important;
+  width: 690rpx;
+  margin: 0 auto;
 }
 .share_btn {
   width: 31rpx;

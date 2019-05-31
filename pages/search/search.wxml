@@ -31,7 +31,7 @@
       </image>
     </view>
     <!-- 名片列表 -->
-    <!-- wx:if="{{card_group_id==clickId}}" -->
+ 
     <block wx:for="{{cardList}}" wx:key="{{index}}">
       <!-- 模板1 -->
       <block wx:if="{{item.templet_id==4}}">
@@ -67,7 +67,7 @@
         </view>
       </block>
       <!-- 模板2 -->
-      <!-- {{item.is_vip!=0?'nextTap':'nextAlert'}} -->
+
       <block wx:if="{{item.templet_id ==5}}">
         <view class="home_selfCard_2" catchtap="ml_toCardDetails" data-id='{{item.card_id}}' catchtap="nextTap">
 

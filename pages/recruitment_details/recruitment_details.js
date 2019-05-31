@@ -15,13 +15,14 @@ Page({
     iconUrl: iconUrl,
     tempUrl: '',
     newsId: '',
-    pageData: ''
+    pageData: '',
   },
 
   /**
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
+    console.log('options', options);
     let that = this
     that.setData({
       newsId: options.id,
@@ -80,7 +81,7 @@ Page({
     let data = {
       token: token,
       id: that.data.newsId,
-      // app_id: 'wxde059b418de529cd'
+      app_id: 'wxde059b418de529cd'
     }
 
     network.POST({

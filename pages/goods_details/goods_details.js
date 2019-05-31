@@ -66,7 +66,7 @@ Page({
               let resData = res.data.data
               resData.goods.big_pic = picUrl + resData.goods.big_pic
               that.setData({
-                goods: resData.goods
+                goods: resData.goods,
               })
               WxParse.wxParse('summary', 'html', resData.goods.content, that, 1)
             }

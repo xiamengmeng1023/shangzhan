@@ -1,6 +1,8 @@
 {
 
-  "usingComponents": {},
+  "usingComponents": {
+
+  },
   "backgroundTextStyle": "light",
   "navigationBarBackgroundColor": "#fff",
   "navigationBarTitleText": "消息雷达",
